@@ -42,6 +42,22 @@
 </template>
 
 <style scoped>
+  :global(:root) {
+    --accordion-border-color: transparent;
+    --accordion-header-text-color: var(--theme-white-color);
+    --accordion-header-background-color: var(--theme-tertiary-color);
+    --accordion-header-border-color: var(--accordion-header-background-color);
+    --accordion-content-background-color: var(--theme-background-color);
+  }
+
+  html[data-theme='dark'] .accordion {
+    --accordion-border-color: transparent;
+    --accordion-header-text-color: var(--theme-white-color);
+    --accordion-header-background-color: #229292;
+    --accordion-header-border-color: var(--accordion-header-background-color);
+    --accordion-content-background-color: #2e3131;
+  }
+
   .accordion {
     border-radius: 0.5rem;
     border: 0.0125rem solid var(--accordion-border-color);

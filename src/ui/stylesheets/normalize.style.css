@@ -10,16 +10,6 @@
     sans-serif;
 }
 
-a {
-  width: fit-content;
-  cursor: pointer;
-  color: var(--hyperlink-text-color);
-}
-
-a:active {
-  opacity: 0.5;
-}
-
 select,
 ::picker(select) {
   appearance: base-select;
