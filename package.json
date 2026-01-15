@@ -1,0 +1,51 @@
+{
+  "name": "kuxtal",
+  "version": "0.0.0",
+  "private": false,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "main": "dist/kuxtal.umd.js",
+  "module": "dist/kuxtal.es.js",
+  "types": "dist/index.d.ts",
+  "author": {
+    "name": "Cat Dog Studios"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/kuxtal.es.js",
+      "require": "./dist/kuxtal.umd.js"
+    },
+    "./*": "./dist/*"
+  },
+  "scripts": {
+    "client": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "dependencies": {
+    "vite-plugin-dts": "^4.5.4",
+    "vue-router": "^4.6.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.26"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.3",
+    "@types/node": "^24.10.4",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/tsconfig": "^0.8.1",
+    "npm-run-all2": "^8.0.4",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.0",
+    "vite-plugin-vue-devtools": "^8.0.5",
+    "vue-tsc": "^3.2.2"
+  }
+}

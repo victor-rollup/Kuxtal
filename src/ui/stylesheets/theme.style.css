@@ -1,0 +1,120 @@
+:root {
+  --theme-primary-color: #1152d4;
+  --theme-surface-color: #333333;
+  --theme-text-color: #2b2727;
+  --theme-background-color: #dfe2e9;
+  --theme-background-active-color: #a1cadf;
+  --theme-background-hover-color: #e9dddd;
+  --theme-border-color: #ecdfdf;
+
+  --common-text-color: var(--theme-text-color);
+  --common-background-color: var(--theme-background-active-color);
+  --common-border-color: var(--theme-border-color);
+  --common-focus-color: var(--theme-primary-color);
+
+  --edit-border-color: transparent;
+  --edit-border-color-focus: var(--theme-primary-color);
+  --edit-text-color: var(--theme-text-color);
+  --edit-text-focus-color: var(--theme-text-color);
+  --edit-background-color: var(--theme-background-hover-color);
+  --edit-background-focus-color: var(--edit-background-color);
+
+  --hyperlink-text-color: var(--theme-primary-color);
+  --hyperlink-text-active-color: var(--theme-background-hover-color);
+
+  --button-text-color: white;
+  --button-background-color: var(--theme-primary-color);
+  --button-secondary-background-color: #2a629a;
+
+  --menu-background-color: #ebeef1;
+  --menu-border-color: var(--common-border-color);
+
+  --menu-item-text-color: var(--theme-primary-color);
+  --menu-item-text-active-color: var(--theme-text-color);
+  --menu-item-background-hover-color: var(--theme-background-hover-color);
+
+  --separator-border-color: var(--theme-border-color);
+
+  --sidebar-background-color: white;
+  --sidebar-border-color: var(--theme-border-color);
+
+  --sidebar-option-text-color: var(--theme-primary-color);
+  --sidebar-option-background-active-color: var(--theme-background-active-color);
+  --sidebar-option-background-hover-color: var(--theme-background-hover-color);
+
+  --tab-border-color: #d3cdcd;
+  --tab-border-active-color: #3b9797;
+  --tab-background-color: transparent;
+  --tab-background-active-color: #d3cdcd;
+  --tab-background-hover-color: #ced8df;
+
+  --table-background-color: #dee0e6;
+  --table-head-background-color: var(--theme-background-hover-color);
+  --table-body-background-hover-color: var(--theme-background-hover-color);
+
+  --scrollbar-thumb-background-color: #ad9c9c;
+  --scrollbar-track-background-color: #5e5454;
+}
+
+.dark-mode {
+  --theme-primary-color: #1152d4;
+  --theme-surface-color: #333333;
+  --theme-text-color: #f8f9fa;
+  --theme-background-color: #101622;
+  --theme-background-active-color: #0f2145;
+  --theme-background-hover-color: #232f48;
+  --theme-border-color: #232f48;
+
+  --common-text-color: var(--theme-text-color);
+  --common-background-color: var(--theme-background-active-color);
+  --common-border-color: var(--theme-border-color);
+  --common-focus-color: var(--theme-primary-color);
+
+  --edit-border-color: transparent;
+  --edit-border-color-focus: var(--theme-primary-color);
+  --edit-text-color: var(--theme-text-color);
+  --edit-text-focus-color: var(--theme-text-color);
+  --edit-background-color: var(--theme-background-hover-color);
+  --edit-background-focus-color: var(--edit-background-color);
+
+  --hyperlink-text-color: var(--theme-primary-color);
+  --hyperlink-text-active-color: var(--theme-background-hover-color);
+
+  --button-text-color: var(--theme-text-color);
+  --button-background-color: var(--theme-primary-color);
+  --button-secondary-background-color: #2a629a;
+
+  --menu-background-color: var(--common-background-color);
+  --menu-border-color: var(--common-border-color);
+
+  --menu-item-text-color: var(--theme-text-color);
+  --menu-item-text-active-color: var(--theme-text-color);
+  --menu-item-background-hover-color: var(--theme-background-hover-color);
+
+  --separator-border-color: var(--theme-border-color);
+
+  --sidebar-background-color: var(--theme-background-color);
+  --sidebar-border-color: var(--common-border-color);
+
+  --sidebar-option-text-color: var(--theme-text-color);
+  --sidebar-option-background-active-color: var(--theme-background-active-color);
+  --sidebar-option-background-hover-color: var(--theme-background-hover-color);
+
+  --tab-border-color: #d3cdcd;
+  --tab-border-active-color: #3b9797;
+  --tab-background-color: transparent;
+  --tab-background-active-color: #d3cdcd;
+  --tab-background-hover-color: #ced8df;
+
+  --table-background-color: #09142a;
+  --table-head-background-color: var(--theme-background-hover-color);
+  --table-body-background-hover-color: var(--theme-background-hover-color);
+
+  --scrollbar-thumb-background-color: #ad9c9c;
+  --scrollbar-track-background-color: #5e5454;
+}
+
+.dark-mode {
+  color-scheme: dark;
+  background: var(--theme-background-color);
+}

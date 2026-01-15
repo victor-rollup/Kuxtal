@@ -1,0 +1,31 @@
+.icon {
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.text-truncate {
+  display: inline-block; /* o block si prefieres */
+  max-width: 100%; /* ajusta según tu layout */
+  overflow: hidden; /* oculta el texto sobrante */
+  text-overflow: ellipsis; /* agrega los "..." */
+  white-space: nowrap; /* evita saltos de línea */
+  vertical-align: middle; /* opcional, para alinear mejor */
+}
+
+.text-truncate-multiline {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* número de líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.text-truncate-multiline {
+  line-clamp: unset;
+  -webkit-line-clamp: unset; /* elimina el límite de líneas */
+  white-space: normal; /* permite saltos de línea */
+}
