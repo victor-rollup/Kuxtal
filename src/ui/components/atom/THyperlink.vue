@@ -10,7 +10,7 @@
   <router-link
     v-if="props.route"
     :to="{ name: route, params }"
-    class="hyperlink"
+    class="hyperlink | text-truncate"
     draggable="false"
     @click="emit('click', $event)"
   >
@@ -19,7 +19,7 @@
   <a
     v-else
     href="#"
-    class="hyperlink"
+    class="hyperlink | text-truncate"
     draggable="false"
     @click="emit('click', $event)"
   >
@@ -28,5 +28,13 @@
 </template>
 
 <style scoped>
-  
+  .hyperlink {
+    width: fit-content;
+    cursor: pointer;
+    color: var(--hyperlink-text-color);
+  }
+
+  .hyperlink:active {
+    opacity: 0.5;
+  }
 </style>

@@ -41,10 +41,11 @@
   .breadcrumb {
     max-width: fit-content;
   }
-  
+
   .breadcrumb__list {
     display: flex;
     gap: 0.25rem;
+    align-items: center;
   }
 
   .breadcrumb__route {
@@ -52,13 +53,24 @@
     gap: 0.25rem;
   }
 
+  .breadcrumb__current {
+    color: var(--theme-text-color);
+    opacity: 0.65;
+  }
+
   .breadcrumb__route-hyperlink {
     text-decoration: none;
     display: flex;
     align-items: center;
+    color: var(--breadcrumb-route-text-color) !important;
+  }
+
+  .breadcrumb__route-hyperlink:hover {
+    color: var(--breadcrumb-route-text-hover-color) !important;
   }
 
   .breadcrumb__route::after {
     content: attr(data-divider);
+    color: var(--breadcrumb-divider-text-color);
   }
 </style>

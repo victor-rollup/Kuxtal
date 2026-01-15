@@ -126,3 +126,17 @@ export interface IFormDialog {
   };
 }
 // ------------------------------------------------------------------------------------------------
+export interface IAccordion {
+  props: {
+    title: string;
+    open?: boolean;
+  };
+  emits: {
+    (event: 'toggle', payload: ToggleEvent): void;
+  };
+  expose: {
+    open: () => void;
+    close: () => void;
+  }
+}
+// ------------------------------------------------------------------------------------------------

@@ -15,22 +15,26 @@
     @click="emit('click', $event)"
   >
     <component :is="props.icon" class="button__icon" />
-    <span v-if="props.caption">{{ props.caption }}</span>
+    <span v-if="props.caption" class="button__caption">{{
+      props.caption
+    }}</span>
   </button>
 </template>
 
 <style scoped>
   .button {
-    border: 0.125rem solid transparent;
-    border-radius: 0.5rem;
-    padding-block: 0.5rem;
-    padding-inline: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
+
+    border-radius: 0.5rem;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+
     font-size: 1rem;
     cursor: pointer;
+    border: 0.125rem solid var(--button-border-color);
   }
 
   .button:not([disabled]):hover {
@@ -42,35 +46,65 @@
   }
 
   .button[data-mode='filled'] {
-    color: var(--button-text-color);
-    background: var(--button-background-color);
+    background: var(--filled-button-background-color);
+  }
+
+  .button[data-mode='filled'] .button__icon,
+  .button[data-mode='filled'] .button__caption {
+    color: var(--filled-button-text-color);
   }
 
   .button[data-mode='secondary'] {
-    color: var(--button-text-color);
-    background: var(--button-secondary-background-color);
+    background: var(--secondary-button-background-color);
+  }
+
+  .button[data-mode='secondary'] .button__icon,
+  .button[data-mode='secondary'] .button__caption {
+    color: var(--secondary-button-text-color);
+  }
+
+  .button[data-mode='text'],
+  .button[data-mode='outlined'] {
+    background: transparent;
   }
 
   .button[data-mode='outlined'] {
-    color: var(--button-background-color);
-    background: transparent;
-    border-color: var(--button-background-color);
+    border-color: var(--outlined-button-border-color);
+  }
+
+  .button[data-mode='outlined']:hover {
+    background: var(--outlined-button-background-hover-color);
+  }
+
+  .button[data-mode='outlined'] .button__icon,
+  .button[data-mode='outlined'] .button__caption {
+    color: var(--outlined-button-text-color);
+    font-weight: 500;
   }
 
   .button[data-mode='text'] {
-    color: var(--button-background-color);
-    background: transparent;
-    width: fit-content;
     padding: 0rem;
-    /* text-decoration: underline; */
+    width: fit-content;
+  }
+
+  .button[data-mode='text'] .button__icon,
+  .button[data-mode='text'] .button__caption {
+    color: var(--text-button-text-color);
   }
 
   .button[data-mode='icon'] {
-    color: var(--button-text-color);
-    background: var(--button-secondary-background-color);
     padding: 0.5rem;
     min-width: 2.5rem;
     max-width: fit-content;
+    background: var(--icon-button-background-color);
+  }
+
+  .button[data-mode='icon'] .button__icon {
+    color: var(--icon-button-text-color);
+  }
+
+  .button[data-mode='icon'] .button__caption {
+    display: none;
   }
 
   .button__icon {

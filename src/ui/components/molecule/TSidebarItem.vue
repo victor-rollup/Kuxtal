@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    max-width: fit-content;
   }
 
   .sidebar-item__option {
@@ -50,7 +51,6 @@
 
   .sidebar-item__option.router-link-exact-active {
     background: var(--sidebar-option-background-active-color);
-    /* border: 0.0125rem solid var(--theme-primary-color); */
   }
 
   .sidebar-item__caption {

@@ -16,7 +16,7 @@
     <header class="form-dialog__header">
       <div class="form-dialog__container">
         <h4 class="form-dialog__title">{{ props.title }}</h4>
-        <p class="form-dialog__description" v-if="props.description">
+        <p class="form-dialog__description | text-truncate-multiline" v-if="props.description">
           {{ props.description }}
         </p>
       </div>
@@ -30,9 +30,8 @@
 
 <style scoped>
   .form-dialog {
-    background: var(--common-background-color);
-    border: 0.0125rem solid var(--common-border-color);
-    width: 24rem;
+    background: var(--form-dialog-background-color);
+    border: 0.0125rem solid var(--form-dialog-border-color);
     border-radius: 0.5rem;
     height: fit-content;
   }
@@ -42,7 +41,9 @@
     align-items: baseline;
     justify-content: space-between;
     padding: 1rem;
-    border-bottom: 0.0125rem solid var(--common-border-color);
+    color: var(--form-dialog-header-text-color);
+    background: var(--form-dialog-header-background-color);
+    border-bottom: 0.0125rem solid var(--form-dialog-header-border-color);
   }
 
   .form-dialog__content {
@@ -55,7 +56,12 @@
   .form-dialog__icon {
     cursor: pointer;
   }
+
+  .form-dialog__icon {
+    color: var(--form-dialog-icon-text-color)
+  }
+
   .form-dialog__icon:hover {
-    color: var(--common-focus-color);
+    color: var(--form-dialog-icon-text-hover-color)
   }
 </style>

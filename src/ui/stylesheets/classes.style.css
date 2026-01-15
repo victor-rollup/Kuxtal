@@ -6,26 +6,29 @@
 }
 
 .text-truncate {
-  display: inline-block; /* o block si prefieres */
-  max-width: 100%; /* ajusta según tu layout */
-  overflow: hidden; /* oculta el texto sobrante */
-  text-overflow: ellipsis; /* agrega los "..." */
-  white-space: nowrap; /* evita saltos de línea */
-  vertical-align: middle; /* opcional, para alinear mejor */
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; /* add "..." */
+  white-space: nowrap; /* avoid line break */
+  vertical-align: bottom;
 }
 
 .text-truncate-multiline {
   display: -webkit-box;
   line-clamp: 2;
-  -webkit-line-clamp: 2; /* número de líneas */
+  -webkit-line-clamp: 2; /* line number */
   -webkit-box-orient: vertical;
   overflow: hidden;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
-.text-truncate-multiline {
+.text-truncate-multiline:hover {
   line-clamp: unset;
-  -webkit-line-clamp: unset; /* elimina el límite de líneas */
-  white-space: normal; /* permite saltos de línea */
+  -webkit-line-clamp: unset;
+  white-space: normal;
+}
+
+.table-wrapper {
+  background: var(--table-background-color);
 }

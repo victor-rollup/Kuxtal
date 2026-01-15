@@ -1,120 +1,185 @@
 :root {
-  --theme-primary-color: #1152d4;
-  --theme-surface-color: #333333;
-  --theme-text-color: #2b2727;
-  --theme-background-color: #dfe2e9;
-  --theme-background-active-color: #a1cadf;
-  --theme-background-hover-color: #e9dddd;
-  --theme-border-color: #ecdfdf;
+  /* --------------------------------------------------------------------------------------------- */
+  --theme-primary-color: #4caf50;
+  --theme-secondary-color: #03a9f4;
+  --theme-tertiary-color: #59a58e;
 
-  --common-text-color: var(--theme-text-color);
-  --common-background-color: var(--theme-background-active-color);
-  --common-border-color: var(--theme-border-color);
-  --common-focus-color: var(--theme-primary-color);
+  --theme-white-color: #eeeeee;
+  --theme-black-color: #161717;
 
-  --edit-border-color: transparent;
-  --edit-border-color-focus: var(--theme-primary-color);
+  --theme-text-color: #242121;
+  --theme-border-color: #a79393;
+  --theme-background-color: #eeeeee;
+
+  --theme-status-active-color: #81c784;
+  --theme-status-hover-color: #dbe2e7;
+  --theme-status-focus-color: #7e9bac70;
+  /* --------------------------------------------------------------------------------------------- */
+  --accordion-border-color: transparent;
+  --accordion-header-text-color: var(--theme-white-color);
+  --accordion-header-background-color: var(--theme-tertiary-color);
+  --accordion-header-border-color: var(--accordion-header-background-color);
+  --accordion-content-background-color: var(--theme-background-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --button-border-color: transparent;
+
+  --filled-button-text-color: var(--theme-white-color);
+  --filled-button-background-color: var(--theme-primary-color);
+
+  --secondary-button-text-color: var(--theme-white-color);
+  --secondary-button-background-color: var(--theme-secondary-color);
+
+  --outlined-button-text-color: var(--theme-primary-color);
+  --outlined-button-border-color: var(--outlined-button-text-color);
+  --outlined-button-background-hover-color: var(--theme-status-hover-color);
+
+  --text-button-text-color: var(--theme-secondary-color);
+
+  --icon-button-text-color: var(--theme-white-color);
+  --icon-button-background-color: var(--theme-secondary-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --hyperlink-text-color: var(--theme-secondary-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --separator-border-color: var(--theme-border-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --breadcrumb-route-text-color: var(--theme-secondary-color);
+  --breadcrumb-route-text-hover-color: var(--theme-status-hover-color);
+  --breadcrumb-divider-text-color: var(--breadcrumb-route-text-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --edit-border-color: var(--theme-border-color);
+  --edit-border-color-focus: var(--theme-secondary-color);
   --edit-text-color: var(--theme-text-color);
   --edit-text-focus-color: var(--theme-text-color);
-  --edit-background-color: var(--theme-background-hover-color);
+  --edit-background-color: var(--theme-background-color);
   --edit-background-focus-color: var(--edit-background-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --form-dialog-border-color: var(--theme-border-color);
+  --form-dialog-background-color: var(--theme-status-hover-color);
 
-  --hyperlink-text-color: var(--theme-primary-color);
-  --hyperlink-text-active-color: var(--theme-background-hover-color);
+  --form-dialog-header-text-color: var(--theme-white-color);
+  --form-dialog-header-border-color: var(--form-dialog-border-color);
+  --form-dialog-header-background-color: var(--theme-tertiary-color);
 
-  --button-text-color: white;
-  --button-background-color: var(--theme-primary-color);
-  --button-secondary-background-color: #2a629a;
-
-  --menu-background-color: #ebeef1;
-  --menu-border-color: var(--common-border-color);
-
-  --menu-item-text-color: var(--theme-primary-color);
-  --menu-item-text-active-color: var(--theme-text-color);
-  --menu-item-background-hover-color: var(--theme-background-hover-color);
-
-  --separator-border-color: var(--theme-border-color);
-
-  --sidebar-background-color: white;
+  --form-dialog-icon-text-color: var(--theme-white-color);
+  --form-dialog-icon-text-hover-color: var(--theme-white-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --menu-background-color: var(--theme-background-color);
+  --menu-border-color: var(--theme-border-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --menu-item-text-color: var(--theme-secondary-color);
+  --menu-item-background-hover-color: var(--theme-white-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --sidebar-background-color: var(--theme-white-color);
   --sidebar-border-color: var(--theme-border-color);
 
-  --sidebar-option-text-color: var(--theme-primary-color);
-  --sidebar-option-background-active-color: var(--theme-background-active-color);
-  --sidebar-option-background-hover-color: var(--theme-background-hover-color);
+  --sidebar-option-text-color: var(--theme-secondary-color);
+  --sidebar-option-background-active-color: var(--theme-status-active-color);
+  --sidebar-option-background-hover-color: var(--theme-status-focus-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --table-background-color: transparent;
+  --table-secondary-background-color: transparent;
 
-  --tab-border-color: #d3cdcd;
-  --tab-border-active-color: #3b9797;
-  --tab-background-color: transparent;
-  --tab-background-active-color: #d3cdcd;
-  --tab-background-hover-color: #ced8df;
+  --table-head-text-color: var(--theme-white-color);
+  --table-head-background-color: var(--theme-secondary-color);
 
-  --table-background-color: #dee0e6;
-  --table-head-background-color: var(--theme-background-hover-color);
-  --table-body-background-hover-color: var(--theme-background-hover-color);
-
+  --table-body-background-hover-color: var(--theme-status-hover-color);
+  /* --------------------------------------------------------------------------------------------- */
   --scrollbar-thumb-background-color: #ad9c9c;
   --scrollbar-track-background-color: #5e5454;
+  /* --------------------------------------------------------------------------------------------- */
 }
-
-.dark-mode {
-  --theme-primary-color: #1152d4;
-  --theme-surface-color: #333333;
-  --theme-text-color: #f8f9fa;
-  --theme-background-color: #101622;
-  --theme-background-active-color: #0f2145;
-  --theme-background-hover-color: #232f48;
-  --theme-border-color: #232f48;
-
-  --common-text-color: var(--theme-text-color);
-  --common-background-color: var(--theme-background-active-color);
-  --common-border-color: var(--theme-border-color);
-  --common-focus-color: var(--theme-primary-color);
-
-  --edit-border-color: transparent;
-  --edit-border-color-focus: var(--theme-primary-color);
-  --edit-text-color: var(--theme-text-color);
-  --edit-text-focus-color: var(--theme-text-color);
-  --edit-background-color: var(--theme-background-hover-color);
-  --edit-background-focus-color: var(--edit-background-color);
-
-  --hyperlink-text-color: var(--theme-primary-color);
-  --hyperlink-text-active-color: var(--theme-background-hover-color);
-
-  --button-text-color: var(--theme-text-color);
-  --button-background-color: var(--theme-primary-color);
-  --button-secondary-background-color: #2a629a;
-
-  --menu-background-color: var(--common-background-color);
-  --menu-border-color: var(--common-border-color);
-
-  --menu-item-text-color: var(--theme-text-color);
-  --menu-item-text-active-color: var(--theme-text-color);
-  --menu-item-background-hover-color: var(--theme-background-hover-color);
-
-  --separator-border-color: var(--theme-border-color);
-
-  --sidebar-background-color: var(--theme-background-color);
-  --sidebar-border-color: var(--common-border-color);
-
-  --sidebar-option-text-color: var(--theme-text-color);
-  --sidebar-option-background-active-color: var(--theme-background-active-color);
-  --sidebar-option-background-hover-color: var(--theme-background-hover-color);
-
-  --tab-border-color: #d3cdcd;
-  --tab-border-active-color: #3b9797;
-  --tab-background-color: transparent;
-  --tab-background-active-color: #d3cdcd;
-  --tab-background-hover-color: #ced8df;
-
-  --table-background-color: #09142a;
-  --table-head-background-color: var(--theme-background-hover-color);
-  --table-body-background-hover-color: var(--theme-background-hover-color);
-
-  --scrollbar-thumb-background-color: #ad9c9c;
-  --scrollbar-track-background-color: #5e5454;
-}
-
-.dark-mode {
+/* --------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+[data-theme='dark'] {
   color-scheme: dark;
   background: var(--theme-background-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --theme-primary-color: #12886a;
+  --theme-secondary-color: #11717e;
+  --theme-tertiary-color: #066b4d;
+
+  --theme-white-color: #161717;
+  --theme-black-color: #eeeeee;
+
+  --theme-text-color: #eaeaea;
+  --theme-border-color: #2b2b2b;
+  --theme-background-color: #161717;
+
+  --theme-status-active-color: #81c784;
+  --theme-status-hover-color: #000000;
+  --theme-status-focus-color: #2c7ead70;
+  /* --------------------------------------------------------------------------------------------- */
+  --accordion-border-color: var(--theme-border-color);
+  --accordion-header-text-color: var(--theme-black-color);
+  --accordion-header-background-color: var(--theme-tertiary-color);
+  --accordion-header-border-color: var(--accordion-header-background-color);
+  --accordion-content-background-color: var(--theme-background-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --button-border-color: transparent;
+
+  --filled-button-text-color: var(--theme-black-color);
+  --filled-button-background-color: var(--theme-primary-color);
+
+  --secondary-button-text-color: var(--theme-black-color);
+  --secondary-button-background-color: var(--theme-secondary-color);
+
+  --outlined-button-text-color: var(--theme-primary-color);
+  --outlined-button-border-color: var(--outlined-button-text-color);
+  --outlined-button-background-hover-color: var(--theme-status-hover-color);
+
+  --text-button-text-color: var(--theme-secondary-color);
+
+  --icon-button-text-color: var(--theme-black-color);
+  --icon-button-background-color: var(--theme-secondary-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --hyperlink-text-color: var(--theme-secondary-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --separator-border-color: var(--theme-border-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --breadcrumb-route-text-color: var(--theme-secondary-color);
+  --breadcrumb-route-text-hover-color: var(--theme-black-color);
+  --breadcrumb-divider-text-color: var(--breadcrumb-route-text-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --edit-border-color: var(--theme-border-color);
+  --edit-border-color-focus: var(--theme-secondary-color);
+  --edit-text-color: var(--theme-text-color);
+  --edit-text-focus-color: var(--theme-text-color);
+  --edit-background-color: var(--theme-background-color);
+  --edit-background-focus-color: var(--edit-background-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --form-dialog-border-color: var(--theme-border-color);
+  --form-dialog-background-color: var(--theme-status-hover-color);
+
+  --form-dialog-header-text-color: var(--theme-black-color);
+  --form-dialog-header-border-color: var(--form-dialog-border-color);
+  --form-dialog-header-background-color: var(--theme-tertiary-color);
+
+  --form-dialog-icon-text-color: var(--theme-black-color);
+  --form-dialog-icon-text-hover-color: var(--theme-black-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --menu-background-color: var(--theme-background-color);
+  --menu-border-color: var(--theme-border-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --menu-item-text-color: var(--theme-secondary-color);
+  --menu-item-background-hover-color: var(--theme-black-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --sidebar-background-color: var(--theme-white-color);
+  --sidebar-border-color: var(--theme-border-color);
+
+  --sidebar-option-text-color: var(--theme-secondary-color);
+  --sidebar-option-background-active-color: var(--theme-status-active-color);
+  --sidebar-option-background-hover-color: var(--theme-status-focus-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --table-background-color: var(--theme-background-color);
+  --table-secondary-background-color: transparent;
+
+  --table-head-text-color: var(--theme-black-color);
+  --table-head-background-color: var(--theme-secondary-color);
+
+  --table-body-background-hover-color: var(--theme-status-hover-color);
+  /* --------------------------------------------------------------------------------------------- */
+  --scrollbar-thumb-background-color: #ad9c9c;
+  --scrollbar-track-background-color: #5e5454;
+  /* --------------------------------------------------------------------------------------------- */
 }
+/* --------------------------------------------------------------------------------------------- */

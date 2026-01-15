@@ -1,7 +1,7 @@
 import { AllowedComponentProps } from 'vue';
 import { App } from 'vue';
 import { ButtonHTMLAttributes } from 'vue';
-import { Component } from 'vue';
+import { Component as Component_2 } from 'vue';
 import { ComponentCustomProps } from 'vue';
 import { ComponentOptionsBase } from 'vue';
 import { ComponentOptionsMixin } from 'vue';
@@ -20,9 +20,63 @@ import { RouterViewProps } from 'vue-router';
 import { VNode } from 'vue';
 import { VNodeProps } from 'vue';
 
+export declare namespace Component {
+    export {
+        ILabel,
+        IEdit,
+        IComboBox,
+        IHyperlink,
+        IMemo,
+        IMenu,
+        IForm,
+        ILayout,
+        IButton,
+        ISidebar,
+        ISidebarItem,
+        IFormDialog,
+        IAccordion
+    }
+}
+
 export { createRouter }
 
 export { createWebHistory }
+
+declare interface IAccordion {
+    props: {
+        title: string;
+        open?: boolean;
+    };
+    emits: {
+        (event: 'toggle', payload: ToggleEvent): void;
+    };
+    expose: {
+        open: () => void;
+        close: () => void;
+    };
+}
+
+declare interface IButton {
+    props: {
+        type?: ButtonHTMLAttributes['type'];
+        mode?: 'filled' | 'secondary' | 'outlined' | 'text' | 'icon';
+        caption?: string;
+        icon?: Component_2;
+        disabled?: boolean;
+        form?: string;
+    };
+    emits: {
+        (event: 'click', payload: PointerEvent): void;
+    };
+}
+
+declare interface IComboBox {
+    props: {
+        caption?: string;
+        allowNull?: boolean;
+        options: IComboBoxOption[];
+    };
+}
 
 declare interface IComboBoxOption {
     label: string;
@@ -84,16 +138,106 @@ export declare const Icon: {
     List: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
 };
 
+declare interface IEdit {
+    props: {
+        type: InputTypeHTMLAttribute;
+        caption?: string;
+        icon?: Component_2;
+        placeholder?: string;
+        required?: boolean;
+        disabled?: boolean;
+        min?: number;
+        max?: number;
+        minlength?: number;
+        maxlength?: number;
+        pattern?: string;
+    };
+    emits: {
+        (event: 'input', payload: InputEvent): void;
+        (event: 'beforeinput', payload: InputEvent): void;
+        (event: 'blur', payload: FocusEvent): void;
+        (event: 'change', payload: Event): void;
+        (event: 'focus', payload: FocusEvent): void;
+        (event: 'click', payload: PointerEvent): void;
+        (event: 'paste', payload: ClipboardEvent): void;
+        (event: 'keypress', payload: KeyboardEvent): void;
+    };
+}
+
+declare interface IForm {
+    emits: {
+        (event: 'submit', payload: SubmitEvent): void;
+        (event: 'reset', payload: Event): void;
+    };
+}
+
+declare interface IFormDialog {
+    props: {
+        title: string;
+        description?: string;
+    };
+    emits: {
+        (event: 'submit', payload: SubmitEvent): void;
+        (event: 'cancel'): void;
+        (event: 'reset', payload: Event): void;
+    };
+}
+
+declare interface IHyperlink {
+    props: {
+        route?: string;
+        params?: RouteParamsRawGeneric;
+    };
+    emits: {
+        (event: 'click', payload: PointerEvent): void;
+    };
+}
+
 declare interface IItem extends IOption {
     submenu?: IItem[];
     useSeparator?: boolean;
     onClick?: (event: PointerEvent) => void;
 }
 
+declare interface ILabel {
+    props: {
+        caption?: string;
+    };
+}
+
+declare interface ILayout {
+    props: {
+        showHeader?: boolean;
+        showFooter?: boolean;
+        showPrimarySidebar?: boolean;
+        showSecondarySidebar?: boolean;
+    };
+}
+
+declare interface IMemo {
+    props: {
+        caption?: string;
+        maxLength?: number;
+    };
+}
+
+declare interface IMenu {
+    props: {
+        items: IItem[];
+        orientation?: 'vertical' | 'horizontal';
+    };
+}
+
 declare interface IOption {
     caption?: string;
-    icon?: Component;
+    icon?: Component_2;
     route?: string;
+}
+
+declare interface ISidebar {
+    props: {
+        items: ISidebarItem['props'][];
+    };
 }
 
 declare interface ISidebarItem {
@@ -105,12 +249,42 @@ declare interface ISidebarItem {
 
 declare interface ITab {
     title: string;
-    content: Component;
+    content: Component_2;
 }
 
 export declare const Kuxtal: {
     install(application: App): void;
 };
+
+export declare namespace Schema {
+    export {
+        IOption,
+        ITab,
+        IComboBoxOption,
+        IItem
+    }
+}
+
+declare function setTheme(theme: theme_type): void;
+
+export declare namespace Theme {
+    export {
+        setTheme,
+        toggleDarkMode,
+        Type
+    }
+}
+
+declare type theme_type = 'dark' | 'light' | 'aqua' | 'solaris';
+
+declare function toggleDarkMode(): void;
+
+declare enum Type {
+    DARK = "dark",
+    LIGHT = "light",
+    AQUA = "aqua",
+    SOLARIS = "solaris"
+}
 
 export declare const UI: {
     Page: new () => {
@@ -159,11 +333,58 @@ export declare const UI: {
             default?(_: {}): any;
         };
     });
+    Accordion: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
+        title: string;
+        open?: boolean;
+        }> & Readonly<{
+        onToggle?: ((payload: ToggleEvent) => any) | undefined;
+        }>, {
+        open: () => void;
+        close: () => void;
+        }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
+        toggle: (payload: ToggleEvent) => any;
+        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {
+        accordion: HTMLDetailsElement;
+        }, HTMLDetailsElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<{
+        title: string;
+        open?: boolean;
+        }> & Readonly<{
+        onToggle?: ((payload: ToggleEvent) => any) | undefined;
+        }>, {
+        open: () => void;
+        close: () => void;
+        }, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<{
+    title: string;
+    open?: boolean;
+    }> & Readonly<{
+    onToggle?: ((payload: ToggleEvent) => any) | undefined;
+    }>, {
+    open: () => void;
+    close: () => void;
+    }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
+    toggle: (payload: ToggleEvent) => any;
+    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+        };
+    });
     Button: DefineComponent<    {
     type?: ButtonHTMLAttributes["type"];
     mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
     caption?: string;
-    icon?: Component;
+    icon?: Component_2;
     disabled?: boolean;
     form?: string;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
@@ -172,7 +393,7 @@ export declare const UI: {
     type?: ButtonHTMLAttributes["type"];
     mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
     caption?: string;
-    icon?: Component;
+    icon?: Component_2;
     disabled?: boolean;
     form?: string;
     }> & Readonly<{
@@ -310,7 +531,7 @@ export declare const UI: {
     current: string;
     routes: {
     caption: string;
-    icon?: Component;
+    icon?: Component_2;
     route: string;
     }[];
     divider?: string;
@@ -318,7 +539,7 @@ export declare const UI: {
     current: string;
     routes: {
     caption: string;
-    icon?: Component;
+    icon?: Component_2;
     route: string;
     }[];
     divider?: string;
@@ -345,7 +566,7 @@ export declare const UI: {
     } & {
     type: InputTypeHTMLAttribute;
     caption?: string;
-    icon?: Component;
+    icon?: Component_2;
     placeholder?: string;
     required?: boolean;
     disabled?: boolean;
@@ -370,7 +591,7 @@ export declare const UI: {
     } & {
     type: InputTypeHTMLAttribute;
     caption?: string;
-    icon?: Component;
+    icon?: Component_2;
     placeholder?: string;
     required?: boolean;
     disabled?: boolean;
@@ -458,11 +679,6 @@ export declare const UI: {
     caption?: string;
     options: IOption[];
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLIElement>;
-    TabPanel: DefineComponent<    {
-    tabs: ITab[];
-    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
-    tabs: ITab[];
-    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
     Menu: DefineComponent<    {
     items: IItem[];
     orientation?: "vertical" | "horizontal";

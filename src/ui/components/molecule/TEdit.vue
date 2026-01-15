@@ -54,6 +54,51 @@
     text-align: inherit;
   }
 
+  .edit:has(.edit__field[type='file']) .edit__icon {
+    display: none;
+  }
+
+  .edit:has(.edit__field[type='range']) .edit__container {
+    border-color: transparent;
+  }
+
+  .edit:has(.edit__field[type='file']) .edit__container {
+    padding: 0rem;
+    border-color: transparent;
+  }
+
+  .edit:has(.edit__field[type='file']) .edit__field::file-selector-button {
+    background: var(--filled-button-background-color);
+    color: white;
+    border: none;
+    padding-block: 0.25rem;
+    padding-inline: 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+
+  .edit:has(.edit__field[type='color']) {
+    max-width: 2.5rem;
+  }
+
+  .edit:has(.edit__field[type='color']) .edit__icon {
+    display: none;
+  }
+
+  .edit:has(.edit__field[type='color']) .edit__field {
+    border-radius: 1rem;
+  }
+
+  .edit:has(.edit__field[type='submit']),
+  .edit:has(.edit__field[type='reset']),
+  .edit:has(.edit__field[type='image']),
+  .edit:has(.edit__field[type='button']),
+  .edit:has(.edit__field[type='radio']),
+  .edit:has(.edit__field[type='checkbox']) {
+    display: none;
+  }
+
   .edit__field::placeholder {
     font-size: 0.85rem;
   }
@@ -61,14 +106,14 @@
   .edit__container {
     display: flex;
     align-items: center;
-    border-bottom: 0.125rem solid var(--edit-border-color);
     border-radius: 0.125rem;
     padding-block: 0.25rem;
     padding-inline: 0.5rem;
     gap: 0.5rem;
+    text-align: inherit;
     color: var(--edit-text-color);
     background: var(--edit-background-color);
-    text-align: inherit;
+    border-bottom: 0.125rem solid var(--edit-border-color);
   }
 
   .edit__container:focus-within {
@@ -76,9 +121,4 @@
     background: var(--edit-background-focus-color);
     border-color: var(--edit-border-color-focus);
   }
-
-  /* .edit__container:has(:invalid:not(:placeholder-shown)) {
-    background: rgb(185, 108, 108);
-    border-color: darkred;
-  } */
 </style>

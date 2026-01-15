@@ -18,6 +18,7 @@
     gap: 1rem;
     height: 100%;
     min-width: fit-content;
+    max-width: fit-content;
     padding: 1rem;
     background: var(--sidebar-background-color);
     border-right: 0.0125rem solid var(--sidebar-border-color);
