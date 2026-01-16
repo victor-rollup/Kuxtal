@@ -30,7 +30,7 @@
 <style scoped>
   .combo-box {
     background: var(--edit-background-color);
-    border: 0.125rem solid var(--edit-border-color);
+    border: 0.125rem solid transparent;
     padding: 0.25rem;
     border-radius: 0.125rem;
     outline: none;

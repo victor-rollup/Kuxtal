@@ -3,6 +3,7 @@ import './ui/stylesheets/index.css';
 // ------------------------------------------------------------------------------------------------
 import type { App } from 'vue';
 import { RouterView as Page } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 // ------------------------------------------------------------------------------------------------
 import Button from './ui/components/atom/TButton.vue';
 import Form from './ui/components/atom/TForm.vue';
@@ -24,12 +25,15 @@ import Menu from './ui/components/organism/TMenu.vue';
 import Sidebar from './ui/components/organism/TSidebar.vue';
 import Icon from './ui/components/atom/icon';
 // ------------------------------------------------------------------------------------------------
-export * as Theme from './ui/theme'
+export * as Theme from './ui/theme';
 export * as Schema from './types/schema.types';
 export * as Component from './types/component.types';
 // ------------------------------------------------------------------------------------------------
 export { Icon };
-export { createRouter, createWebHistory } from 'vue-router';
+export const Router = {
+  create: createRouter,
+  createWebHistory,
+};
 // ------------------------------------------------------------------------------------------------
 export const UI = {
   Page,

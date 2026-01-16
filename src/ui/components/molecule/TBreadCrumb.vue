@@ -38,6 +38,20 @@
 </template>
 
 <style scoped>
+  :global(:root) {
+    --breadcrumb-current-text-color: #000000;
+    --breadcrumb-route-text-color: #1878b8;
+    --breadcrumb-route-text-hover-color: #07193d;
+    --breadcrumb-divider-text-color: var(--breadcrumb-route-text-color);
+  }
+
+  html[data-theme='dark'] .breadcrumb {
+    --breadcrumb-current-text-color: #ffffff;
+    --breadcrumb-route-text-color: #92a4c9;
+    --breadcrumb-route-text-hover-color: #ffffff;
+    --breadcrumb-divider-text-color: #92a4c9;
+  }
+
   .breadcrumb {
     max-width: fit-content;
   }
@@ -54,7 +68,7 @@
   }
 
   .breadcrumb__current {
-    color: var(--theme-text-color);
+    color: var(--breadcrumb-current-text-color);
     opacity: 0.65;
   }
 

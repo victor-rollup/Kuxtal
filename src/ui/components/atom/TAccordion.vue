@@ -43,19 +43,21 @@
 
 <style scoped>
   :global(:root) {
-    --accordion-border-color: transparent;
-    --accordion-header-text-color: var(--theme-white-color);
-    --accordion-header-background-color: var(--theme-tertiary-color);
-    --accordion-header-border-color: var(--accordion-header-background-color);
-    --accordion-content-background-color: var(--theme-background-color);
+    --accordion-border-color: skyblue;
+    --accordion-header-text-color: #000000;
+    --accordion-header-background-color: #ffffff;
+    --accordion-header-background-hover-color: #b5c7ce;
+    --accordion-header-border-color: transparent;
+    --accordion-content-background-color: #c8f0ff;
   }
 
   html[data-theme='dark'] .accordion {
-    --accordion-border-color: transparent;
-    --accordion-header-text-color: var(--theme-white-color);
-    --accordion-header-background-color: #229292;
-    --accordion-header-border-color: var(--accordion-header-background-color);
-    --accordion-content-background-color: #2e3131;
+    --accordion-border-color: #232f48;
+    --accordion-header-text-color: #92a4c9;
+    --accordion-header-background-color: #161e2d;
+    --accordion-header-background-hover-color: #111c34;
+    --accordion-header-border-color: #232f48;
+    --accordion-content-background-color: transparent;
   }
 
   .accordion {
@@ -73,6 +75,10 @@
     border-top-right-radius: 0.5rem;
     cursor: pointer;
     border: 0.0125rem solid var(--accordion-header-border-color);
+  }
+
+  .accordion__header:hover {
+    background: var(--accordion-header-background-hover-color);
   }
 
   .accordion:not([open]) .accordion__header {
