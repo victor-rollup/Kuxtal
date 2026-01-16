@@ -57,6 +57,22 @@
 </template>
 
 <style scoped>
+  :global(:root) {
+    --menu-background-color: white;
+    --menu-border-color: #afa1a1;
+
+    --menu-item-text-color: blue;
+    --menu-item-background-hover-color: #e9eaf5;
+  }
+
+  html[data-theme='dark'] .menu {
+    --menu-background-color: #161e2d;
+    --menu-border-color: #232f48;
+
+    --menu-item-text-color: #92a4c9;
+    --menu-item-background-hover-color: #232f48;
+  }
+
   .menu {
     width: 100%;
     border: 0.0125rem solid var(--menu-border-color);

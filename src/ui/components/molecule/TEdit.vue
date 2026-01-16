@@ -36,7 +36,30 @@
   </TLabel>
 </template>
 
-<style scoped>
+<style>
+  :root {
+    --edit-border-color: #b9b5b5;
+    --edit-border-color-focus: #03a9f4;
+    --edit-text-color: #000000;
+    --edit-text-focus-color: #000000;
+    --edit-background-color: #a1e1f1;
+    --edit-background-focus-color: var(--edit-background-color);
+    --edit-file-background-color: #03a9f4;
+  }
+
+  html[data-theme='dark'] .edit,
+  html[data-theme='dark'] .memo,
+  html[data-theme='dark'] .combo-box
+   {
+    --edit-border-color: #232f48;
+    --edit-border-color-focus: #92a4c9;
+    --edit-text-color: #ffffff;
+    --edit-text-focus-color: #ffffff;
+    --edit-background-color: #232f48;
+    --edit-background-focus-color: var(--edit-background-color);
+    --edit-file-background-color: #92a4c9;
+  }
+
   .edit__icon {
     min-height: 1rem;
     min-width: 1rem;
@@ -68,7 +91,7 @@
   }
 
   .edit:has(.edit__field[type='file']) .edit__field::file-selector-button {
-    background: var(--filled-button-background-color);
+    background: var(--edit-file-background-color);
     color: white;
     border: none;
     padding-block: 0.25rem;

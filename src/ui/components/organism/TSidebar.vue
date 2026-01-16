@@ -12,16 +12,25 @@
 </template>
 
 <style scoped>
+  :global(:root) {
+    --sidebar-background-color: #ffffff;
+    --sidebar-border-color: #2b2b2b;
+  }
+
+  html[data-theme='dark'] .sidebar {
+    --sidebar-background-color: #101622;
+    --sidebar-border-color: #232f48;
+  }
+
   .sidebar {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 100%;
+    flex: 1 1 auto;
     min-width: fit-content;
-    max-width: fit-content;
+    /* max-width: fit-content; */
     padding: 1rem;
     background: var(--sidebar-background-color);
     border-right: 0.0125rem solid var(--sidebar-border-color);
-    transition: width 3s ease-in-out;
   }
 </style>

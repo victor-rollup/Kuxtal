@@ -34,7 +34,7 @@
   }
 
   .memo__field {
-    border: 0.125rem solid var(--edit-border-color);
+    border: 0.125rem solid transparent;
     background: var(--edit-background-color);
     border-radius: 0.125rem;
     padding: 0.5rem;

@@ -16,7 +16,10 @@
     <header class="form-dialog__header">
       <div class="form-dialog__container">
         <h4 class="form-dialog__title">{{ props.title }}</h4>
-        <p class="form-dialog__description | text-truncate-multiline" v-if="props.description">
+        <p
+          class="form-dialog__description | text-truncate-multiline"
+          v-if="props.description"
+        >
           {{ props.description }}
         </p>
       </div>
@@ -29,6 +32,30 @@
 </template>
 
 <style scoped>
+  :global(:root) {
+    --form-dialog-border-color: skyblue;
+    --form-dialog-background-color: transparent;
+
+    --form-dialog-header-text-color: #000000;
+    --form-dialog-header-border-color: skyblue;
+    --form-dialog-header-background-color: transparent;
+
+    --form-dialog-icon-text-color: #999999;
+    --form-dialog-icon-text-hover-color: #000000;
+  }
+
+  html[data-theme='dark'] .form-dialog {
+    --form-dialog-border-color: #232f48;
+    --form-dialog-background-color: #161e2d;
+
+    --form-dialog-header-text-color: #92a4c9;
+    --form-dialog-header-border-color: #232f48;
+    --form-dialog-header-background-color: #161e2d;
+
+    --form-dialog-icon-text-color: #92a4c9;
+    --form-dialog-icon-text-hover-color: #ffffff;
+  }
+
   .form-dialog {
     background: var(--form-dialog-background-color);
     border: 0.0125rem solid var(--form-dialog-border-color);
@@ -58,10 +85,10 @@
   }
 
   .form-dialog__icon {
-    color: var(--form-dialog-icon-text-color)
+    color: var(--form-dialog-icon-text-color);
   }
 
   .form-dialog__icon:hover {
-    color: var(--form-dialog-icon-text-hover-color)
+    color: var(--form-dialog-icon-text-hover-color);
   }
 </style>

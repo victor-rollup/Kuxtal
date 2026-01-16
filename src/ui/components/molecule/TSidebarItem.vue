@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import type { ISidebarItem } from '@/types/component.types';
   import THyperlink from '../atom/THyperlink.vue';
-  
+
   const props = defineProps<ISidebarItem['props']>();
 </script>
 
@@ -24,11 +24,27 @@
 </template>
 
 <style scoped>
+  :global(:root) {
+    --sidebar-option-text-color: #475362;
+    --sidebar-option-text-color-active: #ffffff;
+    --sidebar-option-caption-color: #8e969d;
+    --sidebar-option-background-hover-color: #e9eaf5;
+    --sidebar-option-background-active-color: #103aae;
+  }
+
+  html[data-theme='dark'] .sidebar-item {
+    --sidebar-option-text-color: #94a3b8;
+    --sidebar-option-text-color-active: #f8f9fa;
+    --sidebar-option-caption-color: #8e969d;
+    --sidebar-option-background-hover-color: #232f48;
+    --sidebar-option-background-active-color: #0f2145;
+  }
+
   .sidebar-item {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
-    max-width: fit-content;
+    gap: 0.5rem;
+    /* max-width: fit-content; */
   }
 
   .sidebar-item__option {
@@ -37,11 +53,19 @@
     gap: 0.5rem;
     padding: 0.5rem;
     min-width: 12rem;
+    width: 100%;
     border-radius: 0.5rem;
     cursor: pointer;
+    font-weight: 500;
     color: var(--sidebar-option-text-color);
     text-decoration: none;
     border: 0.0125rem solid transparent;
+  }
+
+  .sidebar-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .sidebar-item__option:hover,
@@ -50,11 +74,12 @@
   }
 
   .sidebar-item__option.router-link-exact-active {
+    color: var(--sidebar-option-text-color-active);
     background: var(--sidebar-option-background-active-color);
   }
 
   .sidebar-item__caption {
     text-transform: uppercase;
-    opacity: 0.5;
+    color: var(--sidebar-option-caption-color);
   }
 </style>

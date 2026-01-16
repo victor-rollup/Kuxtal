@@ -10,16 +10,6 @@
     sans-serif;
 }
 
-a {
-  width: fit-content;
-  cursor: pointer;
-  color: var(--hyperlink-text-color);
-}
-
-a:active {
-  opacity: 0.5;
-}
-
 select,
 ::picker(select) {
   appearance: base-select;
@@ -62,48 +52,6 @@ ul,
 ol,
 dl {
   list-style: none;
-}
-
-table {
-  /* background: var(--table-background-color); */
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-}
-
-thead {
-  position: sticky;
-  top: 0;
-  color: var(--table-head-text-color);
-  background: var(--table-head-background-color);
-  font-size: 0.85rem;
-  font-weight: normal;
-}
-
-thead th:first-child {
-  border-top-left-radius: 0.25rem;
-}
-
-thead th:last-child {
-  border-top-right-radius: 0.25rem;
-}
-
-thead th,
-tbody td {
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-}
-
-tbody td {
-  color: var(--theme-text-color);
-}
-
-tbody tr:nth-child(even) {
-  background: var(--table-secondary-background-color);
-}
-
-tbody tr:hover {
-  background: var(--table-body-background-hover-color);
 }
 
 dialog[open] {

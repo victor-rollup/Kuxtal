@@ -68,5 +68,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     min-width: fit-content;
+    display: flex;
+    flex-direction: column;
   }
 </style>

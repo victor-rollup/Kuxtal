@@ -22,6 +22,44 @@
 </template>
 
 <style scoped>
+  :global(:root) {
+    --button-border-color: transparent;
+
+    --filled-button-text-color: #ffffff;
+    --filled-button-background-color: blue;
+
+    --secondary-button-text-color: #ffffff;
+    --secondary-button-background-color: rgb(0, 113, 128);
+
+    --outlined-button-text-color: blue;
+    --outlined-button-border-color: var(--outlined-button-text-color);
+    --outlined-button-background-hover-color: #ffffff;
+
+    --text-button-text-color: var(--theme-secondary-color);
+
+    --icon-button-text-color: #ffffff;
+    --icon-button-background-color: var(--theme-secondary-color);
+  }
+
+  html[data-theme='dark'] .button {
+    --button-border-color: transparent;
+
+    --filled-button-text-color: #ffffffff;
+    --filled-button-background-color: #92a4c9;
+
+    --secondary-button-text-color: #92a4c9;
+    --secondary-button-background-color: #0f2145;
+
+    --outlined-button-text-color: #92a4c9;
+    --outlined-button-border-color: #92a4c9;
+    --outlined-button-background-hover-color: #232f48;
+
+    --text-button-text-color: #92a4c9;
+
+    --icon-button-text-color: #92a4c9;
+    --icon-button-background-color: #0f2145;
+  }
+
   .button {
     display: flex;
     align-items: center;
