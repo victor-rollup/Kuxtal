@@ -1,38 +1,50 @@
 :root,
 [data-theme='light'] {
+  --theme-primary-color-lighter: hsl(236, 50%, 90%);
   --theme-primary-color-light: hsl(236, 50%, 70%);
   --theme-primary-color-normal: hsl(236, 50%, 50%);
   --theme-primary-color-dark: hsl(236, 50%, 30%);
+  --theme-primary-color-darker: hsl(236, 50%, 10%);
 
-  --theme-secondary-color-light: hsl(155, 25%, 70%);
-  --theme-secondary-color-normal: hsl(155, 25%, 50%);
-  --theme-secondary-color-dark: hsl(155, 25%, 30%);
+  --theme-secondary-color-lighter: hsl(187, 25%, 90%);
+  --theme-secondary-color-light: hsl(187, 25%, 70%);
+  --theme-secondary-color-normal: hsl(187, 25%, 50%);
+  --theme-secondary-color-dark: hsl(187, 25%, 30%);
+  --theme-secondary-color-darker: hsl(187, 25%, 10%);
 
+  --theme-tertiary-color-lighter: hsl(34, 61%, 90%);
   --theme-tertiary-color-light: hsl(34, 61%, 70%);
   --theme-tertiary-color-normal: hsl(34, 61%, 52%);
   --theme-tertiary-color-dark: hsl(34, 61%, 30%);
+  --theme-tertiary-color-darker: hsl(34, 61%, 10%);
 
-  --theme-neutral-color-white: hsl(0, 0%, 100%);
-  --theme-neutral-color-lighter: hsl(0, 0%, 90%);
-  --theme-neutral-color-light: hsl(0, 0%, 70%);
-  --theme-neutral-color-normal: hsl(0, 0%, 50%);
-  --theme-neutral-color-dark: hsl(0, 0%, 30%);
-  --theme-neutral-color-darker: hsl(0, 0%, 10%);
-  --theme-neutral-color-black: hsl(0, 0%, 0%);
+  --theme-neutral-color-white: hsl(0, 20%, 100%);
+  --theme-neutral-color-lighter: hsl(0, 20%, 90%);
+  --theme-neutral-color-light: hsl(0, 20%, 70%);
+  --theme-neutral-color-normal: hsl(0, 20%, 90%);
+  --theme-neutral-color-dark: hsl(0, 20%, 30%);
+  --theme-neutral-color-darker: hsl(0, 20%, 10%);
+  --theme-neutral-color-black: hsl(0, 20%, 0%);
 }
 
 [data-theme='dark'] {
-  --theme-primary-color-light: hsl(194, 50%, 70%);
-  --theme-primary-color-normal: hsl(194, 50%, 50%);
-  --theme-primary-color-dark: hsl(194, 50%, 30%);
+  --theme-primary-color-lighter: hsl(200, 50%, 90%);
+  --theme-primary-color-light: hsl(200, 50%, 70%);
+  --theme-primary-color-normal: hsl(200, 50%, 50%);
+  --theme-primary-color-dark: hsl(200, 50%, 30%);
+  --theme-primary-color-darker: hsl(200, 50%, 10%);
 
-  --theme-secondary-color-light: hsl(155, 10%, 70%);
-  --theme-secondary-color-normal: hsl(155, 10%, 50%);
-  --theme-secondary-color-dark: hsl(155, 10%, 30%);
+  --theme-secondary-color-lighter: hsl(200, 10%, 90%);
+  --theme-secondary-color-light: hsl(200, 10%, 70%);
+  --theme-secondary-color-normal: hsl(200, 10%, 50%);
+  --theme-secondary-color-dark: hsl(200, 10%, 30%);
+  --theme-secondary-color-darker: hsl(200, 10%, 10%);
 
+  --theme-tertiary-color-lighter: hsl(34, 61%, 90%);
   --theme-tertiary-color-light: hsl(34, 61%, 70%);
   --theme-tertiary-color-normal: hsl(34, 61%, 52%);
   --theme-tertiary-color-dark: hsl(34, 61%, 30%);
+  --theme-tertiary-color-darker: hsl(34, 61%, 10%);
 
   --theme-neutral-color-white: hsl(0, 0%, 0%);
   --theme-neutral-color-lighter: hsl(0, 0%, 10%);

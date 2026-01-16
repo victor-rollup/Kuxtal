@@ -6,6 +6,7 @@
   --accordion-border-color: var(--theme-neutral-color-normal);
   --accordion-header-text-color: var(--theme-neutral-color-dark);
   --accordion-header-background-color: var(--theme-neutral-color-white);
+  --accordion-header-background-hover-color: var(--theme-neutral-color-lighter);
   --accordion-content-background-color: var(--theme-neutral-color-white);
 
   --filled-button-text-color: var(--theme-neutral-color-lighter);
@@ -29,8 +30,8 @@
   --edit-file-background-color: var(--filled-button-background-color);
 
   --sidebar-item-text-color: var(--theme-neutral-color-dark);
-  --sidebar-item-text-hover-color: var(--theme-neutral-color-lighter);
-  --sidebar-item-background-hover-color: var(--theme-primary-color-light);
+  --sidebar-item-text-hover-color: var(--theme-neutral-color-dark);
+  --sidebar-item-background-hover-color: var(--theme-neutral-color-lighter);
   --sidebar-item-text-active-color: var(--theme-neutral-color-lighter);
   --sidebar-item-background-active-color: var(--theme-primary-color-normal);
   --sidebar-item-caption-text-color: var(--theme-neutral-color-light);
@@ -52,8 +53,8 @@
   --form-dialog-header-background-color: var(--theme-neutral-color-white);
 
   --table-head-text-color: var(--theme-primary-color-dark);
-  --table-head-background-color: var(--theme-neutral-color-light);
-  --table-body-row-background-hover-color: var(--theme-neutral-color-lighter);
+  --table-head-background-color: var(--theme-neutral-color-lighter);
+  --table-body-row-background-hover-color: var(--theme-primary-color-lighter);
 }
 /* --------------------------------------------------------------------------------------------- */
 [data-theme='dark'] {
@@ -62,6 +63,7 @@
   --accordion-border-color: var(--theme-neutral-color-normal);
   --accordion-header-text-color: var(--theme-neutral-color-dark);
   --accordion-header-background-color: var(--theme-neutral-color-white);
+  --accordion-header-background-hover-color: var(--theme-neutral-color-lighter);
   --accordion-content-background-color: var(--theme-neutral-color-white);
 
   --filled-button-text-color: var(--theme-neutral-color-darker);
@@ -83,10 +85,10 @@
   --edit-file-background-color: var(--filled-button-background-color);
 
   --sidebar-item-text-color: var(--theme-neutral-color-dark);
-  --sidebar-item-text-hover-color: var(--theme-neutral-color-lighter);
-  --sidebar-item-background-hover-color: var(--theme-primary-color-light);
-  --sidebar-item-text-active-color: var(--theme-neutral-color-lighter);
-  --sidebar-item-background-active-color: var(--theme-primary-color-light);
+  --sidebar-item-text-hover-color: var(--theme-neutral-color-dark);
+  --sidebar-item-background-hover-color: var(--theme-neutral-color-lighter);
+  --sidebar-item-text-active-color: var(--theme-neutral-color-darker);
+  --sidebar-item-background-active-color: var(--theme-primary-color-dark);
   --sidebar-item-caption-text-color: var(--theme-neutral-color-light);
 
   --scrollbar-thumb-background-color: var(--theme-neutral-color-light);
@@ -103,7 +105,7 @@
   --form-dialog-header-background-color: var(--theme-neutral-color-white);
 
   --table-head-text-color: var(--theme-primary-color-light);
-  --table-head-background-color: var(--theme-neutral-color-light);
-  --table-body-row-background-hover-color: var(--theme-neutral-color-lighter);
+  --table-head-background-color: var(--theme-neutral-color-lighter);
+  --table-body-row-background-hover-color: var(--theme-primary-color-darker);
 }
 /* --------------------------------------------------------------------------------------------- */

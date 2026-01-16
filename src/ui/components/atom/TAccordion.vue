@@ -68,7 +68,7 @@
   }
 
   .accordion__header:hover {
-    filter: brightness(115%);
+    background: var(--accordion-header-background-hover-color);
   }
 
   .accordion__chevron {
