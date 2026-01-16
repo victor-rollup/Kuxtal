@@ -38,10 +38,6 @@ export declare namespace Component {
     }
 }
 
-export { createRouter }
-
-export { createWebHistory }
-
 declare interface IAccordion {
     props: {
         title: string;
@@ -254,6 +250,11 @@ declare interface ITab {
 
 export declare const Kuxtal: {
     install(application: App): void;
+};
+
+export declare const Router: {
+    create: typeof createRouter;
+    createWebHistory: typeof createWebHistory;
 };
 
 export declare namespace Schema {

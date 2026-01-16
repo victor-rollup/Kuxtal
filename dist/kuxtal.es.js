@@ -1,4 +1,4 @@
-import { watch as $t, defineComponent as H, reactive as rn, inject as be, computed as Z, h as Ct, unref as le, provide as He, ref as Nt, shallowRef as sn, getCurrentInstance as Rt, watchEffect as an, shallowReactive as ln, nextTick as cn, createElementBlock as _, openBlock as f, createBlock as W, createCommentVNode as K, resolveDynamicComponent as ye, toDisplayString as Q, withModifiers as un, renderSlot as U, withCtx as se, createElementVNode as l, createVNode as ke, Fragment as Ee, renderList as Me, mergeModels as Ie, useModel as ot, withDirectives as rt, vModelSelect as dn, vModelDynamic as hn, vModelText as pn, onMounted as fn, resolveComponent as mn, mergeProps as _n, createStaticVNode as V } from "vue";
+import { watch as $t, defineComponent as H, shallowRef as rn, reactive as sn, inject as be, computed as Z, h as Ct, unref as le, provide as He, ref as Nt, shallowReactive as an, getCurrentInstance as Rt, watchEffect as ln, nextTick as cn, createElementBlock as _, openBlock as f, createBlock as W, createCommentVNode as K, resolveDynamicComponent as ye, toDisplayString as Q, withModifiers as un, renderSlot as U, withCtx as se, createElementVNode as l, createVNode as ke, Fragment as Ee, renderList as Me, mergeModels as Ie, useModel as ot, withDirectives as rt, vModelSelect as dn, vModelDynamic as hn, vModelText as pn, onMounted as fn, resolveComponent as mn, mergeProps as _n, createStaticVNode as V } from "vue";
 function vn() {
   return Tt().__VUE_DEVTOOLS_GLOBAL_HOOK__;
 }
@@ -809,7 +809,7 @@ You can find more information at https://router.vuejs.org/guide/migration/#Usage
     replace: i
   };
 }
-function sc(e) {
+function bo(e) {
   e = Gn(e);
   const t = wo(e), n = go(e, t.state, t.location, t.replace);
   function o(s, i = !0) {
@@ -835,13 +835,13 @@ let ce = /* @__PURE__ */ (function(e) {
 var L = /* @__PURE__ */ (function(e) {
   return e[e.Static = 0] = "Static", e[e.Param = 1] = "Param", e[e.ParamRegExp = 2] = "ParamRegExp", e[e.ParamRegExpEnd = 3] = "ParamRegExpEnd", e[e.EscapeNext = 4] = "EscapeNext", e;
 })(L || {});
-const bo = {
+const ko = {
   type: ce.Static,
   value: ""
-}, ko = /[a-zA-Z0-9_]/;
-function yo(e) {
+}, yo = /[a-zA-Z0-9_]/;
+function Eo(e) {
   if (!e) return [[]];
-  if (e === "/") return [[bo]];
+  if (e === "/") return [[ko]];
   if (!e.startsWith("/")) throw new Error(process.env.NODE_ENV !== "production" ? `Route paths should start with a "/": "${e}" should be "/${e}".` : `Invalid path "${e}"`);
   function t(m) {
     throw new Error(`ERR (${n})/"${v}": ${m}`);
@@ -881,7 +881,7 @@ function yo(e) {
         u(), n = o;
         break;
       case L.Param:
-        p === "(" ? n = L.ParamRegExp : ko.test(p) ? u() : (a(), n = L.Static, p !== "*" && p !== "?" && p !== "+" && h--);
+        p === "(" ? n = L.ParamRegExp : yo.test(p) ? u() : (a(), n = L.Static, p !== "*" && p !== "?" && p !== "+" && h--);
         break;
       case L.ParamRegExp:
         p === ")" ? d[d.length - 1] == "\\" ? d = d.slice(0, -1) + p : n = L.ParamRegExpEnd : d += p;
@@ -896,7 +896,7 @@ function yo(e) {
   }
   return n === L.ParamRegExp && t(`Unfinished custom RegExp for param "${v}"`), a(), i(), r;
 }
-const vt = "[^/]+?", Eo = {
+const vt = "[^/]+?", Mo = {
   sensitive: !1,
   strict: !1,
   start: !0,
@@ -905,9 +905,9 @@ const vt = "[^/]+?", Eo = {
 var q = /* @__PURE__ */ (function(e) {
   return e[e._multiplier = 10] = "_multiplier", e[e.Root = 90] = "Root", e[e.Segment = 40] = "Segment", e[e.SubSegment = 30] = "SubSegment", e[e.Static = 40] = "Static", e[e.Dynamic = 20] = "Dynamic", e[e.BonusCustomRegExp = 10] = "BonusCustomRegExp", e[e.BonusWildcard = -50] = "BonusWildcard", e[e.BonusRepeatable = -20] = "BonusRepeatable", e[e.BonusOptional = -8] = "BonusOptional", e[e.BonusStrict = 0.7000000000000001] = "BonusStrict", e[e.BonusCaseSensitive = 0.25] = "BonusCaseSensitive", e;
 })(q || {});
-const Mo = /[.+*?^${}()[\]/\\]/g;
-function xo(e, t) {
-  const n = A({}, Eo, t), o = [];
+const xo = /[.+*?^${}()[\]/\\]/g;
+function $o(e, t) {
+  const n = A({}, Mo, t), o = [];
   let r = n.start ? "^" : "";
   const s = [];
   for (const v of e) {
@@ -917,7 +917,7 @@ function xo(e, t) {
       const u = v[a];
       let m = q.Segment + (n.sensitive ? q.BonusCaseSensitive : 0);
       if (u.type === ce.Static)
-        a || (r += "/"), r += u.value.replace(Mo, "\\$&"), m += q.Static;
+        a || (r += "/"), r += u.value.replace(xo, "\\$&"), m += q.Static;
       else if (u.type === ce.Param) {
         const { value: M, repeatable: E, optional: T, regexp: S } = u;
         s.push({
@@ -981,7 +981,7 @@ function xo(e, t) {
     stringify: p
   };
 }
-function $o(e, t) {
+function Co(e, t) {
   let n = 0;
   for (; n < e.length && n < t.length; ) {
     const o = t[n] - e[n];
@@ -994,7 +994,7 @@ function Wt(e, t) {
   let n = 0;
   const o = e.score, r = t.score;
   for (; n < o.length && n < r.length; ) {
-    const s = $o(o[n], r[n]);
+    const s = Co(o[n], r[n]);
     if (s) return s;
     n++;
   }
@@ -1008,13 +1008,13 @@ function gt(e) {
   const t = e[e.length - 1];
   return e.length > 0 && t[t.length - 1] < 0;
 }
-const Co = {
+const No = {
   strict: !1,
   end: !0,
   sensitive: !1
 };
-function No(e, t, n) {
-  const o = xo(yo(e.path), n);
+function Ro(e, t, n) {
+  const o = $o(Eo(e.path), n);
   if (process.env.NODE_ENV !== "production") {
     const s = /* @__PURE__ */ new Set();
     for (const i of o.keys)
@@ -1028,15 +1028,15 @@ function No(e, t, n) {
   });
   return t && !r.record.aliasOf == !t.record.aliasOf && t.children.push(r), r;
 }
-function Ro(e, t) {
+function To(e, t) {
   const n = [], o = /* @__PURE__ */ new Map();
-  t = ct(Co, t);
+  t = ct(No, t);
   function r(a) {
     return o.get(a);
   }
   function s(a, u, m) {
     const M = !m, E = bt(a);
-    process.env.NODE_ENV !== "production" && So(E, u), E.aliasOf = m && m.record;
+    process.env.NODE_ENV !== "production" && Oo(E, u), E.aliasOf = m && m.record;
     const T = ct(t, a), S = [E];
     if ("alias" in a) {
       const z = typeof a.alias == "string" ? [a.alias] : a.alias;
@@ -1055,7 +1055,7 @@ function Ro(e, t) {
       }
       if (process.env.NODE_ENV !== "production" && z.path === "*") throw new Error(`Catch all routes ("*") must now be defined using a param with a custom regexp.
 See more at https://router.vuejs.org/guide/migration/#Removed-star-or-catch-all-routes.`);
-      if (x = No(z, u, T), process.env.NODE_ENV !== "production" && u && X[0] === "/" && Po(x, u), m ? (m.alias.push(x), process.env.NODE_ENV !== "production" && Ao(m, x)) : (I = I || x, I !== x && I.alias.push(x), M && a.name && !kt(x) && (process.env.NODE_ENV !== "production" && Oo(a, u), i(a.name))), Qt(x) && p(x), E.children) {
+      if (x = Ro(z, u, T), process.env.NODE_ENV !== "production" && u && X[0] === "/" && Do(x, u), m ? (m.alias.push(x), process.env.NODE_ENV !== "production" && So(m, x)) : (I = I || x, I !== x && I.alias.push(x), M && a.name && !kt(x) && (process.env.NODE_ENV !== "production" && Po(a, u), i(a.name))), Qt(x) && p(x), E.children) {
         const J = E.children;
         for (let G = 0; G < J.length; G++) s(J[G], x, m && m.children[G]);
       }
@@ -1078,7 +1078,7 @@ See more at https://router.vuejs.org/guide/migration/#Removed-star-or-catch-all-
     return n;
   }
   function p(a) {
-    const u = Do(a, n);
+    const u = Bo(a, n);
     n.splice(u, 0, a), a.record.name && !kt(a) && o.set(a.record.name, a);
   }
   function v(a, u) {
@@ -1108,7 +1108,7 @@ See more at https://router.vuejs.org/guide/migration/#Removed-star-or-catch-all-
       path: E,
       params: M,
       matched: S,
-      meta: Io(S)
+      meta: Ao(S)
     };
   }
   e.forEach((a) => s(a));
@@ -1137,7 +1137,7 @@ function bt(e) {
     meta: e.meta || {},
     aliasOf: e.aliasOf,
     beforeEnter: e.beforeEnter,
-    props: To(e),
+    props: Io(e),
     children: e.children || [],
     instances: {},
     leaveGuards: /* @__PURE__ */ new Set(),
@@ -1147,7 +1147,7 @@ function bt(e) {
   };
   return Object.defineProperty(t, "mods", { value: {} }), t;
 }
-function To(e) {
+function Io(e) {
   const t = {}, n = e.props || !1;
   if ("component" in e) t.default = n;
   else for (const o in e.components) t[o] = typeof n == "object" ? n[o] : n;
@@ -1160,35 +1160,35 @@ function kt(e) {
   }
   return !1;
 }
-function Io(e) {
+function Ao(e) {
   return e.reduce((t, n) => A(t, n.meta), {});
 }
 function et(e, t) {
   return e.name === t.name && e.optional === t.optional && e.repeatable === t.repeatable;
 }
-function Ao(e, t) {
+function So(e, t) {
   for (const n of e.keys) if (!n.optional && !t.keys.find(et.bind(null, n))) return C(`Alias "${t.record.path}" and the original record: "${e.record.path}" must have the exact same param named "${n.name}"`);
   for (const n of t.keys) if (!n.optional && !e.keys.find(et.bind(null, n))) return C(`Alias "${t.record.path}" and the original record: "${e.record.path}" must have the exact same param named "${n.name}"`);
 }
-function So(e, t) {
+function Oo(e, t) {
   t && t.record.name && !e.name && !e.path && C(`The route named "${String(t.record.name)}" has a child without a name and an empty path. Using that name won't render the empty path child so you probably want to move the name to the child instead. If this is intentional, add a name to the child route to remove the warning.`);
 }
-function Oo(e, t) {
+function Po(e, t) {
   for (let n = t; n; n = n.parent) if (n.record.name === e.name) throw new Error(`A route named "${String(e.name)}" has been added as a ${t === n ? "child" : "descendant"} of a route with the same name. Route names must be unique and a nested route cannot use the same name as an ancestor.`);
 }
-function Po(e, t) {
+function Do(e, t) {
   for (const n of t.keys) if (!e.keys.find(et.bind(null, n))) return C(`Absolute path "${e.record.path}" must have the exact same param named "${n.name}" as its parent "${t.record.path}".`);
 }
-function Do(e, t) {
+function Bo(e, t) {
   let n = 0, o = t.length;
   for (; n !== o; ) {
     const s = n + o >> 1;
     Wt(e, t[s]) < 0 ? o = s : n = s + 1;
   }
-  const r = Bo(e);
+  const r = Vo(e);
   return r && (o = t.lastIndexOf(r, o - 1), process.env.NODE_ENV !== "production" && o < 0 && C(`Finding ancestor route "${r.record.path}" failed for "${e.record.path}"`)), o;
 }
-function Bo(e) {
+function Vo(e) {
   let t = e;
   for (; t = t.parent; ) if (Qt(t) && Wt(e, t) === 0) return t;
 }
@@ -1213,9 +1213,9 @@ function yt(e) {
     if (M > -1) return M;
     const E = Et(d[a - 2]);
     return a > 1 && Et(u) === E && m[m.length - 1].path !== E ? m.findIndex(re.bind(null, d[a - 2])) : M;
-  }), h = Z(() => i.value > -1 && Ho(n.params, s.value.params)), p = Z(() => i.value > -1 && i.value === n.matched.length - 1 && Bt(n.params, s.value.params));
+  }), h = Z(() => i.value > -1 && zo(n.params, s.value.params)), p = Z(() => i.value > -1 && i.value === n.matched.length - 1 && Bt(n.params, s.value.params));
   function v(d = {}) {
-    if (jo(d)) {
+    if (Ho(d)) {
       const a = t[le(e.replace) ? "replace" : "push"](le(e.to)).catch(we);
       return e.viewTransition && typeof document < "u" && "startViewTransition" in document && document.startViewTransition(() => a), a;
     }
@@ -1230,7 +1230,7 @@ function yt(e) {
         isExactActive: p.value,
         error: null
       };
-      d.__vrl_devtools = d.__vrl_devtools || [], d.__vrl_devtools.push(a), an(() => {
+      d.__vrl_devtools = d.__vrl_devtools || [], d.__vrl_devtools.push(a), ln(() => {
         a.route = s.value, a.isActive = h.value, a.isExactActive = p.value, a.error = Ae(le(e.to)) ? null : 'Invalid "to" value';
       }, { flush: "post" });
     }
@@ -1243,10 +1243,10 @@ function yt(e) {
     navigate: v
   };
 }
-function Vo(e) {
+function Lo(e) {
   return e.length === 1 ? e[0] : e;
 }
-const Lo = /* @__PURE__ */ H({
+const jo = /* @__PURE__ */ H({
   name: "RouterLink",
   compatConfig: { MODE: 3 },
   props: {
@@ -1266,12 +1266,12 @@ const Lo = /* @__PURE__ */ H({
   },
   useLink: yt,
   setup(e, { slots: t }) {
-    const n = rn(yt(e)), { options: o } = be(it), r = Z(() => ({
+    const n = sn(yt(e)), { options: o } = be(it), r = Z(() => ({
       [Mt(e.activeClass, o.linkActiveClass, "router-link-active")]: n.isActive,
       [Mt(e.exactActiveClass, o.linkExactActiveClass, "router-link-exact-active")]: n.isExactActive
     }));
     return () => {
-      const s = t.default && Vo(t.default(n));
+      const s = t.default && Lo(t.default(n));
       return e.custom ? s : Ct("a", {
         "aria-current": n.isExactActive ? e.ariaCurrentValue : null,
         href: n.href,
@@ -1280,8 +1280,8 @@ const Lo = /* @__PURE__ */ H({
       }, s);
     };
   }
-}), Yt = Lo;
-function jo(e) {
+}), Yt = jo;
+function Ho(e) {
   if (!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) && !e.defaultPrevented && !(e.button !== void 0 && e.button !== 0)) {
     if (e.currentTarget && e.currentTarget.getAttribute) {
       const t = e.currentTarget.getAttribute("target");
@@ -1290,7 +1290,7 @@ function jo(e) {
     return e.preventDefault && e.preventDefault(), !0;
   }
 }
-function Ho(e, t) {
+function zo(e, t) {
   for (const n in t) {
     const o = t[n], r = e[n];
     if (typeof o == "string") {
@@ -1302,7 +1302,7 @@ function Ho(e, t) {
 function Et(e) {
   return e ? e.aliasOf ? e.aliasOf.path : e.path : "";
 }
-const Mt = (e, t, n) => e ?? t ?? n, zo = /* @__PURE__ */ H({
+const Mt = (e, t, n) => e ?? t ?? n, Uo = /* @__PURE__ */ H({
   name: "RouterView",
   inheritAttrs: !1,
   props: {
@@ -1314,7 +1314,7 @@ const Mt = (e, t, n) => e ?? t ?? n, zo = /* @__PURE__ */ H({
   },
   compatConfig: { MODE: 3 },
   setup(e, { attrs: t, slots: n }) {
-    process.env.NODE_ENV !== "production" && Uo();
+    process.env.NODE_ENV !== "production" && Go();
     const o = be(Je), r = Z(() => e.route || o.value), s = be(mt, 0), i = Z(() => {
       let v = le(s);
       const { matched: d } = r.value;
@@ -1365,8 +1365,8 @@ function xt(e, t) {
   const n = e(t);
   return n.length === 1 ? n[0] : n;
 }
-const Xt = zo;
-function Uo() {
+const Xt = Uo;
+function Go() {
   const e = Rt(), t = e.parent && e.parent.type.name, n = e.parent && e.parent.subTree && e.parent.subTree.type;
   if (t && (t === "KeepAlive" || t.includes("Transition")) && typeof n == "object" && n.name === "RouterView") {
     const o = t === "KeepAlive" ? "keep-alive" : "transition";
@@ -1380,10 +1380,10 @@ Use slot props instead:
 </router-view>`);
   }
 }
-function ic(e) {
-  const t = Ro(e.routes, e), n = e.parseQuery || eo, o = e.stringifyQuery || ft, r = e.history;
+function Fo(e) {
+  const t = To(e.routes, e), n = e.parseQuery || eo, o = e.stringifyQuery || ft, r = e.history;
   if (process.env.NODE_ENV !== "production" && !r) throw new Error('Provide the "history" option when calling "createRouter()": https://router.vuejs.org/api/interfaces/RouterOptions.html#history');
-  const s = ve(), i = ve(), h = ve(), p = sn(ne);
+  const s = ve(), i = ve(), h = ve(), p = rn(ne);
   let v = ne;
   te && e.scrollBehavior && "scrollRestoration" in history && (history.scrollRestoration = "manual");
   const d = ze.bind(null, (c) => "" + c), a = ze.bind(null, Vn), u = ze.bind(null, fe);
@@ -1614,7 +1614,7 @@ ${JSON.stringify($, null, 2)}
         get: () => p.value[y],
         enumerable: !0
       });
-      c.provide(it, de), c.provide(Lt, ln(b)), c.provide(Je, p);
+      c.provide(it, de), c.provide(Lt, an(b)), c.provide(Je, p);
       const g = c.unmount;
       Re.add(c), c.unmount = function() {
         Re.delete(c), Re.size < 1 && (v = ne, ie && ie(), ie = null, p.value = ne, je = !1, ue = !1), g();
@@ -1626,10 +1626,10 @@ ${JSON.stringify($, null, 2)}
   }
   return de;
 }
-const Go = ["data-mode", "type", "form", "disabled"], Fo = {
+const qo = ["data-mode", "type", "form", "disabled"], Ko = {
   key: 0,
   class: "button__caption"
-}, qo = /* @__PURE__ */ H({
+}, Wo = /* @__PURE__ */ H({
   __name: "TButton",
   props: {
     type: {},
@@ -1651,15 +1651,15 @@ const Go = ["data-mode", "type", "form", "disabled"], Fo = {
       onClick: s[0] || (s[0] = (i) => o("click", i))
     }, [
       (f(), W(ye(n.icon), { class: "button__icon" })),
-      n.caption ? (f(), _("span", Fo, Q(n.caption), 1)) : K("", !0)
-    ], 8, Go));
+      n.caption ? (f(), _("span", Ko, Q(n.caption), 1)) : K("", !0)
+    ], 8, qo));
   }
 }), w = (e, t) => {
   const n = e.__vccOpts || e;
   for (const [o, r] of t)
     n[o] = r;
   return n;
-}, Ko = /* @__PURE__ */ w(qo, [["__scopeId", "data-v-b3b85ddf"]]), Jt = /* @__PURE__ */ H({
+}, Qo = /* @__PURE__ */ w(Wo, [["__scopeId", "data-v-0d7660df"]]), Jt = /* @__PURE__ */ H({
   __name: "TForm",
   emits: ["submit", "reset"],
   setup(e, { emit: t }) {
@@ -1672,7 +1672,7 @@ const Go = ["data-mode", "type", "form", "disabled"], Fo = {
       U(o.$slots, "default")
     ], 32));
   }
-}), Wo = /* @__PURE__ */ H({
+}), Yo = /* @__PURE__ */ H({
   __name: "THyperlink",
   props: {
     route: {},
@@ -1702,34 +1702,34 @@ const Go = ["data-mode", "type", "form", "disabled"], Fo = {
       U(r.$slots, "default", {}, void 0, !0)
     ]));
   }
-}), Oe = /* @__PURE__ */ w(Wo, [["__scopeId", "data-v-2eb573e4"]]), Qo = { class: "label" }, Yo = {
+}), Oe = /* @__PURE__ */ w(Yo, [["__scopeId", "data-v-ab7e67c7"]]), Xo = { class: "label" }, Jo = {
   key: 0,
   class: "label__caption"
-}, Xo = /* @__PURE__ */ H({
+}, Zo = /* @__PURE__ */ H({
   __name: "TLabel",
   props: {
     caption: {}
   },
   setup(e) {
     const t = e;
-    return (n, o) => (f(), _("label", Qo, [
-      t.caption ? (f(), _("span", Yo, Q(t.caption), 1)) : K("", !0),
+    return (n, o) => (f(), _("label", Xo, [
+      t.caption ? (f(), _("span", Jo, Q(t.caption), 1)) : K("", !0),
       U(n.$slots, "default", {}, void 0, !0)
     ]));
   }
-}), Pe = /* @__PURE__ */ w(Xo, [["__scopeId", "data-v-1bd91740"]]), Jo = { class: "layout" }, Zo = {
+}), Pe = /* @__PURE__ */ w(Zo, [["__scopeId", "data-v-1bd91740"]]), er = { class: "layout" }, tr = {
   key: 0,
   class: "layout__header"
-}, er = { class: "layout__content" }, tr = {
+}, nr = { class: "layout__content" }, or = {
   key: 0,
   class: "layout__sidebar"
-}, nr = { class: "layout__section" }, or = {
+}, rr = { class: "layout__section" }, sr = {
   key: 1,
   class: "layout__sidebar"
-}, rr = {
+}, ir = {
   key: 1,
   class: "layout__footer"
-}, sr = /* @__PURE__ */ H({
+}, ar = /* @__PURE__ */ H({
   __name: "TLayout",
   props: {
     showHeader: { type: Boolean },
@@ -1739,39 +1739,39 @@ const Go = ["data-mode", "type", "form", "disabled"], Fo = {
   },
   setup(e) {
     const t = e;
-    return (n, o) => (f(), _("div", Jo, [
-      t.showHeader ? (f(), _("header", Zo, [
+    return (n, o) => (f(), _("div", er, [
+      t.showHeader ? (f(), _("header", tr, [
         U(n.$slots, "TLayoutHeader", {}, void 0, !0)
       ])) : K("", !0),
-      l("main", er, [
-        t.showPrimarySidebar ? (f(), _("aside", tr, [
+      l("main", nr, [
+        t.showPrimarySidebar ? (f(), _("aside", or, [
           U(n.$slots, "TLayoutPrimarySidebar", {}, void 0, !0)
         ])) : K("", !0),
-        l("div", nr, [
+        l("div", rr, [
           U(n.$slots, "default", {}, void 0, !0)
         ]),
-        t.showSecondarySidebar ? (f(), _("aside", or, [
+        t.showSecondarySidebar ? (f(), _("aside", sr, [
           U(n.$slots, "TLayoutSecondarySidebar", {}, void 0, !0)
         ])) : K("", !0)
       ]),
-      t.showFooter ? (f(), _("footer", rr, [
+      t.showFooter ? (f(), _("footer", ir, [
         U(n.$slots, "TLayoutFooter", {}, void 0, !0)
       ])) : K("", !0)
     ]));
   }
-}), ir = /* @__PURE__ */ w(sr, [["__scopeId", "data-v-6b791cc6"]]), ar = { class: "panel" }, lr = {
+}), lr = /* @__PURE__ */ w(ar, [["__scopeId", "data-v-ff46500d"]]), cr = { class: "panel" }, ur = {
   key: 0,
   class: "panel__header"
-}, cr = { class: "panel__content" }, ur = {
+}, dr = { class: "panel__content" }, hr = {
   key: 0,
   class: "panel__sidebar"
-}, dr = { class: "panel__section" }, hr = {
+}, pr = { class: "panel__section" }, fr = {
   key: 1,
   class: "panel__sidebar"
-}, pr = {
+}, mr = {
   key: 1,
   class: "panel__footer"
-}, fr = /* @__PURE__ */ H({
+}, _r = /* @__PURE__ */ H({
   __name: "TPanel",
   props: {
     showHeader: { type: Boolean },
@@ -1781,31 +1781,31 @@ const Go = ["data-mode", "type", "form", "disabled"], Fo = {
   },
   setup(e) {
     const t = e;
-    return (n, o) => (f(), _("div", ar, [
-      t.showHeader ? (f(), _("header", lr, [
+    return (n, o) => (f(), _("div", cr, [
+      t.showHeader ? (f(), _("header", ur, [
         U(n.$slots, "TPanelHeader", {}, void 0, !0)
       ])) : K("", !0),
-      l("section", cr, [
-        t.showPrimarySidebar ? (f(), _("aside", ur, [
+      l("section", dr, [
+        t.showPrimarySidebar ? (f(), _("aside", hr, [
           U(n.$slots, "TPanelPrimarySidebar", {}, void 0, !0)
         ])) : K("", !0),
-        l("div", dr, [
+        l("div", pr, [
           U(n.$slots, "default", {}, void 0, !0)
         ]),
-        t.showSecondarySidebar ? (f(), _("aside", hr, [
+        t.showSecondarySidebar ? (f(), _("aside", fr, [
           U(n.$slots, "TPanelSecondarySidebar", {}, void 0, !0)
         ])) : K("", !0)
       ]),
-      t.showFooter ? (f(), _("footer", pr, [
+      t.showFooter ? (f(), _("footer", mr, [
         U(n.$slots, "TPanelFooter", {}, void 0, !0)
       ])) : K("", !0)
     ]));
   }
-}), mr = /* @__PURE__ */ w(fr, [["__scopeId", "data-v-ce59918a"]]), _r = {}, vr = { class: "separator" };
-function gr(e, t) {
-  return f(), _("div", vr);
+}), vr = /* @__PURE__ */ w(_r, [["__scopeId", "data-v-ec3ecf66"]]), gr = {}, wr = { class: "separator" };
+function br(e, t) {
+  return f(), _("div", wr);
 }
-const wr = /* @__PURE__ */ w(_r, [["render", gr], ["__scopeId", "data-v-02e492b5"]]), br = {}, kr = {
+const kr = /* @__PURE__ */ w(gr, [["render", br], ["__scopeId", "data-v-87cd4d09"]]), yr = {}, Er = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -1817,8 +1817,8 @@ const wr = /* @__PURE__ */ w(_r, [["render", gr], ["__scopeId", "data-v-02e492b5
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
 };
-function yr(e, t) {
-  return f(), _("svg", kr, [...t[0] || (t[0] = [
+function Mr(e, t) {
+  return f(), _("svg", Er, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -1827,7 +1827,7 @@ function yr(e, t) {
     l("path", { d: "M9 6l6 6l-6 6" }, null, -1)
   ])]);
 }
-const at = /* @__PURE__ */ w(br, [["render", yr]]);
+const at = /* @__PURE__ */ w(yr, [["render", Mr]]);
 var tt;
 ((e) => {
   const t = "es-mx", o = /^[0-9]*$/, r = /\s/g;
@@ -1938,7 +1938,7 @@ var tt;
   }
   e.preventIfExclusiveNumeric = ie;
 })(tt || (tt = {}));
-const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class: "accordion__title | text-truncate" }, $r = { class: "accordion__content" }, Cr = /* @__PURE__ */ H({
+const qe = tt, xr = ["open"], $r = { class: "accordion__header" }, Cr = { class: "accordion__title | text-truncate" }, Nr = { class: "accordion__content" }, Rr = /* @__PURE__ */ H({
   __name: "TAccordion",
   props: {
     title: {},
@@ -1961,16 +1961,16 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
       class: "accordion",
       onToggle: h[0] || (h[0] = (p) => s("toggle", p))
     }, [
-      l("summary", Mr, [
-        l("h4", xr, Q(r.title), 1),
+      l("summary", $r, [
+        l("h4", Cr, Q(r.title), 1),
         ke(at, { class: "accordion__chevron" })
       ]),
-      l("div", $r, [
+      l("div", Nr, [
         U(i.$slots, "default", {}, void 0, !0)
       ])
-    ], 40, Er));
+    ], 40, xr));
   }
-}), Nr = /* @__PURE__ */ w(Cr, [["__scopeId", "data-v-e4873ec6"]]), Rr = { class: "breadcrumb" }, Tr = { class: "breadcrumb__list" }, Ir = ["data-divider"], Ar = { class: "breadcrumb__route-caption | text-truncate" }, Sr = { class: "breadcrumb__current | text-truncate" }, Or = /* @__PURE__ */ H({
+}), Tr = /* @__PURE__ */ w(Rr, [["__scopeId", "data-v-9f9c4e29"]]), Ir = { class: "breadcrumb" }, Ar = { class: "breadcrumb__list" }, Sr = ["data-divider"], Or = { class: "breadcrumb__route-caption | text-truncate" }, Pr = { class: "breadcrumb__current | text-truncate" }, Dr = /* @__PURE__ */ H({
   __name: "TBreadCrumb",
   props: {
     current: {},
@@ -1979,8 +1979,8 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
   },
   setup(e) {
     const t = e;
-    return (n, o) => (f(), _("nav", Rr, [
-      l("ul", Tr, [
+    return (n, o) => (f(), _("nav", Ir, [
+      l("ul", Ar, [
         (f(!0), _(Ee, null, Me(t.routes, (r, s) => (f(), _("li", {
           key: s,
           "data-divider": t.divider ?? "/",
@@ -1992,20 +1992,20 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
           }, {
             default: se(() => [
               (f(), W(ye(r.icon), { class: "breadcrumb__route-caption" })),
-              l("span", Ar, Q(r.caption), 1)
+              l("span", Or, Q(r.caption), 1)
             ]),
             _: 2
           }, 1032, ["route"])
-        ], 8, Ir))), 128)),
-        l("li", Sr, Q(t.current), 1)
+        ], 8, Sr))), 128)),
+        l("li", Pr, Q(t.current), 1)
       ])
     ]));
   }
-}), Pr = /* @__PURE__ */ w(Or, [["__scopeId", "data-v-faa8e711"]]), Dr = {
+}), Br = /* @__PURE__ */ w(Dr, [["__scopeId", "data-v-8e0c2aba"]]), Vr = {
   key: 0,
   class: "combo-box__option",
   value: null
-}, Br = ["value"], Vr = /* @__PURE__ */ H({
+}, Lr = ["value"], jr = /* @__PURE__ */ H({
   __name: "TComboBox",
   props: /* @__PURE__ */ Ie({
     caption: {},
@@ -2031,12 +2031,12 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
             class: "combo-box__option",
             value: null
           }, " Selecciona un elemento ", -1)),
-          n.allowNull ? (f(), _("option", Dr, " Ninguno/a ")) : K("", !0),
+          n.allowNull ? (f(), _("option", Vr, " Ninguno/a ")) : K("", !0),
           (f(!0), _(Ee, null, Me(n.options, (s, i) => (f(), _("option", {
             key: i,
             value: s.value,
             class: "combo-box__option"
-          }, Q(s.label), 9, Br))), 128))
+          }, Q(s.label), 9, Lr))), 128))
         ], 512), [
           [dn, t.value]
         ])
@@ -2044,7 +2044,7 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
       _: 1
     }, 8, ["caption"]));
   }
-}), Lr = /* @__PURE__ */ w(Vr, [["__scopeId", "data-v-5f70a990"]]), jr = { class: "edit__container" }, Hr = ["type", "placeholder", "required", "disabled", "min", "max", "minlength", "maxlength", "pattern"], zr = /* @__PURE__ */ H({
+}), Hr = /* @__PURE__ */ w(jr, [["__scopeId", "data-v-1a820544"]]), zr = { class: "edit__container" }, Ur = ["type", "placeholder", "required", "disabled", "min", "max", "minlength", "maxlength", "pattern"], Gr = /* @__PURE__ */ H({
   __name: "TEdit",
   props: /* @__PURE__ */ Ie({
     type: {},
@@ -2070,7 +2070,7 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
       class: "edit"
     }, {
       default: se(() => [
-        l("div", jr, [
+        l("div", zr, [
           (f(), W(ye(n.icon), { class: "edit__icon" })),
           rt(l("input", {
             class: "edit__field",
@@ -2092,7 +2092,7 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
             onClick: i[6] || (i[6] = (h) => o("click", h)),
             onPaste: i[7] || (i[7] = (h) => o("paste", h)),
             onKeypress: i[8] || (i[8] = (h) => o("keypress", h))
-          }, null, 40, Hr), [
+          }, null, 40, Ur), [
             [hn, r.value]
           ])
         ])
@@ -2100,7 +2100,7 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
       _: 1
     }, 8, ["caption"]));
   }
-}), Ur = /* @__PURE__ */ w(zr, [["__scopeId", "data-v-88ba82c9"]]), Gr = {}, Fr = {
+}), Fr = {}, qr = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2112,8 +2112,8 @@ const qe = tt, Er = ["open"], Mr = { class: "accordion__header" }, xr = { class:
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-x"
 };
-function qr(e, t) {
-  return f(), _("svg", Fr, [...t[0] || (t[0] = [
+function Kr(e, t) {
+  return f(), _("svg", qr, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2123,10 +2123,10 @@ function qr(e, t) {
     l("path", { d: "M6 6l12 12" }, null, -1)
   ])]);
 }
-const Zt = /* @__PURE__ */ w(Gr, [["render", qr]]), Kr = { class: "form-dialog__header" }, Wr = { class: "form-dialog__container" }, Qr = { class: "form-dialog__title" }, Yr = {
+const Zt = /* @__PURE__ */ w(Fr, [["render", Kr]]), Wr = { class: "form-dialog__header" }, Qr = { class: "form-dialog__container" }, Yr = { class: "form-dialog__title" }, Xr = {
   key: 0,
   class: "form-dialog__description | text-truncate-multiline"
-}, Xr = { class: "form-dialog__content" }, Jr = /* @__PURE__ */ H({
+}, Jr = { class: "form-dialog__content" }, Zr = /* @__PURE__ */ H({
   __name: "TFormDialog",
   props: {
     title: {},
@@ -2141,24 +2141,24 @@ const Zt = /* @__PURE__ */ w(Gr, [["render", qr]]), Kr = { class: "form-dialog__
       onReset: s[2] || (s[2] = (i) => o("reset", i))
     }, {
       default: se(() => [
-        l("header", Kr, [
-          l("div", Wr, [
-            l("h4", Qr, Q(n.title), 1),
-            n.description ? (f(), _("p", Yr, Q(n.description), 1)) : K("", !0)
+        l("header", Wr, [
+          l("div", Qr, [
+            l("h4", Yr, Q(n.title), 1),
+            n.description ? (f(), _("p", Xr, Q(n.description), 1)) : K("", !0)
           ]),
           ke(Zt, {
             class: "form-dialog__icon",
             onClick: s[0] || (s[0] = (i) => o("cancel"))
           })
         ]),
-        l("div", Xr, [
+        l("div", Jr, [
           U(r.$slots, "default", {}, void 0, !0)
         ])
       ]),
       _: 3
     }));
   }
-}), Zr = /* @__PURE__ */ w(Jr, [["__scopeId", "data-v-05413daa"]]), es = ["maxlength"], ts = { class: "memo__counter" }, ns = { key: 0 }, os = /* @__PURE__ */ H({
+}), es = /* @__PURE__ */ w(Zr, [["__scopeId", "data-v-827741d0"]]), ts = ["maxlength"], ns = { class: "memo__counter" }, os = { key: 0 }, rs = /* @__PURE__ */ H({
   __name: "TMemo",
   props: /* @__PURE__ */ Ie({
     caption: {},
@@ -2179,21 +2179,21 @@ const Zt = /* @__PURE__ */ w(Gr, [["render", qr]]), Kr = { class: "form-dialog__
           "onUpdate:modelValue": s[0] || (s[0] = (i) => t.value = i),
           maxlength: e.maxLength,
           class: "memo__field"
-        }, null, 8, es), [
+        }, null, 8, ts), [
           [pn, t.value]
         ]),
-        l("small", ts, [
+        l("small", ns, [
           l("span", null, Q(o.value), 1),
-          e.maxLength ? (f(), _("span", ns, " / " + Q(e.maxLength), 1)) : K("", !0)
+          e.maxLength ? (f(), _("span", os, " / " + Q(e.maxLength), 1)) : K("", !0)
         ])
       ]),
       _: 1
     }, 8, ["caption"]));
   }
-}), rs = /* @__PURE__ */ w(os, [["__scopeId", "data-v-6b3b5744"]]), ss = { class: "sidebar-item" }, is = {
+}), ss = /* @__PURE__ */ w(rs, [["__scopeId", "data-v-bbdfbb30"]]), is = { class: "sidebar-item" }, as = {
   key: 0,
   class: "sidebar-item__caption"
-}, as = { class: "sidebar-item__content" }, ls = { class: "sidebar-item__option-caption" }, cs = /* @__PURE__ */ H({
+}, ls = { class: "sidebar-item__content" }, cs = { class: "sidebar-item__option-caption" }, us = /* @__PURE__ */ H({
   __name: "TSidebarItem",
   props: {
     caption: {},
@@ -2201,23 +2201,23 @@ const Zt = /* @__PURE__ */ w(Gr, [["render", qr]]), Kr = { class: "form-dialog__
   },
   setup(e) {
     const t = e;
-    return (n, o) => (f(), _("li", ss, [
-      t.caption ? (f(), _("h6", is, Q(t.caption), 1)) : K("", !0),
-      l("div", as, [
+    return (n, o) => (f(), _("li", is, [
+      t.caption ? (f(), _("h6", as, Q(t.caption), 1)) : K("", !0),
+      l("div", ls, [
         (f(!0), _(Ee, null, Me(t.options, (r) => (f(), W(Oe, {
           route: r.route,
           class: "sidebar-item__option"
         }, {
           default: se(() => [
             (f(), W(ye(r.icon))),
-            l("span", ls, Q(r.caption), 1)
+            l("span", cs, Q(r.caption), 1)
           ]),
           _: 2
         }, 1032, ["route"]))), 256))
       ])
     ]));
   }
-}), en = /* @__PURE__ */ w(cs, [["__scopeId", "data-v-e027506a"]]), us = ["data-orientation"], ds = ["onClick"], hs = { class: "menu-item__hyperlink-container" }, ps = { class: "menu-item__caption | text-truncate" }, fs = /* @__PURE__ */ H({
+}), en = /* @__PURE__ */ w(us, [["__scopeId", "data-v-b7168a1d"]]), ds = ["data-orientation"], hs = ["onClick"], ps = { class: "menu-item__hyperlink-container" }, fs = { class: "menu-item__caption | text-truncate" }, ms = /* @__PURE__ */ H({
   __name: "TMenu",
   props: {
     items: {},
@@ -2251,9 +2251,9 @@ const Zt = /* @__PURE__ */ w(Gr, [["render", qr]]), Kr = { class: "form-dialog__
             class: "menu-item__hyperlink | text-truncate"
           }, {
             default: se(() => [
-              l("div", hs, [
+              l("div", ps, [
                 (f(), W(ye(s.icon), { class: "menu-item__icon" })),
-                l("span", ps, Q(s.caption), 1)
+                l("span", fs, Q(s.caption), 1)
               ]),
               ke(at, { class: "menu-item__icon | menu-item__chevron" })
             ]),
@@ -2264,22 +2264,22 @@ const Zt = /* @__PURE__ */ w(Gr, [["render", qr]]), Kr = { class: "form-dialog__
             items: s.submenu,
             class: "submenu"
           }, null, 8, ["items"])) : K("", !0)
-        ], 8, ds))), 256))
-      ], 8, us);
+        ], 8, hs))), 256))
+      ], 8, ds);
     };
   }
-}), ms = /* @__PURE__ */ w(fs, [["__scopeId", "data-v-00dbad3c"]]), _s = { class: "sidebar" }, vs = /* @__PURE__ */ H({
+}), _s = /* @__PURE__ */ w(ms, [["__scopeId", "data-v-0fb25870"]]), vs = { class: "sidebar" }, gs = /* @__PURE__ */ H({
   __name: "TSidebar",
   props: {
     items: {}
   },
   setup(e) {
     const t = e;
-    return (n, o) => (f(), _("ul", _s, [
+    return (n, o) => (f(), _("ul", vs, [
       (f(!0), _(Ee, null, Me(t.items, (r) => (f(), W(en, _n({ ref_for: !0 }, r), null, 16))), 256))
     ]));
   }
-}), gs = /* @__PURE__ */ w(vs, [["__scopeId", "data-v-28ff9ad2"]]), ws = {}, bs = {
+}), ws = /* @__PURE__ */ w(gs, [["__scopeId", "data-v-7703d7a6"]]), bs = {}, ks = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2291,8 +2291,8 @@ const Zt = /* @__PURE__ */ w(Gr, [["render", qr]]), Kr = { class: "form-dialog__
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-cash"
 };
-function ks(e, t) {
-  return f(), _("svg", bs, [...t[0] || (t[0] = [
+function ys(e, t) {
+  return f(), _("svg", ks, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2303,7 +2303,7 @@ function ks(e, t) {
     l("path", { d: "M12 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" }, null, -1)
   ])]);
 }
-const ys = /* @__PURE__ */ w(ws, [["render", ks]]), Es = {}, Ms = {
+const Es = /* @__PURE__ */ w(bs, [["render", ys]]), Ms = {}, xs = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2315,12 +2315,12 @@ const ys = /* @__PURE__ */ w(ws, [["render", ks]]), Es = {}, Ms = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-cash-register"
 };
-function xs(e, t) {
-  return f(), _("svg", Ms, [...t[0] || (t[0] = [
+function $s(e, t) {
+  return f(), _("svg", xs, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M21 15h-2.5c-.398 0 -.779 .158 -1.061 .439c-.281 .281 -.439 .663 -.439 1.061c0 .398 .158 .779 .439 1.061c.281 .281 .663 .439 1.061 .439h1c.398 0 .779 .158 1.061 .439c.281 .281 .439 .663 .439 1.061c0 .398 -.158 .779 -.439 1.061c-.281 .281 -.663 .439 -1.061 .439h-2.5"></path><path d="M19 21v1m0 -8v1"></path><path d="M13 21h-7c-.53 0 -1.039 -.211 -1.414 -.586c-.375 -.375 -.586 -.884 -.586 -1.414v-10c0 -.53 .211 -1.039 .586 -1.414c.375 -.375 .884 -.586 1.414 -.586h2m12 3.12v-1.12c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-2"></path><path d="M16 10v-6c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-4c-.53 0 -1.039 .211 -1.414 .586c-.375 .375 -.586 .884 -.586 1.414v6m8 0h-8m8 0h1m-9 0h-1"></path><path d="M8 14v.01"></path><path d="M8 17v.01"></path><path d="M12 13.99v.01"></path><path d="M12 17v.01"></path>', 9)
   ])]);
 }
-const $s = /* @__PURE__ */ w(Es, [["render", xs]]), Cs = {}, Ns = {
+const Cs = /* @__PURE__ */ w(Ms, [["render", $s]]), Ns = {}, Rs = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2332,12 +2332,12 @@ const $s = /* @__PURE__ */ w(Es, [["render", xs]]), Cs = {}, Ns = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-calendar-dollar"
 };
-function Rs(e, t) {
-  return f(), _("svg", Ns, [...t[0] || (t[0] = [
+function Ts(e, t) {
+  return f(), _("svg", Rs, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M13 21h-7a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v3"></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h12.5"></path><path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"></path><path d="M19 21v1m0 -8v1"></path>', 7)
   ])]);
 }
-const Ts = /* @__PURE__ */ w(Cs, [["render", Rs]]), Is = {}, As = {
+const Is = /* @__PURE__ */ w(Ns, [["render", Ts]]), As = {}, Ss = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2349,12 +2349,12 @@ const Ts = /* @__PURE__ */ w(Cs, [["render", Rs]]), Is = {}, As = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-device-desktop"
 };
-function Ss(e, t) {
-  return f(), _("svg", As, [...t[0] || (t[0] = [
+function Os(e, t) {
+  return f(), _("svg", Ss, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z"></path><path d="M7 20h10"></path><path d="M9 16v4"></path><path d="M15 16v4"></path>', 5)
   ])]);
 }
-const Os = /* @__PURE__ */ w(Is, [["render", Ss]]), Ps = {}, Ds = {
+const Ps = /* @__PURE__ */ w(As, [["render", Os]]), Ds = {}, Bs = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2366,8 +2366,8 @@ const Os = /* @__PURE__ */ w(Is, [["render", Ss]]), Ps = {}, Ds = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-eye"
 };
-function Bs(e, t) {
-  return f(), _("svg", Ds, [...t[0] || (t[0] = [
+function Vs(e, t) {
+  return f(), _("svg", Bs, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2377,7 +2377,7 @@ function Bs(e, t) {
     l("path", { d: "M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" }, null, -1)
   ])]);
 }
-const Vs = /* @__PURE__ */ w(Ps, [["render", Bs]]), Ls = {}, js = {
+const Ls = /* @__PURE__ */ w(Ds, [["render", Vs]]), js = {}, Hs = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2389,8 +2389,8 @@ const Vs = /* @__PURE__ */ w(Ps, [["render", Bs]]), Ls = {}, js = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-eye-off"
 };
-function Hs(e, t) {
-  return f(), _("svg", js, [...t[0] || (t[0] = [
+function zs(e, t) {
+  return f(), _("svg", Hs, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2401,7 +2401,7 @@ function Hs(e, t) {
     l("path", { d: "M3 3l18 18" }, null, -1)
   ])]);
 }
-const zs = /* @__PURE__ */ w(Ls, [["render", Hs]]), Us = {}, Gs = {
+const Us = /* @__PURE__ */ w(js, [["render", zs]]), Gs = {}, Fs = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2413,8 +2413,8 @@ const zs = /* @__PURE__ */ w(Ls, [["render", Hs]]), Us = {}, Gs = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-search"
 };
-function Fs(e, t) {
-  return f(), _("svg", Gs, [...t[0] || (t[0] = [
+function qs(e, t) {
+  return f(), _("svg", Fs, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2424,7 +2424,7 @@ function Fs(e, t) {
     l("path", { d: "M21 21l-6 -6" }, null, -1)
   ])]);
 }
-const qs = /* @__PURE__ */ w(Us, [["render", Fs]]), Ks = {}, Ws = {
+const Ks = /* @__PURE__ */ w(Gs, [["render", qs]]), Ws = {}, Qs = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2436,8 +2436,8 @@ const qs = /* @__PURE__ */ w(Us, [["render", Fs]]), Ks = {}, Ws = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-tag"
 };
-function Qs(e, t) {
-  return f(), _("svg", Ws, [...t[0] || (t[0] = [
+function Ys(e, t) {
+  return f(), _("svg", Qs, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2447,7 +2447,7 @@ function Qs(e, t) {
     l("path", { d: "M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71a2 2 0 0 0 -1.414 -.586h-5.172a3 3 0 0 0 -3 3z" }, null, -1)
   ])]);
 }
-const Ys = /* @__PURE__ */ w(Ks, [["render", Qs]]), Xs = {}, Js = {
+const Xs = /* @__PURE__ */ w(Ws, [["render", Ys]]), Js = {}, Zs = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2459,12 +2459,12 @@ const Ys = /* @__PURE__ */ w(Ks, [["render", Qs]]), Xs = {}, Js = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-report"
 };
-function Zs(e, t) {
-  return f(), _("svg", Js, [...t[0] || (t[0] = [
+function ei(e, t) {
+  return f(), _("svg", Zs, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697"></path><path d="M18 14v4h4"></path><path d="M18 11v-4a2 2 0 0 0 -2 -2h-2"></path><path d="M8 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M8 11h4"></path><path d="M8 15h3"></path>', 8)
   ])]);
 }
-const ei = /* @__PURE__ */ w(Xs, [["render", Zs]]), ti = {}, ni = {
+const ti = /* @__PURE__ */ w(Js, [["render", ei]]), ni = {}, oi = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2476,12 +2476,12 @@ const ei = /* @__PURE__ */ w(Xs, [["render", Zs]]), ti = {}, ni = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"
 };
-function oi(e, t) {
-  return f(), _("svg", ni, [...t[0] || (t[0] = [
+function ri(e, t) {
+  return f(), _("svg", oi, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M17 17h-11v-14h-2"></path><path d="M6 5l14 1l-1 7h-13"></path>', 5)
   ])]);
 }
-const ri = /* @__PURE__ */ w(ti, [["render", oi]]), si = {}, ii = {
+const si = /* @__PURE__ */ w(ni, [["render", ri]]), ii = {}, ai = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2493,8 +2493,8 @@ const ri = /* @__PURE__ */ w(ti, [["render", oi]]), si = {}, ii = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-user-circle"
 };
-function ai(e, t) {
-  return f(), _("svg", ii, [...t[0] || (t[0] = [
+function li(e, t) {
+  return f(), _("svg", ai, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2505,7 +2505,7 @@ function ai(e, t) {
     l("path", { d: "M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" }, null, -1)
   ])]);
 }
-const li = /* @__PURE__ */ w(si, [["render", ai]]), ci = {}, ui = {
+const ci = /* @__PURE__ */ w(ii, [["render", li]]), ui = {}, di = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2517,8 +2517,8 @@ const li = /* @__PURE__ */ w(si, [["render", ai]]), ci = {}, ui = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-settings"
 };
-function di(e, t) {
-  return f(), _("svg", ui, [...t[0] || (t[0] = [
+function hi(e, t) {
+  return f(), _("svg", di, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2528,7 +2528,7 @@ function di(e, t) {
     l("path", { d: "M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" }, null, -1)
   ])]);
 }
-const hi = /* @__PURE__ */ w(ci, [["render", di]]), pi = {}, fi = {
+const pi = /* @__PURE__ */ w(ui, [["render", hi]]), fi = {}, mi = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2540,8 +2540,8 @@ const hi = /* @__PURE__ */ w(ci, [["render", di]]), pi = {}, fi = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-plus"
 };
-function mi(e, t) {
-  return f(), _("svg", fi, [...t[0] || (t[0] = [
+function _i(e, t) {
+  return f(), _("svg", mi, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2551,7 +2551,7 @@ function mi(e, t) {
     l("path", { d: "M5 12l14 0" }, null, -1)
   ])]);
 }
-const _i = /* @__PURE__ */ w(pi, [["render", mi]]), vi = {}, gi = {
+const vi = /* @__PURE__ */ w(fi, [["render", _i]]), gi = {}, wi = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2563,8 +2563,8 @@ const _i = /* @__PURE__ */ w(pi, [["render", mi]]), vi = {}, gi = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-pencil"
 };
-function wi(e, t) {
-  return f(), _("svg", gi, [...t[0] || (t[0] = [
+function bi(e, t) {
+  return f(), _("svg", wi, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2574,7 +2574,7 @@ function wi(e, t) {
     l("path", { d: "M13.5 6.5l4 4" }, null, -1)
   ])]);
 }
-const bi = /* @__PURE__ */ w(vi, [["render", wi]]), ki = {}, yi = {
+const ki = /* @__PURE__ */ w(gi, [["render", bi]]), yi = {}, Ei = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2586,8 +2586,8 @@ const bi = /* @__PURE__ */ w(vi, [["render", wi]]), ki = {}, yi = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-receipt-2"
 };
-function Ei(e, t) {
-  return f(), _("svg", yi, [...t[0] || (t[0] = [
+function Mi(e, t) {
+  return f(), _("svg", Ei, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2597,7 +2597,7 @@ function Ei(e, t) {
     l("path", { d: "M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5" }, null, -1)
   ])]);
 }
-const Mi = /* @__PURE__ */ w(ki, [["render", Ei]]), xi = {}, $i = {
+const xi = /* @__PURE__ */ w(yi, [["render", Mi]]), $i = {}, Ci = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2609,8 +2609,8 @@ const Mi = /* @__PURE__ */ w(ki, [["render", Ei]]), xi = {}, $i = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-reload"
 };
-function Ci(e, t) {
-  return f(), _("svg", $i, [...t[0] || (t[0] = [
+function Ni(e, t) {
+  return f(), _("svg", Ci, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2620,7 +2620,7 @@ function Ci(e, t) {
     l("path", { d: "M20 4v5h-5" }, null, -1)
   ])]);
 }
-const Ni = /* @__PURE__ */ w(xi, [["render", Ci]]), Ri = {}, Ti = {
+const Ri = /* @__PURE__ */ w($i, [["render", Ni]]), Ti = {}, Ii = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2632,8 +2632,8 @@ const Ni = /* @__PURE__ */ w(xi, [["render", Ci]]), Ri = {}, Ti = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
 };
-function Ii(e, t) {
-  return f(), _("svg", Ti, [...t[0] || (t[0] = [
+function Ai(e, t) {
+  return f(), _("svg", Ii, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2644,7 +2644,7 @@ function Ii(e, t) {
     l("path", { d: "M15 8l4 4" }, null, -1)
   ])]);
 }
-const Ai = /* @__PURE__ */ w(Ri, [["render", Ii]]), Si = {}, Oi = {
+const Si = /* @__PURE__ */ w(Ti, [["render", Ai]]), Oi = {}, Pi = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2656,8 +2656,8 @@ const Ai = /* @__PURE__ */ w(Ri, [["render", Ii]]), Si = {}, Oi = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-receipt"
 };
-function Pi(e, t) {
-  return f(), _("svg", Oi, [...t[0] || (t[0] = [
+function Di(e, t) {
+  return f(), _("svg", Pi, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2666,7 +2666,7 @@ function Pi(e, t) {
     l("path", { d: "M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2" }, null, -1)
   ])]);
 }
-const Di = /* @__PURE__ */ w(Si, [["render", Pi]]), Bi = {}, Vi = {
+const Bi = /* @__PURE__ */ w(Oi, [["render", Di]]), Vi = {}, Li = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2678,12 +2678,12 @@ const Di = /* @__PURE__ */ w(Si, [["render", Pi]]), Bi = {}, Vi = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-credit-card"
 };
-function Li(e, t) {
-  return f(), _("svg", Vi, [...t[0] || (t[0] = [
+function ji(e, t) {
+  return f(), _("svg", Li, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path><path d="M3 10l18 0"></path><path d="M7 15l.01 0"></path><path d="M11 15l2 0"></path>', 5)
   ])]);
 }
-const ji = /* @__PURE__ */ w(Bi, [["render", Li]]), Hi = {}, zi = {
+const Hi = /* @__PURE__ */ w(Vi, [["render", ji]]), zi = {}, Ui = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2695,8 +2695,8 @@ const ji = /* @__PURE__ */ w(Bi, [["render", Li]]), Hi = {}, zi = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-lock"
 };
-function Ui(e, t) {
-  return f(), _("svg", zi, [...t[0] || (t[0] = [
+function Gi(e, t) {
+  return f(), _("svg", Ui, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2707,7 +2707,7 @@ function Ui(e, t) {
     l("path", { d: "M8 11v-4a4 4 0 1 1 8 0v4" }, null, -1)
   ])]);
 }
-const Gi = /* @__PURE__ */ w(Hi, [["render", Ui]]), Fi = {}, qi = {
+const Fi = /* @__PURE__ */ w(zi, [["render", Gi]]), qi = {}, Ki = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2719,8 +2719,8 @@ const Gi = /* @__PURE__ */ w(Hi, [["render", Ui]]), Fi = {}, qi = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-bell"
 };
-function Ki(e, t) {
-  return f(), _("svg", qi, [...t[0] || (t[0] = [
+function Wi(e, t) {
+  return f(), _("svg", Ki, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2730,7 +2730,7 @@ function Ki(e, t) {
     l("path", { d: "M9 17v1a3 3 0 0 0 6 0v-1" }, null, -1)
   ])]);
 }
-const Wi = /* @__PURE__ */ w(Fi, [["render", Ki]]), Qi = {}, Yi = {
+const Qi = /* @__PURE__ */ w(qi, [["render", Wi]]), Yi = {}, Xi = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2742,8 +2742,8 @@ const Wi = /* @__PURE__ */ w(Fi, [["render", Ki]]), Qi = {}, Yi = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-help"
 };
-function Xi(e, t) {
-  return f(), _("svg", Yi, [...t[0] || (t[0] = [
+function Ji(e, t) {
+  return f(), _("svg", Xi, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2754,7 +2754,7 @@ function Xi(e, t) {
     l("path", { d: "M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" }, null, -1)
   ])]);
 }
-const Ji = /* @__PURE__ */ w(Qi, [["render", Xi]]), Zi = {}, ea = {
+const Zi = /* @__PURE__ */ w(Yi, [["render", Ji]]), ea = {}, ta = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2766,12 +2766,12 @@ const Ji = /* @__PURE__ */ w(Qi, [["render", Xi]]), Zi = {}, ea = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-plug-connected"
 };
-function ta(e, t) {
-  return f(), _("svg", ea, [...t[0] || (t[0] = [
+function na(e, t) {
+  return f(), _("svg", ta, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5z"></path><path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5z"></path><path d="M3 21l2.5 -2.5"></path><path d="M18.5 5.5l2.5 -2.5"></path><path d="M10 11l-2 2"></path><path d="M13 14l-2 2"></path>', 7)
   ])]);
 }
-const na = /* @__PURE__ */ w(Zi, [["render", ta]]), oa = {}, ra = {
+const oa = /* @__PURE__ */ w(ea, [["render", na]]), ra = {}, sa = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2783,12 +2783,12 @@ const na = /* @__PURE__ */ w(Zi, [["render", ta]]), oa = {}, ra = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-apps"
 };
-function sa(e, t) {
-  return f(), _("svg", ra, [...t[0] || (t[0] = [
+function ia(e, t) {
+  return f(), _("svg", sa, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M14 7l6 0"></path><path d="M17 4l0 6"></path>', 6)
   ])]);
 }
-const ia = /* @__PURE__ */ w(oa, [["render", sa]]), aa = {}, la = {
+const aa = /* @__PURE__ */ w(ra, [["render", ia]]), la = {}, ca = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2800,12 +2800,12 @@ const ia = /* @__PURE__ */ w(oa, [["render", sa]]), aa = {}, la = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-building-bank"
 };
-function ca(e, t) {
-  return f(), _("svg", la, [...t[0] || (t[0] = [
+function ua(e, t) {
+  return f(), _("svg", ca, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 21l18 0"></path><path d="M3 10l18 0"></path><path d="M5 6l7 -3l7 3"></path><path d="M4 10l0 11"></path><path d="M20 10l0 11"></path><path d="M8 14l0 3"></path><path d="M12 14l0 3"></path><path d="M16 14l0 3"></path>', 9)
   ])]);
 }
-const ua = /* @__PURE__ */ w(aa, [["render", ca]]), da = {}, ha = {
+const da = /* @__PURE__ */ w(la, [["render", ua]]), ha = {}, pa = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2817,8 +2817,8 @@ const ua = /* @__PURE__ */ w(aa, [["render", ca]]), da = {}, ha = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-check"
 };
-function pa(e, t) {
-  return f(), _("svg", ha, [...t[0] || (t[0] = [
+function fa(e, t) {
+  return f(), _("svg", pa, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2827,7 +2827,7 @@ function pa(e, t) {
     l("path", { d: "M5 12l5 5l10 -10" }, null, -1)
   ])]);
 }
-const fa = /* @__PURE__ */ w(da, [["render", pa]]), ma = {}, _a = {
+const ma = /* @__PURE__ */ w(ha, [["render", fa]]), _a = {}, va = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2839,12 +2839,12 @@ const fa = /* @__PURE__ */ w(da, [["render", pa]]), ma = {}, _a = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-list"
 };
-function va(e, t) {
-  return f(), _("svg", _a, [...t[0] || (t[0] = [
+function ga(e, t) {
+  return f(), _("svg", va, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l11 0"></path><path d="M9 12l11 0"></path><path d="M9 18l11 0"></path><path d="M5 6l0 .01"></path><path d="M5 12l0 .01"></path><path d="M5 18l0 .01"></path>', 7)
   ])]);
 }
-const ga = /* @__PURE__ */ w(ma, [["render", va]]), wa = {}, ba = {
+const wa = /* @__PURE__ */ w(_a, [["render", ga]]), ba = {}, ka = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2856,12 +2856,12 @@ const ga = /* @__PURE__ */ w(ma, [["render", va]]), wa = {}, ba = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-meat"
 };
-function ka(e, t) {
-  return f(), _("svg", ba, [...t[0] || (t[0] = [
+function ya(e, t) {
+  return f(), _("svg", ka, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M13.62 8.382l1.966 -1.967a2 2 0 1 1 3.414 -1.415a2 2 0 1 1 -1.413 3.414l-1.82 1.821"></path><path d="M5.904 18.596c2.733 2.734 5.9 4 7.07 2.829c1.172 -1.172 -.094 -4.338 -2.828 -7.071c-2.733 -2.734 -5.9 -4 -7.07 -2.829c-1.172 1.172 .094 4.338 2.828 7.071z"></path><path d="M7.5 16l1 1"></path><path d="M12.975 21.425c3.905 -3.906 4.855 -9.288 2.121 -12.021c-2.733 -2.734 -8.115 -1.784 -12.02 2.121"></path>', 5)
   ])]);
 }
-const ya = /* @__PURE__ */ w(wa, [["render", ka]]), Ea = {}, Ma = {
+const Ea = /* @__PURE__ */ w(ba, [["render", ya]]), Ma = {}, xa = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2873,8 +2873,8 @@ const ya = /* @__PURE__ */ w(wa, [["render", ka]]), Ea = {}, Ma = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-dots"
 };
-function xa(e, t) {
-  return f(), _("svg", Ma, [...t[0] || (t[0] = [
+function $a(e, t) {
+  return f(), _("svg", xa, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2885,7 +2885,7 @@ function xa(e, t) {
     l("path", { d: "M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" }, null, -1)
   ])]);
 }
-const $a = /* @__PURE__ */ w(Ea, [["render", xa]]), Ca = {}, Na = {
+const Ca = /* @__PURE__ */ w(Ma, [["render", $a]]), Na = {}, Ra = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2897,8 +2897,8 @@ const $a = /* @__PURE__ */ w(Ea, [["render", xa]]), Ca = {}, Na = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
 };
-function Ra(e, t) {
-  return f(), _("svg", Na, [...t[0] || (t[0] = [
+function Ta(e, t) {
+  return f(), _("svg", Ra, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2909,7 +2909,7 @@ function Ra(e, t) {
     l("path", { d: "M4 18l16 0" }, null, -1)
   ])]);
 }
-const Ta = /* @__PURE__ */ w(Ca, [["render", Ra]]), Ia = {}, Aa = {
+const Ia = /* @__PURE__ */ w(Na, [["render", Ta]]), Aa = {}, Sa = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2921,8 +2921,8 @@ const Ta = /* @__PURE__ */ w(Ca, [["render", Ra]]), Ia = {}, Aa = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-circle-x"
 };
-function Sa(e, t) {
-  return f(), _("svg", Aa, [...t[0] || (t[0] = [
+function Oa(e, t) {
+  return f(), _("svg", Sa, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2932,7 +2932,7 @@ function Sa(e, t) {
     l("path", { d: "M10 10l4 4m0 -4l-4 4" }, null, -1)
   ])]);
 }
-const Oa = /* @__PURE__ */ w(Ia, [["render", Sa]]), Pa = {}, Da = {
+const Pa = /* @__PURE__ */ w(Aa, [["render", Oa]]), Da = {}, Ba = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2944,12 +2944,12 @@ const Oa = /* @__PURE__ */ w(Ia, [["render", Sa]]), Pa = {}, Da = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-trash"
 };
-function Ba(e, t) {
-  return f(), _("svg", Da, [...t[0] || (t[0] = [
+function Va(e, t) {
+  return f(), _("svg", Ba, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7l16 0"></path><path d="M10 11l0 6"></path><path d="M14 11l0 6"></path><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>', 6)
   ])]);
 }
-const Va = /* @__PURE__ */ w(Pa, [["render", Ba]]), La = {}, ja = {
+const La = /* @__PURE__ */ w(Da, [["render", Va]]), ja = {}, Ha = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2961,12 +2961,12 @@ const Va = /* @__PURE__ */ w(Pa, [["render", Ba]]), La = {}, ja = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-calendar"
 };
-function Ha(e, t) {
-  return f(), _("svg", ja, [...t[0] || (t[0] = [
+function za(e, t) {
+  return f(), _("svg", Ha, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h16"></path><path d="M11 15h1"></path><path d="M12 15v3"></path>', 7)
   ])]);
 }
-const za = /* @__PURE__ */ w(La, [["render", Ha]]), Ua = {}, Ga = {
+const Ua = /* @__PURE__ */ w(ja, [["render", za]]), Ga = {}, Fa = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -2978,8 +2978,8 @@ const za = /* @__PURE__ */ w(La, [["render", Ha]]), Ua = {}, Ga = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-logout"
 };
-function Fa(e, t) {
-  return f(), _("svg", Ga, [...t[0] || (t[0] = [
+function qa(e, t) {
+  return f(), _("svg", Fa, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -2990,7 +2990,7 @@ function Fa(e, t) {
     l("path", { d: "M18 15l3 -3" }, null, -1)
   ])]);
 }
-const qa = /* @__PURE__ */ w(Ua, [["render", Fa]]), Ka = {}, Wa = {
+const Ka = /* @__PURE__ */ w(Ga, [["render", qa]]), Wa = {}, Qa = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3002,8 +3002,8 @@ const qa = /* @__PURE__ */ w(Ua, [["render", Fa]]), Ka = {}, Wa = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-mail"
 };
-function Qa(e, t) {
-  return f(), _("svg", Wa, [...t[0] || (t[0] = [
+function Ya(e, t) {
+  return f(), _("svg", Qa, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3013,7 +3013,7 @@ function Qa(e, t) {
     l("path", { d: "M3 7l9 6l9 -6" }, null, -1)
   ])]);
 }
-const Ya = /* @__PURE__ */ w(Ka, [["render", Qa]]), Xa = {}, Ja = {
+const Xa = /* @__PURE__ */ w(Wa, [["render", Ya]]), Ja = {}, Za = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3025,8 +3025,8 @@ const Ya = /* @__PURE__ */ w(Ka, [["render", Qa]]), Xa = {}, Ja = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-phone"
 };
-function Za(e, t) {
-  return f(), _("svg", Ja, [...t[0] || (t[0] = [
+function el(e, t) {
+  return f(), _("svg", Za, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3035,7 +3035,7 @@ function Za(e, t) {
     l("path", { d: "M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" }, null, -1)
   ])]);
 }
-const el = /* @__PURE__ */ w(Xa, [["render", Za]]), tl = {}, nl = {
+const tl = /* @__PURE__ */ w(Ja, [["render", el]]), nl = {}, ol = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3047,12 +3047,12 @@ const el = /* @__PURE__ */ w(Xa, [["render", Za]]), tl = {}, nl = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-users-group"
 };
-function ol(e, t) {
-  return f(), _("svg", nl, [...t[0] || (t[0] = [
+function rl(e, t) {
+  return f(), _("svg", ol, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path><path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M17 10h2a2 2 0 0 1 2 2v1"></path><path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>', 7)
   ])]);
 }
-const rl = /* @__PURE__ */ w(tl, [["render", ol]]), sl = {}, il = {
+const sl = /* @__PURE__ */ w(nl, [["render", rl]]), il = {}, al = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3064,12 +3064,12 @@ const rl = /* @__PURE__ */ w(tl, [["render", ol]]), sl = {}, il = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-scan"
 };
-function al(e, t) {
-  return f(), _("svg", il, [...t[0] || (t[0] = [
+function ll(e, t) {
+  return f(), _("svg", al, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7v-1a2 2 0 0 1 2 -2h2"></path><path d="M4 17v1a2 2 0 0 0 2 2h2"></path><path d="M16 4h2a2 2 0 0 1 2 2v1"></path><path d="M16 20h2a2 2 0 0 0 2 -2v-1"></path><path d="M5 12l14 0"></path>', 6)
   ])]);
 }
-const ll = /* @__PURE__ */ w(sl, [["render", al]]), cl = {}, ul = {
+const cl = /* @__PURE__ */ w(il, [["render", ll]]), ul = {}, dl = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3081,12 +3081,12 @@ const ll = /* @__PURE__ */ w(sl, [["render", al]]), cl = {}, ul = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-abc"
 };
-function dl(e, t) {
-  return f(), _("svg", ul, [...t[0] || (t[0] = [
+function hl(e, t) {
+  return f(), _("svg", dl, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 16v-6a2 2 0 1 1 4 0v6"></path><path d="M3 13h4"></path><path d="M10 8v6a2 2 0 1 0 4 0v-1a2 2 0 1 0 -4 0v1"></path><path d="M20.732 12a2 2 0 0 0 -3.732 1v1a2 2 0 0 0 3.726 1.01"></path>', 5)
   ])]);
 }
-const hl = /* @__PURE__ */ w(cl, [["render", dl]]), pl = {}, fl = {
+const pl = /* @__PURE__ */ w(ul, [["render", hl]]), fl = {}, ml = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3098,8 +3098,8 @@ const hl = /* @__PURE__ */ w(cl, [["render", dl]]), pl = {}, fl = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-number-123"
 };
-function ml(e, t) {
-  return f(), _("svg", fl, [...t[0] || (t[0] = [
+function _l(e, t) {
+  return f(), _("svg", ml, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3110,7 +3110,7 @@ function ml(e, t) {
     l("path", { d: "M17 8h2.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1 -1.5 1.5h-1.5h1.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1 -1.5 1.5h-2.5" }, null, -1)
   ])]);
 }
-const _l = /* @__PURE__ */ w(pl, [["render", ml]]), vl = {}, gl = {
+const vl = /* @__PURE__ */ w(fl, [["render", _l]]), gl = {}, wl = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3122,8 +3122,8 @@ const _l = /* @__PURE__ */ w(pl, [["render", ml]]), vl = {}, gl = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-currency-dollar"
 };
-function wl(e, t) {
-  return f(), _("svg", gl, [...t[0] || (t[0] = [
+function bl(e, t) {
+  return f(), _("svg", wl, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3133,7 +3133,7 @@ function wl(e, t) {
     l("path", { d: "M12 3v3m0 12v3" }, null, -1)
   ])]);
 }
-const bl = /* @__PURE__ */ w(vl, [["render", wl]]), kl = {}, yl = {
+const kl = /* @__PURE__ */ w(gl, [["render", bl]]), yl = {}, El = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3145,8 +3145,8 @@ const bl = /* @__PURE__ */ w(vl, [["render", wl]]), kl = {}, yl = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left"
 };
-function El(e, t) {
-  return f(), _("svg", yl, [...t[0] || (t[0] = [
+function Ml(e, t) {
+  return f(), _("svg", El, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3157,7 +3157,7 @@ function El(e, t) {
     l("path", { d: "M5 12l4 -4" }, null, -1)
   ])]);
 }
-const Ml = /* @__PURE__ */ w(kl, [["render", El]]), xl = {}, $l = {
+const xl = /* @__PURE__ */ w(yl, [["render", Ml]]), $l = {}, Cl = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3169,8 +3169,8 @@ const Ml = /* @__PURE__ */ w(kl, [["render", El]]), xl = {}, $l = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-up"
 };
-function Cl(e, t) {
-  return f(), _("svg", $l, [...t[0] || (t[0] = [
+function Nl(e, t) {
+  return f(), _("svg", Cl, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3181,7 +3181,7 @@ function Cl(e, t) {
     l("path", { d: "M8 9l4 -4" }, null, -1)
   ])]);
 }
-const Nl = /* @__PURE__ */ w(xl, [["render", Cl]]), Rl = {}, Tl = {
+const Rl = /* @__PURE__ */ w($l, [["render", Nl]]), Tl = {}, Il = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3193,8 +3193,8 @@ const Nl = /* @__PURE__ */ w(xl, [["render", Cl]]), Rl = {}, Tl = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-down"
 };
-function Il(e, t) {
-  return f(), _("svg", Tl, [...t[0] || (t[0] = [
+function Al(e, t) {
+  return f(), _("svg", Il, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3205,7 +3205,7 @@ function Il(e, t) {
     l("path", { d: "M8 15l4 4" }, null, -1)
   ])]);
 }
-const Al = /* @__PURE__ */ w(Rl, [["render", Il]]), Sl = {}, Ol = {
+const Sl = /* @__PURE__ */ w(Tl, [["render", Al]]), Ol = {}, Pl = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3217,8 +3217,8 @@ const Al = /* @__PURE__ */ w(Rl, [["render", Il]]), Sl = {}, Ol = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-home"
 };
-function Pl(e, t) {
-  return f(), _("svg", Ol, [...t[0] || (t[0] = [
+function Dl(e, t) {
+  return f(), _("svg", Pl, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3229,7 +3229,7 @@ function Pl(e, t) {
     l("path", { d: "M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" }, null, -1)
   ])]);
 }
-const Dl = /* @__PURE__ */ w(Sl, [["render", Pl]]), Bl = {}, Vl = {
+const Bl = /* @__PURE__ */ w(Ol, [["render", Dl]]), Vl = {}, Ll = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3241,12 +3241,12 @@ const Dl = /* @__PURE__ */ w(Sl, [["render", Pl]]), Bl = {}, Vl = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-ruler-measure-2"
 };
-function Ll(e, t) {
-  return f(), _("svg", Vl, [...t[0] || (t[0] = [
+function jl(e, t) {
+  return f(), _("svg", Ll, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 19.875c0 .621 -.512 1.125 -1.143 1.125h-5.714a1.134 1.134 0 0 1 -1.143 -1.125v-15.875a1 1 0 0 1 1 -1h5.857c.631 0 1.143 .504 1.143 1.125l0 15.75"></path><path d="M12 9h-2"></path><path d="M12 6h-3"></path><path d="M12 12h-3"></path><path d="M12 18h-3"></path><path d="M12 15h-2"></path><path d="M21 3h-4"></path><path d="M19 3v18"></path><path d="M21 21h-4"></path>', 10)
   ])]);
 }
-const jl = /* @__PURE__ */ w(Bl, [["render", Ll]]), Hl = {}, zl = {
+const Hl = /* @__PURE__ */ w(Vl, [["render", jl]]), zl = {}, Ul = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3258,12 +3258,12 @@ const jl = /* @__PURE__ */ w(Bl, [["render", Ll]]), Hl = {}, zl = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-scale"
 };
-function Ul(e, t) {
-  return f(), _("svg", zl, [...t[0] || (t[0] = [
+function Gl(e, t) {
+  return f(), _("svg", Ul, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 20l10 0"></path><path d="M6 6l6 -1l6 1"></path><path d="M12 3l0 17"></path><path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path><path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>', 6)
   ])]);
 }
-const Gl = /* @__PURE__ */ w(Hl, [["render", Ul]]), Fl = {}, ql = {
+const Fl = /* @__PURE__ */ w(zl, [["render", Gl]]), ql = {}, Kl = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3275,12 +3275,12 @@ const Gl = /* @__PURE__ */ w(Hl, [["render", Ul]]), Fl = {}, ql = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-list-search"
 };
-function Kl(e, t) {
-  return f(), _("svg", ql, [...t[0] || (t[0] = [
+function Wl(e, t) {
+  return f(), _("svg", Kl, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M11 15a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M18.5 18.5l2.5 2.5"></path><path d="M4 6h16"></path><path d="M4 12h4"></path><path d="M4 18h4"></path>', 6)
   ])]);
 }
-const Wl = /* @__PURE__ */ w(Fl, [["render", Kl]]), Ql = {}, Yl = {
+const Ql = /* @__PURE__ */ w(ql, [["render", Wl]]), Yl = {}, Xl = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3292,12 +3292,12 @@ const Wl = /* @__PURE__ */ w(Fl, [["render", Kl]]), Ql = {}, Yl = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-list-check"
 };
-function Xl(e, t) {
-  return f(), _("svg", Yl, [...t[0] || (t[0] = [
+function Jl(e, t) {
+  return f(), _("svg", Xl, [...t[0] || (t[0] = [
     V('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3.5 5.5l1.5 1.5l2.5 -2.5"></path><path d="M3.5 11.5l1.5 1.5l2.5 -2.5"></path><path d="M3.5 17.5l1.5 1.5l2.5 -2.5"></path><path d="M11 6l9 0"></path><path d="M11 12l9 0"></path><path d="M11 18l9 0"></path>', 7)
   ])]);
 }
-const Jl = /* @__PURE__ */ w(Ql, [["render", Xl]]), Zl = {}, ec = {
+const Zl = /* @__PURE__ */ w(Yl, [["render", Jl]]), ec = {}, tc = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -3309,8 +3309,8 @@ const Jl = /* @__PURE__ */ w(Ql, [["render", Xl]]), Zl = {}, ec = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-clock"
 };
-function tc(e, t) {
-  return f(), _("svg", ec, [...t[0] || (t[0] = [
+function nc(e, t) {
+  return f(), _("svg", tc, [...t[0] || (t[0] = [
     l("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -3320,66 +3320,66 @@ function tc(e, t) {
     l("path", { d: "M12 7v5l3 3" }, null, -1)
   ])]);
 }
-const nc = /* @__PURE__ */ w(Zl, [["render", tc]]), ac = {
-  Clock: nc,
-  ListSearch: Wl,
-  ListCheck: Jl,
-  Scale: Gl,
-  RuleMeasure: jl,
-  Home: Dl,
-  Currency: bl,
-  Numbers: _l,
-  Scan: ll,
-  Abc: hl,
-  Email: Ya,
-  Phone: el,
+const oc = /* @__PURE__ */ w(ec, [["render", nc]]), ic = {
+  Clock: oc,
+  ListSearch: Ql,
+  ListCheck: Zl,
+  Scale: Fl,
+  RuleMeasure: Hl,
+  Home: Bl,
+  Currency: kl,
+  Numbers: vl,
+  Scan: cl,
+  Abc: pl,
+  Email: Xa,
+  Phone: tl,
   X: Zt,
-  LogOut: qa,
-  Calendar: za,
-  Trash: Va,
-  Cancel: Oa,
-  Menu: Ta,
-  Dots: $a,
-  Meat: ya,
-  Cash: ys,
-  CashReceipt: Mi,
-  CashRegister: $s,
-  CashCalendar: Ts,
-  Computer: Os,
-  Eye: Vs,
-  EyeOff: zs,
-  Search: qs,
-  Tag: Ys,
-  Report: ei,
-  ShoppingCart: ri,
-  UserCircle: li,
-  UserGroup: rl,
-  Configuration: hi,
-  Plus: _i,
-  Pencil: bi,
-  Reload: Ni,
-  ArrowRight: Ai,
-  ArrowLeft: Ml,
-  ArrowUp: Nl,
-  ArrowDown: Al,
-  Receipt: Di,
-  CreditCard: ji,
-  Lock: Gi,
-  Bell: Wi,
-  Help: Ji,
-  Connection: na,
-  Apps: ia,
+  LogOut: Ka,
+  Calendar: Ua,
+  Trash: La,
+  Cancel: Pa,
+  Menu: Ia,
+  Dots: Ca,
+  Meat: Ea,
+  Cash: Es,
+  CashReceipt: xi,
+  CashRegister: Cs,
+  CashCalendar: Is,
+  Computer: Ps,
+  Eye: Ls,
+  EyeOff: Us,
+  Search: Ks,
+  Tag: Xs,
+  Report: ti,
+  ShoppingCart: si,
+  UserCircle: ci,
+  UserGroup: sl,
+  Configuration: pi,
+  Plus: vi,
+  Pencil: ki,
+  Reload: Ri,
+  ArrowRight: Si,
+  ArrowLeft: xl,
+  ArrowUp: Rl,
+  ArrowDown: Sl,
+  Receipt: Bi,
+  CreditCard: Hi,
+  Lock: Fi,
+  Bell: Qi,
+  Help: Zi,
+  Connection: oa,
+  Apps: aa,
   Chevron: at,
-  Bank: ua,
-  Check: fa,
-  List: ga
+  Bank: da,
+  Check: ma,
+  List: wa
 }, tn = "data-theme";
 var nn = /* @__PURE__ */ ((e) => (e.DARK = "dark", e.LIGHT = "light", e.AQUA = "aqua", e.SOLARIS = "solaris", e))(nn || {});
 function nt(e) {
-  document.body.setAttribute(tn, e);
+  document.documentElement.setAttribute(tn, e);
 }
-function oc() {
-  if (document.body.getAttribute(tn) !== "dark") {
+function rc() {
+  if (document.documentElement.getAttribute(tn) !== "dark") {
     nt(
       "dark"
       /* DARK */
@@ -3391,45 +3391,47 @@ function oc() {
     /* LIGHT */
   );
 }
-const lc = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const ac = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Type: nn,
   setTheme: nt,
-  toggleDarkMode: oc
+  toggleDarkMode: rc
+}, Symbol.toStringTag, { value: "Module" })), lc = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null
 }, Symbol.toStringTag, { value: "Module" })), cc = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
-}, Symbol.toStringTag, { value: "Module" })), uc = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null
-}, Symbol.toStringTag, { value: "Module" })), j = {
+}, Symbol.toStringTag, { value: "Module" })), uc = {
+  create: Fo,
+  createWebHistory: bo
+}, j = {
   Page: Xt,
   Hyperlink: Oe,
-  Accordion: Nr,
-  Button: Ko,
+  Accordion: Tr,
+  Button: Qo,
   Form: Jt,
   Label: Pe,
-  Layout: ir,
-  Panel: mr,
-  Separator: wr,
-  BreadCrumb: Pr,
-  ComboBox: Lr,
-  Edit: Ur,
-  FormDialog: Zr,
-  Memo: rs,
+  Layout: lr,
+  Panel: vr,
+  Separator: kr,
+  BreadCrumb: Br,
+  ComboBox: Hr,
+  Edit: Gr,
+  FormDialog: es,
+  Memo: ss,
   SidebarItem: en,
-  Menu: ms,
-  Sidebar: gs
+  Menu: _s,
+  Sidebar: ws
 }, dc = {
   install(e) {
     e.component("ui-accordion", j.Accordion), e.component("ui-breadcrumb", j.BreadCrumb), e.component("ui-button", j.Button), e.component("ui-combo-box", j.ComboBox), e.component("ui-edit", j.Edit), e.component("ui-form", j.Form), e.component("ui-form-dialog", j.FormDialog), e.component("ui-hyperlink", j.Hyperlink), e.component("ui-label", j.Label), e.component("ui-layout", j.Layout), e.component("ui-memo", j.Memo), e.component("ui-menu", j.Menu), e.component("ui-page", j.Page), e.component("ui-panel", j.Panel), e.component("ui-separator", j.Separator), e.component("ui-sidebar", j.Sidebar), e.component("ui-sidebar-item", j.SidebarItem);
   }
 };
 export {
-  uc as Component,
-  ac as Icon,
+  cc as Component,
+  ic as Icon,
   dc as Kuxtal,
-  cc as Schema,
-  lc as Theme,
-  j as UI,
-  ic as createRouter,
-  sc as createWebHistory
+  uc as Router,
+  lc as Schema,
+  ac as Theme,
+  j as UI
 };
