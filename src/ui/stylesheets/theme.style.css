@@ -17,6 +17,8 @@
   --hyperlink-text-color: var(--theme-primary-color-normal);
   --hyperlink-text-active-color: var(--theme-primary-color-dark);
 
+  --separator-border-color: var(--theme-neutral-color-normal);
+
   --edit-background-color: var(--theme-neutral-color-lighter);
   --edit-text-color: var(--theme-neutral-color-darker);
   --edit-border-color: var(--theme-neutral-color-normal);
