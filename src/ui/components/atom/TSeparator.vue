@@ -5,17 +5,9 @@
 </template>
 
 <style scoped>
-  :global(:root) {
-    --separator-border-color: #2b2b2b;
-  }
-
-  html[data-theme="dark"] .separator {
-    --separator-border-color: #232f48;
-  }
-
   .separator {
     min-width: 100%;
     margin-block: 0.125rem;
-    border-bottom: 0.0125rem solid var(--separator-border-color);
+    border-bottom: 0.0125rem solid var(--theme-neutral-color-500);
   }
 </style>

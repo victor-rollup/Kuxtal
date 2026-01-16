@@ -157,5 +157,8 @@
 <style scoped>
   .playground {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 </style>

@@ -29,15 +29,15 @@
 
 <style scoped>
   .combo-box {
-    background: var(--edit-background-color);
-    border: 0.125rem solid transparent;
     padding: 0.25rem;
     border-radius: 0.125rem;
     outline: none;
-    color: var(--edit-text-color);
+    color: var(--theme-neutral-color-900);
+    border: 0.125rem solid transparent;
+    background: var(--theme-neutral-color-200);
   }
 
   .combo-box:focus {
-    outline: 0.125rem solid var(--edit-border-color-focus);
+    border-color: var(--theme-primary-color-500);
   }
 </style>

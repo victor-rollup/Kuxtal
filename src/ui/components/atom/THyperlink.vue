@@ -28,17 +28,13 @@
 </template>
 
 <style scoped>
-  :global(:root) {
-    --hyperlink-text-color: #4e4caf;
-  }
-
-  html[data-theme="dark"] .hyperlink {
-    --hyperlink-text-color: #92a4c9;
-  }
-
   .hyperlink {
     width: fit-content;
     cursor: pointer;
-    color: var(--hyperlink-text-color);
+    color: var(--theme-primary-color-500);
+  }
+
+  .hyperlink:active {
+    color: var(--theme-primary-color-900);
   }
 </style>

@@ -24,27 +24,10 @@
 </template>
 
 <style scoped>
-  :global(:root) {
-    --sidebar-option-text-color: #475362;
-    --sidebar-option-text-color-active: #ffffff;
-    --sidebar-option-caption-color: #8e969d;
-    --sidebar-option-background-hover-color: #e9eaf5;
-    --sidebar-option-background-active-color: #103aae;
-  }
-
-  html[data-theme='dark'] .sidebar-item {
-    --sidebar-option-text-color: #94a3b8;
-    --sidebar-option-text-color-active: #f8f9fa;
-    --sidebar-option-caption-color: #8e969d;
-    --sidebar-option-background-hover-color: #232f48;
-    --sidebar-option-background-active-color: #0f2145;
-  }
-
   .sidebar-item {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    /* max-width: fit-content; */
   }
 
   .sidebar-item__option {
@@ -57,7 +40,7 @@
     border-radius: 0.5rem;
     cursor: pointer;
     font-weight: 500;
-    color: var(--sidebar-option-text-color);
+    color: var(--theme-neutral-color-800);
     text-decoration: none;
     border: 0.0125rem solid transparent;
   }
@@ -68,18 +51,17 @@
     gap: 0.5rem;
   }
 
-  .sidebar-item__option:hover,
-  .sidebar-item__option.router-link-exact-active {
-    background: var(--sidebar-option-background-hover-color);
+  .sidebar-item__option:hover {
+    background: var(--theme-primary-color-100);
   }
 
   .sidebar-item__option.router-link-exact-active {
-    color: var(--sidebar-option-text-color-active);
-    background: var(--sidebar-option-background-active-color);
+    color: var(--theme-neutral-color-100);
+    background: var(--theme-primary-color-500);
   }
 
   .sidebar-item__caption {
     text-transform: uppercase;
-    color: var(--sidebar-option-caption-color);
+    color: var(--theme-neutral-color-400);
   }
 </style>

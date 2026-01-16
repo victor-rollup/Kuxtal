@@ -57,26 +57,10 @@
 </template>
 
 <style scoped>
-  :global(:root) {
-    --menu-background-color: white;
-    --menu-border-color: #afa1a1;
-
-    --menu-item-text-color: blue;
-    --menu-item-background-hover-color: #e9eaf5;
-  }
-
-  html[data-theme='dark'] .menu {
-    --menu-background-color: #161e2d;
-    --menu-border-color: #232f48;
-
-    --menu-item-text-color: #92a4c9;
-    --menu-item-background-hover-color: #232f48;
-  }
-
   .menu {
     width: 100%;
-    border: 0.0125rem solid var(--menu-border-color);
-    background: var(--menu-background-color);
+    border: 0.0125rem solid var(--theme-neutral-color-500);
+    background: var(--theme-neutral-color-100);
   }
 
   .menu-item {
@@ -116,12 +100,8 @@
   }
 
   .menu-item__hyperlink[data-use-separator='true'] {
-    border-top: 0.0125rem solid var(--menu-border-color);
-    border-bottom: 0.0125rem solid var(--menu-border-color);
-  }
-
-  .menu-item__hyperlink-container {
-    color: var(--menu-item-text-color);
+    border-top: 0.0125rem solid var(--theme-neutral-color-500);
+    border-bottom: 0.0125rem solid var(--theme-neutral-color-500);
   }
 
   .menu-item__hyperlink,
@@ -137,10 +117,11 @@
   .menu-item__hyperlink {
     border-radius: 0.25rem;
     justify-content: space-between;
+    color: var(--theme-secondary-color-700);
   }
 
   .menu-item__hyperlink:hover {
-    background: var(--menu-item-background-hover-color);
+    background: var(--theme-neutral-color-200);
   }
 
   .menu[data-orientation='vertical'] {

@@ -38,20 +38,6 @@
 </template>
 
 <style scoped>
-  :global(:root) {
-    --breadcrumb-current-text-color: #000000;
-    --breadcrumb-route-text-color: #1878b8;
-    --breadcrumb-route-text-hover-color: #07193d;
-    --breadcrumb-divider-text-color: var(--breadcrumb-route-text-color);
-  }
-
-  html[data-theme='dark'] .breadcrumb {
-    --breadcrumb-current-text-color: #ffffff;
-    --breadcrumb-route-text-color: #92a4c9;
-    --breadcrumb-route-text-hover-color: #ffffff;
-    --breadcrumb-divider-text-color: #92a4c9;
-  }
-
   .breadcrumb {
     max-width: fit-content;
   }
@@ -68,7 +54,7 @@
   }
 
   .breadcrumb__current {
-    color: var(--breadcrumb-current-text-color);
+    color: var(--theme-neutral-color-800);
     opacity: 0.65;
   }
 
@@ -76,15 +62,14 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: var(--breadcrumb-route-text-color) !important;
   }
 
   .breadcrumb__route-hyperlink:hover {
-    color: var(--breadcrumb-route-text-hover-color) !important;
+    text-decoration: underline;
   }
 
   .breadcrumb__route::after {
     content: attr(data-divider);
-    color: var(--breadcrumb-divider-text-color);
+    color: var(--theme-primary-color-500);
   }
 </style>

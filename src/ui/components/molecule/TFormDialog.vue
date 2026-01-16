@@ -32,33 +32,9 @@
 </template>
 
 <style scoped>
-  :global(:root) {
-    --form-dialog-border-color: skyblue;
-    --form-dialog-background-color: transparent;
-
-    --form-dialog-header-text-color: #000000;
-    --form-dialog-header-border-color: skyblue;
-    --form-dialog-header-background-color: transparent;
-
-    --form-dialog-icon-text-color: #999999;
-    --form-dialog-icon-text-hover-color: #000000;
-  }
-
-  html[data-theme='dark'] .form-dialog {
-    --form-dialog-border-color: #232f48;
-    --form-dialog-background-color: #161e2d;
-
-    --form-dialog-header-text-color: #92a4c9;
-    --form-dialog-header-border-color: #232f48;
-    --form-dialog-header-background-color: #161e2d;
-
-    --form-dialog-icon-text-color: #92a4c9;
-    --form-dialog-icon-text-hover-color: #ffffff;
-  }
-
   .form-dialog {
-    background: var(--form-dialog-background-color);
-    border: 0.0125rem solid var(--form-dialog-border-color);
+    background: var(--theme-neutral-color-100);
+    border: 0.0125rem solid var(--theme-neutral-color-500);
     border-radius: 0.5rem;
     height: fit-content;
   }
@@ -68,9 +44,11 @@
     align-items: baseline;
     justify-content: space-between;
     padding: 1rem;
-    color: var(--form-dialog-header-text-color);
-    background: var(--form-dialog-header-background-color);
-    border-bottom: 0.0125rem solid var(--form-dialog-header-border-color);
+    color: var(--theme-neutral-color-800);
+    background: var(--theme-neutral-color-200);
+    border-bottom: 0.0125rem solid var(--theme-neutral-color-500);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }
 
   .form-dialog__content {
@@ -85,10 +63,10 @@
   }
 
   .form-dialog__icon {
-    color: var(--form-dialog-icon-text-color);
+    color: var(--theme-neutral-color-500);
   }
 
   .form-dialog__icon:hover {
-    color: var(--form-dialog-icon-text-hover-color);
+    color: var(--theme-neutral-color-800);
   }
 </style>

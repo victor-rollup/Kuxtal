@@ -36,30 +36,7 @@
   </TLabel>
 </template>
 
-<style>
-  :root {
-    --edit-border-color: #b9b5b5;
-    --edit-border-color-focus: #03a9f4;
-    --edit-text-color: #000000;
-    --edit-text-focus-color: #000000;
-    --edit-background-color: #a1e1f1;
-    --edit-background-focus-color: var(--edit-background-color);
-    --edit-file-background-color: #03a9f4;
-  }
-
-  html[data-theme='dark'] .edit,
-  html[data-theme='dark'] .memo,
-  html[data-theme='dark'] .combo-box
-   {
-    --edit-border-color: #232f48;
-    --edit-border-color-focus: #92a4c9;
-    --edit-text-color: #ffffff;
-    --edit-text-focus-color: #ffffff;
-    --edit-background-color: #232f48;
-    --edit-background-focus-color: var(--edit-background-color);
-    --edit-file-background-color: #92a4c9;
-  }
-
+<style scoped>
   .edit__icon {
     min-height: 1rem;
     min-width: 1rem;
@@ -91,14 +68,16 @@
   }
 
   .edit:has(.edit__field[type='file']) .edit__field::file-selector-button {
-    background: var(--edit-file-background-color);
-    color: white;
+    background: var(--theme-primary-color-500);
+    color: var(--theme-neutral-color-100);
     border: none;
     padding-block: 0.25rem;
     padding-inline: 0.5rem;
     font-size: 0.85rem;
-    border-radius: 0.25rem;
     cursor: pointer;
+    border-radius: 0.25rem;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
   }
 
   .edit:has(.edit__field[type='color']) {
@@ -134,14 +113,12 @@
     padding-inline: 0.5rem;
     gap: 0.5rem;
     text-align: inherit;
-    color: var(--edit-text-color);
-    background: var(--edit-background-color);
-    border-bottom: 0.125rem solid var(--edit-border-color);
+    color: var(--theme-neutral-color-900);
+    background: var(--theme-neutral-color-200);
+    border-bottom: 0.125rem solid var(--theme-neutral-color-500);
   }
 
   .edit__container:focus-within {
-    color: var(--edit-text-focus-color);
-    background: var(--edit-background-focus-color);
-    border-color: var(--edit-border-color-focus);
+    border-color: var(--theme-primary-color-500);
   }
 </style>

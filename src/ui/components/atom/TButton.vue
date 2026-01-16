@@ -22,44 +22,6 @@
 </template>
 
 <style scoped>
-  :global(:root) {
-    --button-border-color: transparent;
-
-    --filled-button-text-color: #ffffff;
-    --filled-button-background-color: blue;
-
-    --secondary-button-text-color: #ffffff;
-    --secondary-button-background-color: rgb(0, 113, 128);
-
-    --outlined-button-text-color: blue;
-    --outlined-button-border-color: var(--outlined-button-text-color);
-    --outlined-button-background-hover-color: #ffffff;
-
-    --text-button-text-color: var(--theme-secondary-color);
-
-    --icon-button-text-color: #ffffff;
-    --icon-button-background-color: var(--theme-secondary-color);
-  }
-
-  html[data-theme='dark'] .button {
-    --button-border-color: transparent;
-
-    --filled-button-text-color: #ffffffff;
-    --filled-button-background-color: #92a4c9;
-
-    --secondary-button-text-color: #92a4c9;
-    --secondary-button-background-color: #0f2145;
-
-    --outlined-button-text-color: #92a4c9;
-    --outlined-button-border-color: #92a4c9;
-    --outlined-button-background-hover-color: #232f48;
-
-    --text-button-text-color: #92a4c9;
-
-    --icon-button-text-color: #92a4c9;
-    --icon-button-background-color: #0f2145;
-  }
-
   .button {
     display: flex;
     align-items: center;
@@ -72,7 +34,7 @@
 
     font-size: 1rem;
     cursor: pointer;
-    border: 0.125rem solid var(--button-border-color);
+    border: 0.125rem solid transparent;
   }
 
   .button:not([disabled]):hover {
@@ -84,40 +46,28 @@
   }
 
   .button[data-mode='filled'] {
-    background: var(--filled-button-background-color);
-  }
-
-  .button[data-mode='filled'] .button__icon,
-  .button[data-mode='filled'] .button__caption {
-    color: var(--filled-button-text-color);
+    color: var(--theme-neutral-color-100);
+    background: var(--theme-primary-color-900);
   }
 
   .button[data-mode='secondary'] {
-    background: var(--secondary-button-background-color);
-  }
-
-  .button[data-mode='secondary'] .button__icon,
-  .button[data-mode='secondary'] .button__caption {
-    color: var(--secondary-button-text-color);
+    color: var(--theme-neutral-color-100);
+    background: var(--theme-primary-color-500);
   }
 
   .button[data-mode='text'],
   .button[data-mode='outlined'] {
     background: transparent;
+    color: var(--theme-primary-color-900);
   }
 
   .button[data-mode='outlined'] {
-    border-color: var(--outlined-button-border-color);
+    font-weight: 500;
+    border-color: var(--theme-primary-color-900);
   }
 
   .button[data-mode='outlined']:hover {
-    background: var(--outlined-button-background-hover-color);
-  }
-
-  .button[data-mode='outlined'] .button__icon,
-  .button[data-mode='outlined'] .button__caption {
-    color: var(--outlined-button-text-color);
-    font-weight: 500;
+    background: var(--theme-primary-color-300);
   }
 
   .button[data-mode='text'] {
@@ -125,20 +75,12 @@
     width: fit-content;
   }
 
-  .button[data-mode='text'] .button__icon,
-  .button[data-mode='text'] .button__caption {
-    color: var(--text-button-text-color);
-  }
-
   .button[data-mode='icon'] {
     padding: 0.5rem;
     min-width: 2.5rem;
     max-width: fit-content;
-    background: var(--icon-button-background-color);
-  }
-
-  .button[data-mode='icon'] .button__icon {
-    color: var(--icon-button-text-color);
+    color: var(--theme-neutral-color-100);
+    background: var(--theme-primary-color-500);
   }
 
   .button[data-mode='icon'] .button__caption {

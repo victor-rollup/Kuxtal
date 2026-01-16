@@ -35,7 +35,7 @@
 
   .memo__field {
     border: 0.125rem solid transparent;
-    background: var(--edit-background-color);
+    background: var(--theme-neutral-color-200);
     border-radius: 0.125rem;
     padding: 0.5rem;
     font-size: 1rem;
@@ -46,7 +46,7 @@
   }
 
   .memo__field:focus {
-    color: var(--edit-text-focus-color);
-    border-color: var(--edit-border-color-focus);
+    color: var(--theme-primary-color-500);
+    border-color: var(--theme-primary-color-500);
   }
 </style>
