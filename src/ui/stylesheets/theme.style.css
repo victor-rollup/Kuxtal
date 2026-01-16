@@ -64,7 +64,7 @@
   --accordion-header-text-color: var(--theme-neutral-color-dark);
   --accordion-header-background-color: var(--theme-neutral-color-white);
   --accordion-header-background-hover-color: var(--theme-neutral-color-lighter);
-  --accordion-content-background-color: var(--theme-neutral-color-white);
+  --accordion-content-background-color: transparent;
 
   --filled-button-text-color: var(--theme-neutral-color-darker);
   --filled-button-background-color: var(--theme-primary-color-normal);
