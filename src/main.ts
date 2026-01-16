@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
-// import Playground from './test/playground.vue';
+import Playground from './test/playground.vue';
 import StyleComponents from './test/style.components.vue';
+import css from './test/css.vue';
 
 import { UI, Router } from '.';
 

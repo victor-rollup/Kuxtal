@@ -31,10 +31,10 @@
   .hyperlink {
     width: fit-content;
     cursor: pointer;
-    color: var(--theme-primary-color-500);
+    color: var(--hyperlink-text-color);
   }
 
   .hyperlink:active {
-    color: var(--theme-primary-color-900);
+    color: var(--hyperlink-text-active-color);
   }
 </style>

@@ -1,97 +1,107 @@
+/* --------------------------------------------------------------------------------------------- */
+@import url(./colorimetry.style.css);
+/* --------------------------------------------------------------------------------------------- */
 :root,
 [data-theme='light'] {
-  --theme-primary-color-100: hsl(200, 50%, 95%);
-  --theme-primary-color-200: hsl(200, 50%, 85%);
-  --theme-primary-color-300: hsl(200, 50%, 75%);
-  --theme-primary-color-400: hsl(200, 50%, 65%);
-  --theme-primary-color-500: hsl(200, 50%, 55%);
-  --theme-primary-color-600: hsl(200, 50%, 45%);
-  --theme-primary-color-700: hsl(200, 50%, 35%);
-  --theme-primary-color-800: hsl(200, 50%, 25%);
-  --theme-primary-color-900: hsl(200, 50%, 15%);
+  --accordion-border-color: var(--theme-neutral-color-normal);
+  --accordion-header-text-color: var(--theme-neutral-color-dark);
+  --accordion-header-background-color: var(--theme-neutral-color-white);
+  --accordion-content-background-color: var(--theme-neutral-color-white);
 
-  --theme-secondary-color-100: hsl(200, 50%, 95%);
-  --theme-secondary-color-200: hsl(200, 50%, 85%);
-  --theme-secondary-color-300: hsl(200, 50%, 75%);
-  --theme-secondary-color-400: hsl(200, 50%, 65%);
-  --theme-secondary-color-500: hsl(200, 50%, 55%);
-  --theme-secondary-color-600: hsl(200, 50%, 45%);
-  --theme-secondary-color-700: hsl(200, 50%, 35%);
-  --theme-secondary-color-800: hsl(200, 50%, 25%);
-  --theme-secondary-color-900: hsl(200, 50%, 15%);
+  --filled-button-text-color: var(--theme-neutral-color-lighter);
+  --filled-button-background-color: var(--theme-primary-color-normal);
+  --secondary-button-text-color: var(--theme-neutral-color-lighter);
+  --secondary-button-background-color: var(--theme-secondary-color-normal);
+  --outlined-button-text-color: var(--theme-primary-color-normal);
 
-  --theme-tertiary-color-100: hsl(36, 50%, 95%);
-  --theme-tertiary-color-200: hsl(36, 50%, 85%);
-  --theme-tertiary-color-300: hsl(36, 50%, 75%);
-  --theme-tertiary-color-400: hsl(36, 50%, 65%);
-  --theme-tertiary-color-500: hsl(36, 50%, 55%);
-  --theme-tertiary-color-600: hsl(36, 50%, 45%);
-  --theme-tertiary-color-700: hsl(36, 50%, 35%);
-  --theme-tertiary-color-800: hsl(36, 50%, 25%);
-  --theme-tertiary-color-900: hsl(36, 50%, 15%);
+  --hyperlink-text-color: var(--theme-primary-color-normal);
+  --hyperlink-text-active-color: var(--theme-primary-color-dark);
 
-  --theme-neutral-color-100: hsl(0, 0%, 95%);
-  --theme-neutral-color-200: hsl(0, 0%, 85%);
-  --theme-neutral-color-300: hsl(0, 0%, 75%);
-  --theme-neutral-color-400: hsl(0, 0%, 65%);
-  --theme-neutral-color-500: hsl(0, 0%, 55%);
-  --theme-neutral-color-600: hsl(0, 0%, 45%);
-  --theme-neutral-color-700: hsl(0, 0%, 35%);
-  --theme-neutral-color-800: hsl(0, 0%, 25%);
-  --theme-neutral-color-900: hsl(0, 0%, 15%);
+  --edit-background-color: var(--theme-neutral-color-lighter);
+  --edit-text-color: var(--theme-neutral-color-darker);
+  --edit-border-color: var(--theme-neutral-color-normal);
+  --edit-background-focus-color: var(--theme-neutral-color-lighter);
+  --edit-text-focus-color: var(--theme-primary-color-dark);
+  --edit-border-focus-color: var(--theme-primary-color-normal);
+  --edit-file-text-color: var(--filled-button-text-color);
+  --edit-file-background-color: var(--filled-button-background-color);
 
-  --theme-status-success-color: hsl(122, 40%, 40%);
-  --theme-status-error-color: hsl(4, 90%, 60%);
-  --theme-status-warning-color: hsl(36, 100%, 50%);
-  --theme-status-information-color: hsl(207, 90%, 54%);
+  --sidebar-item-text-color: var(--theme-neutral-color-dark);
+  --sidebar-item-text-hover-color: var(--theme-neutral-color-lighter);
+  --sidebar-item-background-hover-color: var(--theme-primary-color-light);
+  --sidebar-item-text-active-color: var(--theme-neutral-color-lighter);
+  --sidebar-item-background-active-color: var(--theme-primary-color-normal);
+  --sidebar-item-caption-text-color: var(--theme-neutral-color-light);
+
+  --sidebar-background-color: var(--theme-neutral-color-white);
+  --sidebar-border-color: var(--theme-neutral-color-normal);
+
+  --scrollbar-thumb-background-color: var(--theme-neutral-color-light);
+  --scrollbar-track-background-color: var(--theme-neutral-color-lighter);
+
+  --menu-border-color: var(--theme-neutral-color-normal);
+  --menu-background-color: var(--theme-neutral-color-white);
+  --menu-item-text-color: var(--theme-primary-color-light);
+  --menu-item-background-hover-color: var(--theme-neutral-color-lighter);
+
+  --form-dialog-background-color: var(--theme-neutral-color-white);
+  --form-dialog-border-color: var(--theme-neutral-color-normal);
+  --form-dialog-header-text-color: var(--theme-neutral-color-darker);
+  --form-dialog-header-background-color: var(--theme-neutral-color-white);
+
+  --table-head-text-color: var(--theme-primary-color-dark);
+  --table-head-background-color: var(--theme-neutral-color-light);
+  --table-body-row-background-hover-color: var(--theme-neutral-color-lighter);
 }
-
+/* --------------------------------------------------------------------------------------------- */
 [data-theme='dark'] {
-  --theme-primary-color-100: hsl(200, 35%, 15%);
-  --theme-primary-color-200: hsl(200, 35%, 25%);
-  --theme-primary-color-300: hsl(200, 35%, 35%);
-  --theme-primary-color-400: hsl(200, 35%, 45%);
-  --theme-primary-color-500: hsl(200, 35%, 55%);
-  --theme-primary-color-600: hsl(200, 35%, 65%);
-  --theme-primary-color-700: hsl(200, 35%, 75%);
-  --theme-primary-color-800: hsl(200, 35%, 85%);
-  --theme-primary-color-900: hsl(200, 35%, 95%);
-
-  --theme-secondary-color-100: hsl(200, 32%, 15%);
-  --theme-secondary-color-200: hsl(200, 32%, 25%);
-  --theme-secondary-color-300: hsl(200, 32%, 35%);
-  --theme-secondary-color-400: hsl(200, 32%, 45%);
-  --theme-secondary-color-500: hsl(200, 32%, 55%);
-  --theme-secondary-color-600: hsl(200, 32%, 65%);
-  --theme-secondary-color-700: hsl(200, 32%, 75%);
-  --theme-secondary-color-800: hsl(200, 32%, 85%);
-  --theme-secondary-color-900: hsl(200, 32%, 95%);
-
-  --theme-tertiary-color-100: hsl(36, 50%, 95%);
-  --theme-tertiary-color-200: hsl(36, 50%, 85%);
-  --theme-tertiary-color-300: hsl(36, 50%, 75%);
-  --theme-tertiary-color-400: hsl(36, 50%, 65%);
-  --theme-tertiary-color-500: hsl(36, 50%, 55%);
-  --theme-tertiary-color-600: hsl(36, 50%, 45%);
-  --theme-tertiary-color-700: hsl(36, 50%, 35%);
-  --theme-tertiary-color-800: hsl(36, 50%, 25%);
-  --theme-tertiary-color-900: hsl(36, 50%, 15%);
-
-  --theme-neutral-color-100: hsl(0, 0%, 15%);
-  --theme-neutral-color-200: hsl(0, 0%, 25%);
-  --theme-neutral-color-300: hsl(0, 0%, 35%);
-  --theme-neutral-color-400: hsl(0, 0%, 45%);
-  --theme-neutral-color-500: hsl(0, 0%, 55%);
-  --theme-neutral-color-600: hsl(0, 0%, 65%);
-  --theme-neutral-color-700: hsl(0, 0%, 75%);
-  --theme-neutral-color-800: hsl(0, 0%, 85%);
-  --theme-neutral-color-900: hsl(0, 0%, 95%);
-
-  --theme-status-success-color: hsl(122, 40%, 40%);
-  --theme-status-error-color: hsl(4, 90%, 60%);
-  --theme-status-warning-color: hsl(36, 100%, 50%);
-  --theme-status-information-color: hsl(207, 90%, 54%);
-
   color-scheme: dark;
-  background: var(--theme-neutral-color-100);
+
+  --accordion-border-color: var(--theme-neutral-color-normal);
+  --accordion-header-text-color: var(--theme-neutral-color-dark);
+  --accordion-header-background-color: var(--theme-neutral-color-white);
+  --accordion-content-background-color: var(--theme-neutral-color-white);
+
+  --filled-button-text-color: var(--theme-neutral-color-darker);
+  --filled-button-background-color: var(--theme-primary-color-normal);
+  --secondary-button-text-color: var(--theme-neutral-color-darker);
+  --secondary-button-background-color: var(--theme-secondary-color-normal);
+  --outlined-button-text-color: var(--theme-primary-color-normal);
+
+  --hyperlink-text-color: var(--theme-primary-color-normal);
+  --hyperlink-text-active-color: var(--theme-primary-color-dark);
+
+  --edit-background-color: var(--theme-neutral-color-lighter);
+  --edit-text-color: var(--theme-neutral-color-darker);
+  --edit-border-color: var(--theme-neutral-color-normal);
+  --edit-background-focus-color: var(--theme-neutral-color-lighter);
+  --edit-text-focus-color: var(--theme-primary-color-light);
+  --edit-border-focus-color: var(--theme-primary-color-normal);
+  --edit-file-text-color: var(--filled-button-text-color);
+  --edit-file-background-color: var(--filled-button-background-color);
+
+  --sidebar-item-text-color: var(--theme-neutral-color-dark);
+  --sidebar-item-text-hover-color: var(--theme-neutral-color-lighter);
+  --sidebar-item-background-hover-color: var(--theme-primary-color-light);
+  --sidebar-item-text-active-color: var(--theme-neutral-color-lighter);
+  --sidebar-item-background-active-color: var(--theme-primary-color-light);
+  --sidebar-item-caption-text-color: var(--theme-neutral-color-light);
+
+  --scrollbar-thumb-background-color: var(--theme-neutral-color-light);
+  --scrollbar-track-background-color: var(--theme-neutral-color-lighter);
+
+  --menu-border-color: var(--theme-neutral-color-normal);
+  --menu-background-color: var(--theme-neutral-color-white);
+  --menu-item-text-color: var(--theme-primary-color-light);
+  --menu-item-background-hover-color: var(--theme-neutral-color-lighter);
+
+  --form-dialog-background-color: var(--theme-neutral-color-white);
+  --form-dialog-border-color: var(--theme-neutral-color-normal);
+  --form-dialog-header-text-color: var(--theme-neutral-color-darker);
+  --form-dialog-header-background-color: var(--theme-neutral-color-white);
+
+  --table-head-text-color: var(--theme-primary-color-light);
+  --table-head-background-color: var(--theme-neutral-color-light);
+  --table-body-row-background-hover-color: var(--theme-neutral-color-lighter);
 }
+/* --------------------------------------------------------------------------------------------- */

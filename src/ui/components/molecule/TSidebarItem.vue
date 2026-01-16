@@ -40,7 +40,7 @@
     border-radius: 0.5rem;
     cursor: pointer;
     font-weight: 500;
-    color: var(--theme-neutral-color-800);
+    color: var(--sidebar-item-text-color);
     text-decoration: none;
     border: 0.0125rem solid transparent;
   }
@@ -52,16 +52,17 @@
   }
 
   .sidebar-item__option:hover {
-    background: var(--theme-primary-color-100);
+    color: var(--sidebar-item-text-hover-color);
+    background: var(--sidebar-item-background-hover-color);
   }
 
   .sidebar-item__option.router-link-exact-active {
-    color: var(--theme-neutral-color-100);
-    background: var(--theme-primary-color-500);
+    color: var(--sidebar-item-text-active-color);
+    background: var(--sidebar-item-background-active-color);
   }
 
   .sidebar-item__caption {
     text-transform: uppercase;
-    color: var(--theme-neutral-color-400);
+    color: var(--sidebar-item-caption-text-color);
   }
 </style>

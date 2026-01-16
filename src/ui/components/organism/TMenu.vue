@@ -59,8 +59,8 @@
 <style scoped>
   .menu {
     width: 100%;
-    border: 0.0125rem solid var(--theme-neutral-color-500);
-    background: var(--theme-neutral-color-100);
+    border: 0.0125rem solid var(--menu-border-color);
+    background: var(--menu-background-color);
   }
 
   .menu-item {
@@ -100,8 +100,8 @@
   }
 
   .menu-item__hyperlink[data-use-separator='true'] {
-    border-top: 0.0125rem solid var(--theme-neutral-color-500);
-    border-bottom: 0.0125rem solid var(--theme-neutral-color-500);
+    border-top: 0.0125rem solid var(--menu-border-color);
+    border-bottom: 0.0125rem solid var(--menu-border-color);
   }
 
   .menu-item__hyperlink,
@@ -117,11 +117,11 @@
   .menu-item__hyperlink {
     border-radius: 0.25rem;
     justify-content: space-between;
-    color: var(--theme-secondary-color-700);
+    color: var(--menu-item-text-color);
   }
 
   .menu-item__hyperlink:hover {
-    background: var(--theme-neutral-color-200);
+    background: var(--menu-item-background-hover-color);
   }
 
   .menu[data-orientation='vertical'] {

@@ -54,8 +54,9 @@
   }
 
   .breadcrumb__current {
-    color: var(--theme-neutral-color-800);
+    color: var(--theme-neutral-color-darker);
     opacity: 0.65;
+    font-weight: 500;
   }
 
   .breadcrumb__route-hyperlink {
@@ -70,6 +71,6 @@
 
   .breadcrumb__route::after {
     content: attr(data-divider);
-    color: var(--theme-primary-color-500);
+    color: var(--theme-primary-color-normal);
   }
 </style>

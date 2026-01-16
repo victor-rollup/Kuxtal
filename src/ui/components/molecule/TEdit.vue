@@ -68,8 +68,8 @@
   }
 
   .edit:has(.edit__field[type='file']) .edit__field::file-selector-button {
-    background: var(--theme-primary-color-500);
-    color: var(--theme-neutral-color-100);
+    background: var(--edit-file-background-color);
+    color: var(--edit-file-text-color);
     border: none;
     padding-block: 0.25rem;
     padding-inline: 0.5rem;
@@ -78,6 +78,7 @@
     border-radius: 0.25rem;
     border-top-right-radius: 0rem;
     border-bottom-right-radius: 0rem;
+    margin-right: 0.5rem;
   }
 
   .edit:has(.edit__field[type='color']) {
@@ -113,12 +114,14 @@
     padding-inline: 0.5rem;
     gap: 0.5rem;
     text-align: inherit;
-    color: var(--theme-neutral-color-900);
-    background: var(--theme-neutral-color-200);
-    border-bottom: 0.125rem solid var(--theme-neutral-color-500);
+    color: var(--edit-text-color);
+    background: var(--edit-background-color);
+    border-bottom: 0.125rem solid var(--edit-border-color);
   }
 
   .edit__container:focus-within {
-    border-color: var(--theme-primary-color-500);
+    color: var(--edit-text-focus-color);
+    border-color: var(--edit-border-focus-color);
+    background: var(--edit-background-focus-color);
   }
 </style>

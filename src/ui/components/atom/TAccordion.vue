@@ -44,22 +44,22 @@
 <style scoped>
   .accordion {
     border-radius: 0.25rem;
-    border: 0.0125rem solid var(--theme-neutral-color-500);
+    border: 0.0125rem solid var(--accordion-border-color);
   }
 
   .accordion__header {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    color: var(--theme-neutral-color-900);
-    background: var(--theme-neutral-color-100);
+    color: var(--accordion-header-text-color);
+    background: var(--accordion-header-background-color);
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     cursor: pointer;
   }
 
   .accordion[open] .accordion__header {
-    border-bottom: 0.0125rem solid var(--theme-neutral-color-500);
+    border-bottom: 0.0125rem solid var(--accordion-border-color);
   }
 
   .accordion:not([open]) .accordion__header {
@@ -68,7 +68,7 @@
   }
 
   .accordion__header:hover {
-    background: var(--theme-neutral-color-200);
+    filter: brightness(115%);
   }
 
   .accordion__chevron {
@@ -84,6 +84,6 @@
     padding: 1rem;
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
-    background: var(--theme-neutral-color-100);
+    background: var(--accordion-content-background-color);
   }
 </style>

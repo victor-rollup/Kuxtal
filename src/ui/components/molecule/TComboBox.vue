@@ -32,12 +32,14 @@
     padding: 0.25rem;
     border-radius: 0.125rem;
     outline: none;
-    color: var(--theme-neutral-color-900);
+    color: var(--edit-text-color);
+    background: var(--edit-background-color);
     border: 0.125rem solid transparent;
-    background: var(--theme-neutral-color-200);
   }
 
   .combo-box:focus {
-    border-color: var(--theme-primary-color-500);
+    color: var(--edit-text-focus-color);
+    border-color: var(--edit-border-focus-color);
+    background: var(--edit-background-focus-color);
   }
 </style>

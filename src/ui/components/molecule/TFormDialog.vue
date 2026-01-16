@@ -33,8 +33,8 @@
 
 <style scoped>
   .form-dialog {
-    background: var(--theme-neutral-color-100);
-    border: 0.0125rem solid var(--theme-neutral-color-500);
+    background: var(--form-dialog-background-color);
+    border: 0.0125rem solid var(--form-dialog-border-color);
     border-radius: 0.5rem;
     height: fit-content;
   }
@@ -44,9 +44,9 @@
     align-items: baseline;
     justify-content: space-between;
     padding: 1rem;
-    color: var(--theme-neutral-color-800);
-    background: var(--theme-neutral-color-200);
-    border-bottom: 0.0125rem solid var(--theme-neutral-color-500);
+    color: var(--form-dialog-header-text-color);
+    background: var(--form-dialog-header-background-color);
+    border-bottom: 0.0125rem solid var(--form-dialog-border-color);
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
   }
@@ -60,13 +60,5 @@
 
   .form-dialog__icon {
     cursor: pointer;
-  }
-
-  .form-dialog__icon {
-    color: var(--theme-neutral-color-500);
-  }
-
-  .form-dialog__icon:hover {
-    color: var(--theme-neutral-color-800);
   }
 </style>

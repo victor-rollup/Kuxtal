@@ -18,9 +18,8 @@
     gap: 1rem;
     flex: 1 1 auto;
     min-width: fit-content;
-    /* max-width: fit-content; */
     padding: 1rem;
-    background: var(--theme-neutral-color-100);
-    border-right: 0.0125rem solid var(--theme-neutral-color-500);
+    background: var(--sidebar-background-color);
+    border-right: 0.0125rem solid var(--sidebar-border-color);
   }
 </style>

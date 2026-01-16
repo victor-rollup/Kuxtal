@@ -1,11 +1,9 @@
-type theme_type = 'dark' | 'light' | 'aqua' | 'solaris';
+type theme_type = 'dark' | 'light';
 const DATA_THEME = 'data-theme';
 
 export enum Type {
   DARK = 'dark',
   LIGHT = 'light',
-  AQUA = 'aqua',
-  SOLARIS = 'solaris',
 }
 
 export function setTheme(theme: theme_type) {

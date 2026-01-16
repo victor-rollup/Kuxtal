@@ -54,6 +54,39 @@ dl {
   list-style: none;
 }
 
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  color: var(--table-head-text-color);
+  background: var(--table-head-background-color);
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+
+thead th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+thead th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+thead th,
+tbody td {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+tbody tr:hover {
+  background: var(--table-body-row-background-hover-color);
+}
+
 dialog[open] {
   display: flex;
   justify-content: center;

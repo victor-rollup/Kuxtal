@@ -74,7 +74,24 @@
     </template>
     <div class="playground">
       <UI.Button @click="Theme.toggleDarkMode" caption="Dark/Light" />
-      <UI.Accordion title="Soy un acodeón"> </UI.Accordion>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Coca Cola</td>
+            </tr>
+            <tr>
+              <td>Pepsi</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <UI.Accordion title="Soy un acordeón"> </UI.Accordion>
       <UI.Accordion title="Botones" class="accordion">
         <UI.Button caption="Filled button" />
         <UI.Button mode="outlined" caption="Outlined button" />

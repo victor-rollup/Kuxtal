@@ -20,7 +20,6 @@
   -webkit-line-clamp: 2; /* line number */
   -webkit-box-orient: vertical;
   overflow: hidden;
-  transition: all 0.3s ease;
 }
 
 .text-truncate-multiline:hover {
