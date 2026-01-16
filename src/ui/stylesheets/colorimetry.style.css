@@ -46,11 +46,11 @@
   --theme-tertiary-color-dark: hsl(34, 61%, 30%);
   --theme-tertiary-color-darker: hsl(34, 61%, 10%);
 
-  --theme-neutral-color-white: hsl(0, 0%, 0%);
-  --theme-neutral-color-lighter: hsl(0, 0%, 10%);
-  --theme-neutral-color-light: hsl(0, 0%, 30%);
-  --theme-neutral-color-normal: hsl(0, 0%, 50%);
-  --theme-neutral-color-dark: hsl(0, 0%, 70%);
-  --theme-neutral-color-darker: hsl(0, 0%, 90%);
-  --theme-neutral-color-black: hsl(0, 0%, 100%);
+  --theme-neutral-color-white: hsl(0, 5%, 0%);
+  --theme-neutral-color-lighter: hsl(0, 5%, 10%);
+  --theme-neutral-color-light: hsl(0, 5%, 30%);
+  --theme-neutral-color-normal: hsl(0, 5%, 20%);
+  --theme-neutral-color-dark: hsl(0, 5%, 70%);
+  --theme-neutral-color-darker: hsl(0, 5%, 90%);
+  --theme-neutral-color-black: hsl(0, 5%, 100%);
 }

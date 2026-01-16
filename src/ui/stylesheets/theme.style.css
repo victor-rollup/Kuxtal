@@ -91,6 +91,9 @@
   --sidebar-item-background-active-color: var(--theme-primary-color-dark);
   --sidebar-item-caption-text-color: var(--theme-neutral-color-light);
 
+  --sidebar-background-color: var(--theme-neutral-color-lighter);
+  --sidebar-border-color: var(--theme-neutral-color-normal);
+
   --scrollbar-thumb-background-color: var(--theme-neutral-color-light);
   --scrollbar-track-background-color: var(--theme-neutral-color-lighter);
 
