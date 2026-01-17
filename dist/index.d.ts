@@ -34,7 +34,8 @@ export declare namespace Component {
         ISidebar,
         ISidebarItem,
         IFormDialog,
-        IAccordion
+        IAccordion,
+        IBreadcrumb
     }
 }
 
@@ -49,6 +50,14 @@ declare interface IAccordion {
     expose: {
         open: () => void;
         close: () => void;
+    };
+}
+
+declare interface IBreadcrumb {
+    props: {
+        current: string;
+        routes: IRoute[];
+        divider?: string;
     };
 }
 
@@ -230,6 +239,12 @@ declare interface IOption {
     route?: string;
 }
 
+declare interface IRoute {
+    caption: string;
+    icon?: Component_2;
+    route: string;
+}
+
 declare interface ISidebar {
     props: {
         items: ISidebarItem['props'][];
@@ -262,7 +277,8 @@ export declare namespace Schema {
         IOption,
         ITab,
         IComboBoxOption,
-        IItem
+        IItem,
+        IRoute
     }
 }
 
@@ -529,19 +545,11 @@ export declare const UI: {
     Separator: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
     BreadCrumb: DefineComponent<    {
     current: string;
-    routes: {
-    caption: string;
-    icon?: Component_2;
-    route: string;
-    }[];
+    routes: IRoute[];
     divider?: string;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
     current: string;
-    routes: {
-    caption: string;
-    icon?: Component_2;
-    route: string;
-    }[];
+    routes: IRoute[];
     divider?: string;
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
     ComboBox: DefineComponent<    {

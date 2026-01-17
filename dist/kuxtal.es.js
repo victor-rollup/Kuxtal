@@ -2001,7 +2001,7 @@ const qe = tt, xr = ["open"], $r = { class: "accordion__header" }, Cr = { class:
       ])
     ]));
   }
-}), Br = /* @__PURE__ */ w(Dr, [["__scopeId", "data-v-ae17a42f"]]), Vr = {
+}), Br = /* @__PURE__ */ w(Dr, [["__scopeId", "data-v-f4ff0974"]]), Vr = {
   key: 0,
   class: "combo-box__option",
   value: null
