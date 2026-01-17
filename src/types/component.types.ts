@@ -5,7 +5,7 @@ import type {
   InputTypeHTMLAttribute,
 } from 'vue';
 import type { RouteParamsRawGeneric } from 'vue-router';
-import type { IComboBoxOption, IItem, IOption } from './schema.types';
+import type { IComboBoxOption, IItem, IOption, IRoute } from './schema.types';
 // ------------------------------------------------------------------------------------------------
 export interface ILabel {
   props: {
@@ -137,6 +137,14 @@ export interface IAccordion {
   expose: {
     open: () => void;
     close: () => void;
-  }
+  };
+}
+// ------------------------------------------------------------------------------------------------
+export interface IBreadcrumb {
+  props: {
+    current: string;
+    routes: IRoute[];
+    divider?: string;
+  };
 }
 // ------------------------------------------------------------------------------------------------

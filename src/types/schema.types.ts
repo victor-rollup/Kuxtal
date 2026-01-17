@@ -23,3 +23,9 @@ export interface IItem extends IOption {
   onClick?: (event: PointerEvent) => void;
 }
 // ------------------------------------------------------------------------------------------------
+export interface IRoute {
+  caption: string;
+  icon?: Component;
+  route: string;
+}
+// ------------------------------------------------------------------------------------------------

@@ -1,16 +1,8 @@
 <script setup lang="ts">
-  import type { Component } from 'vue';
   import THyperlink from '../atom/THyperlink.vue';
+  import type { IBreadcrumb } from '@/types/component.types';
 
-  const props = defineProps<{
-    current: string;
-    routes: {
-      caption: string;
-      icon?: Component;
-      route: string;
-    }[];
-    divider?: string;
-  }>();
+  const props = defineProps<IBreadcrumb['props']>();
 </script>
 
 <template>
