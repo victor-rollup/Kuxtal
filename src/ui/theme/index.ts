@@ -1,9 +1,10 @@
-type theme_type = 'dark' | 'light';
+type theme_type = 'dark' | 'light' | 'midnight';
 const DATA_THEME = 'data-theme';
 
 export enum Type {
   DARK = 'dark',
   LIGHT = 'light',
+  MIDNIGHT = 'midnight',
 }
 
 export function setTheme(theme: theme_type) {
@@ -16,6 +17,6 @@ export function toggleDarkMode() {
     setTheme(Type.DARK);
     return;
   }
-  
+
   setTheme(Type.LIGHT);
 }

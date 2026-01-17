@@ -58,8 +58,6 @@
 }
 /* --------------------------------------------------------------------------------------------- */
 [data-theme='dark'] {
-  color-scheme: dark;
-
   --accordion-border-color: var(--theme-neutral-color-normal);
   --accordion-header-text-color: var(--theme-neutral-color-dark);
   --accordion-header-background-color: var(--theme-neutral-color-white);
@@ -109,6 +107,61 @@
 
   --table-head-text-color: var(--theme-primary-color-light);
   --table-head-background-color: var(--theme-neutral-color-lighter);
+  --table-body-row-background-hover-color: var(--theme-primary-color-darker);
+}
+/* --------------------------------------------------------------------------------------------- */
+[data-theme='midnight'] {
+  background: var(--theme-neutral-color-lighter);
+
+  --accordion-border-color: var(--theme-neutral-color-normal);
+  --accordion-header-text-color: var(--theme-neutral-color-dark);
+  --accordion-header-background-color: var(--theme-primary-color-darker);
+  --accordion-header-background-hover-color: var(--theme-primary-color-dark);
+  --accordion-content-background-color: transparent;
+
+  --filled-button-text-color: var(--theme-neutral-color-darker);
+  --filled-button-background-color: var(--theme-primary-color-normal);
+  --secondary-button-text-color: var(--theme-neutral-color-darker);
+  --secondary-button-background-color: var(--theme-secondary-color-normal);
+  --outlined-button-text-color: var(--theme-primary-color-normal);
+
+  --hyperlink-text-color: var(--theme-primary-color-light);
+  --hyperlink-text-active-color: var(--theme-primary-color-lighter);
+
+  --edit-background-color: var(--theme-neutral-color-normal);
+  --edit-text-color: var(--theme-neutral-color-darker);
+  --edit-border-color: var(--theme-neutral-color-normal);
+  --edit-background-focus-color: var(--theme-neutral-color-normal);
+  --edit-text-focus-color: var(--theme-neutral-color-darker);
+  --edit-border-focus-color: var(--theme-primary-color-normal);
+  --edit-file-text-color: var(--filled-button-text-color);
+  --edit-file-background-color: var(--filled-button-background-color);
+
+  --sidebar-item-text-color: var(--theme-neutral-color-dark);
+  --sidebar-item-text-hover-color: var(--theme-neutral-color-dark);
+  --sidebar-item-background-hover-color: var(--theme-neutral-color-lighter);
+  --sidebar-item-text-active-color: var(--theme-neutral-color-darker);
+  --sidebar-item-background-active-color: var(--theme-primary-color-dark);
+  --sidebar-item-caption-text-color: var(--theme-neutral-color-light);
+
+  --sidebar-background-color: var(--theme-neutral-color-lighter);
+  --sidebar-border-color: var(--theme-neutral-color-normal);
+
+  --scrollbar-thumb-background-color: var(--theme-neutral-color-light);
+  --scrollbar-track-background-color: var(--theme-neutral-color-lighter);
+
+  --menu-border-color: var(--theme-neutral-color-normal);
+  --menu-background-color: var(--theme-neutral-color-white);
+  --menu-item-text-color: var(--theme-primary-color-light);
+  --menu-item-background-hover-color: var(--theme-neutral-color-lighter);
+
+  --form-dialog-background-color: var(--theme-neutral-color-lighter);
+  --form-dialog-border-color: var(--theme-neutral-color-normal);
+  --form-dialog-header-text-color: var(--theme-neutral-color-darker);
+  --form-dialog-header-background-color: var(--theme-primary-color-dark);
+
+  --table-head-text-color: var(--theme-primary-color-light);
+  --table-head-background-color: var(--theme-neutral-color-light);
   --table-body-row-background-hover-color: var(--theme-primary-color-darker);
 }
 /* --------------------------------------------------------------------------------------------- */
