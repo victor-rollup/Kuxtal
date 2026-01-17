@@ -1805,7 +1805,7 @@ const qo = ["data-mode", "type", "form", "disabled"], Ko = {
 function br(e, t) {
   return f(), _("div", wr);
 }
-const kr = /* @__PURE__ */ w(gr, [["render", br], ["__scopeId", "data-v-c113fae0"]]), yr = {}, Er = {
+const kr = /* @__PURE__ */ w(gr, [["render", br], ["__scopeId", "data-v-02e492b5"]]), yr = {}, Er = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -1970,7 +1970,7 @@ const qe = tt, xr = ["open"], $r = { class: "accordion__header" }, Cr = { class:
       ])
     ], 40, xr));
   }
-}), Tr = /* @__PURE__ */ w(Rr, [["__scopeId", "data-v-086f7611"]]), Ir = { class: "breadcrumb" }, Ar = { class: "breadcrumb__list" }, Sr = ["data-divider"], Or = { class: "breadcrumb__route-caption | text-truncate" }, Pr = { class: "breadcrumb__current | text-truncate" }, Dr = /* @__PURE__ */ H({
+}), Tr = /* @__PURE__ */ w(Rr, [["__scopeId", "data-v-60f79128"]]), Ir = { class: "breadcrumb" }, Ar = { class: "breadcrumb__list" }, Sr = ["data-divider"], Or = { class: "breadcrumb__route-caption | text-truncate" }, Pr = { class: "breadcrumb__current | text-truncate" }, Dr = /* @__PURE__ */ H({
   __name: "TBreadCrumb",
   props: {
     current: {},
@@ -3374,7 +3374,7 @@ const rc = /* @__PURE__ */ w(tc, [["render", oc]]), ac = {
   Check: _a,
   List: ba
 }, tn = "data-theme";
-var nn = /* @__PURE__ */ ((e) => (e.DARK = "dark", e.LIGHT = "light", e))(nn || {});
+var nn = /* @__PURE__ */ ((e) => (e.DARK = "dark", e.LIGHT = "light", e.MIDNIGHT = "midnight", e))(nn || {});
 function nt(e) {
   document.documentElement.setAttribute(tn, e);
 }

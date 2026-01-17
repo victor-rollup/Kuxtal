@@ -276,13 +276,14 @@ export declare namespace Theme {
     }
 }
 
-declare type theme_type = 'dark' | 'light';
+declare type theme_type = 'dark' | 'light' | 'midnight';
 
 declare function toggleDarkMode(): void;
 
 declare enum Type {
     DARK = "dark",
-    LIGHT = "light"
+    LIGHT = "light",
+    MIDNIGHT = "midnight"
 }
 
 export declare const UI: {
