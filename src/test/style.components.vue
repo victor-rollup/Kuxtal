@@ -19,6 +19,34 @@
           {
             caption: 'Edit',
           },
+          {
+            caption: 'View',
+            submenu: [
+              {
+                caption: 'Appearance',
+                submenu: [
+                  {
+                    caption: 'Set midnight theme',
+                    onClick() {
+                      Theme.setTheme('midnight');
+                    },
+                  },
+                  {
+                    caption: 'Set light theme',
+                    onClick() {
+                      Theme.setTheme('light');
+                    },
+                  },
+                  {
+                    caption: 'Set dark theme',
+                    onClick() {
+                      Theme.setTheme('dark');
+                    },
+                  },
+                ],
+              },
+            ],
+          },
         ]"
       />
     </template>
