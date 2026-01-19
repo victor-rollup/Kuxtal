@@ -187,6 +187,8 @@
         <UI.Edit type="range" placeholder="xd" :icon="Icon.Search" />
         <UI.Edit type="time" placeholder="xd" :icon="Icon.Search" />
         <UI.Edit type="week" placeholder="xd" :icon="Icon.Search" />
+        <input type="checkbox" />
+        <input type="radio" />
       </UI.Accordion>
       <UI.FormDialog
         title="Dialogo"

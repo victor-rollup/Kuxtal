@@ -84,7 +84,7 @@
 
   --sidebar-item-text-color: var(--theme-neutral-color-dark);
   --sidebar-item-text-hover-color: var(--theme-neutral-color-dark);
-  --sidebar-item-background-hover-color: var(--theme-neutral-color-lighter);
+  --sidebar-item-background-hover-color: var(--theme-neutral-color-light);
   --sidebar-item-text-active-color: var(--theme-neutral-color-darker);
   --sidebar-item-background-active-color: var(--theme-primary-color-dark);
   --sidebar-item-caption-text-color: var(--theme-neutral-color-light);
@@ -139,9 +139,9 @@
 
   --sidebar-item-text-color: var(--theme-neutral-color-dark);
   --sidebar-item-text-hover-color: var(--theme-neutral-color-dark);
-  --sidebar-item-background-hover-color: var(--theme-neutral-color-lighter);
+  --sidebar-item-background-hover-color: var(--theme-primary-color-dark);
   --sidebar-item-text-active-color: var(--theme-neutral-color-darker);
-  --sidebar-item-background-active-color: var(--theme-primary-color-dark);
+  --sidebar-item-background-active-color: var(--theme-primary-color-normal);
   --sidebar-item-caption-text-color: var(--theme-neutral-color-light);
 
   --sidebar-background-color: var(--theme-neutral-color-lighter);
