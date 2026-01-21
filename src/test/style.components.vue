@@ -146,7 +146,7 @@
         <UI.Button :icon="Icon.Bell" mode="text" caption="Text button" />
       </UI.Accordion>
       <UI.Accordion title="Navegación">
-        <UI.Hyperlink class="text-truncate-multiline">
+        <UI.Hyperlink>
           Lorem ipsum <UI.Hyperlink>tempore</UI.Hyperlink> sit amet consectetur
           adipisicing elit. Id fugit laudantium facere cupiditate amet maiores
           eum accusantium repellendus soluta. Neque sapiente debitis sint
@@ -168,26 +168,61 @@
       </UI.Accordion>
       <UI.Accordion title="Formulario">
         <UI.Memo />
+        <br>
         <UI.Separator />
-        <UI.ComboBox :options="[]" />
+        <br>
+        <UI.ComboBox allow-null :options="[]" />
+        <br>
         <UI.Separator />
+        <br>
         <UI.Edit type="search" :icon="Icon.Search" />
+        <br>
         <UI.Separator />
+        <br>
         <UI.Edit type="color" :icon="Icon.Search" />
+        <br>
         <UI.Separator />
+        <br>
         <UI.Edit type="date" placeholder="xd" />
+        <br>
         <UI.Separator />
+        <br>
         <UI.Edit type="datetime-local" placeholder="xd" />
+        <br>
         <UI.Separator />
+        <br>
         <UI.Edit type="file" placeholder="xd" :icon="Icon.Search" />
+        <br>
         <UI.Separator />
+        <br>
         <UI.Edit type="month" placeholder="xd" :icon="Icon.Search" />
+        <br>
+        <UI.Separator />
+        <br>
         <UI.Edit type="number" placeholder="xd" :icon="Icon.Search" />
+        <br>
+        <UI.Separator />
+        <br>
         <UI.Edit type="password" placeholder="xd" :icon="Icon.Search" />
+        <br>
+        <UI.Separator />
+        <br>
         <UI.Edit type="range" placeholder="xd" :icon="Icon.Search" />
+        <br>
+        <UI.Separator />
+        <br>
         <UI.Edit type="time" placeholder="xd" :icon="Icon.Search" />
+        <br>
+        <UI.Separator />
+        <br>
         <UI.Edit type="week" placeholder="xd" :icon="Icon.Search" />
+        <br>
+        <UI.Separator />
+        <br>
         <input type="checkbox" />
+        <br>
+        <UI.Separator />
+        <br>
         <input type="radio" />
       </UI.Accordion>
       <UI.FormDialog
