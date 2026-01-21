@@ -29,5 +29,6 @@
 }
 
 .table-wrapper {
-  background: var(--table-background-color);
+  border-radius: 0.25rem;
+  border: 0.0125rem solid var(--table-wrapper-border-color);
 }

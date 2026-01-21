@@ -28,6 +28,7 @@ import Icon from './ui/components/atom/icon';
 export * as Theme from './ui/theme';
 export * as Schema from './types/schema.types';
 export * as Component from './types/component.types';
+export { Use, Helper, DateMethods } from 'helper';
 // ------------------------------------------------------------------------------------------------
 export { Icon };
 export const Router = {
