@@ -94,6 +94,8 @@
     --accordion-header-background-color
   );
 
+  --separator-border-color: var(--theme-neutral-color-800);
+
   --table-wrapper-border-color: var(--theme-neutral-color-800);
   --table-head-text-color: var(--theme-primary-color-100);
   --table-head-background-color: var(--theme-neutral-color-700);
