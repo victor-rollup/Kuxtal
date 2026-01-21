@@ -9,14 +9,17 @@ import { ComponentProvideOptions } from 'vue';
 import { CreateComponentPublicInstanceWithMixins } from 'vue';
 import { createRouter } from 'vue-router';
 import { createWebHistory } from 'vue-router';
+import { DateMethods } from 'helper';
 import { DefineComponent } from 'vue';
 import { GlobalComponents } from 'vue';
 import { GlobalDirectives } from 'vue';
+import { Helper } from 'helper';
 import { InputTypeHTMLAttribute } from 'vue';
 import { PublicProps } from 'vue';
 import { RouteLocationNormalizedLoaded } from 'vue-router';
 import { RouteParamsRawGeneric } from 'vue-router';
 import { RouterViewProps } from 'vue-router';
+import { Use } from 'helper';
 import { VNode } from 'vue';
 import { VNodeProps } from 'vue';
 
@@ -38,6 +41,10 @@ export declare namespace Component {
         IBreadcrumb
     }
 }
+
+export { DateMethods }
+
+export { Helper }
 
 declare interface IAccordion {
     props: {
@@ -700,5 +707,7 @@ export declare const UI: {
     items: ISidebarItem["props"][];
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
 };
+
+export { Use }
 
 export { }
