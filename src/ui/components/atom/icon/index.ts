@@ -50,8 +50,10 @@ import TIconScale from './TIconScale.vue';
 import TIconListSearch from './TIconListSearch.vue';
 import TIconListCheck from './TIconListCheck.vue';
 import TIconClock from './TIconClock.vue';
+import TIconCategory from './TIconCategory.vue';
 
 const Icon = {
+  Category: TIconCategory,
   Clock: TIconClock,
   ListSearch: TIconListSearch,
   ListCheck: TIconListCheck,
