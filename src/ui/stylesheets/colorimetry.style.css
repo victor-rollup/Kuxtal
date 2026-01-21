@@ -55,7 +55,7 @@
   --theme-neutral-color-darker: hsl(0, 5%, 90%);
   --theme-neutral-color-black: hsl(0, 5%, 100%);
 }
-/* hsl(220, 40%, 20%) */
+
 [data-theme='midnight'] {
   color-scheme: dark;
   --theme-primary-color-lighter: hsl(260, 24%, 90%);

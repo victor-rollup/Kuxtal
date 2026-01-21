@@ -2,9 +2,9 @@
   import type { IAccordion } from '@/types/component.types';
   import TIconChevron from './icon/TIconChevron.vue';
   import { ref } from 'vue';
-  import Helper from '@/helper';
+  import { Use } from 'helper';
 
-  const accordion = ref<HTMLDetailsElement | null>(Helper.Use.NULL);
+  const accordion = ref<HTMLDetailsElement | null>(Use.NULL);
   const props = defineProps<IAccordion['props']>();
   const emit = defineEmits<IAccordion['emits']>();
 
@@ -13,13 +13,13 @@
       if (!accordion.value) {
         return;
       }
-      accordion.value.open = Helper.Use.TRUE;
+      accordion.value.open = Use.TRUE;
     },
     close() {
       if (!accordion.value) {
         return;
       }
-      accordion.value.open = Helper.Use.FALSE;
+      accordion.value.open = Use.FALSE;
     },
   });
 </script>
