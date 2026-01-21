@@ -42,8 +42,8 @@
   --theme-neutral-color-800: hsl(0, 0%, 48%);
   --theme-neutral-color-900: hsl(0, 0%, 40%);
 }
-
 /* --------------------------------------------------------------------------------------------- */
+:root,
 [data-theme='light'] {
   background: var(--theme-neutral-color-100);
 
