@@ -75,8 +75,8 @@
   --sidebar-background-color: var(--theme-neutral-color-100);
   --sidebar-border-color: var(--theme-neutral-color-200);
 
-  --scrollbar-thumb-background-color: var(--theme-neutral-color-700);
-  --scrollbar-track-background-color: var(--theme-neutral-color-800);
+  --scrollbar-thumb-background-color: var(--theme-neutral-color-200);
+  --scrollbar-track-background-color: var(--theme-neutral-color-100);
 
   --menu-border-color: var(--theme-neutral-color-200);
   --menu-background-color: var(--theme-neutral-color-100);
