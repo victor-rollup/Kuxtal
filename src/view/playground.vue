@@ -1,21 +1,21 @@
 <script setup lang="ts">
-  import { Icon, UI } from '@/ui';
-  import { ref } from 'vue';
+import { Icon, Theme, UI } from "@/ui";
+import { ref } from "vue";
 
-  function toggleDarkMode() {
-    const current = document.documentElement.getAttribute('data-theme');
-    if (current === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'light');
-      return;
-    }
-    document.documentElement.setAttribute('data-theme', 'dark');
+function toggleDarkMode() {
+  const current = document.documentElement.getAttribute("data-theme");
+  if (current === "dark") {
+    document.documentElement.setAttribute("data-theme", "light");
+    return;
   }
+  document.documentElement.setAttribute("data-theme", "dark");
+}
 
-  function alert() {
-    window.alert(1);
-  }
+function alert() {
+  window.alert(1);
+}
 
-  const value = ref('');
+const value = ref("");
 </script>
 
 <template>
@@ -43,15 +43,21 @@
                 submenu: [
                   {
                     caption: 'Set midnight theme',
-                    onClick() {},
+                    onClick() {
+                      Theme.setTheme(Theme.Type.MIDNIGHT);
+                    },
                   },
                   {
                     caption: 'Set light theme',
-                    onClick() {},
+                    onClick() {
+                      Theme.setTheme(Theme.Type.LIGHT);
+                    },
                   },
                   {
                     caption: 'Set dark theme',
-                    onClick() {},
+                    onClick() {
+                      Theme.setTheme(Theme.Type.DARK);
+                    },
                   },
                 ],
               },
@@ -115,8 +121,44 @@
     <div class="playground">
       <h1>Playground</h1>
 
+      <UI.Accordion title="Tabla">
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>NOMBRE</th>
+                <th>APELLIDO PATERNO</th>
+                <th>APELLIDO MATERNO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Víctor Eduardo</td>
+                <td>León</td>
+                <td>Carreño</td>
+              </tr>
+              <tr>
+                <td>Víctor Eduardo</td>
+                <td>León</td>
+                <td>Carreño</td>
+              </tr>
+              <tr>
+                <td>Víctor Eduardo</td>
+                <td>León</td>
+                <td>Carreño</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </UI.Accordion>
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
+          <UI.Memo caption="Descripción" :maxlength="45" />
+          <UI.ComboBox
+            caption="Selecciona un elemento"
+            :allow-null="true"
+            :items="[]"
+          />
           <UI.Edit
             autocomplete="off"
             name="edit"
@@ -241,11 +283,21 @@
           mode="outlined"
         />
         <UI.Separator />
-        <UI.Button :icon="Icon.Search" disabled caption="Click me" mode="text" />
+        <UI.Button
+          :icon="Icon.Search"
+          disabled
+          caption="Click me"
+          mode="text"
+        />
         <UI.Separator />
         <UI.Button :icon="Icon.Search" disabled mode="text" />
         <UI.Separator />
-        <UI.Button :icon="Icon.Search" disabled caption="Click me" mode="icon" />
+        <UI.Button
+          :icon="Icon.Search"
+          disabled
+          caption="Click me"
+          mode="icon"
+        />
         <UI.Separator />
       </UI.Accordion>
 
@@ -268,10 +320,10 @@
 </template>
 
 <style scoped>
-  .playground {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
+.playground {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 </style>
