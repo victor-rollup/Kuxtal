@@ -12790,7 +12790,9 @@ const xw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   Memo: b1,
   Menu: P1,
   Sidebar: E1
-}, Ew = {
+};
+Promise.resolve({          });
+const Ew = {
   create: jm,
   createWebHistory: xm
 }, Yw = De.DateMethods, Bw = De.Helper, Ww = De.Use;
