@@ -85,13 +85,6 @@
   --menu-item-text-color: var(--theme-primary-color-500);
   --menu-item-background-hover-color: var(--theme-neutral-color-300);
 
-  --form-dialog-background-color: var(--theme-neutral-color-100);
-  --form-dialog-border-color: var(--theme-neutral-color-400);
-  --form-dialog-header-text-color: var(--theme-neutral-color-900);
-  --form-dialog-header-background-color: var(
-    --accordion-header-background-color
-  );
-
   --separator-border-color: var(--theme-neutral-color-400);
 
   --table-wrapper-border-color: var(--theme-neutral-color-400);
