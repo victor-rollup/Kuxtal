@@ -8,7 +8,7 @@
 
 <template>
   <TLabel :caption="props.caption">
-    <select v-model="model" class="combo-box" v-bind="props">
+    <select v-model="model" class="combo-box" v-bind="props" :options="undefined" >
       <option disabled class="combo-box__option" :value="null">
         Selecciona un elemento
       </option>
