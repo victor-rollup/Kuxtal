@@ -10585,7 +10585,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), f1 = /* @__PURE__ */ P(l1, [["__scopeId", "data-v-d9de39e0"]]), h1 = { class: "edit__container" }, p1 = /* @__PURE__ */ te({
+}), f1 = /* @__PURE__ */ P(l1, [["__scopeId", "data-v-19856906"]]), h1 = { class: "edit__container" }, p1 = /* @__PURE__ */ te({
   __name: "TEdit",
   props: /* @__PURE__ */ yd({
     accept: {},
@@ -11057,7 +11057,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), y1 = /* @__PURE__ */ P(g1, [["__scopeId", "data-v-e1b28f68"]]), b1 = ["data-orientation"], F1 = ["onClick"], M1 = { class: "menu-item__hyperlink-container" }, O1 = { class: "menu-item__caption | text-truncate" }, w1 = /* @__PURE__ */ te({
+}), y1 = /* @__PURE__ */ P(g1, [["__scopeId", "data-v-df09e8f4"]]), b1 = ["data-orientation"], F1 = ["onClick"], M1 = { class: "menu-item__hyperlink-container" }, O1 = { class: "menu-item__caption | text-truncate" }, w1 = /* @__PURE__ */ te({
   __name: "TMenu",
   props: {
     placeholder: {},
