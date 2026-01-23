@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import type { ISidebar } from '@/types/component.types';
+  import THyperlink from '../atom/THyperlink.vue';
 
   const props = defineProps<ISidebar['props']>();
 </script>
