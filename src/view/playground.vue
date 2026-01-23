@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Icon, Theme, UI } from "@/ui";
+import { createNotification } from "@/utils/create-notification";
 import { ref } from "vue";
 
 function toggleDarkMode() {
@@ -248,7 +249,15 @@ const value = ref("");
       </UI.Accordion>
 
       <UI.Accordion title="Botones">
-        <UI.Button caption="Click me" />
+        <UI.Button
+          caption="Notification"
+          @click="
+            createNotification({
+              message: 'NETWORK ERROR',
+              type: 'error',
+            })
+          "
+        />
         <UI.Separator />
         <UI.Button caption="Click me" mode="filled" />
         <UI.Separator />
