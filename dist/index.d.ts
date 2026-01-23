@@ -1,6 +1,6 @@
 import { AllowedComponentProps } from 'vue';
 import { AriaAttributes } from 'vue';
-import { Component } from 'vue';
+import { Component as Component_2 } from 'vue';
 import { ComponentCustomProps } from 'vue';
 import { ComponentOptionsBase } from 'vue';
 import { ComponentOptionsMixin } from 'vue';
@@ -22,7 +22,7 @@ import { Use } from 'helper';
 import { VNode } from 'vue';
 import { VNodeProps } from 'vue';
 
-declare namespace Component_2 {
+export declare namespace Component {
     export {
         ILabel,
         IEdit,
@@ -65,14 +65,14 @@ declare interface IBreadcrumb {
 declare interface IBreadcrumbRoute {
     route: string;
     caption: string;
-    icon?: Component;
+    icon?: Component_2;
 }
 
 declare interface IButton {
     props: IDOMButton & {
         mode?: 'filled' | 'secondary' | 'outlined' | 'text' | 'icon';
         caption?: string;
-        icon?: Component;
+        icon?: Component_2;
     };
 }
 
@@ -353,7 +353,7 @@ declare interface IDOMTextarea extends IDOMElement, IFormAttributes {
 
 declare interface IEdit {
     props: IDOMInput & {
-        icon?: Component;
+        icon?: Component_2;
         caption?: string;
     };
 }
@@ -458,7 +458,7 @@ declare interface ISidebar {
 
 declare interface ISidebarOption {
     caption?: string;
-    icon?: Component;
+    icon?: Component_2;
     route?: string;
 }
 
@@ -467,17 +467,12 @@ declare interface ISidebarSection {
     options: ISidebarOption[];
 }
 
-export declare const Kuxtal: {
-    Schema: typeof Schema;
-    Component: typeof Component_2;
-};
-
 export declare const Router: {
     create: typeof createRouter;
     createWebHistory: typeof createWebHistory;
 };
 
-declare namespace Schema {
+export declare namespace Schema {
     export {
         ISidebarOption,
         ISidebarSection,
@@ -583,11 +578,11 @@ export declare const UI: {
     Button: DefineComponent<IDOMButton & {
     mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
     caption?: string;
-    icon?: Component;
+    icon?: Component_2;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMButton & {
     mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
     caption?: string;
-    icon?: Component;
+    icon?: Component_2;
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLButtonElement>;
     Form: {
         new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLFormElement, ComponentProvideOptions, {
@@ -731,14 +726,14 @@ export declare const UI: {
     Edit: DefineComponent<    {
     modelValue?: string | number;
     } & IDOMInput & {
-    icon?: Component;
+    icon?: Component_2;
     caption?: string;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
     "update:modelValue": (value: string | number) => any;
     }, string, PublicProps, Readonly<{
     modelValue?: string | number;
     } & IDOMInput & {
-    icon?: Component;
+    icon?: Component_2;
     caption?: string;
     }> & Readonly<{
     "onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
