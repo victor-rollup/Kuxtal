@@ -10811,7 +10811,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), v1 = /* @__PURE__ */ P(p1, [["__scopeId", "data-v-a074980e"]]), m1 = { class: "memo__counter" }, _1 = { key: 0 }, g1 = /* @__PURE__ */ te({
+}), v1 = /* @__PURE__ */ P(p1, [["__scopeId", "data-v-4599a9fc"]]), m1 = { class: "memo__counter" }, _1 = { key: 0 }, g1 = /* @__PURE__ */ te({
   __name: "TMemo",
   props: /* @__PURE__ */ yd({
     autocomplete: {},
