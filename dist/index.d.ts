@@ -17,7 +17,6 @@ import { PublicProps } from 'vue';
 import { RouteLocationNormalizedLoaded } from 'vue-router';
 import { RouteParamsRawGeneric } from 'vue-router';
 import { RouterViewProps } from 'vue-router';
-import { StyleValue } from 'vue';
 import { Use } from 'helper';
 import { VNode } from 'vue';
 import { VNodeProps } from 'vue';
@@ -372,8 +371,6 @@ declare interface IFormAttributes {
 }
 
 declare interface IGlobalAttributes extends AriaAttributes {
-    class?: string;
-    style?: StyleValue;
     accesskey?: string;
     contenteditable?: boolean | 'inherit' | 'plaintext-only';
     contextmenu?: string;
