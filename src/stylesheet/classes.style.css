@@ -7,6 +7,58 @@
   width: var(--icon-dimension);
 }
 /* --------------------------------------------------------------------------------------------- */
+.row,
+.column,
+.row-reverse,
+.column-reverse {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+/* --------------------------------------------------------------------------------------------- */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(0, 0%, 85%) 25%,
+    hsl(0, 0%, 95%) 50%,
+    hsl(0, 0%, 85%) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-color: transparent;
+}
+
+.skeleton * {
+  opacity: 0;
+}
+
+@keyframes skeleton-loading {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+/* --------------------------------------------------------------------------------------------- */
 .text-truncate {
   display: inline-block;
   max-width: 100%;
