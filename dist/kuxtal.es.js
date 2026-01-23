@@ -1,8 +1,8 @@
 import { RouterLink as Tm, RouterView as Im, createWebHistory as qm, createRouter as xm } from "vue-router";
 import { defineComponent as te, createElementBlock as F, openBlock as b, mergeProps as ne, createBlock as ae, createCommentVNode as ee, resolveDynamicComponent as je, toDisplayString as ie, withModifiers as jm, renderSlot as K, unref as Em, withCtx as ye, createElementVNode as _, ref as Ym, createVNode as Pn, Fragment as qe, renderList as xe, mergeModels as yd, useModel as bd, withDirectives as Fd, vModelSelect as Bm, vModelDynamic as Wm, computed as Rm, vModelText as Cm, onMounted as Hm, resolveComponent as Lm, createStaticVNode as A } from "vue";
-const XO = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const UO = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
-}, Symbol.toStringTag, { value: "Module" })), KO = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, Symbol.toStringTag, { value: "Module" })), XO = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
 }, Symbol.toStringTag, { value: "Module" })), Nm = ["data-mode", "type"], Am = {
   key: 0,
@@ -10356,7 +10356,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
   key: 0,
   class: "combo-box__option",
   value: null
-}, l1 = ["value"], f1 = /* @__PURE__ */ te({
+}, l1 = /* @__PURE__ */ te({
   __name: "TComboBox",
   props: /* @__PURE__ */ yd({
     autocomplete: {},
@@ -10555,7 +10555,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
     formtarget: {},
     caption: {},
     allowNull: { type: Boolean },
-    options: {}
+    items: {}
   }, {
     modelValue: { default: null },
     modelModifiers: {}
@@ -10570,18 +10570,14 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
         Fd(_("select", ne({
           "onUpdate:modelValue": i[0] || (i[0] = (r) => t.value = r),
           class: "combo-box"
-        }, a, { options: void 0 }), [
+        }, a, { items: void 0 }), [
           i[1] || (i[1] = _("option", {
             disabled: "",
             class: "combo-box__option",
             value: null
           }, " Selecciona un elemento ", -1)),
           a.allowNull ? (b(), F("option", d1, " Ninguno/a ")) : ee("", !0),
-          (b(!0), F(qe, null, xe(a.options, (r, u) => (b(), F("option", {
-            key: u,
-            value: r.value,
-            class: "combo-box__option"
-          }, ie(r.label), 9, l1))), 128))
+          (b(!0), F(qe, null, xe(a.items, (r, u) => (b(), F("option", ne({ key: u }, { ref_for: !0 }, r, { class: "combo-box__option" }), ie(r.label), 17))), 128))
         ], 16), [
           [Bm, t.value]
         ])
@@ -10589,7 +10585,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), h1 = /* @__PURE__ */ P(f1, [["__scopeId", "data-v-b9c26f7a"]]), p1 = { class: "edit__container" }, v1 = /* @__PURE__ */ te({
+}), f1 = /* @__PURE__ */ P(l1, [["__scopeId", "data-v-d9de39e0"]]), h1 = { class: "edit__container" }, p1 = /* @__PURE__ */ te({
   __name: "TEdit",
   props: /* @__PURE__ */ yd({
     accept: {},
@@ -10818,7 +10814,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
       class: "edit"
     }, {
       default: ye(() => [
-        _("div", p1, [
+        _("div", h1, [
           (b(), ae(je(t.icon), { class: "edit__icon" })),
           Fd(_("input", ne({
             "onUpdate:modelValue": i[0] || (i[0] = (r) => a.value = r)
@@ -10833,7 +10829,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), m1 = /* @__PURE__ */ P(v1, [["__scopeId", "data-v-a074980e"]]), _1 = { class: "memo__counter" }, g1 = { key: 0 }, y1 = /* @__PURE__ */ te({
+}), v1 = /* @__PURE__ */ P(p1, [["__scopeId", "data-v-a074980e"]]), m1 = { class: "memo__counter" }, _1 = { key: 0 }, g1 = /* @__PURE__ */ te({
   __name: "TMemo",
   props: /* @__PURE__ */ yd({
     autocomplete: {},
@@ -11053,15 +11049,15 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
         }, a, { class: "memo__field" }), null, 16), [
           [Cm, t.value]
         ]),
-        _("small", _1, [
+        _("small", m1, [
           _("span", null, ie(o.value), 1),
-          a.maxlength ? (b(), F("span", g1, " / " + ie(a.maxlength), 1)) : ee("", !0)
+          a.maxlength ? (b(), F("span", _1, " / " + ie(a.maxlength), 1)) : ee("", !0)
         ])
       ]),
       _: 1
     }, 8, ["caption"]));
   }
-}), b1 = /* @__PURE__ */ P(y1, [["__scopeId", "data-v-e1b28f68"]]), F1 = ["data-orientation"], M1 = ["onClick"], O1 = { class: "menu-item__hyperlink-container" }, w1 = { class: "menu-item__caption | text-truncate" }, D1 = /* @__PURE__ */ te({
+}), y1 = /* @__PURE__ */ P(g1, [["__scopeId", "data-v-e1b28f68"]]), b1 = ["data-orientation"], F1 = ["onClick"], M1 = { class: "menu-item__hyperlink-container" }, O1 = { class: "menu-item__caption | text-truncate" }, w1 = /* @__PURE__ */ te({
   __name: "TMenu",
   props: {
     placeholder: {},
@@ -11276,9 +11272,9 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
             class: "menu-item__hyperlink | text-truncate"
           }, {
             default: ye(() => [
-              _("div", O1, [
+              _("div", M1, [
                 (b(), ae(je(r.icon), { class: "menu-item__icon" })),
-                _("span", w1, ie(r.caption), 1)
+                _("span", O1, ie(r.caption), 1)
               ]),
               Pn(Md, { class: "menu-item__icon | menu-item__chevron" })
             ]),
@@ -11289,14 +11285,14 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
             items: r.submenu,
             class: "submenu"
           }, null, 8, ["items"])) : ee("", !0)
-        ], 8, M1))), 256))
-      ], 16, F1);
+        ], 8, F1))), 256))
+      ], 16, b1);
     };
   }
-}), P1 = /* @__PURE__ */ P(D1, [["__scopeId", "data-v-19bab840"]]), S1 = { class: "sidebar" }, T1 = { class: "sidebar-item" }, I1 = {
+}), D1 = /* @__PURE__ */ P(w1, [["__scopeId", "data-v-19bab840"]]), P1 = { class: "sidebar" }, S1 = { class: "sidebar-item" }, T1 = {
   key: 0,
   class: "sidebar-item__caption"
-}, q1 = { class: "sidebar-item__content" }, x1 = { class: "sidebar-item__option-caption" }, j1 = /* @__PURE__ */ te({
+}, I1 = { class: "sidebar-item__content" }, q1 = { class: "sidebar-item__option-caption" }, x1 = /* @__PURE__ */ te({
   __name: "TSidebar",
   props: {
     placeholder: {},
@@ -11484,17 +11480,17 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
   },
   setup(n) {
     const t = n;
-    return (a, o) => (b(), F("ul", S1, [
-      (b(!0), F(qe, null, xe(t.sections, (i) => (b(), F("li", T1, [
-        i.caption ? (b(), F("h6", I1, ie(i.caption), 1)) : ee("", !0),
-        _("div", q1, [
+    return (a, o) => (b(), F("ul", P1, [
+      (b(!0), F(qe, null, xe(t.sections, (i) => (b(), F("li", S1, [
+        i.caption ? (b(), F("h6", T1, ie(i.caption), 1)) : ee("", !0),
+        _("div", I1, [
           (b(!0), F(qe, null, xe(i.options, (r) => (b(), ae(Sn, {
             route: r.route,
             class: "sidebar-item__option"
           }, {
             default: ye(() => [
               (b(), ae(je(r.icon))),
-              _("span", x1, ie(r.caption), 1)
+              _("span", q1, ie(r.caption), 1)
             ]),
             _: 2
           }, 1032, ["route"]))), 256))
@@ -11502,7 +11498,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
       ]))), 256))
     ]));
   }
-}), E1 = /* @__PURE__ */ P(j1, [["__scopeId", "data-v-db33995f"]]), Y1 = {}, B1 = {
+}), j1 = /* @__PURE__ */ P(x1, [["__scopeId", "data-v-db33995f"]]), E1 = {}, Y1 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11514,8 +11510,8 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-cash"
 };
-function W1(n, t) {
-  return b(), F("svg", B1, [...t[0] || (t[0] = [
+function B1(n, t) {
+  return b(), F("svg", Y1, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11526,7 +11522,7 @@ function W1(n, t) {
     _("path", { d: "M12 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" }, null, -1)
   ])]);
 }
-const R1 = /* @__PURE__ */ P(Y1, [["render", W1]]), C1 = {}, H1 = {
+const W1 = /* @__PURE__ */ P(E1, [["render", B1]]), R1 = {}, C1 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11538,12 +11534,12 @@ const R1 = /* @__PURE__ */ P(Y1, [["render", W1]]), C1 = {}, H1 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-cash-register"
 };
-function L1(n, t) {
-  return b(), F("svg", H1, [...t[0] || (t[0] = [
+function H1(n, t) {
+  return b(), F("svg", C1, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M21 15h-2.5c-.398 0 -.779 .158 -1.061 .439c-.281 .281 -.439 .663 -.439 1.061c0 .398 .158 .779 .439 1.061c.281 .281 .663 .439 1.061 .439h1c.398 0 .779 .158 1.061 .439c.281 .281 .439 .663 .439 1.061c0 .398 -.158 .779 -.439 1.061c-.281 .281 -.663 .439 -1.061 .439h-2.5"></path><path d="M19 21v1m0 -8v1"></path><path d="M13 21h-7c-.53 0 -1.039 -.211 -1.414 -.586c-.375 -.375 -.586 -.884 -.586 -1.414v-10c0 -.53 .211 -1.039 .586 -1.414c.375 -.375 .884 -.586 1.414 -.586h2m12 3.12v-1.12c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-2"></path><path d="M16 10v-6c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-4c-.53 0 -1.039 .211 -1.414 .586c-.375 .375 -.586 .884 -.586 1.414v6m8 0h-8m8 0h1m-9 0h-1"></path><path d="M8 14v.01"></path><path d="M8 17v.01"></path><path d="M12 13.99v.01"></path><path d="M12 17v.01"></path>', 9)
   ])]);
 }
-const N1 = /* @__PURE__ */ P(C1, [["render", L1]]), A1 = {}, z1 = {
+const L1 = /* @__PURE__ */ P(R1, [["render", H1]]), N1 = {}, A1 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11555,12 +11551,12 @@ const N1 = /* @__PURE__ */ P(C1, [["render", L1]]), A1 = {}, z1 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-calendar-dollar"
 };
-function Q1(n, t) {
-  return b(), F("svg", z1, [...t[0] || (t[0] = [
+function z1(n, t) {
+  return b(), F("svg", A1, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M13 21h-7a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v3"></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h12.5"></path><path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"></path><path d="M19 21v1m0 -8v1"></path>', 7)
   ])]);
 }
-const G1 = /* @__PURE__ */ P(A1, [["render", Q1]]), Z1 = {}, V1 = {
+const Q1 = /* @__PURE__ */ P(N1, [["render", z1]]), G1 = {}, Z1 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11572,12 +11568,12 @@ const G1 = /* @__PURE__ */ P(A1, [["render", Q1]]), Z1 = {}, V1 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-device-desktop"
 };
-function U1(n, t) {
-  return b(), F("svg", V1, [...t[0] || (t[0] = [
+function V1(n, t) {
+  return b(), F("svg", Z1, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z"></path><path d="M7 20h10"></path><path d="M9 16v4"></path><path d="M15 16v4"></path>', 5)
   ])]);
 }
-const X1 = /* @__PURE__ */ P(Z1, [["render", U1]]), K1 = {}, J1 = {
+const U1 = /* @__PURE__ */ P(G1, [["render", V1]]), X1 = {}, K1 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11589,8 +11585,8 @@ const X1 = /* @__PURE__ */ P(Z1, [["render", U1]]), K1 = {}, J1 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-eye"
 };
-function $1(n, t) {
-  return b(), F("svg", J1, [...t[0] || (t[0] = [
+function J1(n, t) {
+  return b(), F("svg", K1, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11600,7 +11596,7 @@ function $1(n, t) {
     _("path", { d: "M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" }, null, -1)
   ])]);
 }
-const k1 = /* @__PURE__ */ P(K1, [["render", $1]]), eF = {}, nF = {
+const $1 = /* @__PURE__ */ P(X1, [["render", J1]]), k1 = {}, eF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11612,8 +11608,8 @@ const k1 = /* @__PURE__ */ P(K1, [["render", $1]]), eF = {}, nF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-eye-off"
 };
-function tF(n, t) {
-  return b(), F("svg", nF, [...t[0] || (t[0] = [
+function nF(n, t) {
+  return b(), F("svg", eF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11624,7 +11620,7 @@ function tF(n, t) {
     _("path", { d: "M3 3l18 18" }, null, -1)
   ])]);
 }
-const rF = /* @__PURE__ */ P(eF, [["render", tF]]), aF = {}, iF = {
+const tF = /* @__PURE__ */ P(k1, [["render", nF]]), rF = {}, aF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11636,8 +11632,8 @@ const rF = /* @__PURE__ */ P(eF, [["render", tF]]), aF = {}, iF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-search"
 };
-function oF(n, t) {
-  return b(), F("svg", iF, [...t[0] || (t[0] = [
+function iF(n, t) {
+  return b(), F("svg", aF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11647,7 +11643,7 @@ function oF(n, t) {
     _("path", { d: "M21 21l-6 -6" }, null, -1)
   ])]);
 }
-const uF = /* @__PURE__ */ P(aF, [["render", oF]]), sF = {}, cF = {
+const oF = /* @__PURE__ */ P(rF, [["render", iF]]), uF = {}, sF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11659,8 +11655,8 @@ const uF = /* @__PURE__ */ P(aF, [["render", oF]]), sF = {}, cF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-tag"
 };
-function dF(n, t) {
-  return b(), F("svg", cF, [...t[0] || (t[0] = [
+function cF(n, t) {
+  return b(), F("svg", sF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11670,7 +11666,7 @@ function dF(n, t) {
     _("path", { d: "M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71a2 2 0 0 0 -1.414 -.586h-5.172a3 3 0 0 0 -3 3z" }, null, -1)
   ])]);
 }
-const lF = /* @__PURE__ */ P(sF, [["render", dF]]), fF = {}, hF = {
+const dF = /* @__PURE__ */ P(uF, [["render", cF]]), lF = {}, fF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11682,12 +11678,12 @@ const lF = /* @__PURE__ */ P(sF, [["render", dF]]), fF = {}, hF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-report"
 };
-function pF(n, t) {
-  return b(), F("svg", hF, [...t[0] || (t[0] = [
+function hF(n, t) {
+  return b(), F("svg", fF, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697"></path><path d="M18 14v4h4"></path><path d="M18 11v-4a2 2 0 0 0 -2 -2h-2"></path><path d="M8 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"></path><path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M8 11h4"></path><path d="M8 15h3"></path>', 8)
   ])]);
 }
-const vF = /* @__PURE__ */ P(fF, [["render", pF]]), mF = {}, _F = {
+const pF = /* @__PURE__ */ P(lF, [["render", hF]]), vF = {}, mF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11699,12 +11695,12 @@ const vF = /* @__PURE__ */ P(fF, [["render", pF]]), mF = {}, _F = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"
 };
-function gF(n, t) {
-  return b(), F("svg", _F, [...t[0] || (t[0] = [
+function _F(n, t) {
+  return b(), F("svg", mF, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M17 17h-11v-14h-2"></path><path d="M6 5l14 1l-1 7h-13"></path>', 5)
   ])]);
 }
-const yF = /* @__PURE__ */ P(mF, [["render", gF]]), bF = {}, FF = {
+const gF = /* @__PURE__ */ P(vF, [["render", _F]]), yF = {}, bF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11716,8 +11712,8 @@ const yF = /* @__PURE__ */ P(mF, [["render", gF]]), bF = {}, FF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-user-circle"
 };
-function MF(n, t) {
-  return b(), F("svg", FF, [...t[0] || (t[0] = [
+function FF(n, t) {
+  return b(), F("svg", bF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11728,7 +11724,7 @@ function MF(n, t) {
     _("path", { d: "M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" }, null, -1)
   ])]);
 }
-const OF = /* @__PURE__ */ P(bF, [["render", MF]]), wF = {}, DF = {
+const MF = /* @__PURE__ */ P(yF, [["render", FF]]), OF = {}, wF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11740,8 +11736,8 @@ const OF = /* @__PURE__ */ P(bF, [["render", MF]]), wF = {}, DF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-settings"
 };
-function PF(n, t) {
-  return b(), F("svg", DF, [...t[0] || (t[0] = [
+function DF(n, t) {
+  return b(), F("svg", wF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11751,7 +11747,7 @@ function PF(n, t) {
     _("path", { d: "M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" }, null, -1)
   ])]);
 }
-const SF = /* @__PURE__ */ P(wF, [["render", PF]]), TF = {}, IF = {
+const PF = /* @__PURE__ */ P(OF, [["render", DF]]), SF = {}, TF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11763,8 +11759,8 @@ const SF = /* @__PURE__ */ P(wF, [["render", PF]]), TF = {}, IF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-plus"
 };
-function qF(n, t) {
-  return b(), F("svg", IF, [...t[0] || (t[0] = [
+function IF(n, t) {
+  return b(), F("svg", TF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11774,7 +11770,7 @@ function qF(n, t) {
     _("path", { d: "M5 12l14 0" }, null, -1)
   ])]);
 }
-const xF = /* @__PURE__ */ P(TF, [["render", qF]]), jF = {}, EF = {
+const qF = /* @__PURE__ */ P(SF, [["render", IF]]), xF = {}, jF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11786,8 +11782,8 @@ const xF = /* @__PURE__ */ P(TF, [["render", qF]]), jF = {}, EF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-pencil"
 };
-function YF(n, t) {
-  return b(), F("svg", EF, [...t[0] || (t[0] = [
+function EF(n, t) {
+  return b(), F("svg", jF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11797,7 +11793,7 @@ function YF(n, t) {
     _("path", { d: "M13.5 6.5l4 4" }, null, -1)
   ])]);
 }
-const BF = /* @__PURE__ */ P(jF, [["render", YF]]), WF = {}, RF = {
+const YF = /* @__PURE__ */ P(xF, [["render", EF]]), BF = {}, WF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11809,8 +11805,8 @@ const BF = /* @__PURE__ */ P(jF, [["render", YF]]), WF = {}, RF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-receipt-2"
 };
-function CF(n, t) {
-  return b(), F("svg", RF, [...t[0] || (t[0] = [
+function RF(n, t) {
+  return b(), F("svg", WF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11820,7 +11816,7 @@ function CF(n, t) {
     _("path", { d: "M14 8h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5m2 0v1.5m0 -9v1.5" }, null, -1)
   ])]);
 }
-const HF = /* @__PURE__ */ P(WF, [["render", CF]]), LF = {}, NF = {
+const CF = /* @__PURE__ */ P(BF, [["render", RF]]), HF = {}, LF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11832,8 +11828,8 @@ const HF = /* @__PURE__ */ P(WF, [["render", CF]]), LF = {}, NF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-reload"
 };
-function AF(n, t) {
-  return b(), F("svg", NF, [...t[0] || (t[0] = [
+function NF(n, t) {
+  return b(), F("svg", LF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11843,7 +11839,7 @@ function AF(n, t) {
     _("path", { d: "M20 4v5h-5" }, null, -1)
   ])]);
 }
-const zF = /* @__PURE__ */ P(LF, [["render", AF]]), QF = {}, GF = {
+const AF = /* @__PURE__ */ P(HF, [["render", NF]]), zF = {}, QF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11855,8 +11851,8 @@ const zF = /* @__PURE__ */ P(LF, [["render", AF]]), QF = {}, GF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
 };
-function ZF(n, t) {
-  return b(), F("svg", GF, [...t[0] || (t[0] = [
+function GF(n, t) {
+  return b(), F("svg", QF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11867,7 +11863,7 @@ function ZF(n, t) {
     _("path", { d: "M15 8l4 4" }, null, -1)
   ])]);
 }
-const VF = /* @__PURE__ */ P(QF, [["render", ZF]]), UF = {}, XF = {
+const ZF = /* @__PURE__ */ P(zF, [["render", GF]]), VF = {}, UF = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11879,8 +11875,8 @@ const VF = /* @__PURE__ */ P(QF, [["render", ZF]]), UF = {}, XF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-receipt"
 };
-function KF(n, t) {
-  return b(), F("svg", XF, [...t[0] || (t[0] = [
+function XF(n, t) {
+  return b(), F("svg", UF, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11889,7 +11885,7 @@ function KF(n, t) {
     _("path", { d: "M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2" }, null, -1)
   ])]);
 }
-const JF = /* @__PURE__ */ P(UF, [["render", KF]]), $F = {}, kF = {
+const KF = /* @__PURE__ */ P(VF, [["render", XF]]), JF = {}, $F = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11901,12 +11897,12 @@ const JF = /* @__PURE__ */ P(UF, [["render", KF]]), $F = {}, kF = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-credit-card"
 };
-function e2(n, t) {
-  return b(), F("svg", kF, [...t[0] || (t[0] = [
+function kF(n, t) {
+  return b(), F("svg", $F, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"></path><path d="M3 10l18 0"></path><path d="M7 15l.01 0"></path><path d="M11 15l2 0"></path>', 5)
   ])]);
 }
-const n2 = /* @__PURE__ */ P($F, [["render", e2]]), t2 = {}, r2 = {
+const e2 = /* @__PURE__ */ P(JF, [["render", kF]]), n2 = {}, t2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11918,8 +11914,8 @@ const n2 = /* @__PURE__ */ P($F, [["render", e2]]), t2 = {}, r2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-lock"
 };
-function a2(n, t) {
-  return b(), F("svg", r2, [...t[0] || (t[0] = [
+function r2(n, t) {
+  return b(), F("svg", t2, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11930,7 +11926,7 @@ function a2(n, t) {
     _("path", { d: "M8 11v-4a4 4 0 1 1 8 0v4" }, null, -1)
   ])]);
 }
-const i2 = /* @__PURE__ */ P(t2, [["render", a2]]), o2 = {}, u2 = {
+const a2 = /* @__PURE__ */ P(n2, [["render", r2]]), i2 = {}, o2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11942,8 +11938,8 @@ const i2 = /* @__PURE__ */ P(t2, [["render", a2]]), o2 = {}, u2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-bell"
 };
-function s2(n, t) {
-  return b(), F("svg", u2, [...t[0] || (t[0] = [
+function u2(n, t) {
+  return b(), F("svg", o2, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11953,7 +11949,7 @@ function s2(n, t) {
     _("path", { d: "M9 17v1a3 3 0 0 0 6 0v-1" }, null, -1)
   ])]);
 }
-const c2 = /* @__PURE__ */ P(o2, [["render", s2]]), d2 = {}, l2 = {
+const s2 = /* @__PURE__ */ P(i2, [["render", u2]]), c2 = {}, d2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11965,8 +11961,8 @@ const c2 = /* @__PURE__ */ P(o2, [["render", s2]]), d2 = {}, l2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-help"
 };
-function f2(n, t) {
-  return b(), F("svg", l2, [...t[0] || (t[0] = [
+function l2(n, t) {
+  return b(), F("svg", d2, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -11977,7 +11973,7 @@ function f2(n, t) {
     _("path", { d: "M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" }, null, -1)
   ])]);
 }
-const h2 = /* @__PURE__ */ P(d2, [["render", f2]]), p2 = {}, v2 = {
+const f2 = /* @__PURE__ */ P(c2, [["render", l2]]), h2 = {}, p2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -11989,12 +11985,12 @@ const h2 = /* @__PURE__ */ P(d2, [["render", f2]]), p2 = {}, v2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-plug-connected"
 };
-function m2(n, t) {
-  return b(), F("svg", v2, [...t[0] || (t[0] = [
+function v2(n, t) {
+  return b(), F("svg", p2, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5z"></path><path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5z"></path><path d="M3 21l2.5 -2.5"></path><path d="M18.5 5.5l2.5 -2.5"></path><path d="M10 11l-2 2"></path><path d="M13 14l-2 2"></path>', 7)
   ])]);
 }
-const _2 = /* @__PURE__ */ P(p2, [["render", m2]]), g2 = {}, y2 = {
+const m2 = /* @__PURE__ */ P(h2, [["render", v2]]), _2 = {}, g2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12006,12 +12002,12 @@ const _2 = /* @__PURE__ */ P(p2, [["render", m2]]), g2 = {}, y2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-apps"
 };
-function b2(n, t) {
-  return b(), F("svg", y2, [...t[0] || (t[0] = [
+function y2(n, t) {
+  return b(), F("svg", g2, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"></path><path d="M14 7l6 0"></path><path d="M17 4l0 6"></path>', 6)
   ])]);
 }
-const F2 = /* @__PURE__ */ P(g2, [["render", b2]]), M2 = {}, O2 = {
+const b2 = /* @__PURE__ */ P(_2, [["render", y2]]), F2 = {}, M2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12023,12 +12019,12 @@ const F2 = /* @__PURE__ */ P(g2, [["render", b2]]), M2 = {}, O2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-building-bank"
 };
-function w2(n, t) {
-  return b(), F("svg", O2, [...t[0] || (t[0] = [
+function O2(n, t) {
+  return b(), F("svg", M2, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 21l18 0"></path><path d="M3 10l18 0"></path><path d="M5 6l7 -3l7 3"></path><path d="M4 10l0 11"></path><path d="M20 10l0 11"></path><path d="M8 14l0 3"></path><path d="M12 14l0 3"></path><path d="M16 14l0 3"></path>', 9)
   ])]);
 }
-const D2 = /* @__PURE__ */ P(M2, [["render", w2]]), P2 = {}, S2 = {
+const w2 = /* @__PURE__ */ P(F2, [["render", O2]]), D2 = {}, P2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12040,8 +12036,8 @@ const D2 = /* @__PURE__ */ P(M2, [["render", w2]]), P2 = {}, S2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-circle-check"
 };
-function T2(n, t) {
-  return b(), F("svg", S2, [...t[0] || (t[0] = [
+function S2(n, t) {
+  return b(), F("svg", P2, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12051,7 +12047,7 @@ function T2(n, t) {
     _("path", { d: "M9 12l2 2l4 -4" }, null, -1)
   ])]);
 }
-const I2 = /* @__PURE__ */ P(P2, [["render", T2]]), q2 = {}, x2 = {
+const T2 = /* @__PURE__ */ P(D2, [["render", S2]]), I2 = {}, q2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12063,12 +12059,12 @@ const I2 = /* @__PURE__ */ P(P2, [["render", T2]]), q2 = {}, x2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-list"
 };
-function j2(n, t) {
-  return b(), F("svg", x2, [...t[0] || (t[0] = [
+function x2(n, t) {
+  return b(), F("svg", q2, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l11 0"></path><path d="M9 12l11 0"></path><path d="M9 18l11 0"></path><path d="M5 6l0 .01"></path><path d="M5 12l0 .01"></path><path d="M5 18l0 .01"></path>', 7)
   ])]);
 }
-const E2 = /* @__PURE__ */ P(q2, [["render", j2]]), Y2 = {}, B2 = {
+const j2 = /* @__PURE__ */ P(I2, [["render", x2]]), E2 = {}, Y2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12080,12 +12076,12 @@ const E2 = /* @__PURE__ */ P(q2, [["render", j2]]), Y2 = {}, B2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-meat"
 };
-function W2(n, t) {
-  return b(), F("svg", B2, [...t[0] || (t[0] = [
+function B2(n, t) {
+  return b(), F("svg", Y2, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M13.62 8.382l1.966 -1.967a2 2 0 1 1 3.414 -1.415a2 2 0 1 1 -1.413 3.414l-1.82 1.821"></path><path d="M5.904 18.596c2.733 2.734 5.9 4 7.07 2.829c1.172 -1.172 -.094 -4.338 -2.828 -7.071c-2.733 -2.734 -5.9 -4 -7.07 -2.829c-1.172 1.172 .094 4.338 2.828 7.071z"></path><path d="M7.5 16l1 1"></path><path d="M12.975 21.425c3.905 -3.906 4.855 -9.288 2.121 -12.021c-2.733 -2.734 -8.115 -1.784 -12.02 2.121"></path>', 5)
   ])]);
 }
-const R2 = /* @__PURE__ */ P(Y2, [["render", W2]]), C2 = {}, H2 = {
+const W2 = /* @__PURE__ */ P(E2, [["render", B2]]), R2 = {}, C2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12097,8 +12093,8 @@ const R2 = /* @__PURE__ */ P(Y2, [["render", W2]]), C2 = {}, H2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-dots"
 };
-function L2(n, t) {
-  return b(), F("svg", H2, [...t[0] || (t[0] = [
+function H2(n, t) {
+  return b(), F("svg", C2, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12109,7 +12105,7 @@ function L2(n, t) {
     _("path", { d: "M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" }, null, -1)
   ])]);
 }
-const N2 = /* @__PURE__ */ P(C2, [["render", L2]]), A2 = {}, z2 = {
+const L2 = /* @__PURE__ */ P(R2, [["render", H2]]), N2 = {}, A2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12121,8 +12117,8 @@ const N2 = /* @__PURE__ */ P(C2, [["render", L2]]), A2 = {}, z2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
 };
-function Q2(n, t) {
-  return b(), F("svg", z2, [...t[0] || (t[0] = [
+function z2(n, t) {
+  return b(), F("svg", A2, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12133,7 +12129,7 @@ function Q2(n, t) {
     _("path", { d: "M4 18l16 0" }, null, -1)
   ])]);
 }
-const G2 = /* @__PURE__ */ P(A2, [["render", Q2]]), Z2 = {}, V2 = {
+const Q2 = /* @__PURE__ */ P(N2, [["render", z2]]), G2 = {}, Z2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12145,8 +12141,8 @@ const G2 = /* @__PURE__ */ P(A2, [["render", Q2]]), Z2 = {}, V2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-circle-x"
 };
-function U2(n, t) {
-  return b(), F("svg", V2, [...t[0] || (t[0] = [
+function V2(n, t) {
+  return b(), F("svg", Z2, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12156,7 +12152,7 @@ function U2(n, t) {
     _("path", { d: "M10 10l4 4m0 -4l-4 4" }, null, -1)
   ])]);
 }
-const X2 = /* @__PURE__ */ P(Z2, [["render", U2]]), K2 = {}, J2 = {
+const U2 = /* @__PURE__ */ P(G2, [["render", V2]]), X2 = {}, K2 = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12168,12 +12164,12 @@ const X2 = /* @__PURE__ */ P(Z2, [["render", U2]]), K2 = {}, J2 = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-trash"
 };
-function $2(n, t) {
-  return b(), F("svg", J2, [...t[0] || (t[0] = [
+function J2(n, t) {
+  return b(), F("svg", K2, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7l16 0"></path><path d="M10 11l0 6"></path><path d="M14 11l0 6"></path><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>', 6)
   ])]);
 }
-const k2 = /* @__PURE__ */ P(K2, [["render", $2]]), eM = {}, nM = {
+const $2 = /* @__PURE__ */ P(X2, [["render", J2]]), k2 = {}, eM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12185,8 +12181,8 @@ const k2 = /* @__PURE__ */ P(K2, [["render", $2]]), eM = {}, nM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-x"
 };
-function tM(n, t) {
-  return b(), F("svg", nM, [...t[0] || (t[0] = [
+function nM(n, t) {
+  return b(), F("svg", eM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12196,7 +12192,7 @@ function tM(n, t) {
     _("path", { d: "M6 6l12 12" }, null, -1)
   ])]);
 }
-const rM = /* @__PURE__ */ P(eM, [["render", tM]]), aM = {}, iM = {
+const tM = /* @__PURE__ */ P(k2, [["render", nM]]), rM = {}, aM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12208,12 +12204,12 @@ const rM = /* @__PURE__ */ P(eM, [["render", tM]]), aM = {}, iM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-calendar"
 };
-function oM(n, t) {
-  return b(), F("svg", iM, [...t[0] || (t[0] = [
+function iM(n, t) {
+  return b(), F("svg", aM, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h16"></path><path d="M11 15h1"></path><path d="M12 15v3"></path>', 7)
   ])]);
 }
-const uM = /* @__PURE__ */ P(aM, [["render", oM]]), sM = {}, cM = {
+const oM = /* @__PURE__ */ P(rM, [["render", iM]]), uM = {}, sM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12225,8 +12221,8 @@ const uM = /* @__PURE__ */ P(aM, [["render", oM]]), sM = {}, cM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-logout"
 };
-function dM(n, t) {
-  return b(), F("svg", cM, [...t[0] || (t[0] = [
+function cM(n, t) {
+  return b(), F("svg", sM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12237,7 +12233,7 @@ function dM(n, t) {
     _("path", { d: "M18 15l3 -3" }, null, -1)
   ])]);
 }
-const lM = /* @__PURE__ */ P(sM, [["render", dM]]), fM = {}, hM = {
+const dM = /* @__PURE__ */ P(uM, [["render", cM]]), lM = {}, fM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12249,8 +12245,8 @@ const lM = /* @__PURE__ */ P(sM, [["render", dM]]), fM = {}, hM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-mail"
 };
-function pM(n, t) {
-  return b(), F("svg", hM, [...t[0] || (t[0] = [
+function hM(n, t) {
+  return b(), F("svg", fM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12260,7 +12256,7 @@ function pM(n, t) {
     _("path", { d: "M3 7l9 6l9 -6" }, null, -1)
   ])]);
 }
-const vM = /* @__PURE__ */ P(fM, [["render", pM]]), mM = {}, _M = {
+const pM = /* @__PURE__ */ P(lM, [["render", hM]]), vM = {}, mM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12272,8 +12268,8 @@ const vM = /* @__PURE__ */ P(fM, [["render", pM]]), mM = {}, _M = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-phone"
 };
-function gM(n, t) {
-  return b(), F("svg", _M, [...t[0] || (t[0] = [
+function _M(n, t) {
+  return b(), F("svg", mM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12282,7 +12278,7 @@ function gM(n, t) {
     _("path", { d: "M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" }, null, -1)
   ])]);
 }
-const yM = /* @__PURE__ */ P(mM, [["render", gM]]), bM = {}, FM = {
+const gM = /* @__PURE__ */ P(vM, [["render", _M]]), yM = {}, bM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12294,12 +12290,12 @@ const yM = /* @__PURE__ */ P(mM, [["render", gM]]), bM = {}, FM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-users-group"
 };
-function MM(n, t) {
-  return b(), F("svg", FM, [...t[0] || (t[0] = [
+function FM(n, t) {
+  return b(), F("svg", bM, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path><path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M17 10h2a2 2 0 0 1 2 2v1"></path><path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>', 7)
   ])]);
 }
-const OM = /* @__PURE__ */ P(bM, [["render", MM]]), wM = {}, DM = {
+const MM = /* @__PURE__ */ P(yM, [["render", FM]]), OM = {}, wM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12311,12 +12307,12 @@ const OM = /* @__PURE__ */ P(bM, [["render", MM]]), wM = {}, DM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-scan"
 };
-function PM(n, t) {
-  return b(), F("svg", DM, [...t[0] || (t[0] = [
+function DM(n, t) {
+  return b(), F("svg", wM, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7v-1a2 2 0 0 1 2 -2h2"></path><path d="M4 17v1a2 2 0 0 0 2 2h2"></path><path d="M16 4h2a2 2 0 0 1 2 2v1"></path><path d="M16 20h2a2 2 0 0 0 2 -2v-1"></path><path d="M5 12l14 0"></path>', 6)
   ])]);
 }
-const SM = /* @__PURE__ */ P(wM, [["render", PM]]), TM = {}, IM = {
+const PM = /* @__PURE__ */ P(OM, [["render", DM]]), SM = {}, TM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12328,12 +12324,12 @@ const SM = /* @__PURE__ */ P(wM, [["render", PM]]), TM = {}, IM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-abc"
 };
-function qM(n, t) {
-  return b(), F("svg", IM, [...t[0] || (t[0] = [
+function IM(n, t) {
+  return b(), F("svg", TM, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 16v-6a2 2 0 1 1 4 0v6"></path><path d="M3 13h4"></path><path d="M10 8v6a2 2 0 1 0 4 0v-1a2 2 0 1 0 -4 0v1"></path><path d="M20.732 12a2 2 0 0 0 -3.732 1v1a2 2 0 0 0 3.726 1.01"></path>', 5)
   ])]);
 }
-const xM = /* @__PURE__ */ P(TM, [["render", qM]]), jM = {}, EM = {
+const qM = /* @__PURE__ */ P(SM, [["render", IM]]), xM = {}, jM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12345,8 +12341,8 @@ const xM = /* @__PURE__ */ P(TM, [["render", qM]]), jM = {}, EM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-number-123"
 };
-function YM(n, t) {
-  return b(), F("svg", EM, [...t[0] || (t[0] = [
+function EM(n, t) {
+  return b(), F("svg", jM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12357,7 +12353,7 @@ function YM(n, t) {
     _("path", { d: "M17 8h2.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1 -1.5 1.5h-1.5h1.5a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1 -1.5 1.5h-2.5" }, null, -1)
   ])]);
 }
-const BM = /* @__PURE__ */ P(jM, [["render", YM]]), WM = {}, RM = {
+const YM = /* @__PURE__ */ P(xM, [["render", EM]]), BM = {}, WM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12369,8 +12365,8 @@ const BM = /* @__PURE__ */ P(jM, [["render", YM]]), WM = {}, RM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-currency-dollar"
 };
-function CM(n, t) {
-  return b(), F("svg", RM, [...t[0] || (t[0] = [
+function RM(n, t) {
+  return b(), F("svg", WM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12380,7 +12376,7 @@ function CM(n, t) {
     _("path", { d: "M12 3v3m0 12v3" }, null, -1)
   ])]);
 }
-const HM = /* @__PURE__ */ P(WM, [["render", CM]]), LM = {}, NM = {
+const CM = /* @__PURE__ */ P(BM, [["render", RM]]), HM = {}, LM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12392,8 +12388,8 @@ const HM = /* @__PURE__ */ P(WM, [["render", CM]]), LM = {}, NM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-left"
 };
-function AM(n, t) {
-  return b(), F("svg", NM, [...t[0] || (t[0] = [
+function NM(n, t) {
+  return b(), F("svg", LM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12404,7 +12400,7 @@ function AM(n, t) {
     _("path", { d: "M5 12l4 -4" }, null, -1)
   ])]);
 }
-const zM = /* @__PURE__ */ P(LM, [["render", AM]]), QM = {}, GM = {
+const AM = /* @__PURE__ */ P(HM, [["render", NM]]), zM = {}, QM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12416,8 +12412,8 @@ const zM = /* @__PURE__ */ P(LM, [["render", AM]]), QM = {}, GM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-up"
 };
-function ZM(n, t) {
-  return b(), F("svg", GM, [...t[0] || (t[0] = [
+function GM(n, t) {
+  return b(), F("svg", QM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12428,7 +12424,7 @@ function ZM(n, t) {
     _("path", { d: "M8 9l4 -4" }, null, -1)
   ])]);
 }
-const VM = /* @__PURE__ */ P(QM, [["render", ZM]]), UM = {}, XM = {
+const ZM = /* @__PURE__ */ P(zM, [["render", GM]]), VM = {}, UM = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12440,8 +12436,8 @@ const VM = /* @__PURE__ */ P(QM, [["render", ZM]]), UM = {}, XM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-down"
 };
-function KM(n, t) {
-  return b(), F("svg", XM, [...t[0] || (t[0] = [
+function XM(n, t) {
+  return b(), F("svg", UM, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12452,7 +12448,7 @@ function KM(n, t) {
     _("path", { d: "M8 15l4 4" }, null, -1)
   ])]);
 }
-const JM = /* @__PURE__ */ P(UM, [["render", KM]]), $M = {}, kM = {
+const KM = /* @__PURE__ */ P(VM, [["render", XM]]), JM = {}, $M = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12464,8 +12460,8 @@ const JM = /* @__PURE__ */ P(UM, [["render", KM]]), $M = {}, kM = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-home"
 };
-function eO(n, t) {
-  return b(), F("svg", kM, [...t[0] || (t[0] = [
+function kM(n, t) {
+  return b(), F("svg", $M, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12476,7 +12472,7 @@ function eO(n, t) {
     _("path", { d: "M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" }, null, -1)
   ])]);
 }
-const nO = /* @__PURE__ */ P($M, [["render", eO]]), tO = {}, rO = {
+const eO = /* @__PURE__ */ P(JM, [["render", kM]]), nO = {}, tO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12488,12 +12484,12 @@ const nO = /* @__PURE__ */ P($M, [["render", eO]]), tO = {}, rO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-ruler-measure-2"
 };
-function aO(n, t) {
-  return b(), F("svg", rO, [...t[0] || (t[0] = [
+function rO(n, t) {
+  return b(), F("svg", tO, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 19.875c0 .621 -.512 1.125 -1.143 1.125h-5.714a1.134 1.134 0 0 1 -1.143 -1.125v-15.875a1 1 0 0 1 1 -1h5.857c.631 0 1.143 .504 1.143 1.125l0 15.75"></path><path d="M12 9h-2"></path><path d="M12 6h-3"></path><path d="M12 12h-3"></path><path d="M12 18h-3"></path><path d="M12 15h-2"></path><path d="M21 3h-4"></path><path d="M19 3v18"></path><path d="M21 21h-4"></path>', 10)
   ])]);
 }
-const iO = /* @__PURE__ */ P(tO, [["render", aO]]), oO = {}, uO = {
+const aO = /* @__PURE__ */ P(nO, [["render", rO]]), iO = {}, oO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12505,12 +12501,12 @@ const iO = /* @__PURE__ */ P(tO, [["render", aO]]), oO = {}, uO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-scale"
 };
-function sO(n, t) {
-  return b(), F("svg", uO, [...t[0] || (t[0] = [
+function uO(n, t) {
+  return b(), F("svg", oO, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 20l10 0"></path><path d="M6 6l6 -1l6 1"></path><path d="M12 3l0 17"></path><path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path><path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0"></path>', 6)
   ])]);
 }
-const cO = /* @__PURE__ */ P(oO, [["render", sO]]), dO = {}, lO = {
+const sO = /* @__PURE__ */ P(iO, [["render", uO]]), cO = {}, dO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12522,12 +12518,12 @@ const cO = /* @__PURE__ */ P(oO, [["render", sO]]), dO = {}, lO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-list-search"
 };
-function fO(n, t) {
-  return b(), F("svg", lO, [...t[0] || (t[0] = [
+function lO(n, t) {
+  return b(), F("svg", dO, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M11 15a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M18.5 18.5l2.5 2.5"></path><path d="M4 6h16"></path><path d="M4 12h4"></path><path d="M4 18h4"></path>', 6)
   ])]);
 }
-const hO = /* @__PURE__ */ P(dO, [["render", fO]]), pO = {}, vO = {
+const fO = /* @__PURE__ */ P(cO, [["render", lO]]), hO = {}, pO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12539,12 +12535,12 @@ const hO = /* @__PURE__ */ P(dO, [["render", fO]]), pO = {}, vO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-list-check"
 };
-function mO(n, t) {
-  return b(), F("svg", vO, [...t[0] || (t[0] = [
+function vO(n, t) {
+  return b(), F("svg", pO, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3.5 5.5l1.5 1.5l2.5 -2.5"></path><path d="M3.5 11.5l1.5 1.5l2.5 -2.5"></path><path d="M3.5 17.5l1.5 1.5l2.5 -2.5"></path><path d="M11 6l9 0"></path><path d="M11 12l9 0"></path><path d="M11 18l9 0"></path>', 7)
   ])]);
 }
-const _O = /* @__PURE__ */ P(pO, [["render", mO]]), gO = {}, yO = {
+const mO = /* @__PURE__ */ P(hO, [["render", vO]]), _O = {}, gO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12556,8 +12552,8 @@ const _O = /* @__PURE__ */ P(pO, [["render", mO]]), gO = {}, yO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-clock"
 };
-function bO(n, t) {
-  return b(), F("svg", yO, [...t[0] || (t[0] = [
+function yO(n, t) {
+  return b(), F("svg", gO, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12567,7 +12563,7 @@ function bO(n, t) {
     _("path", { d: "M12 7v5l3 3" }, null, -1)
   ])]);
 }
-const FO = /* @__PURE__ */ P(gO, [["render", bO]]), MO = {}, OO = {
+const bO = /* @__PURE__ */ P(_O, [["render", yO]]), FO = {}, MO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12579,12 +12575,12 @@ const FO = /* @__PURE__ */ P(gO, [["render", bO]]), MO = {}, OO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-category"
 };
-function wO(n, t) {
-  return b(), F("svg", OO, [...t[0] || (t[0] = [
+function OO(n, t) {
+  return b(), F("svg", MO, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 4h6v6h-6l0 -6"></path><path d="M14 4h6v6h-6l0 -6"></path><path d="M4 14h6v6h-6l0 -6"></path><path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>', 5)
   ])]);
 }
-const DO = /* @__PURE__ */ P(MO, [["render", wO]]), PO = {}, SO = {
+const wO = /* @__PURE__ */ P(FO, [["render", OO]]), DO = {}, PO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12596,8 +12592,8 @@ const DO = /* @__PURE__ */ P(MO, [["render", wO]]), PO = {}, SO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-user"
 };
-function TO(n, t) {
-  return b(), F("svg", SO, [...t[0] || (t[0] = [
+function SO(n, t) {
+  return b(), F("svg", PO, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12607,7 +12603,7 @@ function TO(n, t) {
     _("path", { d: "M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" }, null, -1)
   ])]);
 }
-const IO = /* @__PURE__ */ P(PO, [["render", TO]]), qO = {}, xO = {
+const TO = /* @__PURE__ */ P(DO, [["render", SO]]), IO = {}, qO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12619,12 +12615,12 @@ const IO = /* @__PURE__ */ P(PO, [["render", TO]]), qO = {}, xO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-user-plus"
 };
-function jO(n, t) {
-  return b(), F("svg", xO, [...t[0] || (t[0] = [
+function xO(n, t) {
+  return b(), F("svg", qO, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path><path d="M16 19h6"></path><path d="M19 16v6"></path><path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>', 5)
   ])]);
 }
-const EO = /* @__PURE__ */ P(qO, [["render", jO]]), YO = {}, BO = {
+const jO = /* @__PURE__ */ P(IO, [["render", xO]]), EO = {}, YO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12636,8 +12632,8 @@ const EO = /* @__PURE__ */ P(qO, [["render", jO]]), YO = {}, BO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical"
 };
-function WO(n, t) {
-  return b(), F("svg", BO, [...t[0] || (t[0] = [
+function BO(n, t) {
+  return b(), F("svg", YO, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12648,7 +12644,7 @@ function WO(n, t) {
     _("path", { d: "M11 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" }, null, -1)
   ])]);
 }
-const RO = /* @__PURE__ */ P(YO, [["render", WO]]), CO = {}, HO = {
+const WO = /* @__PURE__ */ P(EO, [["render", BO]]), RO = {}, CO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12660,12 +12656,12 @@ const RO = /* @__PURE__ */ P(YO, [["render", WO]]), CO = {}, HO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-palette"
 };
-function LO(n, t) {
-  return b(), F("svg", HO, [...t[0] || (t[0] = [
+function HO(n, t) {
+  return b(), F("svg", CO, [...t[0] || (t[0] = [
     A('<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25"></path><path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>', 5)
   ])]);
 }
-const NO = /* @__PURE__ */ P(CO, [["render", LO]]), AO = {}, zO = {
+const LO = /* @__PURE__ */ P(RO, [["render", HO]]), NO = {}, AO = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -12677,8 +12673,8 @@ const NO = /* @__PURE__ */ P(CO, [["render", LO]]), AO = {}, zO = {
   "stroke-linejoin": "round",
   class: "icon icon-tabler icons-tabler-outline icon-tabler-info-circle"
 };
-function QO(n, t) {
-  return b(), F("svg", zO, [...t[0] || (t[0] = [
+function zO(n, t) {
+  return b(), F("svg", AO, [...t[0] || (t[0] = [
     _("path", {
       stroke: "none",
       d: "M0 0h24v24H0z",
@@ -12689,71 +12685,71 @@ function QO(n, t) {
     _("path", { d: "M11 12h1v4h1" }, null, -1)
   ])]);
 }
-const GO = /* @__PURE__ */ P(AO, [["render", QO]]), qw = {
-  Information: GO,
-  Palette: NO,
-  DotsVertical: RO,
-  UserPlus: EO,
-  User: IO,
-  Category: DO,
-  Clock: FO,
-  ListSearch: hO,
-  ListCheck: _O,
-  Scale: cO,
-  RuleMeasure: iO,
-  Home: nO,
-  Currency: HM,
-  Numbers: BM,
-  Scan: SM,
-  Abc: xM,
-  Email: vM,
-  Phone: yM,
-  X: rM,
-  LogOut: lM,
-  Calendar: uM,
-  Trash: k2,
-  Cancel: X2,
-  Menu: G2,
-  Dots: N2,
-  Meat: R2,
-  Cash: R1,
-  CashReceipt: HF,
-  CashRegister: N1,
-  CashCalendar: G1,
-  Computer: X1,
-  Eye: k1,
-  EyeOff: rF,
-  Search: uF,
-  Tag: lF,
-  Report: vF,
-  ShoppingCart: yF,
-  UserCircle: OF,
-  UserGroup: OM,
-  Configuration: SF,
-  Plus: xF,
-  Pencil: BF,
-  Reload: zF,
-  ArrowRight: VF,
-  ArrowLeft: zM,
-  ArrowUp: VM,
-  ArrowDown: JM,
-  Receipt: JF,
-  CreditCard: n2,
-  Lock: i2,
-  Bell: c2,
-  Help: h2,
-  Connection: _2,
-  Apps: F2,
+const QO = /* @__PURE__ */ P(NO, [["render", zO]]), Iw = {
+  Information: QO,
+  Palette: LO,
+  DotsVertical: WO,
+  UserPlus: jO,
+  User: TO,
+  Category: wO,
+  Clock: bO,
+  ListSearch: fO,
+  ListCheck: mO,
+  Scale: sO,
+  RuleMeasure: aO,
+  Home: eO,
+  Currency: CM,
+  Numbers: YM,
+  Scan: PM,
+  Abc: qM,
+  Email: pM,
+  Phone: gM,
+  X: tM,
+  LogOut: dM,
+  Calendar: oM,
+  Trash: $2,
+  Cancel: U2,
+  Menu: Q2,
+  Dots: L2,
+  Meat: W2,
+  Cash: W1,
+  CashReceipt: CF,
+  CashRegister: L1,
+  CashCalendar: Q1,
+  Computer: U1,
+  Eye: $1,
+  EyeOff: tF,
+  Search: oF,
+  Tag: dF,
+  Report: pF,
+  ShoppingCart: gF,
+  UserCircle: MF,
+  UserGroup: MM,
+  Configuration: PF,
+  Plus: qF,
+  Pencil: YF,
+  Reload: AF,
+  ArrowRight: ZF,
+  ArrowLeft: AM,
+  ArrowUp: ZM,
+  ArrowDown: KM,
+  Receipt: KF,
+  CreditCard: e2,
+  Lock: a2,
+  Bell: s2,
+  Help: f2,
+  Connection: m2,
+  Apps: b2,
   Chevron: Md,
-  Bank: D2,
-  Check: I2,
-  List: E2
+  Bank: w2,
+  Check: T2,
+  List: j2
 }, Pm = "data-theme";
 var Sm = /* @__PURE__ */ ((n) => (n.DARK = "dark", n.LIGHT = "light", n.MIDNIGHT = "midnight", n))(Sm || {});
 function gd(n) {
   document.documentElement.setAttribute(Pm, n);
 }
-function ZO() {
+function GO() {
   if (document.documentElement.getAttribute(Pm) !== "dark") {
     gd(
       "dark"
@@ -12766,12 +12762,12 @@ function ZO() {
     /* LIGHT */
   );
 }
-const xw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const qw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Type: Sm,
   setTheme: gd,
-  toggleDarkMode: ZO
-}, Symbol.toStringTag, { value: "Module" })), jw = {
+  toggleDarkMode: GO
+}, Symbol.toStringTag, { value: "Module" })), xw = {
   Page: Im,
   Hyperlink: Sn,
   Accordion: r1,
@@ -12782,25 +12778,25 @@ const xw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   Panel: d_,
   Separator: p_,
   BreadCrumb: c1,
-  ComboBox: h1,
-  Edit: m1,
-  Memo: b1,
-  Menu: P1,
-  Sidebar: E1
+  ComboBox: f1,
+  Edit: v1,
+  Memo: y1,
+  Menu: D1,
+  Sidebar: j1
 };
 Promise.resolve({          });
-const Ew = {
+const jw = {
   create: xm,
   createWebHistory: qm
-}, Yw = De.DateMethods, Bw = De.Helper, Ww = De.Use;
+}, Ew = De.DateMethods, Yw = De.Helper, Bw = De.Use;
 export {
-  KO as Component,
-  Yw as DateMethods,
-  Bw as Helper,
-  qw as Icon,
-  Ew as Router,
-  XO as Schema,
-  xw as Theme,
-  jw as UI,
-  Ww as Use
+  XO as Component,
+  Ew as DateMethods,
+  Yw as Helper,
+  Iw as Icon,
+  jw as Router,
+  UO as Schema,
+  qw as Theme,
+  xw as UI,
+  Bw as Use
 };

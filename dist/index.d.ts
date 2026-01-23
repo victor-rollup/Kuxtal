@@ -80,7 +80,7 @@ declare interface IComboBox {
     props: IDOMSelect & {
         caption?: string;
         allowNull?: boolean;
-        options: IDOMSelectOption[];
+        items: IDOMSelectOption[];
     };
 }
 
@@ -711,7 +711,7 @@ export declare const UI: {
     } & IDOMSelect & {
     caption?: string;
     allowNull?: boolean;
-    options: IDOMSelectOption[];
+    items: IDOMSelectOption[];
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
     "update:modelValue": (value: string | number | null) => any;
     }, string, PublicProps, Readonly<{
@@ -719,7 +719,7 @@ export declare const UI: {
     } & IDOMSelect & {
     caption?: string;
     allowNull?: boolean;
-    options: IDOMSelectOption[];
+    items: IDOMSelectOption[];
     }> & Readonly<{
     "onUpdate:modelValue"?: ((value: string | number | null) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
