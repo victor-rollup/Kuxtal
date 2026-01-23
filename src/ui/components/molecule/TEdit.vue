@@ -48,4 +48,12 @@
     border-radius: 0.25rem;
     padding-inline: 0.25rem;
   }
+
+  .edit__icon {
+    --icon-dimension: 1rem;
+    min-height: var(--icon-dimension);
+    min-width: var(--icon-dimension);
+    height: var(--icon-dimension);
+    width: var(--icon-dimension);
+  }
 </style>
