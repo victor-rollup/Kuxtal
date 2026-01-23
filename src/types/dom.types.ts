@@ -162,8 +162,6 @@ export interface IDOMEvents {
 }
 // ------------------------------------------------------------------------------------------------
 export interface IGlobalAttributes extends AriaAttributes {
-  class?: string;
-  style?: StyleValue;
   accesskey?: string;
   contenteditable?: boolean | 'inherit' | 'plaintext-only';
   contextmenu?: string;
