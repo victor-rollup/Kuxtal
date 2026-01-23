@@ -29,12 +29,13 @@
 
 <style scoped>
   .combo-box {
-    padding: 0.25rem;
-    border-radius: 0.125rem;
+    height: 2.5rem;
+    padding-inline: 0.75rem;
+    border-radius: 0.25rem;
     outline: none;
     color: var(--edit-text-color);
     background: var(--edit-background-color);
-    border: 0.125rem solid transparent;
+    border: 0.125rem solid var(--edit-border-color);
   }
 
   .combo-box:focus {

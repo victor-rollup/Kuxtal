@@ -30,11 +30,11 @@
   }
 
   .memo__field {
-    border: 0.125rem solid transparent;
+    border: 0.125rem solid var(--edit-border-color);
     color: var(--edit-text-color);
     background: var(--edit-background-color);
-    border-radius: 0.125rem;
-    padding: 0.5rem;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
     font-size: 1rem;
     outline: none;
     resize: vertical;
