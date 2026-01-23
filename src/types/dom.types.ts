@@ -311,7 +311,7 @@ export interface IDOMInput extends IDOMElement, IFormAttributes {
   required?: boolean;
   size?: number;
   src?: string;
-  step?: number;
+  step?: number | 'any';
   type: IDOMInputType;
   width?: number;
 }
