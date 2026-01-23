@@ -35,7 +35,7 @@ export interface IComboBox {
   props: IDOMSelect & {
     caption?: string;
     allowNull?: boolean;
-    options: IDOMSelectOption[];
+    items: IDOMSelectOption[];
   };
 }
 // ------------------------------------------------------------------------------------------------

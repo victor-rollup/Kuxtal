@@ -8,7 +8,7 @@
 
 <template>
   <TLabel :caption="props.caption">
-    <select v-model="model" class="combo-box" v-bind="props" :options="undefined" >
+    <select v-model="model" class="combo-box" v-bind="props" :items="undefined" >
       <option disabled class="combo-box__option" :value="null">
         Selecciona un elemento
       </option>
@@ -16,9 +16,9 @@
         Ninguno/a
       </option>
       <option
-        v-for="(option, index) in props.options"
+        v-for="(option, index) in props.items"
         :key="index"
-        :value="option.value"
+        v-bind="option"
         class="combo-box__option"
       >
         {{ option.label }}
