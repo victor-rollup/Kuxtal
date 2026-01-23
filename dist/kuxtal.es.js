@@ -10570,7 +10570,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
         Fd(_("select", ne({
           "onUpdate:modelValue": i[0] || (i[0] = (r) => t.value = r),
           class: "combo-box"
-        }, a), [
+        }, a, { options: void 0 }), [
           i[1] || (i[1] = _("option", {
             disabled: "",
             class: "combo-box__option",
@@ -10589,7 +10589,7 @@ const kb = { class: "accordion__header" }, e1 = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), h1 = /* @__PURE__ */ P(f1, [["__scopeId", "data-v-2c140a3c"]]), p1 = { class: "edit__container" }, v1 = /* @__PURE__ */ te({
+}), h1 = /* @__PURE__ */ P(f1, [["__scopeId", "data-v-b9c26f7a"]]), p1 = { class: "edit__container" }, v1 = /* @__PURE__ */ te({
   __name: "TEdit",
   props: /* @__PURE__ */ yd({
     accept: {},
