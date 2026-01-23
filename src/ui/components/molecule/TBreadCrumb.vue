@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <nav class="breadcrumb">
+  <nav class="breadcrumb" v-bind="props" :routes="undefined">
     <ul class="breadcrumb__list">
       <li
         v-for="(breadcrumb, index) in props.routes"
@@ -55,6 +55,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    font-weight: 500;
   }
 
   .breadcrumb__route-hyperlink:hover {

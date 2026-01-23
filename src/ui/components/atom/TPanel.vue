@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="panel">
+  <div class="panel" v-bind="props">
     <header v-if="props.showHeader" class="panel__header">
       <slot name="TPanelHeader" />
     </header>

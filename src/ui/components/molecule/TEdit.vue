@@ -3,7 +3,6 @@
   import TLabel from '../atom/TLabel.vue';
 
   const props = defineProps<IEdit['props']>();
-  const emit = defineEmits<IEdit['emits']>();
   const model = defineModel<string | number>();
 </script>
 
@@ -12,116 +11,41 @@
     <div class="edit__container">
       <component :is="props.icon" class="edit__icon" />
       <input
-        class="edit__field"
         v-model="model"
-        :type="props.type"
-        :placeholder="props.placeholder"
-        :required="props.required"
-        :disabled="props.disabled"
-        :min="props.min"
-        :max="props.max"
-        :minlength="props.minlength"
-        :maxlength="props.maxlength"
-        :pattern="props.pattern"
-        @input="emit('input', $event)"
-        @beforeinput="emit('beforeinput', $event)"
-        @blur="emit('blur', $event)"
-        @change="emit('change', $event)"
-        @focus="emit('focus', $event)"
-        @click="emit('click', $event)"
-        @paste="emit('paste', $event)"
-        @keypress="emit('keypress', $event)"
+        v-bind="props"
+        :icon="undefined"
+        class="edit__field"
       />
     </div>
   </TLabel>
 </template>
 
 <style scoped>
-  .edit__icon {
-    min-height: 1rem;
-    min-width: 1rem;
-    height: 1rem;
-    width: 1rem;
-  }
-
-  .edit__field {
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    color: inherit;
-    font-size: 1rem;
-    text-align: inherit;
-  }
-
-  .edit:has(.edit__field[type='file']) .edit__icon {
-    display: none;
-  }
-
-  .edit:has(.edit__field[type='range']) .edit__container {
-    border-color: transparent;
-  }
-
-  .edit:has(.edit__field[type='file']) .edit__container {
-    padding: 0rem;
-    border-color: transparent;
-  }
-
-  .edit:has(.edit__field[type='file']) .edit__field::file-selector-button {
-    background: var(--edit-file-background-color);
-    color: var(--edit-file-text-color);
-    border: none;
-    padding-block: 0.25rem;
-    padding-inline: 0.5rem;
-    font-size: 0.85rem;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    border-top-right-radius: 0rem;
-    border-bottom-right-radius: 0rem;
-    margin-right: 0.5rem;
-  }
-
-  .edit:has(.edit__field[type='color']) {
-    max-width: 2.5rem;
-  }
-
-  .edit:has(.edit__field[type='color']) .edit__icon {
-    display: none;
-  }
-
-  .edit:has(.edit__field[type='color']) .edit__field {
-    border-radius: 1rem;
-  }
-
-  .edit:has(.edit__field[type='submit']),
-  .edit:has(.edit__field[type='reset']),
-  .edit:has(.edit__field[type='image']),
-  .edit:has(.edit__field[type='button']),
-  .edit:has(.edit__field[type='radio']),
-  .edit:has(.edit__field[type='checkbox']) {
-    display: none;
-  }
-
-  .edit__field::placeholder {
-    font-size: 0.85rem;
-  }
-
   .edit__container {
+    height: 2.5rem;
     display: flex;
     align-items: center;
-    border-radius: 0.125rem;
-    padding-block: 0.25rem;
-    padding-inline: 0.5rem;
-    gap: 0.5rem;
-    text-align: inherit;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
     color: var(--edit-text-color);
     background: var(--edit-background-color);
-    border-bottom: 0.125rem solid var(--edit-border-color);
+    border: 0.125rem solid var(--edit-border-color);
   }
 
   .edit__container:focus-within {
     color: var(--edit-text-focus-color);
-    border-color: var(--edit-border-focus-color);
     background: var(--edit-background-focus-color);
+    border-color: var(--edit-border-focus-color);
+    /* box-shadow: 0 0 0.125rem 0.0125rem var(--theme-primary-color-500); */
+  }
+
+  .edit__field {
+    width: 100%;
+    color: inherit;
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 0.25rem;
+    padding-inline: 0.25rem;
   }
 </style>

@@ -1,0 +1,20 @@
+[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+[text-align='left'] {
+  text-align: left;
+}
+
+[text-align='right'] {
+  text-align: right;
+}
+
+[text-align='center'] {
+  text-align: center;
+}
+
+[text-align='justify'] {
+  text-align: justify;
+}

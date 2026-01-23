@@ -30,14 +30,13 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build"
   },
-  "dependencies": {
-    "helper": "github:victor-rollup/Helper",
+  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^3.5.26",
     "vue-router": "^4.6.4"
   },
-  "peerDependencies": {
-    "vue": "^3.5.26"
-  },
   "devDependencies": {
+    "helper": "github:victor-rollup/Helper",
     "@tsconfig/node24": "^24.0.3",
     "@types/node": "^24.10.4",
     "@vitejs/plugin-vue": "^6.0.3",

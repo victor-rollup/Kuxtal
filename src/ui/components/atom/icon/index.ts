@@ -51,8 +51,18 @@ import TIconListSearch from './TIconListSearch.vue';
 import TIconListCheck from './TIconListCheck.vue';
 import TIconClock from './TIconClock.vue';
 import TIconCategory from './TIconCategory.vue';
+import TIconUser from './TIconUser.vue';
+import TIconUserPlus from './TIconUserPlus.vue';
+import TIconDotsVertical from './TIconDotsVertical.vue';
+import TIconPalette from './TIconPalette.vue';
+import TIconInformation from './TIconInformation.vue';
 
 const Icon = {
+  Information: TIconInformation,
+  Palette: TIconPalette,
+  DotsVertical: TIconDotsVertical,
+  UserPlus: TIconUserPlus,
+  User: TIconUser,
   Category: TIconCategory,
   Clock: TIconClock,
   ListSearch: TIconListSearch,

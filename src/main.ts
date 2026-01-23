@@ -1,18 +1,23 @@
+import('@/stylesheet/index.css')
+import { createRouter, createWebHistory, RouterView } from 'vue-router';
 import { createApp } from 'vue';
-import StyleComponents from './test/style.components.vue';
-import { UI, Router } from '.';
 
-createApp(UI.Page)
-  .use(
-    Router.create({
-      history: Router.createWebHistory(),
-      routes: [
-        {
-          path: '/',
-          name: 'home',
-          component: StyleComponents,
-        },
-      ],
-    })
-  )
-  .mount('#application');
+namespace Kuxtal {
+  export const Router = createRouter({
+    history: createWebHistory(),
+    routes: [
+      {
+        path: '/',
+        name: 'playground',
+        component: () => import('@/view/playground.vue'),
+      },
+      {
+        path: '/home',
+        name: 'home',
+        component: () => import('@/view/playground.vue'),
+      },
+    ],
+  });
+}
+
+createApp(RouterView).use(Kuxtal.Router).mount('#application');

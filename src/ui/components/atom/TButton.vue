@@ -2,17 +2,15 @@
   import type { IButton } from '@/types/component.types';
 
   const props = defineProps<IButton['props']>();
-  const emit = defineEmits<IButton['emits']>();
 </script>
 
 <template>
   <button
     class="button"
+    v-bind="props"
     :data-mode="props.mode ?? 'filled'"
     :type="props.type ?? 'button'"
-    :form="props.form"
-    :disabled="props.disabled"
-    @click="emit('click', $event)"
+    :icon="undefined"
   >
     <component :is="props.icon" class="button__icon" />
     <span v-if="props.caption" class="button__caption">{{

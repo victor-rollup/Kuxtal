@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <label class="label">
+  <label class="label" v-bind="props">
     <span v-if="props.caption" class="label__caption">{{ props.caption }}</span>
     <slot />
   </label>
@@ -15,6 +15,7 @@
   .label {
     display: flex;
     flex-direction: column;
+    gap: 0.25rem;
   }
 
   .label__caption {

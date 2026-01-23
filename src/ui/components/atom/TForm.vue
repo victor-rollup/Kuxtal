@@ -1,15 +1,11 @@
 <script setup lang="ts">
   import type { IForm } from '@/types/component.types';
 
-  const emit = defineEmits<IForm['emits']>();
+  const props = defineProps<IForm['props']>();
 </script>
 
 <template>
-  <form
-    class="form"
-    @submit.prevent="emit('submit', $event)"
-    @reset="emit('reset', $event)"
-  >
+  <form class="form" v-bind="props" @submit.prevent>
     <slot />
   </form>
 </template>

@@ -1,7 +1,6 @@
 import { AllowedComponentProps } from 'vue';
-import { App } from 'vue';
-import { ButtonHTMLAttributes } from 'vue';
-import { Component as Component_2 } from 'vue';
+import { AriaAttributes } from 'vue';
+import { Component } from 'vue';
 import { ComponentCustomProps } from 'vue';
 import { ComponentOptionsBase } from 'vue';
 import { ComponentOptionsMixin } from 'vue';
@@ -14,29 +13,27 @@ import { DefineComponent } from 'vue';
 import { GlobalComponents } from 'vue';
 import { GlobalDirectives } from 'vue';
 import { Helper } from 'helper';
-import { InputTypeHTMLAttribute } from 'vue';
 import { PublicProps } from 'vue';
 import { RouteLocationNormalizedLoaded } from 'vue-router';
 import { RouteParamsRawGeneric } from 'vue-router';
 import { RouterViewProps } from 'vue-router';
+import { StyleValue } from 'vue';
 import { Use } from 'helper';
 import { VNode } from 'vue';
 import { VNodeProps } from 'vue';
 
-export declare namespace Component {
+declare namespace Component_2 {
     export {
         ILabel,
         IEdit,
         IComboBox,
-        IHyperlink,
         IMemo,
+        IHyperlink,
         IMenu,
         IForm,
         ILayout,
         IButton,
         ISidebar,
-        ISidebarItem,
-        IFormDialog,
         IAccordion,
         IBreadcrumb
     }
@@ -47,12 +44,9 @@ export { DateMethods }
 export { Helper }
 
 declare interface IAccordion {
-    props: {
+    props: IDOMElement & {
         title: string;
         open?: boolean;
-    };
-    emits: {
-        (event: 'toggle', payload: ToggleEvent): void;
     };
     expose: {
         open: () => void;
@@ -63,39 +57,40 @@ declare interface IAccordion {
 declare interface IBreadcrumb {
     props: {
         current: string;
-        routes: IRoute[];
+        routes: IBreadcrumbRoute[];
         divider?: string;
     };
 }
 
+declare interface IBreadcrumbRoute {
+    route: string;
+    caption: string;
+    icon?: Component;
+}
+
 declare interface IButton {
-    props: {
-        type?: ButtonHTMLAttributes['type'];
+    props: IDOMButton & {
         mode?: 'filled' | 'secondary' | 'outlined' | 'text' | 'icon';
         caption?: string;
-        icon?: Component_2;
-        disabled?: boolean;
-        form?: string;
-    };
-    emits: {
-        (event: 'click', payload: PointerEvent): void;
+        icon?: Component;
     };
 }
 
 declare interface IComboBox {
-    props: {
+    props: IDOMSelect & {
         caption?: string;
         allowNull?: boolean;
-        options: IComboBoxOption[];
+        options: IDOMSelectOption[];
     };
 }
 
-declare interface IComboBoxOption {
-    label: string;
-    value: null | string | number;
-}
-
 export declare const Icon: {
+    Information: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
+    Palette: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
+    DotsVertical: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
+    UserPlus: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
+    User: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
+    Category: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
     Clock: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
     ListSearch: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
     ListCheck: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
@@ -150,75 +145,270 @@ export declare const Icon: {
     List: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
 };
 
+declare interface IDOMAnchor extends IDOMElement {
+    download?: string;
+    href?: string;
+    hreflang?: string;
+    ping?: string;
+    rel?: string;
+    target?: string;
+    type?: string;
+}
+
+declare interface IDOMButton extends IDOMElement, IFormAttributes {
+    autofocus?: boolean;
+    disabled?: boolean;
+    name?: string;
+    type?: 'submit' | 'reset' | 'button';
+}
+
+declare interface IDOMElement extends IGlobalAttributes, IMicrodataAttributes, IDOMEvents {
+    placeholder?: string;
+    autocapitalize?: string;
+    autocorrect?: string;
+    autosave?: string;
+    results?: number;
+    security?: string;
+    unselectable?: 'on' | 'off';
+}
+
+declare interface IDOMEvents {
+    onCopy?: (event: ClipboardEvent) => void;
+    onCut?: (event: ClipboardEvent) => void;
+    onPaste?: (event: ClipboardEvent) => void;
+    onCompositionend?: (event: CompositionEvent) => void;
+    onCompositionstart?: (event: CompositionEvent) => void;
+    onCompositionupdate?: (event: CompositionEvent) => void;
+    onDrag?: (event: DragEvent) => void;
+    onDragend?: (event: DragEvent) => void;
+    onDragenter?: (event: DragEvent) => void;
+    onDragexit?: (event: DragEvent) => void;
+    onDragleave?: (event: DragEvent) => void;
+    onDragover?: (event: DragEvent) => void;
+    onDragstart?: (event: DragEvent) => void;
+    onDrop?: (event: DragEvent) => void;
+    onFocus?: (event: FocusEvent) => void;
+    onFocusin?: (event: FocusEvent) => void;
+    onFocusout?: (event: FocusEvent) => void;
+    onBlur?: (event: FocusEvent) => void;
+    onChange?: (event: Event) => void;
+    onBeforeinput?: (event: InputEvent) => void;
+    onFormdata?: (event: FormDataEvent) => void;
+    onInput?: (event: InputEvent) => void;
+    onReset?: (event: Event) => void;
+    onSubmit?: (event: SubmitEvent) => void;
+    onInvalid?: (event: Event) => void;
+    onFullscreenchange?: (event: Event) => void;
+    onFullscreenerror?: (event: Event) => void;
+    onLoad?: (event: Event) => void;
+    onError?: (event: Event) => void;
+    onKeydown?: (event: KeyboardEvent) => void;
+    onKeypress?: (event: KeyboardEvent) => void;
+    onKeyup?: (event: KeyboardEvent) => void;
+    onDblclick?: (event: MouseEvent) => void;
+    onMousedown?: (event: MouseEvent) => void;
+    onMouseenter?: (event: MouseEvent) => void;
+    onMouseleave?: (event: MouseEvent) => void;
+    onMousemove?: (event: MouseEvent) => void;
+    onMouseout?: (event: MouseEvent) => void;
+    onMouseover?: (event: MouseEvent) => void;
+    onMouseup?: (event: MouseEvent) => void;
+    onAbort?: (event: UIEvent) => void;
+    onCanplay?: (event: Event) => void;
+    onCanplaythrough?: (event: Event) => void;
+    onDurationchange?: (event: Event) => void;
+    onEmptied?: (event: Event) => void;
+    onEncrypted?: (event: MediaEncryptedEvent) => void;
+    onEnded?: (event: Event) => void;
+    onLoadeddata?: (event: Event) => void;
+    onLoadedmetadata?: (event: Event) => void;
+    onLoadstart?: (event: Event) => void;
+    onPause?: (event: Event) => void;
+    onPlay?: (event: Event) => void;
+    onPlaying?: (event: Event) => void;
+    onProgress?: (event: ProgressEvent) => void;
+    onRatechange?: (event: Event) => void;
+    onSeeked?: (event: Event) => void;
+    onSeeking?: (event: Event) => void;
+    onStalled?: (event: Event) => void;
+    onSuspend?: (event: Event) => void;
+    onTimeupdate?: (event: Event) => void;
+    onVolumechange?: (event: Event) => void;
+    onWaiting?: (event: Event) => void;
+    onSelect?: (event: Event) => void;
+    onScroll?: (event: Event) => void;
+    onScrollend?: (event: Event) => void;
+    onTouchcancel?: (event: TouchEvent) => void;
+    onTouchend?: (event: TouchEvent) => void;
+    onTouchmove?: (event: TouchEvent) => void;
+    onTouchstart?: (event: TouchEvent) => void;
+    onAuxclick?: (event: PointerEvent) => void;
+    onClick?: (event: PointerEvent) => void;
+    onContextmenu?: (event: PointerEvent) => void;
+    onGotpointercapture?: (event: PointerEvent) => void;
+    onLostpointercapture?: (event: PointerEvent) => void;
+    onPointerdown?: (event: PointerEvent) => void;
+    onPointermove?: (event: PointerEvent) => void;
+    onPointerup?: (event: PointerEvent) => void;
+    onPointercancel?: (event: PointerEvent) => void;
+    onPointerenter?: (event: PointerEvent) => void;
+    onPointerleave?: (event: PointerEvent) => void;
+    onPointerover?: (event: PointerEvent) => void;
+    onPointerout?: (event: PointerEvent) => void;
+    onBeforetoggle?: (event: ToggleEvent) => void;
+    onToggle?: (event: ToggleEvent) => void;
+    onWheel?: (event: WheelEvent) => void;
+    onAnimationcancel?: (event: AnimationEvent) => void;
+    onAnimationstart?: (event: AnimationEvent) => void;
+    onAnimationend?: (event: AnimationEvent) => void;
+    onAnimationiteration?: (event: AnimationEvent) => void;
+    onSecuritypolicyviolation?: (event: SecurityPolicyViolationEvent) => void;
+    onTransitioncancel?: (event: TransitionEvent) => void;
+    onTransitionend?: (event: TransitionEvent) => void;
+    onTransitionrun?: (event: TransitionEvent) => void;
+    onTransitionstart?: (event: TransitionEvent) => void;
+}
+
+declare interface IDOMForm extends IDOMElement {
+    acceptcharset?: string;
+    action?: string;
+    autocomplete?: string;
+    enctype?: string;
+    method?: string;
+    name?: string;
+    novalidate?: boolean;
+    target?: string;
+}
+
+declare interface IDOMInput extends IDOMElement, IFormAttributes {
+    accept?: string;
+    alt?: string;
+    autocomplete?: IDOMInputAutocomplete;
+    autofocus?: boolean;
+    capture?: boolean | 'user' | 'environment';
+    checked?: boolean | any[] | Set<any>;
+    crossorigin?: string;
+    disabled?: boolean;
+    height?: number;
+    indeterminate?: boolean;
+    list?: string;
+    max?: number;
+    maxlength?: number;
+    min?: number;
+    minlength?: number;
+    multiple?: boolean;
+    name?: string;
+    pattern?: string;
+    placeholder?: string;
+    readonly?: boolean;
+    required?: boolean;
+    size?: number;
+    src?: string;
+    step?: number;
+    type: IDOMInputType;
+    width?: number;
+}
+
+declare type IDOMInputAutocomplete = 'on' | 'off' | 'additional-name' | 'address-level1' | 'address-level2' | 'address-level3' | 'address-level4' | 'address-line1' | 'address-line2' | 'address-line3' | 'bday-day' | 'bday-month' | 'bday-year' | 'cc-csc' | 'cc-exp' | 'cc-exp-month' | 'cc-exp-year' | 'cc-family-name' | 'cc-given-name' | 'cc-name' | 'cc-number' | 'cc-type' | 'country' | 'country-name' | 'current-password' | 'family-name' | 'given-name' | 'honorific-prefix' | 'honorific-suffix' | 'name' | 'new-password' | 'one-time-code' | 'organization' | 'postal-code' | 'street-address' | 'transaction-amount' | 'transaction-currency' | 'username' | 'email' | 'tel' | 'tel-area-code' | 'tel-country-code' | 'tel-extension' | 'tel-local' | 'tel-local-prefix' | 'tel-local-suffix' | 'tel-national';
+
+declare type IDOMInputType = 'date' | 'datetime-local' | 'email' | 'month' | 'number' | 'password' | 'search' | 'tel' | 'text' | 'time' | 'url' | 'week';
+
+declare interface IDOMLabel extends IDOMElement {
+    for?: string;
+    form?: string;
+}
+
+declare interface IDOMSelect extends IDOMElement, IFormAttributes {
+    autocomplete?: string;
+    autofocus?: boolean;
+    disabled?: boolean;
+    multiple?: boolean;
+    name?: string;
+    required?: boolean;
+    size?: number;
+}
+
+declare interface IDOMSelectOption {
+    label: string;
+    value: null | string | number;
+    selected?: boolean;
+    disabled?: boolean;
+}
+
+declare interface IDOMTextarea extends IDOMElement, IFormAttributes {
+    autocomplete?: string;
+    autofocus?: boolean;
+    cols?: number;
+    dirname?: string;
+    disabled?: boolean;
+    maxlength?: number;
+    minlength?: number;
+    name?: string;
+    placeholder?: string;
+    readonly?: boolean;
+    required?: boolean;
+    rows?: number;
+    wrap?: string;
+}
+
 declare interface IEdit {
-    props: {
-        type: InputTypeHTMLAttribute;
+    props: IDOMInput & {
+        icon?: Component;
         caption?: string;
-        icon?: Component_2;
-        placeholder?: string;
-        required?: boolean;
-        disabled?: boolean;
-        min?: number;
-        max?: number;
-        minlength?: number;
-        maxlength?: number;
-        pattern?: string;
-    };
-    emits: {
-        (event: 'input', payload: InputEvent): void;
-        (event: 'beforeinput', payload: InputEvent): void;
-        (event: 'blur', payload: FocusEvent): void;
-        (event: 'change', payload: Event): void;
-        (event: 'focus', payload: FocusEvent): void;
-        (event: 'click', payload: PointerEvent): void;
-        (event: 'paste', payload: ClipboardEvent): void;
-        (event: 'keypress', payload: KeyboardEvent): void;
     };
 }
 
 declare interface IForm {
-    emits: {
-        (event: 'submit', payload: SubmitEvent): void;
-        (event: 'reset', payload: Event): void;
-    };
+    props: IDOMForm;
 }
 
-declare interface IFormDialog {
-    props: {
-        title: string;
-        description?: string;
-    };
-    emits: {
-        (event: 'submit', payload: SubmitEvent): void;
-        (event: 'cancel'): void;
-        (event: 'reset', payload: Event): void;
-    };
+declare interface IFormAttributes {
+    form?: string;
+    formaction?: string;
+    formenctype?: string;
+    formmethod?: string;
+    formnovalidate?: boolean;
+    formtarget?: string;
+}
+
+declare interface IGlobalAttributes extends AriaAttributes {
+    class?: string;
+    style?: StyleValue;
+    accesskey?: string;
+    contenteditable?: boolean | 'inherit' | 'plaintext-only';
+    contextmenu?: string;
+    dir?: string;
+    draggable?: boolean;
+    enterkeyhint?: 'enter' | 'done' | 'go' | 'next' | 'previous' | 'search' | 'send';
+    hidden?: boolean | 'hidden' | 'until-found';
+    id?: string;
+    inert?: boolean;
+    lang?: string;
+    spellcheck?: boolean;
+    tabindex?: number;
+    title?: string;
+    translate?: 'yes' | 'no';
+    role?: string;
+    inputmode?: 'none' | 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search';
+    is?: string;
+    exportparts?: string;
 }
 
 declare interface IHyperlink {
-    props: {
+    props: IDOMAnchor & {
         route?: string;
         params?: RouteParamsRawGeneric;
     };
-    emits: {
-        (event: 'click', payload: PointerEvent): void;
-    };
-}
-
-declare interface IItem extends IOption {
-    submenu?: IItem[];
-    useSeparator?: boolean;
-    onClick?: (event: PointerEvent) => void;
 }
 
 declare interface ILabel {
-    props: {
+    props: IDOMLabel & {
         caption?: string;
     };
 }
 
 declare interface ILayout {
-    props: {
+    props: IDOMElement & {
         showHeader?: boolean;
         showFooter?: boolean;
         showPrimarySidebar?: boolean;
@@ -227,51 +417,59 @@ declare interface ILayout {
 }
 
 declare interface IMemo {
-    props: {
+    props: IDOMTextarea & {
         caption?: string;
-        maxLength?: number;
     };
 }
 
 declare interface IMenu {
-    props: {
-        items: IItem[];
+    props: IDOMElement & {
+        items: IMenuItem[];
         orientation?: 'vertical' | 'horizontal';
     };
 }
 
-declare interface IOption {
-    caption?: string;
-    icon?: Component_2;
-    route?: string;
+declare interface IMenuItem extends ISidebarOption {
+    submenu?: IMenuItem[];
+    useSeparator?: boolean;
+    onClick?: (event: PointerEvent) => void;
 }
 
-declare interface IRoute {
-    caption: string;
-    icon?: Component_2;
-    route: string;
+declare interface IMicrodataAttributes {
+    about?: string;
+    datatype?: string;
+    inlist?: any;
+    property?: string;
+    resource?: string;
+    typeof?: string;
+    vocab?: string;
+    itemprop?: string;
+    itemscope?: boolean;
+    itemtype?: string;
+    itemid?: string;
+    itemref?: string;
 }
 
 declare interface ISidebar {
-    props: {
-        items: ISidebarItem['props'][];
+    props: IDOMElement & {
+        sections: ISidebarSection[];
     };
 }
 
-declare interface ISidebarItem {
-    props: {
-        caption?: string;
-        options: IOption[];
-    };
+declare interface ISidebarOption {
+    caption?: string;
+    icon?: Component;
+    route?: string;
 }
 
-declare interface ITab {
-    title: string;
-    content: Component_2;
+declare interface ISidebarSection {
+    caption?: string;
+    options: ISidebarOption[];
 }
 
 export declare const Kuxtal: {
-    install(application: App): void;
+    Schema: typeof Schema;
+    Component: typeof Component_2;
 };
 
 export declare const Router: {
@@ -279,13 +477,12 @@ export declare const Router: {
     createWebHistory: typeof createWebHistory;
 };
 
-export declare namespace Schema {
+declare namespace Schema {
     export {
-        IOption,
-        ITab,
-        IComboBoxOption,
-        IItem,
-        IRoute
+        ISidebarOption,
+        ISidebarSection,
+        IMenuItem,
+        IBreadcrumbRoute
     }
 }
 
@@ -320,54 +517,40 @@ export declare const UI: {
         };
     };
     Hyperlink: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMAnchor & {
         route?: string;
         params?: RouteParamsRawGeneric;
-        }> & Readonly<{
-        onClick?: ((payload: PointerEvent) => any) | undefined;
-        }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-        click: (payload: PointerEvent) => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, {
+        }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, {
         P: {};
         B: {};
         D: {};
         C: {};
         M: {};
         Defaults: {};
-        }, Readonly<{
+        }, Readonly<IDOMAnchor & {
         route?: string;
         params?: RouteParamsRawGeneric;
-        }> & Readonly<{
-        onClick?: ((payload: PointerEvent) => any) | undefined;
-        }>, {}, {}, {}, {}, {}>;
+        }> & Readonly<{}>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
+    } & ComponentOptionsBase<Readonly<IDOMAnchor & {
     route?: string;
     params?: RouteParamsRawGeneric;
-    }> & Readonly<{
-    onClick?: ((payload: PointerEvent) => any) | undefined;
-    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-    click: (payload: PointerEvent) => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
         $slots: {
             default?(_: {}): any;
             default?(_: {}): any;
         };
     });
     Accordion: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMElement & {
         title: string;
         open?: boolean;
-        }> & Readonly<{
-        onToggle?: ((payload: ToggleEvent) => any) | undefined;
-        }>, {
+        }> & Readonly<{}>, {
         open: () => void;
         close: () => void;
-        }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-        toggle: (payload: ToggleEvent) => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {
+        }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {
         accordion: HTMLDetailsElement;
         }, HTMLDetailsElement, ComponentProvideOptions, {
         P: {};
@@ -376,86 +559,55 @@ export declare const UI: {
         C: {};
         M: {};
         Defaults: {};
-        }, Readonly<{
+        }, Readonly<IDOMElement & {
         title: string;
         open?: boolean;
-        }> & Readonly<{
-        onToggle?: ((payload: ToggleEvent) => any) | undefined;
-        }>, {
+        }> & Readonly<{}>, {
         open: () => void;
         close: () => void;
         }, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
+    } & ComponentOptionsBase<Readonly<IDOMElement & {
     title: string;
     open?: boolean;
-    }> & Readonly<{
-    onToggle?: ((payload: ToggleEvent) => any) | undefined;
-    }>, {
+    }> & Readonly<{}>, {
     open: () => void;
     close: () => void;
-    }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-    toggle: (payload: ToggleEvent) => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
         $slots: {
             default?(_: {}): any;
         };
     });
-    Button: DefineComponent<    {
-    type?: ButtonHTMLAttributes["type"];
+    Button: DefineComponent<IDOMButton & {
     mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
     caption?: string;
-    icon?: Component_2;
-    disabled?: boolean;
-    form?: string;
-    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-    click: (payload: PointerEvent) => any;
-    }, string, PublicProps, Readonly<{
-    type?: ButtonHTMLAttributes["type"];
+    icon?: Component;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMButton & {
     mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
     caption?: string;
-    icon?: Component_2;
-    disabled?: boolean;
-    form?: string;
-    }> & Readonly<{
-    onClick?: ((payload: PointerEvent) => any) | undefined;
-    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLButtonElement>;
+    icon?: Component;
+    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLButtonElement>;
     Form: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{}> & Readonly<{
-        onReset?: ((payload: Event) => any) | undefined;
-        onSubmit?: ((payload: SubmitEvent) => any) | undefined;
-        }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-        reset: (payload: Event) => any;
-        submit: (payload: SubmitEvent) => any;
-        }, PublicProps, {}, true, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLFormElement, ComponentProvideOptions, {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLFormElement, ComponentProvideOptions, {
         P: {};
         B: {};
         D: {};
         C: {};
         M: {};
         Defaults: {};
-        }, Readonly<{}> & Readonly<{
-        onReset?: ((payload: Event) => any) | undefined;
-        onSubmit?: ((payload: SubmitEvent) => any) | undefined;
-        }>, {}, {}, {}, {}, {}>;
+        }, Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{}> & Readonly<{
-    onReset?: ((payload: Event) => any) | undefined;
-    onSubmit?: ((payload: SubmitEvent) => any) | undefined;
-    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-    reset: (payload: Event) => any;
-    submit: (payload: SubmitEvent) => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    } & ComponentOptionsBase<Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
         $slots: {
             default?(_: {}): any;
         };
     });
     Label: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMLabel & {
         caption?: string;
         }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLLabelElement, ComponentProvideOptions, {
         P: {};
@@ -464,13 +616,13 @@ export declare const UI: {
         C: {};
         M: {};
         Defaults: {};
-        }, Readonly<{
+        }, Readonly<IDOMLabel & {
         caption?: string;
         }> & Readonly<{}>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
+    } & ComponentOptionsBase<Readonly<IDOMLabel & {
     caption?: string;
     }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
         $slots: {
@@ -478,7 +630,7 @@ export declare const UI: {
         };
     });
     Layout: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMElement & {
         showHeader?: boolean;
         showFooter?: boolean;
         showPrimarySidebar?: boolean;
@@ -490,7 +642,7 @@ export declare const UI: {
         C: {};
         M: {};
         Defaults: {};
-        }, Readonly<{
+        }, Readonly<IDOMElement & {
         showHeader?: boolean;
         showFooter?: boolean;
         showPrimarySidebar?: boolean;
@@ -499,7 +651,7 @@ export declare const UI: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
+    } & ComponentOptionsBase<Readonly<IDOMElement & {
     showHeader?: boolean;
     showFooter?: boolean;
     showPrimarySidebar?: boolean;
@@ -514,7 +666,7 @@ export declare const UI: {
         };
     });
     Panel: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMElement & {
         showHeader?: boolean;
         showFooter?: boolean;
         showPrimarySidebar?: boolean;
@@ -526,7 +678,7 @@ export declare const UI: {
         C: {};
         M: {};
         Defaults: {};
-        }, Readonly<{
+        }, Readonly<IDOMElement & {
         showHeader?: boolean;
         showFooter?: boolean;
         showPrimarySidebar?: boolean;
@@ -535,7 +687,7 @@ export declare const UI: {
         __isFragment?: never;
         __isTeleport?: never;
         __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
+    } & ComponentOptionsBase<Readonly<IDOMElement & {
     showHeader?: boolean;
     showFooter?: boolean;
     showPrimarySidebar?: boolean;
@@ -552,159 +704,69 @@ export declare const UI: {
     Separator: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
     BreadCrumb: DefineComponent<    {
     current: string;
-    routes: IRoute[];
+    routes: IBreadcrumbRoute[];
     divider?: string;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
     current: string;
-    routes: IRoute[];
+    routes: IBreadcrumbRoute[];
     divider?: string;
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
     ComboBox: DefineComponent<    {
     modelValue?: null | string | number;
-    } & {
+    } & IDOMSelect & {
     caption?: string;
     allowNull?: boolean;
-    options: IComboBoxOption[];
+    options: IDOMSelectOption[];
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
     "update:modelValue": (value: string | number | null) => any;
     }, string, PublicProps, Readonly<{
     modelValue?: null | string | number;
-    } & {
+    } & IDOMSelect & {
     caption?: string;
     allowNull?: boolean;
-    options: IComboBoxOption[];
+    options: IDOMSelectOption[];
     }> & Readonly<{
     "onUpdate:modelValue"?: ((value: string | number | null) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
     Edit: DefineComponent<    {
     modelValue?: string | number;
-    } & {
-    type: InputTypeHTMLAttribute;
+    } & IDOMInput & {
+    icon?: Component;
     caption?: string;
-    icon?: Component_2;
-    placeholder?: string;
-    required?: boolean;
-    disabled?: boolean;
-    min?: number;
-    max?: number;
-    minlength?: number;
-    maxlength?: number;
-    pattern?: string;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
     "update:modelValue": (value: string | number) => any;
-    } & {
-    input: (payload: InputEvent) => any;
-    beforeinput: (payload: InputEvent) => any;
-    blur: (payload: FocusEvent) => any;
-    change: (payload: Event) => any;
-    focus: (payload: FocusEvent) => any;
-    click: (payload: PointerEvent) => any;
-    paste: (payload: ClipboardEvent) => any;
-    keypress: (payload: KeyboardEvent) => any;
     }, string, PublicProps, Readonly<{
     modelValue?: string | number;
-    } & {
-    type: InputTypeHTMLAttribute;
+    } & IDOMInput & {
+    icon?: Component;
     caption?: string;
-    icon?: Component_2;
-    placeholder?: string;
-    required?: boolean;
-    disabled?: boolean;
-    min?: number;
-    max?: number;
-    minlength?: number;
-    maxlength?: number;
-    pattern?: string;
     }> & Readonly<{
-    onInput?: ((payload: InputEvent) => any) | undefined;
-    onBeforeinput?: ((payload: InputEvent) => any) | undefined;
-    onBlur?: ((payload: FocusEvent) => any) | undefined;
-    onChange?: ((payload: Event) => any) | undefined;
-    onFocus?: ((payload: FocusEvent) => any) | undefined;
-    onClick?: ((payload: PointerEvent) => any) | undefined;
-    onPaste?: ((payload: ClipboardEvent) => any) | undefined;
-    onKeypress?: ((payload: KeyboardEvent) => any) | undefined;
     "onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
-    FormDialog: {
-        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<{
-        title: string;
-        description?: string;
-        }> & Readonly<{
-        onReset?: ((payload: Event) => any) | undefined;
-        onSubmit?: ((payload: SubmitEvent) => any) | undefined;
-        onCancel?: (() => any) | undefined;
-        }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-        reset: (payload: Event) => any;
-        submit: (payload: SubmitEvent) => any;
-        cancel: () => any;
-        }, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLFormElement, ComponentProvideOptions, {
-        P: {};
-        B: {};
-        D: {};
-        C: {};
-        M: {};
-        Defaults: {};
-        }, Readonly<{
-        title: string;
-        description?: string;
-        }> & Readonly<{
-        onReset?: ((payload: Event) => any) | undefined;
-        onSubmit?: ((payload: SubmitEvent) => any) | undefined;
-        onCancel?: (() => any) | undefined;
-        }>, {}, {}, {}, {}, {}>;
-        __isFragment?: never;
-        __isTeleport?: never;
-        __isSuspense?: never;
-    } & ComponentOptionsBase<Readonly<{
-    title: string;
-    description?: string;
-    }> & Readonly<{
-    onReset?: ((payload: Event) => any) | undefined;
-    onSubmit?: ((payload: SubmitEvent) => any) | undefined;
-    onCancel?: (() => any) | undefined;
-    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
-    reset: (payload: Event) => any;
-    submit: (payload: SubmitEvent) => any;
-    cancel: () => any;
-    }, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
-        $slots: {
-            default?(_: {}): any;
-        };
-    });
     Memo: DefineComponent<    {
     modelValue?: string;
-    } & {
+    } & IDOMTextarea & {
     caption?: string;
-    maxLength?: number;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
     "update:modelValue": (value: string) => any;
     }, string, PublicProps, Readonly<{
     modelValue?: string;
-    } & {
+    } & IDOMTextarea & {
     caption?: string;
-    maxLength?: number;
     }> & Readonly<{
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
-    SidebarItem: DefineComponent<    {
-    caption?: string;
-    options: IOption[];
-    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
-    caption?: string;
-    options: IOption[];
-    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLIElement>;
-    Menu: DefineComponent<    {
-    items: IItem[];
+    Menu: DefineComponent<IDOMElement & {
+    items: IMenuItem[];
     orientation?: "vertical" | "horizontal";
-    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
-    items: IItem[];
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
+    items: IMenuItem[];
     orientation?: "vertical" | "horizontal";
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
-    Sidebar: DefineComponent<    {
-    items: ISidebarItem["props"][];
-    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
-    items: ISidebarItem["props"][];
+    Sidebar: DefineComponent<IDOMElement & {
+    sections: ISidebarSection[];
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
+    sections: ISidebarSection[];
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
 };
 

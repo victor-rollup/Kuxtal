@@ -3,7 +3,8 @@
 *::before {
   margin: 0rem;
   padding: 0rem;
-  user-select: none;
+  border: none;
+  outline: none;
   box-sizing: border-box;
   font-family:
     system-ui,
@@ -17,6 +18,8 @@
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
+  line-height: 1.5;
+  user-select: none;
 }
 
 select,
@@ -48,10 +51,7 @@ option::checkmark {
   overflow: hidden;
 }
 
-[disabled] {
-  opacity: 0.5;
-  cursor: not-allowed !important;
-}
+
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
@@ -107,7 +107,7 @@ dialog[open] {
   border: none;
   outline: none;
   padding-block: 4rem;
-  background: rgb(0 0 0 / 0.5);
+  background: rgb(0 0 0 / 0.75);
   z-index: 5;
 }
 

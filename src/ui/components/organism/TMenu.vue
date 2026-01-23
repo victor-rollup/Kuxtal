@@ -26,7 +26,7 @@
 </script>
 
 <template>
-  <ul class="menu |" :data-orientation="props.orientation ?? 'vertical'">
+  <ul class="menu |" :data-orientation="props.orientation ?? 'vertical'" v-bind="props" :items="undefined">
     <li
       class="menu-item"
       v-for="(item, index) in props.items"

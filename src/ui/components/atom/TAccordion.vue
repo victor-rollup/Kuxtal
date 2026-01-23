@@ -6,7 +6,6 @@
 
   const accordion = ref<HTMLDetailsElement | null>(Use.NULL);
   const props = defineProps<IAccordion['props']>();
-  const emit = defineEmits<IAccordion['emits']>();
 
   defineExpose<IAccordion['expose']>({
     open() {
@@ -27,9 +26,8 @@
 <template>
   <details
     ref="accordion"
-    :open="props.open"
+    v-bind="props"
     class="accordion"
-    @toggle="emit('toggle', $event)"
   >
     <summary class="accordion__header">
       <h4 class="accordion__title | text-truncate">{{ props.title }}</h4>

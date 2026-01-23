@@ -10,14 +10,10 @@
 
 <template>
   <TLabel :caption="props.caption" class="memo">
-    <textarea
-      v-model="model"
-      :maxlength="maxLength"
-      class="memo__field"
-    ></textarea>
+    <textarea v-model="model" v-bind="props" class="memo__field"></textarea>
     <small class="memo__counter">
       <span>{{ charCount }}</span
-      ><span v-if="maxLength"> / {{ maxLength }}</span>
+      ><span v-if="props.maxlength"> / {{ props.maxlength }}</span>
     </small>
   </TLabel>
 </template>

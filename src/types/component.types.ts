@@ -1,85 +1,70 @@
 // ------------------------------------------------------------------------------------------------
 import type {
-  Component,
-  ButtonHTMLAttributes,
-  InputTypeHTMLAttribute,
-} from 'vue';
+  IDOMButton,
+  IDOMElement,
+  IDOMForm,
+  IDOMLabel,
+  IDOMInput,
+  IDOMTextarea,
+  IDOMSelect,
+  IDOMSelectOption,
+  IDOMAnchor,
+} from './dom.types';
+import type { Component } from 'vue';
+import type {
+  IMenuItem,
+  ISidebarSection,
+  IBreadcrumbRoute,
+} from './schema.types';
 import type { RouteParamsRawGeneric } from 'vue-router';
-import type { IComboBoxOption, IItem, IOption, IRoute } from './schema.types';
 // ------------------------------------------------------------------------------------------------
 export interface ILabel {
-  props: {
+  props: IDOMLabel & {
     caption?: string;
   };
 }
 // ------------------------------------------------------------------------------------------------
 export interface IEdit {
-  props: {
-    type: InputTypeHTMLAttribute;
-    caption?: string;
+  props: IDOMInput & {
     icon?: Component;
-    placeholder?: string;
-    required?: boolean;
-    disabled?: boolean;
-    min?: number;
-    max?: number;
-    minlength?: number;
-    maxlength?: number;
-    pattern?: string;
-  };
-  emits: {
-    (event: 'input', payload: InputEvent): void;
-    (event: 'beforeinput', payload: InputEvent): void;
-    (event: 'blur', payload: FocusEvent): void;
-    (event: 'change', payload: Event): void;
-    (event: 'focus', payload: FocusEvent): void;
-    (event: 'click', payload: PointerEvent): void;
-    (event: 'paste', payload: ClipboardEvent): void;
-    (event: 'keypress', payload: KeyboardEvent): void;
+    caption?: string;
   };
 }
 // ------------------------------------------------------------------------------------------------
 export interface IComboBox {
-  props: {
+  props: IDOMSelect & {
     caption?: string;
     allowNull?: boolean;
-    options: IComboBoxOption[];
-  };
-}
-// ------------------------------------------------------------------------------------------------
-export interface IHyperlink {
-  props: {
-    route?: string;
-    params?: RouteParamsRawGeneric;
-  };
-  emits: {
-    (event: 'click', payload: PointerEvent): void;
+    options: IDOMSelectOption[];
   };
 }
 // ------------------------------------------------------------------------------------------------
 export interface IMemo {
-  props: {
+  props: IDOMTextarea & {
     caption?: string;
-    maxLength?: number;
   };
 }
 // ------------------------------------------------------------------------------------------------
+export interface IHyperlink {
+  props: IDOMAnchor & {
+      route?: string;
+      params?: RouteParamsRawGeneric;
+    };
+}
+// ------------------------------------------------------------------------------------------------
 export interface IMenu {
-  props: {
-    items: IItem[];
+  props: IDOMElement & {
+    items: IMenuItem[];
     orientation?: 'vertical' | 'horizontal';
   };
 }
 // ------------------------------------------------------------------------------------------------
 export interface IForm {
-  emits: {
-    (event: 'submit', payload: SubmitEvent): void;
-    (event: 'reset', payload: Event): void;
-  };
+  props: IDOMForm;
 }
 // ------------------------------------------------------------------------------------------------
 export interface ILayout {
-  props: {
+  props: IDOMElement & {
     showHeader?: boolean;
     showFooter?: boolean;
     showPrimarySidebar?: boolean;
@@ -88,51 +73,23 @@ export interface ILayout {
 }
 // ------------------------------------------------------------------------------------------------
 export interface IButton {
-  props: {
-    type?: ButtonHTMLAttributes['type'];
+  props: IDOMButton & {
     mode?: 'filled' | 'secondary' | 'outlined' | 'text' | 'icon';
     caption?: string;
     icon?: Component;
-    disabled?: boolean;
-    form?: string;
-  };
-  emits: {
-    (event: 'click', payload: PointerEvent): void;
   };
 }
 // ------------------------------------------------------------------------------------------------
 export interface ISidebar {
-  props: {
-    items: ISidebarItem['props'][];
-  };
-}
-// ------------------------------------------------------------------------------------------------
-export interface ISidebarItem {
-  props: {
-    caption?: string;
-    options: IOption[];
-  };
-}
-// ------------------------------------------------------------------------------------------------
-export interface IFormDialog {
-  props: {
-    title: string;
-    description?: string;
-  };
-  emits: {
-    (event: 'submit', payload: SubmitEvent): void;
-    (event: 'cancel'): void;
-    (event: 'reset', payload: Event): void;
+  props: IDOMElement & {
+    sections: ISidebarSection[];
   };
 }
 // ------------------------------------------------------------------------------------------------
 export interface IAccordion {
-  props: {
+  props: IDOMElement & {
     title: string;
     open?: boolean;
-  };
-  emits: {
-    (event: 'toggle', payload: ToggleEvent): void;
   };
   expose: {
     open: () => void;
@@ -143,7 +100,7 @@ export interface IAccordion {
 export interface IBreadcrumb {
   props: {
     current: string;
-    routes: IRoute[];
+    routes: IBreadcrumbRoute[];
     divider?: string;
   };
 }

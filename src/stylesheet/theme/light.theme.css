@@ -33,20 +33,18 @@
   --theme-tertiary-color-900: hsl(200, 100%, 10%);
 
   --theme-neutral-color-100: hsl(0, 0%, 100%);
-  --theme-neutral-color-200: hsl(0, 0%, 90%);
-  --theme-neutral-color-300: hsl(0, 0%, 80%);
-  --theme-neutral-color-400: hsl(0, 0%, 70%);
-  --theme-neutral-color-500: hsl(0, 0%, 60%);
-  --theme-neutral-color-600: hsl(0, 0%, 50%);
-  --theme-neutral-color-700: hsl(0, 0%, 40%);
-  --theme-neutral-color-800: hsl(0, 0%, 30%);
-  --theme-neutral-color-900: hsl(0, 0%, 20%);
+  --theme-neutral-color-200: hsl(0, 0%, 95%);
+  --theme-neutral-color-300: hsl(0, 0%, 85%);
+  --theme-neutral-color-400: hsl(0, 0%, 75%);
+  --theme-neutral-color-500: hsl(0, 0%, 65%);
+  --theme-neutral-color-600: hsl(0, 0%, 55%);
+  --theme-neutral-color-700: hsl(0, 0%, 45%);
+  --theme-neutral-color-800: hsl(0, 0%, 35%);
+  --theme-neutral-color-900: hsl(0, 0%, 25%);
 }
 /* --------------------------------------------------------------------------------------------- */
 :root,
 [data-theme='light'] {
-  background: var(--theme-neutral-color-100);
-
   --accordion-border-color: var(--theme-neutral-color-400);
   --accordion-header-text-color: var(--theme-neutral-color-700);
   --accordion-header-background-color: var(--theme-neutral-color-100);
@@ -68,8 +66,6 @@
   --edit-background-focus-color: var(--theme-neutral-color-200);
   --edit-text-focus-color: var(--theme-neutral-color-900);
   --edit-border-focus-color: var(--theme-primary-color-500);
-  --edit-file-text-color: var(--filled-button-text-color);
-  --edit-file-background-color: var(--filled-button-background-color);
 
   --sidebar-item-text-color: var(--theme-neutral-color-800);
   --sidebar-item-text-hover-color: var(--theme-neutral-color-800);
@@ -102,7 +98,10 @@
   --table-head-text-color: var(--theme-neutral-color-600);
   --table-head-background-color: var(--theme-neutral-color-200);
   --table-body-row-background-hover-color: var(--theme-primary-color-100);
-}
-/* --------------------------------------------------------------------------------------------- */
 
+  --notification-background-color: var(--theme-neutral-color-100);
+  --notification-success-color: hsl(140, 60%, 40%);
+  --notification-error-color: hsl(0, 59%, 59%);
+  --notification-information-color: var(--theme-primary-color-500);
+}
 /* --------------------------------------------------------------------------------------------- */

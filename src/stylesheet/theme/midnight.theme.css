@@ -66,8 +66,6 @@
   --edit-background-focus-color: var(--theme-neutral-color-800);
   --edit-text-focus-color: var(--theme-neutral-color-300);
   --edit-border-focus-color: var(--theme-primary-color-300);
-  --edit-file-text-color: var(--filled-button-text-color);
-  --edit-file-background-color: var(--filled-button-background-color);
 
   --sidebar-item-text-color: var(--theme-neutral-color-300);
   --sidebar-item-text-hover-color: var(--theme-neutral-color-300);
@@ -90,7 +88,9 @@
   --form-dialog-background-color: var(--theme-neutral-color-900);
   --form-dialog-border-color: var(--theme-neutral-color-800);
   --form-dialog-header-text-color: var(--theme-neutral-color-300);
-  --form-dialog-header-background-color: var(--accordion-header-background-color);
+  --form-dialog-header-background-color: var(
+    --accordion-header-background-color
+  );
 
   --separator-border-color: var(--theme-neutral-color-800);
 
@@ -98,5 +98,10 @@
   --table-head-text-color: var(--theme-primary-color-100);
   --table-head-background-color: var(--theme-neutral-color-700);
   --table-body-row-background-hover-color: var(--theme-primary-color-800);
+
+  --notification-background-color: var(--theme-neutral-color-900);
+  --notification-success-color: hsl(140, 60%, 40%);
+  --notification-error-color: hsl(0, 59%, 59%);
+  --notification-information-color: var(--theme-primary-color-500);
 }
 /* --------------------------------------------------------------------------------------------- */

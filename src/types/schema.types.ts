@@ -1,31 +1,26 @@
 // ------------------------------------------------------------------------------------------------
 import type { Component } from 'vue';
 // ------------------------------------------------------------------------------------------------
-export interface IOption {
+export interface ISidebarOption {
   caption?: string;
   icon?: Component;
   route?: string;
 }
 // ------------------------------------------------------------------------------------------------
-export interface ITab {
-  title: string;
-  content: Component;
+export interface ISidebarSection {
+  caption?: string;
+  options: ISidebarOption[];
 }
 // ------------------------------------------------------------------------------------------------
-export interface IComboBoxOption {
-  label: string;
-  value: null | string | number;
-}
-// ------------------------------------------------------------------------------------------------
-export interface IItem extends IOption {
-  submenu?: IItem[];
+export interface IMenuItem extends ISidebarOption {
+  submenu?: IMenuItem[];
   useSeparator?: boolean;
   onClick?: (event: PointerEvent) => void;
 }
 // ------------------------------------------------------------------------------------------------
-export interface IRoute {
+export interface IBreadcrumbRoute {
+  route: string;
   caption: string;
   icon?: Component;
-  route: string;
 }
 // ------------------------------------------------------------------------------------------------
