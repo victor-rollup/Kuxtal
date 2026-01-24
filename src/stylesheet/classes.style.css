@@ -89,8 +89,9 @@
 /* --------------------------------------------------------------------------------------------- */
 .toast {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 0rem;
+  right: 0rem;
+  margin: 2rem;
   padding: 1rem;
   border-radius: 0.25rem;
   background: var(--notification-background-color);
@@ -99,6 +100,11 @@
   z-index: 10;
   opacity: 1;
   transition: opacity 0.5s ease;
+  max-width: 32rem;
+}
+
+.toast:not(:last-child) {
+  display: none;
 }
 
 .toast-success {
@@ -111,7 +117,7 @@
   border-color: var(--notification-error-color);
 }
 
-.toast-info {
+.toast-information {
   color: var(--notification-information-color);
   border-color: var(--notification-information-color);
 }
@@ -124,5 +130,29 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.toast__header .icon {
+  --icon-dimension: 2.5rem;
+}
+/* --------------------------------------------------------------------------------------------- */
+.confirm-dialog {
+  height: fit-content;
+  min-width: 24rem;
+  border-radius: 1rem;
+  background: var(--notification-background-color);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.confirm-dialog__footer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.confirm-dialog__button {
+  flex: 1 1 auto;
 }
 /* --------------------------------------------------------------------------------------------- */

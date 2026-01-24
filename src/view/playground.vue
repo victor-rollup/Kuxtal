@@ -1,22 +1,23 @@
 <script setup lang="ts">
-import { Icon, Theme, UI } from "@/ui";
-import { createNotification } from "@/utils/create-notification";
-import { ref } from "vue";
+  import { Icon, Theme, UI } from '@/ui';
+  import createDialog from '@/utils/create-dialog';
+  import createNotification from '@/utils/create-notification';
+  import { ref } from 'vue';
 
-function toggleDarkMode() {
-  const current = document.documentElement.getAttribute("data-theme");
-  if (current === "dark") {
-    document.documentElement.setAttribute("data-theme", "light");
-    return;
+  function toggleDarkMode() {
+    const current = document.documentElement.getAttribute('data-theme');
+    if (current === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      return;
+    }
+    document.documentElement.setAttribute('data-theme', 'dark');
   }
-  document.documentElement.setAttribute("data-theme", "dark");
-}
 
-function alert() {
-  window.alert(1);
-}
+  function alert() {
+    window.alert(1);
+  }
 
-const value = ref("");
+  const value = ref('');
 </script>
 
 <template>
@@ -255,11 +256,38 @@ const value = ref("");
             createNotification({
               message: 'NETWORK ERROR',
               type: 'error',
+              description:
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam earum ab repudiandae sunt officiis quisquam blanditiis mollitia aut excepturi! Architecto quam tempora debitis magnam illo sint dolor qui vel. Dolore?',
+              duration: 10000,
             })
           "
         />
         <UI.Separator />
-        <UI.Button caption="Click me" mode="filled" />
+        <UI.Button
+          caption="Dialog"
+          mode="filled"
+          @click="
+            createDialog({
+              message: '¿Deseas eliminar este producto?',
+              cancelCaption: 'No, cancelar',
+              confirmCaption: 'Sí, eliminar',
+              onCancel() {
+                createNotification({
+                  message: 'Operación cancelada',
+                  type: 'information',
+                  duration: 10000,
+                });
+              },
+              onConfirm() {
+                createNotification({
+                  message: 'Se ha eliminado el producto',
+                  type: 'success',
+                  duration: 10000,
+                });
+              }
+            })
+          "
+        />
         <UI.Separator />
         <UI.Button caption="Click me" mode="secondary" />
         <UI.Separator />
@@ -329,10 +357,10 @@ const value = ref("");
 </template>
 
 <style scoped>
-.playground {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+  .playground {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 </style>

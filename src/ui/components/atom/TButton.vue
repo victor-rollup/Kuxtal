@@ -19,7 +19,7 @@
   </button>
 </template>
 
-<style scoped>
+<style>
   .button {
     display: flex;
     align-items: center;

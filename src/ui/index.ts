@@ -1,5 +1,7 @@
 // ------------------------------------------------------------------------------------------------
 import { RouterView as Page } from 'vue-router';
+import createDialog from '@/utils/create-dialog';
+import createNotification from '@/utils/create-notification';
 // ------------------------------------------------------------------------------------------------
 import Button from '@/ui/components/atom/TButton.vue';
 import Form from '@/ui/components/atom/TForm.vue';
@@ -39,5 +41,7 @@ export const UI = {
   Memo,
   Menu,
   Sidebar,
+  createDialog,
+  createNotification,
 };
 // ------------------------------------------------------------------------------------------------
