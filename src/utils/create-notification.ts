@@ -22,7 +22,7 @@ export default function createNotification({
   description,
 }: INotification): void {
   const toast = document.createElement('div');
-  toast.className = `toast toast-${type}`;
+  toast.className = `toast | toast-${type}`;
   toast.innerHTML = `
     <header class="toast__header">
       ${icon[type]}
@@ -35,6 +35,8 @@ export default function createNotification({
 
   setTimeout(() => {
     toast.classList.add('fade-out');
-    toast.addEventListener('transitionend', () => toast.remove());
+    toast.addEventListener('transitionend', () =>
+      document.body.removeChild(toast),
+    );
   }, duration);
 }

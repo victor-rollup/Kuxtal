@@ -22,10 +22,6 @@
   user-select: none;
 }
 
-:focus-visible {
-  outline: 0.125rem solid;
-}
-
 select,
 ::picker(select) {
   appearance: base-select;
