@@ -38,6 +38,10 @@ export declare namespace Component {
     }
 }
 
+declare function createDialog({ message, onCancel, onConfirm, title, cancelCaption, confirmCaption, }: IDialogOptions): void;
+
+declare function createNotification({ duration, message, type, description, }: INotification): void;
+
 export { DateMethods }
 
 export { Helper }
@@ -143,6 +147,15 @@ export declare const Icon: {
     Check: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
     List: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
 };
+
+declare interface IDialogOptions {
+    title?: string;
+    message: string;
+    confirmCaption?: string;
+    cancelCaption?: string;
+    onConfirm?: () => void;
+    onCancel?: () => void;
+}
 
 declare interface IDOMAnchor extends IDOMElement {
     download?: string;
@@ -445,6 +458,13 @@ declare interface IMicrodataAttributes {
     itemtype?: string;
     itemid?: string;
     itemref?: string;
+}
+
+declare interface INotification {
+    message: string;
+    description?: string;
+    type?: 'success' | 'error' | 'information';
+    duration?: number;
 }
 
 declare interface ISidebar {
@@ -760,6 +780,8 @@ export declare const UI: {
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
     sections: ISidebarSection[];
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
+    createDialog: typeof createDialog;
+    createNotification: typeof createNotification;
 };
 
 export { Use }
