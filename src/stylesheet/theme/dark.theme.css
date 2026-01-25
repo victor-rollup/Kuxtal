@@ -91,8 +91,16 @@
   --table-body-row-background-hover-color: var(--theme-neutral-color-300);
 
   --notification-background-color: var(--theme-neutral-color-100);
-  --notification-success-color: hsl(140, 60%, 40%);
+  --notification-success-color: hsl(140, 41%, 55%);
   --notification-error-color: hsl(0, 59%, 59%);
   --notification-information-color: var(--theme-primary-color-200);
+
+  --toggle-switch-thumb-background-color: var(--theme-neutral-color-900);
+  --toggle-switch-background-color: var(--theme-neutral-color-300);
+  --toggle-switch-background-checked-color: var(--theme-primary-color-500);
+
+  --slider-background-color: var(--theme-neutral-color-300);
+  --slider-fill-background-color: var(--theme-primary-color-500);
+  --slider-thumb-background-color: var(--theme-neutral-color-900);
 }
 /* --------------------------------------------------------------------------------------------- */
