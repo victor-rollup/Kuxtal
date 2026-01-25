@@ -132,6 +132,10 @@
   gap: 0.5rem;
 }
 
+.toast__message {
+  font-weight: normal;
+}
+
 .toast__header .icon {
   --icon-dimension: 2.5rem;
 }
