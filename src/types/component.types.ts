@@ -45,11 +45,25 @@ export interface IMemo {
   };
 }
 // ------------------------------------------------------------------------------------------------
+export interface IToggleSwitch {
+  props: Omit<IDOMInput, 'type' | 'checked'>;
+}
+// ------------------------------------------------------------------------------------------------
+export interface IRadioButton {
+  props: Omit<IDOMInput, 'type'> & {
+    value: string | number;
+  };
+}
+// ------------------------------------------------------------------------------------------------
+export interface ICheckbox {
+  props: Omit<IDOMInput, 'type'>;
+}
+// ------------------------------------------------------------------------------------------------
 export interface IHyperlink {
   props: IDOMAnchor & {
-      route?: string;
-      params?: RouteParamsRawGeneric;
-    };
+    route?: string;
+    params?: RouteParamsRawGeneric;
+  };
 }
 // ------------------------------------------------------------------------------------------------
 export interface IMenu {
