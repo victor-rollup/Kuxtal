@@ -27,6 +27,9 @@ export declare namespace Component {
         IEdit,
         IComboBox,
         IMemo,
+        IToggleSwitch,
+        IRadioButton,
+        ICheckbox,
         IHyperlink,
         IMenu,
         IForm,
@@ -40,7 +43,7 @@ export declare namespace Component {
 
 declare function createDialog({ message, onCancel, onConfirm, title, cancelCaption, confirmCaption, }: IDialogOptions): void;
 
-declare function createNotification({ duration, message, type, description, }: INotification): void;
+declare function createNotification({ duration, message, type, description, }: INotificationOptions): void;
 
 export { DateMethods }
 
@@ -77,6 +80,10 @@ declare interface IButton {
         caption?: string;
         icon?: Component_2;
     };
+}
+
+declare interface ICheckbox {
+    props: Omit<IDOMInput, 'type'>;
 }
 
 declare interface IComboBox {
@@ -460,11 +467,17 @@ declare interface IMicrodataAttributes {
     itemref?: string;
 }
 
-declare interface INotification {
+declare interface INotificationOptions {
     message: string;
     description?: string;
     type?: 'success' | 'error' | 'information';
     duration?: number;
+}
+
+declare interface IRadioButton {
+    props: Omit<IDOMInput, 'type'> & {
+        value: string | number;
+    };
 }
 
 declare interface ISidebar {
@@ -482,6 +495,10 @@ declare interface ISidebarOption {
 declare interface ISidebarSection {
     caption?: string;
     options: ISidebarOption[];
+}
+
+declare interface IToggleSwitch {
+    props: Omit<IDOMInput, 'type' | 'checked'>;
 }
 
 export declare const Router: {
@@ -601,6 +618,80 @@ export declare const UI: {
     caption?: string;
     icon?: Component_2;
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLButtonElement>;
+    Slider: DefineComponent<    {
+    modelValue?: number;
+    min?: number;
+    max?: number;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: number) => any;
+    "update:min": (value: number) => any;
+    "update:max": (value: number) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: number;
+    min?: number;
+    max?: number;
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: number) => any) | undefined;
+    "onUpdate:min"?: ((value: number) => any) | undefined;
+    "onUpdate:max"?: ((value: number) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+    slider: HTMLDivElement;
+    }, HTMLDivElement>;
+    RangeSlider: DefineComponent<    {
+    minimum?: number;
+    maximun?: number;
+    } & {
+    min?: number;
+    max?: number;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:minimum": (value: number) => any;
+    "update:maximun": (value: number) => any;
+    }, string, PublicProps, Readonly<{
+    minimum?: number;
+    maximun?: number;
+    } & {
+    min?: number;
+    max?: number;
+    }> & Readonly<{
+    "onUpdate:minimum"?: ((value: number) => any) | undefined;
+    "onUpdate:maximun"?: ((value: number) => any) | undefined;
+    }>, {
+    max: number;
+    min: number;
+    }, {}, {}, {}, string, ComponentProvideOptions, false, {
+    slider: HTMLDivElement;
+    }, HTMLDivElement>;
+    RadioButton: DefineComponent<    {
+    modelValue?: string | number;
+    } & Omit<IDOMInput, "type"> & {
+    value: string | number;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string | number) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: string | number;
+    } & Omit<IDOMInput, "type"> & {
+    value: string | number;
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLInputElement>;
+    ToggleSwitch: DefineComponent<    {
+    modelValue?: boolean;
+    } & Omit<IDOMInput, "type" | "checked">, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: boolean) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: boolean;
+    } & Omit<IDOMInput, "type" | "checked">> & Readonly<{
+    "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
+    Checkbox: DefineComponent<    {
+    modelValue?: boolean;
+    } & Omit<IDOMInput, "type">, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: boolean) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: boolean;
+    } & Omit<IDOMInput, "type">> & Readonly<{
+    "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLInputElement>;
     Form: {
         new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLFormElement, ComponentProvideOptions, {
         P: {};
@@ -775,6 +866,13 @@ export declare const UI: {
     items: IMenuItem[];
     orientation?: "vertical" | "horizontal";
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
+    MenuBar: DefineComponent<IDOMElement & {
+    items: IMenuItem[];
+    orientation?: "vertical" | "horizontal";
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
+    items: IMenuItem[];
+    orientation?: "vertical" | "horizontal";
+    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
     Sidebar: DefineComponent<IDOMElement & {
     sections: ISidebarSection[];
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
