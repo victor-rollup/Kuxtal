@@ -83,5 +83,8 @@
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
     background: var(--accordion-content-background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 </style>
