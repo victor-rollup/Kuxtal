@@ -1,5 +1,7 @@
 <script setup lang="ts">
   import { Icon, Theme, UI } from '@/ui';
+import TSlider from '@/ui/components/atom/TSlider.vue';
+import TSliderRange from '@/ui/components/atom/TSliderRange.vue';
   import createDialog from '@/utils/create-dialog';
   import createNotification from '@/utils/create-notification';
   import { ref } from 'vue';
@@ -17,13 +19,58 @@
     window.alert(1);
   }
 
-  const value = ref('');
+  const value = ref(7);
 </script>
 
 <template>
   <UI.Layout show-header show-primary-sidebar>
     <template #TLayoutHeader>
+      <UI.MenuBar
+        orientation="horizontal"
+        :items="[
+          {
+            caption: 'File',
+            submenu: [
+              {
+                caption: 'view',
+              },
+            ],
+          },
+          {
+            caption: 'Edit',
+          },
+          {
+            caption: 'View',
+            submenu: [
+              {
+                caption: 'Appearance',
+                submenu: [
+                  {
+                    caption: 'Set midnight theme',
+                    onClick() {
+                      Theme.setTheme(Theme.Type.MIDNIGHT);
+                    },
+                  },
+                  {
+                    caption: 'Set light theme',
+                    onClick() {
+                      Theme.setTheme(Theme.Type.LIGHT);
+                    },
+                  },
+                  {
+                    caption: 'Set dark theme',
+                    onClick() {
+                      Theme.setTheme(Theme.Type.DARK);
+                    },
+                  },
+                ],
+              },
+            ],
+          },
+        ]"
+      />
       <UI.Menu
+        hidden
         orientation="horizontal"
         :items="[
           {
@@ -122,7 +169,9 @@
 
     <div class="playground">
       <h1>Playground</h1>
-
+      {{ value }}
+      
+    
       <UI.Accordion title="Tabla">
         <div class="table-wrapper">
           <table>
@@ -155,6 +204,15 @@
       </UI.Accordion>
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
+          <UI.Slider v-model="value"/>
+          <UI.RangeSlider v-model:maximun="value"/>
+          <UI.Checkbox checked />
+          <UI.Separator />
+          <UI.RadioButton :value="1" name="radio" />
+          <UI.RadioButton :value="2" name="radio" />
+          <UI.Separator />
+          <UI.ToggleSwitch />
+          <UI.Separator />
           <UI.Memo caption="Descripción" :maxlength="45" />
           <UI.ComboBox
             caption="Selecciona un elemento"
@@ -258,7 +316,7 @@
               type: 'error',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam earum ab repudiandae sunt officiis quisquam blanditiis mollitia aut excepturi! Architecto quam tempora debitis magnam illo sint dolor qui vel. Dolore?',
-              duration: 10000,
+              duration: 1000,
             })
           "
         />
