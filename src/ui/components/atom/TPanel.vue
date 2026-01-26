@@ -9,7 +9,7 @@
     <header v-if="props.showHeader" class="panel__header">
       <slot name="TPanelHeader" />
     </header>
-    <section class="panel__content">
+    <div class="panel__content">
       <aside v-if="props.showPrimarySidebar" class="panel__sidebar">
         <slot name="TPanelPrimarySidebar" />
       </aside>
@@ -19,7 +19,7 @@
       <aside v-if="props.showSecondarySidebar" class="panel__sidebar">
         <slot name="TPanelSecondarySidebar" />
       </aside>
-    </section>
+    </div>
     <footer v-if="props.showFooter" class="panel__footer">
       <slot name="TPanelFooter" />
     </footer>
