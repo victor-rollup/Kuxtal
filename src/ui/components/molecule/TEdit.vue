@@ -47,6 +47,7 @@
     background: transparent;
     border-radius: 0.25rem;
     padding-inline: 0.25rem;
+    outline: none;
   }
 
   .edit__icon {
