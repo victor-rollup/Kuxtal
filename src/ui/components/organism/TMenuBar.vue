@@ -7,7 +7,7 @@
 
 <template>
   <nav class="menu-bar">
-    <TMenu v-bind="props" class="menu-bar__list" />
+    <TMenu v-bind="props" class="menu-bar__list" orientation="horizontal" />
   </nav>
 </template>
 
