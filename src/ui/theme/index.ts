@@ -1,13 +1,13 @@
-type theme_type = 'dark' | 'light' | 'midnight';
 const DATA_THEME = 'data-theme';
 
 export enum Type {
   DARK = 'dark',
   LIGHT = 'light',
   MIDNIGHT = 'midnight',
+  GREEN_NIGHT = 'green-night'
 }
 
-export function setTheme(theme: theme_type) {
+export function setTheme(theme: Type) {
   document.documentElement.setAttribute(DATA_THEME, theme);
 }
 
