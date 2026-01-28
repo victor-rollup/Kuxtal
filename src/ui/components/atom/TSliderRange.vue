@@ -108,7 +108,7 @@
     width: 1rem;
     height: 1rem;
     background: var(--slider-thumb-background-color);
-    box-shadow: 0 0 0.125rem 0.125rem rgb(0 0 0 / 0.25);
+    box-shadow: 0 0 0.125rem 0.125rem rgb(0 0 0 / 0.125);
     border-radius: 50%;
     cursor: grab;
   }

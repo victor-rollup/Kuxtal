@@ -35,5 +35,6 @@ import type { IToggleSwitch } from '@/types/component.types';
     border-radius: 100%;
     background: var(--toggle-switch-thumb-background-color);
     cursor: pointer;
+    box-shadow: 0 0 0.125rem 0.125rem rgb(0 0 0 / 0.125);
   }
 </style>

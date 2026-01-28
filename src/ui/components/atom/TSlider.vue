@@ -75,7 +75,7 @@
     height: 1rem;
     border-radius: 50%;
     background: var(--slider-thumb-background-color);
-    box-shadow: 0 0 0.125rem 0.125rem rgb(0 0 0 / 0.25);
+    box-shadow: 0 0 0.125rem 0.125rem rgb(0 0 0 / 0.125);
     cursor: grab;
   }
 </style>
