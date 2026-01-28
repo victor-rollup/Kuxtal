@@ -476,6 +476,7 @@ declare interface INotificationOptions {
 
 declare interface IRadioButton {
     props: Omit<IDOMInput, 'type'> & {
+        name: string;
         value: string | number;
     };
 }
@@ -515,7 +516,7 @@ export declare namespace Schema {
     }
 }
 
-declare function setTheme(theme: theme_type): void;
+declare function setTheme(theme: Type): void;
 
 export declare namespace Theme {
     export {
@@ -525,14 +526,13 @@ export declare namespace Theme {
     }
 }
 
-declare type theme_type = 'dark' | 'light' | 'midnight';
-
 declare function toggleDarkMode(): void;
 
 declare enum Type {
     DARK = "dark",
     LIGHT = "light",
-    MIDNIGHT = "midnight"
+    MIDNIGHT = "midnight",
+    GREEN_NIGHT = "green-night"
 }
 
 export declare const UI: {
@@ -664,12 +664,14 @@ export declare const UI: {
     RadioButton: DefineComponent<    {
     modelValue?: string | number;
     } & Omit<IDOMInput, "type"> & {
+    name: string;
     value: string | number;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
     "update:modelValue": (value: string | number) => any;
     }, string, PublicProps, Readonly<{
     modelValue?: string | number;
     } & Omit<IDOMInput, "type"> & {
+    name: string;
     value: string | number;
     }> & Readonly<{
     "onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
