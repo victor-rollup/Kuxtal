@@ -51,6 +51,7 @@ export interface IToggleSwitch {
 // ------------------------------------------------------------------------------------------------
 export interface IRadioButton {
   props: Omit<IDOMInput, 'type'> & {
+    name: string;
     value: string | number;
   };
 }
