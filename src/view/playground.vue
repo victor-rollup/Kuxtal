@@ -1,23 +1,8 @@
 <script setup lang="ts">
   import { Icon, Theme, UI } from '@/ui';
-import TSlider from '@/ui/components/atom/TSlider.vue';
-import TSliderRange from '@/ui/components/atom/TSliderRange.vue';
   import createDialog from '@/utils/create-dialog';
   import createNotification from '@/utils/create-notification';
   import { ref } from 'vue';
-
-  function toggleDarkMode() {
-    const current = document.documentElement.getAttribute('data-theme');
-    if (current === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'light');
-      return;
-    }
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
-
-  function alert() {
-    window.alert(1);
-  }
 
   const value = ref(7);
 </script>
@@ -63,49 +48,10 @@ import TSliderRange from '@/ui/components/atom/TSliderRange.vue';
                       Theme.setTheme(Theme.Type.DARK);
                     },
                   },
-                ],
-              },
-            ],
-          },
-        ]"
-      />
-      <UI.Menu
-        hidden
-        orientation="horizontal"
-        :items="[
-          {
-            caption: 'File',
-            submenu: [
-              {
-                caption: 'view',
-              },
-            ],
-          },
-          {
-            caption: 'Edit',
-          },
-          {
-            caption: 'View',
-            submenu: [
-              {
-                caption: 'Appearance',
-                submenu: [
                   {
-                    caption: 'Set midnight theme',
+                    caption: 'Set green night theme',
                     onClick() {
-                      Theme.setTheme(Theme.Type.MIDNIGHT);
-                    },
-                  },
-                  {
-                    caption: 'Set light theme',
-                    onClick() {
-                      Theme.setTheme(Theme.Type.LIGHT);
-                    },
-                  },
-                  {
-                    caption: 'Set dark theme',
-                    onClick() {
-                      Theme.setTheme(Theme.Type.DARK);
+                      Theme.setTheme(Theme.Type.GREEN_NIGHT);
                     },
                   },
                 ],
@@ -170,8 +116,7 @@ import TSliderRange from '@/ui/components/atom/TSliderRange.vue';
     <div class="playground">
       <h1>Playground</h1>
       {{ value }}
-      
-    
+
       <UI.Accordion title="Tabla">
         <div class="table-wrapper">
           <table>
@@ -204,8 +149,8 @@ import TSliderRange from '@/ui/components/atom/TSliderRange.vue';
       </UI.Accordion>
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
-          <UI.Slider v-model="value"/>
-          <UI.RangeSlider v-model:maximun="value"/>
+          <UI.Slider v-model="value" />
+          <UI.RangeSlider v-model:maximun="value" />
           <UI.Checkbox checked />
           <UI.Separator />
           <UI.RadioButton :value="1" name="radio" />
@@ -214,6 +159,25 @@ import TSliderRange from '@/ui/components/atom/TSliderRange.vue';
           <UI.ToggleSwitch />
           <UI.Separator />
           <UI.Memo caption="Descripción" :maxlength="45" />
+          <UI.ComboBox
+            caption="Selecciona un elemento"
+            :allow-null="true"
+            :items="[
+              {
+                label: '1',
+                value: 1,
+              },
+              {
+                label: '1',
+                value: 1,
+              },
+              {
+                label: '1',
+                value: 1,
+              },
+            ]"
+            multiple
+          />
           <UI.ComboBox
             caption="Selecciona un elemento"
             :allow-null="true"
@@ -326,6 +290,7 @@ import TSliderRange from '@/ui/components/atom/TSliderRange.vue';
           mode="filled"
           @click="
             createDialog({
+              title: 'Confirmación',
               message: '¿Deseas eliminar este producto?',
               cancelCaption: 'No, cancelar',
               confirmCaption: 'Sí, eliminar',
@@ -342,7 +307,7 @@ import TSliderRange from '@/ui/components/atom/TSliderRange.vue';
                   type: 'success',
                   duration: 10000,
                 });
-              }
+              },
             })
           "
         />
