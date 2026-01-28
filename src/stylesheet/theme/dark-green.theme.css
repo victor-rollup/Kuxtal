@@ -1,0 +1,106 @@
+/* --------------------------------------------------------------------------------------------- */
+[data-theme='green-night'] {
+  color-scheme: dark;
+  --theme-primary-color-100: hsl(167, 77%, 50%);
+  --theme-primary-color-200: hsl(167, 77%, 45%);
+  --theme-primary-color-300: hsl(167, 77%, 40%);
+  --theme-primary-color-400: hsl(167, 77%, 35%);
+  --theme-primary-color-500: hsl(167, 77%, 30%);
+  --theme-primary-color-600: hsl(167, 77%, 25%);
+  --theme-primary-color-700: hsl(167, 77%, 20%);
+  --theme-primary-color-800: hsl(167, 77%, 15%);
+  --theme-primary-color-900: hsl(167, 77%, 10%);
+
+  --theme-secondary-color-100: hsl(210, 74%, 90%);
+  --theme-secondary-color-200: hsl(210, 74%, 80%);
+  --theme-secondary-color-300: hsl(210, 74%, 70%);
+  --theme-secondary-color-400: hsl(210, 74%, 60%);
+  --theme-secondary-color-500: hsl(210, 74%, 50%);
+  --theme-secondary-color-600: hsl(210, 74%, 40%);
+  --theme-secondary-color-700: hsl(210, 74%, 30%);
+  --theme-secondary-color-800: hsl(210, 74%, 20%);
+  --theme-secondary-color-900: hsl(210, 74%, 10%);
+
+  --theme-tertiary-color-100: hsl(200, 100%, 90%);
+  --theme-tertiary-color-200: hsl(200, 100%, 80%);
+  --theme-tertiary-color-300: hsl(200, 100%, 70%);
+  --theme-tertiary-color-400: hsl(200, 100%, 60%);
+  --theme-tertiary-color-500: hsl(200, 100%, 50%);
+  --theme-tertiary-color-600: hsl(200, 100%, 40%);
+  --theme-tertiary-color-700: hsl(200, 100%, 30%);
+  --theme-tertiary-color-800: hsl(200, 100%, 20%);
+  --theme-tertiary-color-900: hsl(200, 100%, 10%);
+
+  --theme-neutral-color-100: hsl(0, 0%, 10%);
+  --theme-neutral-color-200: hsl(0, 0%, 20%);
+  --theme-neutral-color-300: hsl(0, 0%, 30%);
+  --theme-neutral-color-400: hsl(0, 0%, 40%);
+  --theme-neutral-color-500: hsl(0, 0%, 50%);
+  --theme-neutral-color-600: hsl(0, 0%, 60%);
+  --theme-neutral-color-700: hsl(0, 0%, 70%);
+  --theme-neutral-color-800: hsl(0, 0%, 80%);
+  --theme-neutral-color-900: hsl(0, 0%, 90%);
+}
+/* --------------------------------------------------------------------------------------------- */
+[data-theme='green-night'] {
+  --accordion-border-color: var(--theme-neutral-color-200);
+  --accordion-header-text-color: var(--theme-neutral-color-900);
+  --accordion-header-background-color: var(--theme-neutral-color-100);
+  --accordion-header-background-hover-color: var(--theme-neutral-color-200);
+  --accordion-content-background-color: transparent;
+
+  --filled-button-text-color: var(--theme-neutral-color-900);
+  --filled-button-background-color: var(--theme-primary-color-500);
+  --secondary-button-text-color: var(--theme-neutral-color-900);
+  --secondary-button-background-color: var(--theme-neutral-color-300);
+  --outlined-button-text-color: var(--theme-primary-color-400);
+
+  --hyperlink-text-color: var(--theme-secondary-color-400);
+  --hyperlink-text-active-color: var(--theme-secondary-color-500);
+
+  --edit-background-color: var(--theme-neutral-color-100);
+  --edit-text-color: var(--theme-neutral-color-500);
+  --edit-border-color: var(--theme-neutral-color-200);
+  --edit-background-focus-color: var(--theme-neutral-color-100);
+  --edit-text-focus-color: var(--theme-neutral-color-900);
+  --edit-border-focus-color: var(--theme-primary-color-500);
+
+  --sidebar-item-text-color: var(--theme-neutral-color-600);
+  --sidebar-item-text-hover-color: var(--theme-neutral-color-700);
+  --sidebar-item-background-hover-color: var(--theme-neutral-color-200);
+  --sidebar-item-text-active-color: var(--theme-neutral-color-900);
+  --sidebar-item-background-active-color: var(--theme-primary-color-500);
+  --sidebar-item-caption-text-color: var(--theme-neutral-color-400);
+
+  --sidebar-background-color: var(--theme-neutral-color-100);
+  --sidebar-border-color: var(--theme-neutral-color-200);
+
+  --scrollbar-thumb-background-color: var(--theme-neutral-color-200);
+  --scrollbar-track-background-color: var(--theme-neutral-color-100);
+
+  --menu-border-color: var(--theme-neutral-color-200);
+  --menu-background-color: var(--theme-neutral-color-100);
+  --menu-item-text-color: var(--theme-neutral-color-500);
+  --menu-item-background-hover-color: var(--theme-neutral-color-200);
+
+  --separator-border-color: var(--theme-neutral-color-200);
+
+  --table-wrapper-border-color: var(--theme-neutral-color-200);
+  --table-head-text-color: var(--theme-neutral-color-900);
+  --table-head-background-color: var(--theme-neutral-color-200);
+  --table-body-row-background-hover-color: var(--theme-neutral-color-300);
+
+  --notification-background-color: var(--theme-neutral-color-100);
+  --notification-success-color: hsl(140, 41%, 55%);
+  --notification-error-color: hsl(0, 59%, 59%);
+  --notification-information-color: hsl(210, 50%, 55%);
+
+  --toggle-switch-thumb-background-color: var(--theme-neutral-color-900);
+  --toggle-switch-background-color: var(--theme-neutral-color-300);
+  --toggle-switch-background-checked-color: var(--theme-primary-color-500);
+
+  --slider-background-color: var(--theme-neutral-color-300);
+  --slider-fill-background-color: var(--theme-primary-color-500);
+  --slider-thumb-background-color: var(--theme-neutral-color-900);
+}
+/* --------------------------------------------------------------------------------------------- */
