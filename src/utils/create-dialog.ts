@@ -17,12 +17,19 @@ export default function createDialog({
 }: IDialogOptions) {
   const backdrop = document.createElement('dialog');
   const dialog = document.createElement('div');
+  const dialogHeader = document.createElement('header');
   const dialogFooter = document.createElement('footer');
+  const dialogContent = document.createElement('div')
   const confirmButton = document.createElement('button');
   const cancelButton = document.createElement('button');
 
+  dialogHeader.innerHTML = title ? `<h4>${title}</h4>` : '';
+  dialog.appendChild(dialogHeader);
+  
   dialog.classList.add('confirm-dialog');
-  dialog.innerText = message;
+  // dialog.innerText = message;
+  dialog.appendChild(dialogContent);
+  dialogContent.innerHTML = `<p>${message}</p>`
   dialogFooter.classList.add('confirm-dialog__footer');
 
   confirmButton.innerText = confirmCaption;
@@ -38,6 +45,7 @@ export default function createDialog({
   cancelButton.classList.add('button');
   cancelButton.setAttribute('data-mode', 'text');
   cancelButton.onclick = () => {
+    
     onCancel?.();
     document.body.removeChild(backdrop);
   };
