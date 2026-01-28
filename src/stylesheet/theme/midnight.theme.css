@@ -31,78 +31,77 @@
   --theme-tertiary-color-800: hsl(200, 100%, 20%);
   --theme-tertiary-color-900: hsl(200, 100%, 10%);
 
-  --theme-neutral-color-100: hsl(220, 40%, 95%);
-  --theme-neutral-color-200: hsl(220, 40%, 85%);
-  --theme-neutral-color-300: hsl(220, 40%, 75%);
-  --theme-neutral-color-400: hsl(220, 40%, 65%);
-  --theme-neutral-color-500: hsl(220, 40%, 55%);
-  --theme-neutral-color-600: hsl(220, 40%, 45%);
-  --theme-neutral-color-700: hsl(220, 40%, 35%);
-  --theme-neutral-color-800: hsl(220, 40%, 25%);
-  --theme-neutral-color-900: hsl(220, 40%, 15%);
+  --theme-neutral-color-100: hsl(220, 40%, 10%);
+  --theme-neutral-color-200: hsl(220, 40%, 20%);
+  --theme-neutral-color-300: hsl(220, 40%, 30%);
+  --theme-neutral-color-400: hsl(220, 40%, 40%);
+  --theme-neutral-color-500: hsl(220, 40%, 50%);
+  --theme-neutral-color-600: hsl(220, 40%, 60%);
+  --theme-neutral-color-700: hsl(220, 40%, 70%);
+  --theme-neutral-color-800: hsl(220, 40%, 80%);
+  --theme-neutral-color-900: hsl(220, 40%, 90%);
 }
 /* --------------------------------------------------------------------------------------------- */
 [data-theme='midnight'] {
-  background: var(--theme-neutral-color-900);
-
-  --accordion-border-color: var(--theme-neutral-color-800);
-  --accordion-header-text-color: var(--theme-neutral-color-300);
-  --accordion-header-background-color: var(--theme-primary-color-800);
-  --accordion-header-background-hover-color: var(--theme-primary-color-700);
+  background: var(--theme-neutral-color-100);
+  --accordion-border-color: var(--theme-neutral-color-200);
+  --accordion-header-text-color: var(--theme-neutral-color-900);
+  --accordion-header-background-color: var(--theme-neutral-color-100);
+  --accordion-header-background-hover-color: var(--theme-neutral-color-200);
   --accordion-content-background-color: transparent;
 
-  --filled-button-text-color: var(--theme-primary-color-100);
+  --filled-button-text-color: var(--theme-neutral-color-900);
   --filled-button-background-color: var(--theme-primary-color-500);
-  --secondary-button-text-color: var(--theme-neutral-color-100);
-  --secondary-button-background-color: var(--theme-secondary-color-800);
-  --outlined-button-text-color: var(--theme-primary-color-300);
+  --secondary-button-text-color: var(--theme-neutral-color-900);
+  --secondary-button-background-color: var(--theme-neutral-color-300);
+  --outlined-button-text-color: var(--theme-primary-color-200);
 
-  --hyperlink-text-color: var(--theme-primary-color-300);
+  --hyperlink-text-color: var(--theme-primary-color-400);
   --hyperlink-text-active-color: var(--theme-primary-color-500);
 
-  --edit-background-color: var(--theme-neutral-color-800);
-  --edit-text-color: var(--theme-neutral-color-300);
-  --edit-border-color: var(--theme-neutral-color-800);
-  --edit-background-focus-color: var(--theme-neutral-color-800);
-  --edit-text-focus-color: var(--theme-neutral-color-300);
-  --edit-border-focus-color: var(--theme-primary-color-300);
+  --edit-background-color: var(--theme-neutral-color-100);
+  --edit-text-color: var(--theme-neutral-color-500);
+  --edit-border-color: var(--theme-neutral-color-200);
+  --edit-background-focus-color: var(--theme-neutral-color-100);
+  --edit-text-focus-color: var(--theme-neutral-color-900);
+  --edit-border-focus-color: var(--theme-primary-color-500);
 
-  --sidebar-item-text-color: var(--theme-neutral-color-300);
-  --sidebar-item-text-hover-color: var(--theme-neutral-color-300);
-  --sidebar-item-background-hover-color: var(--theme-neutral-color-800);
-  --sidebar-item-text-active-color: var(--theme-neutral-color-100);
-  --sidebar-item-background-active-color: var(--theme-primary-color-500);
+  --sidebar-item-text-color: var(--theme-neutral-color-600);
+  --sidebar-item-text-hover-color: var(--theme-neutral-color-700);
+  --sidebar-item-background-hover-color: var(--theme-neutral-color-200);
+  --sidebar-item-text-active-color: var(--theme-neutral-color-900);
+  --sidebar-item-background-active-color: var(--theme-neutral-color-300);
   --sidebar-item-caption-text-color: var(--theme-neutral-color-400);
 
-  --sidebar-background-color: var(--theme-neutral-color-900);
-  --sidebar-border-color: var(--theme-neutral-color-800);
+  --sidebar-background-color: var(--theme-neutral-color-100);
+  --sidebar-border-color: var(--theme-neutral-color-200);
 
-  --scrollbar-thumb-background-color: var(--theme-neutral-color-700);
-  --scrollbar-track-background-color: var(--theme-neutral-color-800);
+  --scrollbar-thumb-background-color: var(--theme-neutral-color-200);
+  --scrollbar-track-background-color: var(--theme-neutral-color-100);
 
-  --menu-border-color: var(--theme-neutral-color-800);
-  --menu-background-color: var(--theme-neutral-color-900);
-  --menu-item-text-color: var(--theme-primary-color-300);
-  --menu-item-background-hover-color: var(--theme-neutral-color-900);
+  --menu-border-color: var(--theme-neutral-color-200);
+  --menu-background-color: var(--theme-neutral-color-100);
+  --menu-item-text-color: var(--theme-primary-color-400);
+  --menu-item-background-hover-color: var(--theme-neutral-color-200);
 
-  --separator-border-color: var(--theme-neutral-color-800);
+  --separator-border-color: var(--theme-neutral-color-200);
 
-  --table-wrapper-border-color: var(--theme-neutral-color-800);
-  --table-head-text-color: var(--theme-primary-color-100);
-  --table-head-background-color: var(--theme-neutral-color-700);
-  --table-body-row-background-hover-color: var(--theme-primary-color-800);
+  --table-wrapper-border-color: var(--theme-neutral-color-200);
+  --table-head-text-color: var(--theme-neutral-color-900);
+  --table-head-background-color: var(--theme-neutral-color-200);
+  --table-body-row-background-hover-color: var(--theme-neutral-color-300);
 
-  --notification-background-color: var(--theme-neutral-color-900);
+  --notification-background-color: var(--theme-neutral-color-100);
   --notification-success-color: hsl(140, 41%, 55%);
   --notification-error-color: hsl(0, 59%, 59%);
-  --notification-information-color: var(--theme-primary-color-500);
+  --notification-information-color: var(--theme-primary-color-200);
 
-  --toggle-switch-thumb-background-color: var(--theme-neutral-color-100);
-  --toggle-switch-background-color: var(--theme-neutral-color-700);
-  --toggle-switch-background-checked-color: var(--theme-primary-color-600);
+  --toggle-switch-thumb-background-color: var(--theme-neutral-color-900);
+  --toggle-switch-background-color: var(--theme-neutral-color-300);
+  --toggle-switch-background-checked-color: var(--theme-primary-color-500);
 
   --slider-background-color: var(--theme-neutral-color-300);
   --slider-fill-background-color: var(--theme-primary-color-500);
-  --slider-thumb-background-color: var(--theme-neutral-color-100);
+  --slider-thumb-background-color: var(--theme-neutral-color-900);
 }
 /* --------------------------------------------------------------------------------------------- */

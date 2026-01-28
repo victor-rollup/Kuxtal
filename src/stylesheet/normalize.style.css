@@ -22,6 +22,10 @@
   user-select: none;
 }
 
+:focus-visible {
+  outline: 0.125rem solid var(--theme-primary-color-500);
+}
+
 select,
 ::picker(select) {
   appearance: base-select;
@@ -76,6 +80,7 @@ thead {
   color: var(--table-head-text-color);
   background: var(--table-head-background-color);
   font-weight: normal;
+  border-bottom: 0.0125rem solid var(--separator-border-color);
 }
 
 thead th:first-child {

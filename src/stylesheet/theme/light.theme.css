@@ -45,7 +45,7 @@
 /* --------------------------------------------------------------------------------------------- */
 :root,
 [data-theme='light'] {
-  --accordion-border-color: var(--theme-neutral-color-400);
+  --accordion-border-color: var(--theme-neutral-color-300);
   --accordion-header-text-color: var(--theme-neutral-color-700);
   --accordion-header-background-color: var(--theme-neutral-color-100);
   --accordion-header-background-hover-color: var(--theme-neutral-color-100);
@@ -60,9 +60,9 @@
   --hyperlink-text-color: var(--theme-primary-color-400);
   --hyperlink-text-active-color: var(--theme-primary-color-500);
 
-  --edit-background-color: var(--theme-neutral-color-200);
+  --edit-background-color: var(--theme-neutral-color-100);
   --edit-text-color: var(--theme-neutral-color-800);
-  --edit-border-color: var(--theme-neutral-color-400);
+  --edit-border-color: var(--theme-neutral-color-300);
   --edit-background-focus-color: var(--theme-neutral-color-200);
   --edit-text-focus-color: var(--theme-neutral-color-900);
   --edit-border-focus-color: var(--theme-primary-color-500);
@@ -75,19 +75,19 @@
   --sidebar-item-caption-text-color: var(--theme-neutral-color-500);
 
   --sidebar-background-color: var(--theme-neutral-color-100);
-  --sidebar-border-color: var(--theme-neutral-color-400);
+  --sidebar-border-color: var(--theme-neutral-color-300);
 
   --scrollbar-thumb-background-color: var(--theme-neutral-color-300);
   --scrollbar-track-background-color: var(--theme-neutral-color-200);
 
-  --menu-border-color: var(--theme-neutral-color-400);
+  --menu-border-color: var(--theme-neutral-color-300);
   --menu-background-color: var(--theme-neutral-color-100);
   --menu-item-text-color: var(--theme-primary-color-500);
   --menu-item-background-hover-color: var(--theme-neutral-color-300);
 
-  --separator-border-color: var(--theme-neutral-color-400);
+  --separator-border-color: var(--theme-neutral-color-300);
 
-  --table-wrapper-border-color: var(--theme-neutral-color-400);
+  --table-wrapper-border-color: var(--theme-neutral-color-300);
   --table-head-text-color: var(--theme-neutral-color-600);
   --table-head-background-color: var(--theme-neutral-color-200);
   --table-body-row-background-hover-color: var(--theme-primary-color-100);

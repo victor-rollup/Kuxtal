@@ -148,13 +148,14 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 0.5rem; */
 }
 
 .confirm-dialog__footer {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-block-start: 2rem;
 }
 .confirm-dialog__button {
   flex: 1 1 auto;
