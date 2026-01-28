@@ -13732,10 +13732,13 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
   setup(n) {
     const t = n;
     return (o, i) => (F(), b("nav", cw, [
-      je(xv, Z(t, { class: "menu-bar__list" }), null, 16)
+      je(xv, Z(t, {
+        class: "menu-bar__list",
+        orientation: "horizontal"
+      }), null, 16)
     ]));
   }
-}), dw = /* @__PURE__ */ S(sw, [["__scopeId", "data-v-72d4ed39"]]), qv = "data-theme";
+}), dw = /* @__PURE__ */ S(sw, [["__scopeId", "data-v-71b34e4f"]]), qv = "data-theme";
 var Bv = /* @__PURE__ */ ((n) => (n.DARK = "dark", n.LIGHT = "light", n.MIDNIGHT = "midnight", n.GREEN_NIGHT = "green-night", n))(Bv || {});
 function Od(n) {
   document.documentElement.setAttribute(qv, n);
