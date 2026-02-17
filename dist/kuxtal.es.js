@@ -1575,7 +1575,7 @@ const fb = ["data-mode", "type"], pb = {
       }, null, 36)
     ], 512));
   }
-}), vb = /* @__PURE__ */ S(mb, [["__scopeId", "data-v-5652d8c9"]]), yb = /* @__PURE__ */ V({
+}), vb = /* @__PURE__ */ S(mb, [["__scopeId", "data-v-2a7ccd25"]]), yb = /* @__PURE__ */ V({
   __name: "TSliderRange",
   props: /* @__PURE__ */ Fe({
     min: { default: 0 },
@@ -1628,7 +1628,7 @@ const fb = ["data-mode", "type"], pb = {
       }, null, 36)
     ], 512));
   }
-}), _b = /* @__PURE__ */ S(yb, [["__scopeId", "data-v-1d4ad0d6"]]), gb = /* @__PURE__ */ V({
+}), _b = /* @__PURE__ */ S(yb, [["__scopeId", "data-v-0a022ba7"]]), gb = /* @__PURE__ */ V({
   __name: "TRadioButton",
   props: /* @__PURE__ */ Fe({
     accept: {},
@@ -2082,7 +2082,7 @@ const fb = ["data-mode", "type"], pb = {
       ])
     ]));
   }
-}), Mb = /* @__PURE__ */ S(bb, [["__scopeId", "data-v-dbc73d2f"]]), Ob = /* @__PURE__ */ V({
+}), Mb = /* @__PURE__ */ S(bb, [["__scopeId", "data-v-4505371a"]]), Ob = /* @__PURE__ */ V({
   __name: "TCheckbox",
   props: /* @__PURE__ */ Fe({
     accept: {},
@@ -2717,7 +2717,7 @@ const fb = ["data-mode", "type"], pb = {
       k(o.$slots, "default", {}, void 0, !0)
     ], 16));
   }
-}), Bn = /* @__PURE__ */ S(Db, [["__scopeId", "data-v-8072aed8"]]), Sb = {
+}), Bn = /* @__PURE__ */ S(Db, [["__scopeId", "data-v-3f814b58"]]), Sb = {
   key: 0,
   class: "label__caption"
 }, Pb = /* @__PURE__ */ V({
@@ -2913,7 +2913,7 @@ const fb = ["data-mode", "type"], pb = {
       k(o.$slots, "default", {}, void 0, !0)
     ], 16));
   }
-}), En = /* @__PURE__ */ S(Pb, [["__scopeId", "data-v-d0da2f59"]]), Tb = {
+}), En = /* @__PURE__ */ S(Pb, [["__scopeId", "data-v-17b3539c"]]), Tb = {
   key: 0,
   class: "layout__header"
 }, Ib = { class: "layout__content" }, xb = {
@@ -3134,7 +3134,7 @@ const fb = ["data-mode", "type"], pb = {
       ])) : te("", !0)
     ], 16));
   }
-}), Rb = /* @__PURE__ */ S(jb, [["__scopeId", "data-v-f5274a6a"]]), Wb = {
+}), Rb = /* @__PURE__ */ S(jb, [["__scopeId", "data-v-d14e33d7"]]), Wb = {
   key: 0,
   class: "panel__header"
 }, Yb = { class: "panel__content" }, Cb = {
@@ -3355,11 +3355,11 @@ const fb = ["data-mode", "type"], pb = {
       ])) : te("", !0)
     ], 16));
   }
-}), zb = /* @__PURE__ */ S(Ab, [["__scopeId", "data-v-1c2b8249"]]), Qb = {}, Gb = { class: "separator" };
+}), zb = /* @__PURE__ */ S(Ab, [["__scopeId", "data-v-962a5531"]]), Qb = {}, Gb = { class: "separator" };
 function Vb(n, t) {
   return F(), b("div", Gb);
 }
-const Zb = /* @__PURE__ */ S(Qb, [["render", Vb], ["__scopeId", "data-v-02e492b5"]]);
+const Zb = /* @__PURE__ */ S(Qb, [["render", Vb], ["__scopeId", "data-v-ec429fa2"]]);
 var ce = {}, Wa = {}, Gd;
 function xm() {
   return Gd || (Gd = 1, (function(n) {
@@ -12374,7 +12374,7 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
       ])
     ], 16));
   }
-}), EO = /* @__PURE__ */ S(BO, [["__scopeId", "data-v-4bbb31b3"]]), jO = { class: "breadcrumb__list" }, RO = ["data-divider"], WO = { class: "breadcrumb__route-caption | text-truncate" }, YO = { class: "breadcrumb__current | text-truncate" }, CO = /* @__PURE__ */ V({
+}), EO = /* @__PURE__ */ S(BO, [["__scopeId", "data-v-9fa84a51"]]), jO = { class: "breadcrumb__list" }, RO = ["data-divider"], WO = { class: "breadcrumb__route-caption | text-truncate" }, YO = { class: "breadcrumb__current | text-truncate" }, CO = /* @__PURE__ */ V({
   __name: "TBreadCrumb",
   props: {
     current: {},
@@ -12405,7 +12405,7 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
       ])
     ], 16));
   }
-}), LO = /* @__PURE__ */ S(CO, [["__scopeId", "data-v-794188a1"]]), HO = {
+}), LO = /* @__PURE__ */ S(CO, [["__scopeId", "data-v-7cb5a440"]]), HO = {
   key: 0,
   class: "combo-box__option",
   value: null
@@ -12639,7 +12639,7 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), AO = /* @__PURE__ */ S(NO, [["__scopeId", "data-v-360c1be2"]]), zO = { class: "edit__container" }, QO = /* @__PURE__ */ V({
+}), AO = /* @__PURE__ */ S(NO, [["__scopeId", "data-v-79d27d52"]]), zO = { class: "edit__container" }, QO = /* @__PURE__ */ V({
   __name: "TEdit",
   props: /* @__PURE__ */ Fe({
     accept: {},
@@ -12881,7 +12881,7 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), GO = /* @__PURE__ */ S(QO, [["__scopeId", "data-v-705aea01"]]), VO = { class: "memo__counter" }, ZO = { key: 0 }, UO = /* @__PURE__ */ V({
+}), GO = /* @__PURE__ */ S(QO, [["__scopeId", "data-v-d3254bb0"]]), VO = { class: "memo__counter" }, ZO = { key: 0 }, UO = /* @__PURE__ */ V({
   __name: "TMemo",
   props: /* @__PURE__ */ Fe({
     autocomplete: {},
@@ -13107,7 +13107,7 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), XO = /* @__PURE__ */ S(UO, [["__scopeId", "data-v-df09e8f4"]]), KO = ["data-orientation"], JO = ["onClick"], kO = { class: "menu-item__hyperlink-container" }, $O = { class: "menu-item__caption | text-truncate" }, ew = /* @__PURE__ */ V({
+}), XO = /* @__PURE__ */ S(UO, [["__scopeId", "data-v-5492e3a5"]]), KO = ["data-orientation"], JO = ["onClick"], kO = { class: "menu-item__hyperlink-container" }, $O = { class: "menu-item__caption | text-truncate" }, ew = /* @__PURE__ */ V({
   __name: "TMenu",
   props: {
     placeholder: {},
@@ -13337,7 +13337,7 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
       ], 16, KO);
     };
   }
-}), xv = /* @__PURE__ */ S(ew, [["__scopeId", "data-v-efae4e43"]]), nw = { class: "sidebar" }, tw = { class: "sidebar-item" }, rw = {
+}), xv = /* @__PURE__ */ S(ew, [["__scopeId", "data-v-b8eeae9f"]]), nw = { class: "sidebar" }, tw = { class: "sidebar-item" }, rw = {
   key: 0,
   class: "sidebar-item__caption"
 }, ow = { class: "sidebar-item__content" }, aw = { class: "sidebar-item__option-caption" }, iw = /* @__PURE__ */ V({
@@ -13544,7 +13544,7 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
       ]))), 256))
     ]));
   }
-}), uw = /* @__PURE__ */ S(iw, [["__scopeId", "data-v-db33995f"]]), cw = { class: "menu-bar" }, sw = /* @__PURE__ */ V({
+}), uw = /* @__PURE__ */ S(iw, [["__scopeId", "data-v-30f663aa"]]), cw = { class: "menu-bar" }, sw = /* @__PURE__ */ V({
   __name: "TMenuBar",
   props: {
     placeholder: {},
@@ -13738,7 +13738,7 @@ const IO = { class: "accordion__header" }, xO = { class: "accordion__title | tex
       }), null, 16)
     ]));
   }
-}), dw = /* @__PURE__ */ S(sw, [["__scopeId", "data-v-71b34e4f"]]), qv = "data-theme";
+}), dw = /* @__PURE__ */ S(sw, [["__scopeId", "data-v-69e69f9b"]]), qv = "data-theme";
 var Bv = /* @__PURE__ */ ((n) => (n.DARK = "dark", n.LIGHT = "light", n.MIDNIGHT = "midnight", n.GREEN_NIGHT = "green-night", n))(Bv || {});
 function Od(n) {
   document.documentElement.setAttribute(qv, n);
