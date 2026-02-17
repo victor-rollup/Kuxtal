@@ -80,7 +80,7 @@
 
   --menu-border-color: var(--theme-neutral-color-200);
   --menu-background-color: var(--theme-neutral-color-100);
-  --menu-item-text-color: var(--theme-neutral-color-500);
+  --menu-item-text-color: var(--theme-primary-color-400);
   --menu-item-background-hover-color: var(--theme-neutral-color-200);
 
   --separator-border-color: var(--theme-neutral-color-200);

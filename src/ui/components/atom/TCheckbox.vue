@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import type { ICheckbox } from '@/types/component.types';
+  import type { ICheckbox } from "@/types/component.types";
 
   const model = defineModel<boolean>();
-  const props = defineProps<ICheckbox['props']>();
+  const props = defineProps<ICheckbox["props"]>();
 </script>
 
 <template>

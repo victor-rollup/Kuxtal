@@ -33,7 +33,7 @@ select,
 
 ::picker(select) {
   border-radius: 0.25rem;
-  border: 1px solid var(--edit-border-color);
+  border: 0.0125rem solid var(--edit-border-color);
 }
 
 select {
