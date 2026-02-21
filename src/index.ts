@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------------------------
-import('./stylesheet/index.css')
+import('./ui/stylesheet/index.css')
 // ------------------------------------------------------------------------------------------------
 import { createRouter, createWebHistory } from 'vue-router';
 export * as Schema from './types/schema.types';

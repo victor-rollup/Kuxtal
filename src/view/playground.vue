@@ -5,10 +5,15 @@
   import { ref } from 'vue';
 
   const value = ref(7);
+  const isSidebarOpen = ref(false);
+
+  function toggleSidebar() {
+    isSidebarOpen.value = !isSidebarOpen.value;
+  }
 </script>
 
 <template>
-  <UI.Layout show-header show-primary-sidebar>
+  <UI.Layout show-header show-primary-sidebar class="playground">
     <template #TLayoutHeader>
       <UI.MenuBar
         orientation="horizontal"
@@ -64,6 +69,7 @@
 
     <template #TLayoutPrimarySidebar>
       <UI.Sidebar
+        :collapse="isSidebarOpen"
         :sections="[
           {
             caption: 'Principal',
@@ -113,7 +119,7 @@
       />
     </template>
 
-    <div class="playground">
+    <div @click="toggleSidebar" class="playground__section | column">
       <h1>Playground</h1>
       {{ value }}
 
@@ -380,10 +386,8 @@
 </template>
 
 <style scoped>
-  .playground {
+  .playground__section {
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
   }
 </style>

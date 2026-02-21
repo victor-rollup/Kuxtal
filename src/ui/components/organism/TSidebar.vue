@@ -1,12 +1,13 @@
 <script setup lang="ts">
   import type { ISidebar } from '@/types/component.types';
   import THyperlink from '../atom/THyperlink.vue';
+import Icon from '../atom/icon';
 
   const props = defineProps<ISidebar['props']>();
 </script>
 
 <template>
-  <ul class="sidebar">
+  <ul class="sidebar" :data-collapse="props.collapse">
     <li class="sidebar-item" v-for="item in props.sections">
       <h6 v-if="item.caption" class="sidebar-item__caption">
         {{ item.caption }}
@@ -16,6 +17,7 @@
           v-for="option in item.options"
           :route="option.route"
           class="sidebar-item__option"
+          :title="option.caption"
         >
           <component :is="option.icon" />
           <span class="sidebar-item__option-caption">{{ option.caption }}</span>
@@ -29,33 +31,53 @@
   .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     flex: 1 1 auto;
-    min-width: fit-content;
-    padding: 1rem;
+    width: 18rem;
+    gap: 2rem;
+    padding: 2rem;
     background: var(--sidebar-background-color);
     border-right: 0.0125rem solid var(--sidebar-border-color);
+    transition: width 0.5s ease-in-out;
+  }
+
+  .sidebar[data-collapse="true"] {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    width: 4rem;
   }
 
   .sidebar-item {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sidebar[data-collapse="true"] .sidebar-item {
     gap: 0.5rem;
   }
 
-  .sidebar-item__option {
+  .sidebar-item__option,
+  .sidebar-item__option:active {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem;
-    min-width: 12rem;
+    padding: 1rem;
     width: 100%;
     border-radius: 0.5rem;
     cursor: pointer;
     font-weight: 500;
     color: var(--sidebar-item-text-color);
     text-decoration: none;
-    border: 0.0125rem solid transparent;
+    border: 0.125rem solid transparent;
+  }
+
+  .sidebar[data-collapse="true"] .sidebar-item__option {
+    padding: 0.5rem;
+    justify-content: center;
+  }
+
+  .sidebar[data-collapse="true"] .sidebar-item__option-caption {
+    display: none;
   }
 
   .sidebar-item__content {
@@ -64,18 +86,26 @@
     gap: 0.5rem;
   }
 
+  .sidebar[data-collapse="true"] .sidebar-item__content {
+    gap: 0.5rem;
+  }
+
   .sidebar-item__option:hover {
-    color: var(--sidebar-item-text-hover-color);
-    background: var(--sidebar-item-background-hover-color);
+    border-color: var(--sidebar-item-background-active-color);
   }
 
   .sidebar-item__option.router-link-exact-active {
     color: var(--sidebar-item-text-active-color);
     background: var(--sidebar-item-background-active-color);
+    border-color: transparent !important;
   }
 
   .sidebar-item__caption {
     text-transform: uppercase;
     color: var(--sidebar-item-caption-text-color);
+  }
+
+  .sidebar[data-collapse="true"] .sidebar-item__caption {
+    display: none;
   }
 </style>

@@ -13,10 +13,13 @@ import { DefineComponent } from 'vue';
 import { GlobalComponents } from 'vue';
 import { GlobalDirectives } from 'vue';
 import { Helper } from 'helper';
+import { IfAny } from '@vue/shared';
 import { PublicProps } from 'vue';
+import { Ref } from 'vue';
 import { RouteLocationNormalizedLoaded } from 'vue-router';
 import { RouteParamsRawGeneric } from 'vue-router';
 import { RouterViewProps } from 'vue-router';
+import { UnwrapRef } from 'vue';
 import { Use } from 'helper';
 import { VNode } from 'vue';
 import { VNodeProps } from 'vue';
@@ -484,6 +487,7 @@ declare interface IRadioButton {
 declare interface ISidebar {
     props: IDOMElement & {
         sections: ISidebarSection[];
+        collapse?: boolean;
     };
 }
 
@@ -877,13 +881,18 @@ export declare const UI: {
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
     Sidebar: DefineComponent<IDOMElement & {
     sections: ISidebarSection[];
+    collapse?: boolean;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
     sections: ISidebarSection[];
+    collapse?: boolean;
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
+    useState: typeof useState;
     createDialog: typeof createDialog;
     createNotification: typeof createNotification;
 };
 
 export { Use }
+
+declare function useState<T>(initial: T): readonly [[T] extends [Ref<any, any>] ? IfAny<T, Ref<T, T>, T> : Ref<UnwrapRef<T>, T | UnwrapRef<T>>, (value: T) => void];
 
 export { }

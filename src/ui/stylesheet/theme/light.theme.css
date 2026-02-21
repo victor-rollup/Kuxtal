@@ -12,15 +12,15 @@
   --theme-primary-color-800: hsl(210, 85%, 20%);
   --theme-primary-color-900: hsl(210, 85%, 10%);
 
-  --theme-secondary-color-100: hsl(167, 77%, 90%);
-  --theme-secondary-color-200: hsl(167, 77%, 85%);
-  --theme-secondary-color-300: hsl(167, 77%, 70%);
-  --theme-secondary-color-400: hsl(167, 77%, 65%);
-  --theme-secondary-color-500: hsl(167, 77%, 50%);
-  --theme-secondary-color-600: hsl(167, 77%, 45%);
-  --theme-secondary-color-700: hsl(167, 77%, 30%);
-  --theme-secondary-color-800: hsl(167, 77%, 25%);
-  --theme-secondary-color-900: hsl(167, 77%, 10%);
+  --theme-secondary-color-100: hsl(200, 77%, 90%);
+  --theme-secondary-color-200: hsl(200, 77%, 85%);
+  --theme-secondary-color-300: hsl(200, 77%, 70%);
+  --theme-secondary-color-400: hsl(200, 77%, 65%);
+  --theme-secondary-color-500: hsl(200, 77%, 50%);
+  --theme-secondary-color-600: hsl(200, 77%, 45%);
+  --theme-secondary-color-700: hsl(200, 77%, 30%);
+  --theme-secondary-color-800: hsl(200, 77%, 25%);
+  --theme-secondary-color-900: hsl(200, 77%, 10%);
 
   --theme-tertiary-color-100: hsl(0, 59%, 90%);
   --theme-tertiary-color-200: hsl(0, 59%, 80%);
@@ -45,6 +45,7 @@
 /* --------------------------------------------------------------------------------------------- */
 :root,
 [data-theme='light'] {
+  background: var(--theme-neutral-color-100);
   --accordion-border-color: var(--theme-neutral-color-300);
   --accordion-header-text-color: var(--theme-neutral-color-700);
   --accordion-header-background-color: var(--theme-neutral-color-100);
@@ -93,8 +94,8 @@
   --table-body-row-background-hover-color: var(--theme-primary-color-100);
 
   --notification-background-color: var(--theme-neutral-color-100);
-  --notification-success-color: var(--theme-secondary-color-800);
-  --notification-error-color: var(--theme-tertiary-color-500);
+  --notification-success-color: rgb(134, 161, 94);
+  --notification-error-color: rgb(184, 48, 48);
   --notification-information-color: var(--theme-primary-color-500);
 
   --toggle-switch-thumb-background-color: var(--theme-neutral-color-100);

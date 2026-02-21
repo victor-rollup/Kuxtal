@@ -79,6 +79,7 @@ thead {
   top: 0;
   color: var(--table-head-text-color);
   background: var(--table-head-background-color);
+  font-size: small;
   font-weight: normal;
   border-bottom: 0.0125rem solid var(--separator-border-color);
 }

@@ -98,6 +98,7 @@ export interface IButton {
 export interface ISidebar {
   props: IDOMElement & {
     sections: ISidebarSection[];
+    collapse?: boolean;
   };
 }
 // ------------------------------------------------------------------------------------------------

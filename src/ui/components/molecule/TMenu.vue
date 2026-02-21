@@ -114,7 +114,8 @@
     text-decoration: none;
   }
 
-  .menu-item__hyperlink {
+  .menu-item__hyperlink,
+  .menu-item__hyperlink:active {
     border-radius: 0.25rem;
     justify-content: space-between;
     color: var(--menu-item-text-color);

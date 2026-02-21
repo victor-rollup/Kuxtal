@@ -26,6 +26,7 @@ import Menu from '@/ui/components/molecule/TMenu.vue';
 // ------------------------------------------------------------------------------------------------
 import Sidebar from '@/ui/components/organism/TSidebar.vue';
 import MenuBar from './components/organism/TMenuBar.vue';
+import useState from '@/utils/use-state';
 // ------------------------------------------------------------------------------------------------
 export * as Theme from '@/ui/theme';
 // ------------------------------------------------------------------------------------------------
@@ -53,6 +54,7 @@ export const UI = {
   Menu,
   MenuBar,
   Sidebar,
+  useState,
   createDialog,
   createNotification,
 };

@@ -1,4 +1,4 @@
-import('@/stylesheet/index.css')
+import('@/ui/stylesheet/index.css')
 import { createRouter, createWebHistory, RouterView } from 'vue-router';
 import { createApp } from 'vue';
 

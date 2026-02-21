@@ -26,7 +26,7 @@ export default function createNotification({
   toast.innerHTML = `
     <header class="toast__header">
       ${icon[type]}
-      <h3 class="toast__message">${message}</h3>
+      <h3 class="toast__message"><strong>${message}</strong></h3>
     </header>
     ${description ? `<p>${description}</p>` : ``}
   `;
