@@ -1,13 +1,26 @@
 <script setup lang="ts">
   import type { ISidebar } from '@/types/component.types';
   import THyperlink from '../atom/THyperlink.vue';
-import Icon from '../atom/icon';
+  import { computed, onMounted, onUnmounted, ref } from 'vue';
 
   const props = defineProps<ISidebar['props']>();
+  const width = ref<number>(window.innerWidth * 0.16);
+  const widthAsPx = computed(() => `${width.value}px`);
+  const updateWidth = () => (width.value = window.innerWidth * 0.16);
+
+  onMounted(() => window.addEventListener('resize', updateWidth));
+  onUnmounted(() => window.removeEventListener('resize', updateWidth));
 </script>
 
 <template>
-  <ul class="sidebar" :data-collapse="props.collapse">
+  <ul
+    class="sidebar"
+    v-bind="props"
+    :data-collapse="props.collapse"
+    :sections="undefined"
+    :collapse="undefined"
+    :style="{ width: widthAsPx }"
+  >
     <li class="sidebar-item" v-for="item in props.sections">
       <h6 v-if="item.caption" class="sidebar-item__caption">
         {{ item.caption }}
@@ -20,7 +33,7 @@ import Icon from '../atom/icon';
           :title="option.caption"
         >
           <component :is="option.icon" />
-          <span class="sidebar-item__option-caption">{{ option.caption }}</span>
+          <span class="sidebar-item__option-caption | text-truncate">{{ option.caption }}</span>
         </THyperlink>
       </div>
     </li>
@@ -40,10 +53,10 @@ import Icon from '../atom/icon';
     transition: width 0.5s ease-in-out;
   }
 
-  .sidebar[data-collapse="true"] {
+  .sidebar[data-collapse='true'] {
     gap: 0.5rem;
     padding: 0.5rem;
-    width: 4rem;
+    width: 4rem !important;
   }
 
   .sidebar-item {
@@ -52,7 +65,7 @@ import Icon from '../atom/icon';
     gap: 1rem;
   }
 
-  .sidebar[data-collapse="true"] .sidebar-item {
+  .sidebar[data-collapse='true'] .sidebar-item {
     gap: 0.5rem;
   }
 
@@ -71,12 +84,12 @@ import Icon from '../atom/icon';
     border: 0.125rem solid transparent;
   }
 
-  .sidebar[data-collapse="true"] .sidebar-item__option {
+  .sidebar[data-collapse='true'] .sidebar-item__option {
     padding: 0.5rem;
     justify-content: center;
   }
 
-  .sidebar[data-collapse="true"] .sidebar-item__option-caption {
+  .sidebar[data-collapse='true'] .sidebar-item__option-caption {
     display: none;
   }
 
@@ -86,7 +99,7 @@ import Icon from '../atom/icon';
     gap: 0.5rem;
   }
 
-  .sidebar[data-collapse="true"] .sidebar-item__content {
+  .sidebar[data-collapse='true'] .sidebar-item__content {
     gap: 0.5rem;
   }
 
@@ -105,7 +118,7 @@ import Icon from '../atom/icon';
     color: var(--sidebar-item-caption-text-color);
   }
 
-  .sidebar[data-collapse="true"] .sidebar-item__caption {
+  .sidebar[data-collapse='true'] .sidebar-item__caption {
     display: none;
   }
 </style>

@@ -55,8 +55,6 @@ option::checkmark {
   overflow: hidden;
 }
 
-
-
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   display: none;
@@ -139,4 +137,46 @@ input[type='checkbox'] {
   height: 1.25rem;
   width: 1.25rem;
   accent-color: var(--theme-primary-color-500);
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Móviles grandes / tablets verticales */
+@media (min-width: 481px) and (max-width: 767px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Tablets horizontales */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Desktop estándar */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Ultra-wide */
+@media (min-width: 1921px) {
+  html {
+    font-size: 18px;
+  }
 }

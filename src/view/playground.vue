@@ -69,6 +69,7 @@
 
     <template #TLayoutPrimarySidebar>
       <UI.Sidebar
+        @click="toggleSidebar"
         :collapse="isSidebarOpen"
         :sections="[
           {
@@ -119,7 +120,7 @@
       />
     </template>
 
-    <div @click="toggleSidebar" class="playground__section | column">
+    <div class="playground__section | column">
       <h1>Playground</h1>
       {{ value }}
 
