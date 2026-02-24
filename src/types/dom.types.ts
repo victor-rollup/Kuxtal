@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------------------------
-import type { AriaAttributes, StyleValue } from 'vue';
+import type { AriaAttributes } from 'vue';
 // ------------------------------------------------------------------------------------------------
 type IDOMInputAutocomplete =
   | 'on'
@@ -250,12 +250,12 @@ export interface IDOMLabel extends IDOMElement {
 // ------------------------------------------------------------------------------------------------
 export interface IDOMImage extends IDOMElement {
   alt?: string;
-  crossorigin?: string;
+  crossorigin?: 'anonymous' | 'use-credentials';
   decoding?: 'sync' | 'async' | 'auto';
   height?: number;
   ismap?: boolean;
   loading?: 'eager' | 'lazy';
-  referrerpolicy?: string;
+  referrerpolicy?: 'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url';
   sizes?: string;
   src?: string;
   srcset?: string;

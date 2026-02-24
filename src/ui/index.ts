@@ -17,12 +17,14 @@ import Layout from '@/ui/components/atom/TLayout.vue';
 import Panel from '@/ui/components/atom/TPanel.vue';
 import Separator from '@/ui/components/atom/TSeparator.vue';
 import Accordion from '@/ui/components/atom/TAccordion.vue';
+import Image from './components/atom/TImage.vue';
 // ------------------------------------------------------------------------------------------------
 import BreadCrumb from '@/ui/components/molecule/TBreadCrumb.vue';
 import ComboBox from '@/ui/components/molecule/TComboBox.vue';
 import Edit from '@/ui/components/molecule/TEdit.vue';
 import Memo from '@/ui/components/molecule/TMemo.vue';
 import Menu from '@/ui/components/molecule/TMenu.vue';
+import Thumbnail from './components/molecule/TThumbnail.vue';
 // ------------------------------------------------------------------------------------------------
 import Sidebar from '@/ui/components/organism/TSidebar.vue';
 import MenuBar from './components/organism/TMenuBar.vue';
@@ -54,6 +56,8 @@ export const UI = {
   Menu,
   MenuBar,
   Sidebar,
+  Image,
+  Thumbnail,
   useState,
   createDialog,
   createNotification,

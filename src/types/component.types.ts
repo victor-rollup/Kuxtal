@@ -9,6 +9,7 @@ import type {
   IDOMSelect,
   IDOMSelectOption,
   IDOMAnchor,
+  IDOMImage,
 } from './dom.types';
 import type { Component } from 'vue';
 import type {
@@ -119,5 +120,9 @@ export interface IBreadcrumb {
     routes: IBreadcrumbRoute[];
     divider?: string;
   };
+}
+// ------------------------------------------------------------------------------------------------
+export interface IImage {
+  props: IDOMImage
 }
 // ------------------------------------------------------------------------------------------------

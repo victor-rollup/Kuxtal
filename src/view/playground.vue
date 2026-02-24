@@ -122,7 +122,6 @@
 
     <div class="playground__section | column">
       <h1>Playground</h1>
-      {{ value }}
 
       <UI.Accordion title="Tabla">
         <div class="table-wrapper">
@@ -154,6 +153,7 @@
           </table>
         </div>
       </UI.Accordion>
+      
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
           <UI.Slider v-model="value" />
@@ -287,7 +287,7 @@
               type: 'error',
               description:
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam earum ab repudiandae sunt officiis quisquam blanditiis mollitia aut excepturi! Architecto quam tempora debitis magnam illo sint dolor qui vel. Dolore?',
-              duration: 1000,
+              duration: 5000,
             })
           "
         />
@@ -381,6 +381,11 @@
             },
           ]"
         />
+      </UI.Accordion>
+
+      <UI.Accordion title="Multimedia">
+        <UI.Image src="https://cdn.prod.website-files.com/5bff8886c3964a992e90d465/5c00fa0eb8b0816e1a10dfe6_hero-2.svg"/>
+        <UI.Thumbnail src="https://cdn.prod.website-files.com/5bff8886c3964a992e90d465/5c00fa0eb8b0816e1a10dfe6_hero-2.svg"/>
       </UI.Accordion>
     </div>
   </UI.Layout>
