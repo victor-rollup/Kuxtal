@@ -1,12 +1,12 @@
 <script setup lang="ts">
-  import { UI } from '@/ui';
   import type { IImage } from '@/types/component.types';
+  import TImage from '../atom/TImage.vue';
 
   const props = defineProps<IImage['props']>();
 </script>
 
 <template>
-  <UI.Image v-bind="props" class="thumbnail" />
+  <TImage v-bind="props" class="thumbnail" />
 </template>
 
 <style scoped>

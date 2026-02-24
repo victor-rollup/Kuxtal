@@ -1,15 +1,28 @@
+import { AllowedComponentProps } from 'vue';
 import { AriaAttributes } from 'vue';
 import { Component as Component_2 } from 'vue';
+import { ComponentCustomProps } from 'vue';
+import { ComponentOptionsBase } from 'vue';
 import { ComponentOptionsMixin } from 'vue';
 import { ComponentProvideOptions } from 'vue';
+import { CreateComponentPublicInstanceWithMixins } from 'vue';
 import { createRouter } from 'vue-router';
 import { createWebHistory } from 'vue-router';
 import { DateMethods } from 'helper';
 import { DefineComponent } from 'vue';
+import { GlobalComponents } from 'vue';
+import { GlobalDirectives } from 'vue';
 import { Helper } from 'helper';
+import { IfAny } from '@vue/shared';
 import { PublicProps } from 'vue';
+import { Ref } from 'vue';
+import { RouteLocationNormalizedLoaded } from 'vue-router';
 import { RouteParamsRawGeneric } from 'vue-router';
+import { RouterViewProps } from 'vue-router';
+import { UnwrapRef } from 'vue';
 import { Use } from 'helper';
+import { VNode } from 'vue';
+import { VNodeProps } from 'vue';
 
 export declare namespace Component {
     export {
@@ -31,6 +44,10 @@ export declare namespace Component {
         IImage
     }
 }
+
+declare function createDialog({ message, onCancel, onConfirm, title, cancelCaption, confirmCaption, }: IDialogOptions): void;
+
+declare function createNotification({ duration, message, type, description, }: INotificationOptions): void;
 
 export { DateMethods }
 
@@ -141,6 +158,15 @@ export declare const Icon: {
     Check: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
     List: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
 };
+
+declare interface IDialogOptions {
+    title?: string;
+    message: string;
+    confirmCaption?: string;
+    cancelCaption?: string;
+    onConfirm?: () => void;
+    onCancel?: () => void;
+}
 
 declare interface IDOMAnchor extends IDOMElement {
     download?: string;
@@ -464,6 +490,13 @@ declare interface IMicrodataAttributes {
     itemref?: string;
 }
 
+declare interface INotificationOptions {
+    message: string;
+    description?: string;
+    type?: 'success' | 'error' | 'information';
+    duration?: number;
+}
+
 declare interface IRadioButton {
     props: Omit<IDOMInput, 'type'> & {
         name: string;
@@ -526,8 +559,362 @@ declare enum Type {
     GREEN_NIGHT = "green-night"
 }
 
-export declare const UI: any;
+export declare const UI: {
+    Page: new () => {
+        $props: AllowedComponentProps & ComponentCustomProps & VNodeProps & RouterViewProps;
+        $slots: {
+            default?: ({ Component, route }: {
+                Component: VNode;
+                route: RouteLocationNormalizedLoaded;
+            }) => VNode[];
+        };
+    };
+    Hyperlink: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMAnchor & {
+        route?: string;
+        params?: RouteParamsRawGeneric;
+        }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<IDOMAnchor & {
+        route?: string;
+        params?: RouteParamsRawGeneric;
+        }> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<IDOMAnchor & {
+    route?: string;
+    params?: RouteParamsRawGeneric;
+    }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+            default?(_: {}): any;
+        };
+    });
+    Accordion: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMElement & {
+        title: string;
+        open?: boolean;
+        }> & Readonly<{}>, {
+        open: () => void;
+        close: () => void;
+        }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {
+        accordion: HTMLDetailsElement;
+        }, HTMLDetailsElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<IDOMElement & {
+        title: string;
+        open?: boolean;
+        }> & Readonly<{}>, {
+        open: () => void;
+        close: () => void;
+        }, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<IDOMElement & {
+    title: string;
+    open?: boolean;
+    }> & Readonly<{}>, {
+    open: () => void;
+    close: () => void;
+    }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+        };
+    });
+    Button: DefineComponent<IDOMButton & {
+    mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
+    caption?: string;
+    icon?: Component_2;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMButton & {
+    mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
+    caption?: string;
+    icon?: Component_2;
+    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLButtonElement>;
+    Slider: DefineComponent<    {
+    modelValue?: number;
+    min?: number;
+    max?: number;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: number) => any;
+    "update:min": (value: number) => any;
+    "update:max": (value: number) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: number;
+    min?: number;
+    max?: number;
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: number) => any) | undefined;
+    "onUpdate:min"?: ((value: number) => any) | undefined;
+    "onUpdate:max"?: ((value: number) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+    slider: HTMLDivElement;
+    }, HTMLDivElement>;
+    RangeSlider: DefineComponent<    {
+    minimum?: number;
+    maximun?: number;
+    } & {
+    min?: number;
+    max?: number;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:minimum": (value: number) => any;
+    "update:maximun": (value: number) => any;
+    }, string, PublicProps, Readonly<{
+    minimum?: number;
+    maximun?: number;
+    } & {
+    min?: number;
+    max?: number;
+    }> & Readonly<{
+    "onUpdate:minimum"?: ((value: number) => any) | undefined;
+    "onUpdate:maximun"?: ((value: number) => any) | undefined;
+    }>, {
+    max: number;
+    min: number;
+    }, {}, {}, {}, string, ComponentProvideOptions, false, {
+    slider: HTMLDivElement;
+    }, HTMLDivElement>;
+    RadioButton: DefineComponent<    {
+    modelValue?: string | number;
+    } & Omit<IDOMInput, "type"> & {
+    name: string;
+    value: string | number;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string | number) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: string | number;
+    } & Omit<IDOMInput, "type"> & {
+    name: string;
+    value: string | number;
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLInputElement>;
+    ToggleSwitch: DefineComponent<    {
+    modelValue?: boolean;
+    } & Omit<IDOMInput, "type" | "checked">, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: boolean) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: boolean;
+    } & Omit<IDOMInput, "type" | "checked">> & Readonly<{
+    "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
+    Checkbox: DefineComponent<    {
+    modelValue?: boolean;
+    } & Omit<IDOMInput, "type">, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: boolean) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: boolean;
+    } & Omit<IDOMInput, "type">> & Readonly<{
+    "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLInputElement>;
+    Form: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLFormElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+        };
+    });
+    Label: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMLabel & {
+        caption?: string;
+        }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLLabelElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<IDOMLabel & {
+        caption?: string;
+        }> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<IDOMLabel & {
+    caption?: string;
+    }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            default?(_: {}): any;
+        };
+    });
+    Layout: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMElement & {
+        showHeader?: boolean;
+        showFooter?: boolean;
+        showPrimarySidebar?: boolean;
+        showSecondarySidebar?: boolean;
+        }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<IDOMElement & {
+        showHeader?: boolean;
+        showFooter?: boolean;
+        showPrimarySidebar?: boolean;
+        showSecondarySidebar?: boolean;
+        }> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<IDOMElement & {
+    showHeader?: boolean;
+    showFooter?: boolean;
+    showPrimarySidebar?: boolean;
+    showSecondarySidebar?: boolean;
+    }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            TLayoutHeader?(_: {}): any;
+            TLayoutPrimarySidebar?(_: {}): any;
+            default?(_: {}): any;
+            TLayoutSecondarySidebar?(_: {}): any;
+            TLayoutFooter?(_: {}): any;
+        };
+    });
+    Panel: {
+        new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMElement & {
+        showHeader?: boolean;
+        showFooter?: boolean;
+        showPrimarySidebar?: boolean;
+        showSecondarySidebar?: boolean;
+        }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+        }, Readonly<IDOMElement & {
+        showHeader?: boolean;
+        showFooter?: boolean;
+        showPrimarySidebar?: boolean;
+        showSecondarySidebar?: boolean;
+        }> & Readonly<{}>, {}, {}, {}, {}, {}>;
+        __isFragment?: never;
+        __isTeleport?: never;
+        __isSuspense?: never;
+    } & ComponentOptionsBase<Readonly<IDOMElement & {
+    showHeader?: boolean;
+    showFooter?: boolean;
+    showPrimarySidebar?: boolean;
+    showSecondarySidebar?: boolean;
+    }> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+        $slots: {
+            TPanelHeader?(_: {}): any;
+            TPanelPrimarySidebar?(_: {}): any;
+            default?(_: {}): any;
+            TPanelSecondarySidebar?(_: {}): any;
+            TPanelFooter?(_: {}): any;
+        };
+    });
+    Separator: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLDivElement>;
+    BreadCrumb: DefineComponent<    {
+    current: string;
+    routes: IBreadcrumbRoute[];
+    divider?: string;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
+    current: string;
+    routes: IBreadcrumbRoute[];
+    divider?: string;
+    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
+    ComboBox: DefineComponent<    {
+    modelValue?: null | string | number;
+    } & IDOMSelect & {
+    caption?: string;
+    allowNull?: boolean;
+    items: IDOMSelectOption[];
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string | number | null) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: null | string | number;
+    } & IDOMSelect & {
+    caption?: string;
+    allowNull?: boolean;
+    items: IDOMSelectOption[];
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: string | number | null) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
+    Edit: DefineComponent<    {
+    modelValue?: string | number;
+    } & IDOMInput & {
+    icon?: Component_2;
+    caption?: string;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string | number) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: string | number;
+    } & IDOMInput & {
+    icon?: Component_2;
+    caption?: string;
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
+    Memo: DefineComponent<    {
+    modelValue?: string;
+    } & IDOMTextarea & {
+    caption?: string;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: string;
+    } & IDOMTextarea & {
+    caption?: string;
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: string) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
+    Menu: DefineComponent<IDOMElement & {
+    items: IMenuItem[];
+    orientation?: "vertical" | "horizontal";
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
+    items: IMenuItem[];
+    orientation?: "vertical" | "horizontal";
+    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
+    MenuBar: DefineComponent<IDOMElement & {
+    items: IMenuItem[];
+    orientation?: "vertical" | "horizontal";
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
+    items: IMenuItem[];
+    orientation?: "vertical" | "horizontal";
+    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLElement>;
+    Sidebar: DefineComponent<IDOMElement & {
+    sections: ISidebarSection[];
+    collapse?: boolean;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMElement & {
+    sections: ISidebarSection[];
+    collapse?: boolean;
+    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
+    Image: DefineComponent<IDOMImage, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMImage> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLImageElement>;
+    Thumbnail: DefineComponent<IDOMImage, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMImage> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLImageElement>;
+    useState: typeof useState;
+    createDialog: typeof createDialog;
+    createNotification: typeof createNotification;
+};
 
 export { Use }
+
+declare function useState<T>(initial: T): readonly [[T] extends [Ref<any, any>] ? IfAny<T, Ref<T, T>, T> : Ref<UnwrapRef<T>, T | UnwrapRef<T>>, (value: T) => void];
 
 export { }
