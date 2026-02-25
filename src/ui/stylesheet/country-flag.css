@@ -1,45 +1,45 @@
 .AR {
-  background-image: url(/country-flag/ar.webp);
+  background-image: url(@/assets/country-flag/ar.webp);
 }
 .BR {
-  background-image: url(/country-flag/br.webp);
+  background-image: url(@/assets/country-flag/br.webp);
 }
 .CA {
-  background-image: url(/country-flag/ca.webp);
+  background-image: url(@/assets/country-flag/ca.webp);
 }
 .CL {
-  background-image: url(/country-flag/cl.webp);
+  background-image: url(@/assets/country-flag/cl.webp);
 }
 .CO {
-  background-image: url(/country-flag/co.webp);
+  background-image: url(@/assets/country-flag/co.webp);
 }
 .CU {
-  background-image: url(/country-flag/cu.webp);
+  background-image: url(@/assets/country-flag/cu.webp);
 }
 .DE {
-  background-image: url(/country-flag/de.webp);
+  background-image: url(@/assets/country-flag/de.webp);
 }
 .ES {
-  background-image: url(/country-flag/es.webp);
+  background-image: url(@/assets/country-flag/es.webp);
 }
 .FR {
-  background-image: url(/country-flag/fr.webp);
+  background-image: url(@/assets/country-flag/fr.webp);
 }
 .IT {
-  background-image: url(/country-flag/it.webp);
+  background-image: url(@/assets/country-flag/it.webp);
 }
 .JP {
-  background-image: url(/country-flag/jp.webp);
+  background-image: url(@/assets/country-flag/jp.webp);
 }
 .MX {
-  background-image: url(/country-flag/mx.webp);
+  background-image: url(@/assets/country-flag/mx.webp);
 }
 .PE {
-  background-image: url(/country-flag/pe.webp);
+  background-image: url(@/assets/country-flag/pe.webp);
 }
 .US {
-  background-image: url(/country-flag/us.webp);
+  background-image: url(@/assets/country-flag/us.webp);
 }
 .VE {
-  background-image: url(/country-flag/ve.webp);
+  background-image: url(@/assets/country-flag/ve.webp);
 }
