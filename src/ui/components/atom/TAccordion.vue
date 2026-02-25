@@ -24,11 +24,7 @@
 </script>
 
 <template>
-  <details
-    ref="accordion"
-    v-bind="props"
-    class="accordion"
-  >
+  <details ref="accordion" v-bind="props" class="accordion | sticky">
     <summary class="accordion__header">
       <h4 class="accordion__title | text-truncate">{{ props.title }}</h4>
       <TIconChevron class="accordion__chevron" />
