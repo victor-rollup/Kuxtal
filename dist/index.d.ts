@@ -41,7 +41,8 @@ export declare namespace Component {
         ISidebar,
         IAccordion,
         IBreadcrumb,
-        IImage
+        IImage,
+        ICountryFlag
     }
 }
 
@@ -158,6 +159,12 @@ export declare const Icon: {
     Check: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
     List: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, true, {}, SVGSVGElement>;
 };
+
+declare interface ICountryFlag {
+    props: {
+        code: 'AR' | 'BR' | 'CA' | 'CL' | 'CO' | 'CU' | 'DE' | 'ES' | 'FR' | 'IT' | 'JP' | 'MX' | 'PE' | 'US' | 'VE';
+    };
+}
 
 declare interface IDialogOptions {
     title?: string;
@@ -908,6 +915,11 @@ export declare const UI: {
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLUListElement>;
     Image: DefineComponent<IDOMImage, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMImage> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLImageElement>;
     Thumbnail: DefineComponent<IDOMImage, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMImage> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLImageElement>;
+    CountryFlag: DefineComponent<    {
+    code: "AR" | "BR" | "CA" | "CL" | "CO" | "CU" | "DE" | "ES" | "FR" | "IT" | "JP" | "MX" | "PE" | "US" | "VE";
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
+    code: "AR" | "BR" | "CA" | "CL" | "CO" | "CU" | "DE" | "ES" | "FR" | "IT" | "JP" | "MX" | "PE" | "US" | "VE";
+    }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
     useState: typeof useState;
     createDialog: typeof createDialog;
     createNotification: typeof createNotification;
