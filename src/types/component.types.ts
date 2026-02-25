@@ -129,6 +129,7 @@ export interface IImage {
 export interface ICountryFlag {
   props: {
     code:
+      | string
       | 'AR'
       | 'BR'
       | 'CA'
