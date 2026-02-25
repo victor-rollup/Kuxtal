@@ -123,7 +123,7 @@
     <div class="playground__section | column">
       <h1>Playground</h1>
 
-      <UI.Accordion title="Tabla">
+      <UI.Accordion title="Organización">
         <div class="table-wrapper">
           <table>
             <thead>
@@ -152,6 +152,20 @@
             </tbody>
           </table>
         </div>
+        <ul class="list">
+          <li class="list-item">1</li>
+          <li class="list-item">2</li>
+          <li class="list-item">3</li>
+          <li class="list-item">4</li>
+          <li class="list-item">5</li>
+        </ul>
+        <ul class="list">
+          <li class="list-item--large-padding">1</li>
+          <li class="list-item--large-padding">2</li>
+          <li class="list-item--large-padding">3</li>
+          <li class="list-item--large-padding">4</li>
+          <li class="list-item--large-padding">5</li>
+        </ul>
       </UI.Accordion>
 
       <UI.Accordion title="Controles de formulario">

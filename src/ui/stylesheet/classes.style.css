@@ -171,3 +171,25 @@
   transform: scale(0.98);
 }
 /* --------------------------------------------------------------------------------------------- */
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.25rem;
+}
+
+.list-item--large-padding {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.list-item:hover,
+.list-item--large-padding:hover {
+  background: var(--theme-neutral-color-200);
+}
+
+/* --------------------------------------------------------------------------------------------- */
