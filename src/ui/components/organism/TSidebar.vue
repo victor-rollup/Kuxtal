@@ -31,9 +31,12 @@
           :route="option.route"
           class="sidebar-item__option"
           :title="option.caption"
+          @click="option.onClick"
         >
           <component :is="option.icon" />
-          <span class="sidebar-item__option-caption | text-truncate">{{ option.caption }}</span>
+          <span class="sidebar-item__option-caption | text-truncate">{{
+            option.caption
+          }}</span>
         </THyperlink>
       </div>
     </li>

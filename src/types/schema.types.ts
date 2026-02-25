@@ -5,6 +5,7 @@ export interface ISidebarOption {
   caption?: string;
   icon?: Component;
   route?: string;
+  onClick?: (event: PointerEvent) => void;
 }
 // ------------------------------------------------------------------------------------------------
 export interface ISidebarSection {
