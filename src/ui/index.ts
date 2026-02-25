@@ -18,6 +18,7 @@ import Panel from '@/ui/components/atom/TPanel.vue';
 import Separator from '@/ui/components/atom/TSeparator.vue';
 import Accordion from '@/ui/components/atom/TAccordion.vue';
 import Image from './components/atom/TImage.vue';
+import CountryFlag from './components/atom/TCountryFlag.vue';
 // ------------------------------------------------------------------------------------------------
 import BreadCrumb from '@/ui/components/molecule/TBreadCrumb.vue';
 import ComboBox from '@/ui/components/molecule/TComboBox.vue';
@@ -58,6 +59,7 @@ export const UI = {
   Sidebar,
   Image,
   Thumbnail,
+  CountryFlag,
   useState,
   createDialog,
   createNotification,

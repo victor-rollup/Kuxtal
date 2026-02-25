@@ -153,7 +153,7 @@
           </table>
         </div>
       </UI.Accordion>
-      
+
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
           <UI.Slider v-model="value" />
@@ -384,8 +384,20 @@
       </UI.Accordion>
 
       <UI.Accordion title="Multimedia">
-        <UI.Image src="https://cdn.prod.website-files.com/5bff8886c3964a992e90d465/5c00fa0eb8b0816e1a10dfe6_hero-2.svg"/>
-        <UI.Thumbnail src="https://cdn.prod.website-files.com/5bff8886c3964a992e90d465/5c00fa0eb8b0816e1a10dfe6_hero-2.svg"/>
+        <div class="row">
+          <UI.CountryFlag code="AR" />
+          <UI.CountryFlag code="MX" />
+          <UI.CountryFlag code="US" />
+          <UI.CountryFlag code="CA" />
+          <UI.CountryFlag code="CO" />
+          <UI.CountryFlag code="CL" />
+        </div>
+        <UI.Image
+          src="https://cdn.prod.website-files.com/5bff8886c3964a992e90d465/5c00fa0eb8b0816e1a10dfe6_hero-2.svg"
+        />
+        <UI.Thumbnail
+          src="https://cdn.prod.website-files.com/5bff8886c3964a992e90d465/5c00fa0eb8b0816e1a10dfe6_hero-2.svg"
+        />
       </UI.Accordion>
     </div>
   </UI.Layout>
