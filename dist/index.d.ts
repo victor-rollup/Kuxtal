@@ -8,11 +8,9 @@ import { ComponentProvideOptions } from 'vue';
 import { CreateComponentPublicInstanceWithMixins } from 'vue';
 import { createRouter } from 'vue-router';
 import { createWebHistory } from 'vue-router';
-import { DateMethods } from 'helper';
 import { DefineComponent } from 'vue';
 import { GlobalComponents } from 'vue';
 import { GlobalDirectives } from 'vue';
-import { Helper } from 'helper';
 import { IfAny } from '@vue/shared';
 import { PublicProps } from 'vue';
 import { Ref } from 'vue';
@@ -20,7 +18,6 @@ import { RouteLocationNormalizedLoaded } from 'vue-router';
 import { RouteParamsRawGeneric } from 'vue-router';
 import { RouterViewProps } from 'vue-router';
 import { UnwrapRef } from 'vue';
-import { Use } from 'helper';
 import { VNode } from 'vue';
 import { VNodeProps } from 'vue';
 
@@ -49,10 +46,6 @@ export declare namespace Component {
 declare function createDialog({ message, onCancel, onConfirm, title, cancelCaption, confirmCaption, }: IDialogOptions): void;
 
 declare function createNotification({ duration, message, type, description, }: INotificationOptions): void;
-
-export { DateMethods }
-
-export { Helper }
 
 declare interface IAccordion {
     props: IDOMElement & {
@@ -522,6 +515,7 @@ declare interface ISidebarOption {
     caption?: string;
     icon?: Component_2;
     route?: string;
+    onClick?: (event: PointerEvent) => void;
 }
 
 declare interface ISidebarSection {
@@ -693,19 +687,19 @@ export declare const UI: {
     slider: HTMLDivElement;
     }, HTMLDivElement>;
     RadioButton: DefineComponent<    {
-    modelValue?: string | number;
+    modelValue?: string | number | null;
     } & Omit<IDOMInput, "type"> & {
     name: string;
     value: string | number;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-    "update:modelValue": (value: string | number) => any;
+    "update:modelValue": (value: string | number | null) => any;
     }, string, PublicProps, Readonly<{
-    modelValue?: string | number;
+    modelValue?: string | number | null;
     } & Omit<IDOMInput, "type"> & {
     name: string;
     value: string | number;
     }> & Readonly<{
-    "onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
+    "onUpdate:modelValue"?: ((value: string | number | null) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLInputElement>;
     ToggleSwitch: DefineComponent<    {
     modelValue?: boolean;
@@ -717,13 +711,13 @@ export declare const UI: {
     "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
     Checkbox: DefineComponent<    {
-    modelValue?: boolean;
+    modelValue?: boolean | null;
     } & Omit<IDOMInput, "type">, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-    "update:modelValue": (value: boolean) => any;
+    "update:modelValue": (value: boolean | null) => any;
     }, string, PublicProps, Readonly<{
-    modelValue?: boolean;
+    modelValue?: boolean | null;
     } & Omit<IDOMInput, "type">> & Readonly<{
-    "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+    "onUpdate:modelValue"?: ((value: boolean | null) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLInputElement>;
     Form: {
         new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly<IDOMForm> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {}, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLFormElement, ComponentProvideOptions, {
@@ -865,32 +859,32 @@ export declare const UI: {
     "onUpdate:modelValue"?: ((value: string | number | null) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
     Edit: DefineComponent<    {
-    modelValue?: string | number;
+    modelValue?: string | number | null;
     } & IDOMInput & {
     icon?: Component_2;
     caption?: string;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-    "update:modelValue": (value: string | number) => any;
+    "update:modelValue": (value: string | number | null) => any;
     }, string, PublicProps, Readonly<{
-    modelValue?: string | number;
+    modelValue?: string | number | null;
     } & IDOMInput & {
     icon?: Component_2;
     caption?: string;
     }> & Readonly<{
-    "onUpdate:modelValue"?: ((value: string | number) => any) | undefined;
+    "onUpdate:modelValue"?: ((value: string | number | null) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
     Memo: DefineComponent<    {
-    modelValue?: string;
+    modelValue?: string | null;
     } & IDOMTextarea & {
     caption?: string;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
-    "update:modelValue": (value: string) => any;
+    "update:modelValue": (value: string | null) => any;
     }, string, PublicProps, Readonly<{
-    modelValue?: string;
+    modelValue?: string | null;
     } & IDOMTextarea & {
     caption?: string;
     }> & Readonly<{
-    "onUpdate:modelValue"?: ((value: string) => any) | undefined;
+    "onUpdate:modelValue"?: ((value: string | null) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
     Menu: DefineComponent<IDOMElement & {
     items: IMenuItem[];
@@ -924,8 +918,6 @@ export declare const UI: {
     createDialog: typeof createDialog;
     createNotification: typeof createNotification;
 };
-
-export { Use }
 
 declare function useState<T>(initial: T): readonly [[T] extends [Ref<any, any>] ? IfAny<T, Ref<T, T>, T> : Ref<UnwrapRef<T>, T | UnwrapRef<T>>, (value: T) => void];
 
