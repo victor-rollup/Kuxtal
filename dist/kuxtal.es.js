@@ -1,8 +1,8 @@
 import { RouterLink as Wv, RouterView as Cv, createWebHistory as Rv, createRouter as Yv } from "vue-router";
-import { createElementBlock as b, openBlock as _, createElementVNode as y, createStaticVNode as A, defineComponent as z, mergeProps as Q, createBlock as re, createCommentVNode as $, resolveDynamicComponent as Re, toDisplayString as ie, useModel as ae, ref as Ye, computed as Ee, normalizeStyle as Be, mergeModels as Fe, withDirectives as Pe, vModelRadio as Lv, vModelCheckbox as Im, withModifiers as Hv, renderSlot as k, unref as Nv, withCtx as be, createVNode as je, normalizeClass as Av, Fragment as We, renderList as Ce, vModelSelect as zv, vModelDynamic as Qv, vModelText as Gv, onMounted as xm, resolveComponent as Vv, onUnmounted as Zv } from "vue";
-const Ow = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+import { createElementBlock as b, openBlock as _, createElementVNode as y, createStaticVNode as A, defineComponent as Q, mergeProps as z, createBlock as re, createCommentVNode as $, resolveDynamicComponent as Re, toDisplayString as ie, useModel as ae, ref as Ye, computed as Ee, normalizeStyle as Be, mergeModels as Fe, withDirectives as Pe, vModelRadio as Lv, vModelCheckbox as Im, withModifiers as Hv, renderSlot as k, unref as Nv, withCtx as be, createVNode as je, normalizeClass as Av, Fragment as We, renderList as Ce, vModelSelect as zv, vModelDynamic as Qv, vModelText as Gv, onMounted as xm, resolveComponent as Vv, onUnmounted as Zv } from "vue";
+const Mw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
-}, Symbol.toStringTag, { value: "Module" })), ww = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+}, Symbol.toStringTag, { value: "Module" })), Ow = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
 }, Symbol.toStringTag, { value: "Module" })), w = (n, t) => {
   const o = n.__vccOpts || n;
@@ -1218,7 +1218,7 @@ function ub(n, t) {
     y("path", { d: "M11 12h1v4h1" }, null, -1)
   ])]);
 }
-const cb = /* @__PURE__ */ w(ab, [["render", ub]]), Dw = {
+const cb = /* @__PURE__ */ w(ab, [["render", ub]]), ww = {
   Information: cb,
   Palette: ob,
   DotsVertical: eb,
@@ -1316,7 +1316,7 @@ function hb({
 const mb = ["data-mode", "type"], vb = {
   key: 0,
   class: "button__caption"
-}, yb = /* @__PURE__ */ z({
+}, yb = /* @__PURE__ */ Q({
   __name: "TButton",
   props: {
     autofocus: { type: Boolean },
@@ -1514,7 +1514,7 @@ const mb = ["data-mode", "type"], vb = {
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), b("button", Q({ class: "button" }, t, {
+    return (o, i) => (_(), b("button", z({ class: "button" }, t, {
       "data-mode": t.mode ?? "filled",
       type: t.type ?? "button",
       icon: void 0
@@ -1523,7 +1523,7 @@ const mb = ["data-mode", "type"], vb = {
       t.caption ? (_(), b("span", vb, ie(t.caption), 1)) : $("", !0)
     ], 16, mb));
   }
-}), gb = /* @__PURE__ */ z({
+}), gb = /* @__PURE__ */ Q({
   __name: "TSlider",
   props: {
     modelValue: { default: 50 },
@@ -1575,7 +1575,7 @@ const mb = ["data-mode", "type"], vb = {
       }, null, 36)
     ], 512));
   }
-}), _b = /* @__PURE__ */ w(gb, [["__scopeId", "data-v-2a7ccd25"]]), Fb = /* @__PURE__ */ z({
+}), _b = /* @__PURE__ */ w(gb, [["__scopeId", "data-v-2a7ccd25"]]), Fb = /* @__PURE__ */ Q({
   __name: "TSliderRange",
   props: /* @__PURE__ */ Fe({
     min: { default: 0 },
@@ -1628,7 +1628,7 @@ const mb = ["data-mode", "type"], vb = {
       }, null, 36)
     ], 512));
   }
-}), bb = /* @__PURE__ */ w(Fb, [["__scopeId", "data-v-0a022ba7"]]), Mb = /* @__PURE__ */ z({
+}), bb = /* @__PURE__ */ w(Fb, [["__scopeId", "data-v-0a022ba7"]]), Mb = /* @__PURE__ */ Q({
   __name: "TRadioButton",
   props: /* @__PURE__ */ Fe({
     accept: {},
@@ -1848,14 +1848,14 @@ const mb = ["data-mode", "type"], vb = {
   emits: ["update:modelValue"],
   setup(n) {
     const t = ae(n, "modelValue"), o = n;
-    return (i, a) => Pe((_(), b("input", Q({
+    return (i, a) => Pe((_(), b("input", z({
       type: "radio",
       "onUpdate:modelValue": a[0] || (a[0] = (r) => t.value = r)
     }, o, { class: "radio-button" }), null, 16)), [
       [Lv, t.value]
     ]);
   }
-}), Ob = { class: "toggle-switch" }, wb = /* @__PURE__ */ z({
+}), Ob = { class: "toggle-switch" }, wb = /* @__PURE__ */ Q({
   __name: "TToggleSwitch",
   props: /* @__PURE__ */ Fe({
     accept: {},
@@ -2074,7 +2074,7 @@ const mb = ["data-mode", "type"], vb = {
   setup(n) {
     const t = ae(n, "modelValue"), o = n;
     return (i, a) => (_(), b("label", Ob, [
-      Pe(y("input", Q({
+      Pe(y("input", z({
         "onUpdate:modelValue": a[0] || (a[0] = (r) => t.value = r),
         class: "toggle-switch__thumb"
       }, o, { type: "checkbox" }), null, 16), [
@@ -2082,7 +2082,7 @@ const mb = ["data-mode", "type"], vb = {
       ])
     ]));
   }
-}), Db = /* @__PURE__ */ w(wb, [["__scopeId", "data-v-4505371a"]]), Sb = /* @__PURE__ */ z({
+}), Db = /* @__PURE__ */ w(wb, [["__scopeId", "data-v-4505371a"]]), Sb = /* @__PURE__ */ Q({
   __name: "TCheckbox",
   props: /* @__PURE__ */ Fe({
     accept: {},
@@ -2301,14 +2301,14 @@ const mb = ["data-mode", "type"], vb = {
   emits: ["update:modelValue"],
   setup(n) {
     const t = ae(n, "modelValue"), o = n;
-    return (i, a) => Pe((_(), b("input", Q({
+    return (i, a) => Pe((_(), b("input", z({
       type: "checkbox",
       "onUpdate:modelValue": a[0] || (a[0] = (r) => t.value = r)
     }, o, { class: "checkbox" }), null, 16)), [
       [Im, t.value]
     ]);
   }
-}), Pb = /* @__PURE__ */ z({
+}), Pb = /* @__PURE__ */ Q({
   __name: "TForm",
   props: {
     acceptcharset: {},
@@ -2501,14 +2501,14 @@ const mb = ["data-mode", "type"], vb = {
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), b("form", Q({ class: "form" }, t, {
+    return (o, i) => (_(), b("form", z({ class: "form" }, t, {
       onSubmit: i[0] || (i[0] = Hv(() => {
       }, ["prevent"]))
     }), [
       k(o.$slots, "default")
     ], 16));
   }
-}), Tb = /* @__PURE__ */ z({
+}), Tb = /* @__PURE__ */ Q({
   __name: "THyperlink",
   props: {
     download: {},
@@ -2702,7 +2702,7 @@ const mb = ["data-mode", "type"], vb = {
   },
   setup(n) {
     const t = n;
-    return (o, i) => t.route ? (_(), re(Nv(Wv), Q({ key: 0 }, t, {
+    return (o, i) => t.route ? (_(), re(Nv(Wv), z({ key: 0 }, t, {
       to: { name: t.route, params: t.params },
       class: "hyperlink | text-truncate"
     }), {
@@ -2710,7 +2710,7 @@ const mb = ["data-mode", "type"], vb = {
         k(o.$slots, "default", {}, void 0, !0)
       ]),
       _: 3
-    }, 16, ["to"])) : (_(), b("a", Q({ key: 1 }, t, {
+    }, 16, ["to"])) : (_(), b("a", z({ key: 1 }, t, {
       href: "#",
       class: "hyperlink | text-truncate"
     }), [
@@ -2720,7 +2720,7 @@ const mb = ["data-mode", "type"], vb = {
 }), Bn = /* @__PURE__ */ w(Tb, [["__scopeId", "data-v-3f814b58"]]), Ib = {
   key: 0,
   class: "label__caption"
-}, xb = /* @__PURE__ */ z({
+}, xb = /* @__PURE__ */ Q({
   __name: "TLabel",
   props: {
     for: {},
@@ -2908,7 +2908,7 @@ const mb = ["data-mode", "type"], vb = {
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), b("label", Q({ class: "label" }, t), [
+    return (o, i) => (_(), b("label", z({ class: "label" }, t), [
       t.caption ? (_(), b("span", Ib, ie(t.caption), 1)) : $("", !0),
       k(o.$slots, "default", {}, void 0, !0)
     ], 16));
@@ -2925,7 +2925,7 @@ const mb = ["data-mode", "type"], vb = {
 }, Cb = {
   key: 1,
   class: "layout__footer"
-}, Rb = /* @__PURE__ */ z({
+}, Rb = /* @__PURE__ */ Q({
   __name: "TLayout",
   props: {
     placeholder: {},
@@ -3114,7 +3114,7 @@ const mb = ["data-mode", "type"], vb = {
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), b("div", Q({ class: "layout" }, t), [
+    return (o, i) => (_(), b("div", z({ class: "layout" }, t), [
       t.showHeader ? (_(), b("header", qb, [
         k(o.$slots, "TLayoutHeader", {}, void 0, !0)
       ])) : $("", !0),
@@ -3146,7 +3146,7 @@ const mb = ["data-mode", "type"], vb = {
 }, Qb = {
   key: 1,
   class: "panel__footer"
-}, Gb = /* @__PURE__ */ z({
+}, Gb = /* @__PURE__ */ Q({
   __name: "TPanel",
   props: {
     placeholder: {},
@@ -3335,7 +3335,7 @@ const mb = ["data-mode", "type"], vb = {
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), b("div", Q({ class: "panel" }, t), [
+    return (o, i) => (_(), b("div", z({ class: "panel" }, t), [
       t.showHeader ? (_(), b("header", Lb, [
         k(o.$slots, "TPanelHeader", {}, void 0, !0)
       ])) : $("", !0),
@@ -12168,7 +12168,7 @@ function qO() {
   return Tm || (Tm = 1, Object.defineProperty(ce, "__esModule", { value: !0 }), ce.DateMethods = ce.Helper = ce.Use = void 0, ce.Use = qm(), ce.Helper = Jb(), ce.DateMethods = /* @__PURE__ */ xO()), ce;
 }
 var Od = qO();
-const BO = { class: "accordion__header" }, EO = { class: "accordion__title | text-truncate" }, jO = { class: "accordion__content" }, WO = /* @__PURE__ */ z({
+const BO = { class: "accordion__title | text-truncate" }, EO = { class: "accordion__content" }, jO = /* @__PURE__ */ Q({
   __name: "TAccordion",
   props: {
     placeholder: {},
@@ -12361,20 +12361,20 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       close() {
         o.value && (o.value.open = Od.Use.FALSE);
       }
-    }), (a, r) => (_(), b("details", Q({
+    }), (a, r) => (_(), b("details", z({
       ref_key: "accordion",
       ref: o
-    }, i, { class: "accordion | sticky" }), [
-      y("summary", BO, [
-        y("h4", EO, ie(i.title), 1),
+    }, i, { class: "accordion" }), [
+      y("summary", z({ class: "accordion__header" }, a.$attrs), [
+        y("h4", BO, ie(i.title), 1),
         je(Dd, { class: "accordion__chevron" })
-      ]),
-      y("div", jO, [
+      ], 16),
+      y("div", EO, [
         k(a.$slots, "default", {}, void 0, !0)
       ])
     ], 16));
   }
-}), CO = /* @__PURE__ */ w(WO, [["__scopeId", "data-v-2750a0e8"]]), RO = /* @__PURE__ */ z({
+}), WO = /* @__PURE__ */ w(jO, [["__scopeId", "data-v-4637a5a5"]]), CO = /* @__PURE__ */ Q({
   __name: "TImage",
   props: {
     alt: {},
@@ -12571,9 +12571,9 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), b("img", Q(t, { class: "image" }), null, 16));
+    return (o, i) => (_(), b("img", z(t, { class: "image" }), null, 16));
   }
-}), qv = /* @__PURE__ */ w(RO, [["__scopeId", "data-v-699ab2ac"]]), YO = /* @__PURE__ */ z({
+}), qv = /* @__PURE__ */ w(CO, [["__scopeId", "data-v-699ab2ac"]]), RO = /* @__PURE__ */ Q({
   __name: "TCountryFlag",
   props: {
     code: {}
@@ -12584,7 +12584,7 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       class: Av(`country-flag | ${t.code}`)
     }, null, 2));
   }
-}), LO = /* @__PURE__ */ w(YO, [["__scopeId", "data-v-b44332ae"]]), HO = { class: "breadcrumb__list" }, NO = ["data-divider"], AO = { class: "breadcrumb__route-caption | text-truncate" }, zO = { class: "breadcrumb__current | text-truncate" }, QO = /* @__PURE__ */ z({
+}), YO = /* @__PURE__ */ w(RO, [["__scopeId", "data-v-b44332ae"]]), LO = { class: "breadcrumb__list" }, HO = ["data-divider"], NO = { class: "breadcrumb__route-caption | text-truncate" }, AO = { class: "breadcrumb__current | text-truncate" }, zO = /* @__PURE__ */ Q({
   __name: "TBreadCrumb",
   props: {
     current: {},
@@ -12593,8 +12593,8 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), b("nav", Q({ class: "breadcrumb" }, t, { routes: void 0 }), [
-      y("ul", HO, [
+    return (o, i) => (_(), b("nav", z({ class: "breadcrumb" }, t, { routes: void 0 }), [
+      y("ul", LO, [
         (_(!0), b(We, null, Ce(t.routes, (a, r) => (_(), b("li", {
           key: r,
           "data-divider": t.divider ?? "/",
@@ -12606,20 +12606,20 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
           }, {
             default: be(() => [
               (_(), re(Re(a.icon), { class: "breadcrumb__route-caption" })),
-              y("span", AO, ie(a.caption), 1)
+              y("span", NO, ie(a.caption), 1)
             ]),
             _: 2
           }, 1032, ["route"])
-        ], 8, NO))), 128)),
-        y("li", zO, ie(t.current), 1)
+        ], 8, HO))), 128)),
+        y("li", AO, ie(t.current), 1)
       ])
     ], 16));
   }
-}), GO = /* @__PURE__ */ w(QO, [["__scopeId", "data-v-7cb5a440"]]), VO = {
+}), QO = /* @__PURE__ */ w(zO, [["__scopeId", "data-v-7cb5a440"]]), GO = {
   key: 0,
   class: "combo-box__option",
   value: null
-}, ZO = /* @__PURE__ */ z({
+}, VO = /* @__PURE__ */ Q({
   __name: "TComboBox",
   props: /* @__PURE__ */ Fe({
     autocomplete: {},
@@ -12828,7 +12828,7 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       caption: o.caption
     }, {
       default: be(() => [
-        Pe(y("select", Q({
+        Pe(y("select", z({
           "onUpdate:modelValue": a[0] || (a[0] = (r) => t.value = r),
           class: "combo-box"
         }, o, {
@@ -12840,8 +12840,8 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
             class: "combo-box__option",
             value: null
           }, " Selecciona un elemento ", -1)),
-          o.allowNull ? (_(), b("option", VO, " Ninguno/a ")) : $("", !0),
-          (_(!0), b(We, null, Ce(o.items, (r, u) => (_(), b("option", Q({ key: u }, { ref_for: !0 }, r, { class: "combo-box__option" }), ie(r.label), 17))), 128))
+          o.allowNull ? (_(), b("option", GO, " Ninguno/a ")) : $("", !0),
+          (_(!0), b(We, null, Ce(o.items, (r, u) => (_(), b("option", z({ key: u }, { ref_for: !0 }, r, { class: "combo-box__option" }), ie(r.label), 17))), 128))
         ], 16), [
           [zv, t.value]
         ])
@@ -12849,7 +12849,7 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), UO = /* @__PURE__ */ w(ZO, [["__scopeId", "data-v-79d27d52"]]), KO = { class: "edit__container" }, XO = /* @__PURE__ */ z({
+}), ZO = /* @__PURE__ */ w(VO, [["__scopeId", "data-v-79d27d52"]]), UO = { class: "edit__container" }, KO = /* @__PURE__ */ Q({
   __name: "TEdit",
   props: /* @__PURE__ */ Fe({
     accept: {},
@@ -13076,9 +13076,9 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       class: "edit"
     }, {
       default: be(() => [
-        y("div", KO, [
+        y("div", UO, [
           (_(), re(Re(t.icon), { class: "edit__icon" })),
-          Pe(y("input", Q({
+          Pe(y("input", z({
             "onUpdate:modelValue": a[0] || (a[0] = (r) => o.value = r)
           }, t, {
             icon: void 0,
@@ -13091,10 +13091,10 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       _: 1
     }, 8, ["caption"]));
   }
-}), JO = /* @__PURE__ */ w(XO, [["__scopeId", "data-v-9890bdf0"]]), kO = {
+}), XO = /* @__PURE__ */ w(KO, [["__scopeId", "data-v-9890bdf0"]]), JO = {
   key: 0,
   class: "memo__counter"
-}, $O = { key: 0 }, ew = /* @__PURE__ */ z({
+}, kO = { key: 0 }, $O = /* @__PURE__ */ Q({
   __name: "TMemo",
   props: /* @__PURE__ */ Fe({
     autocomplete: {},
@@ -13307,20 +13307,20 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       class: "memo"
     }, {
       default: be(() => [
-        Pe(y("textarea", Q({
+        Pe(y("textarea", z({
           "onUpdate:modelValue": r[0] || (r[0] = (u) => t.value = u)
         }, o, { class: "memo__field" }), null, 16), [
           [Gv, t.value]
         ]),
-        t.value?.length ? $("", !0) : (_(), b("small", kO, [
+        t.value?.length ? $("", !0) : (_(), b("small", JO, [
           y("span", null, ie(i.value), 1),
-          o.maxlength ? (_(), b("span", $O, " / " + ie(o.maxlength), 1)) : $("", !0)
+          o.maxlength ? (_(), b("span", kO, " / " + ie(o.maxlength), 1)) : $("", !0)
         ]))
       ]),
       _: 1
     }, 8, ["caption"]));
   }
-}), nw = /* @__PURE__ */ w(ew, [["__scopeId", "data-v-3d550002"]]), tw = ["data-orientation"], rw = ["onClick"], ow = { class: "menu-item__hyperlink-container" }, aw = { class: "menu-item__caption | text-truncate" }, iw = /* @__PURE__ */ z({
+}), ew = /* @__PURE__ */ w($O, [["__scopeId", "data-v-3d550002"]]), nw = ["data-orientation"], tw = ["onClick"], rw = { class: "menu-item__hyperlink-container" }, ow = { class: "menu-item__caption | text-truncate" }, aw = /* @__PURE__ */ Q({
   __name: "TMenu",
   props: {
     placeholder: {},
@@ -13518,7 +13518,7 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       });
     }), (o, i) => {
       const a = Vv("TMenu", !0);
-      return _(), b("ul", Q({
+      return _(), b("ul", z({
         class: "menu |",
         "data-orientation": t.orientation ?? "vertical"
       }, t, { items: void 0 }), [
@@ -13533,9 +13533,9 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
             class: "menu-item__hyperlink | text-truncate"
           }, {
             default: be(() => [
-              y("div", ow, [
+              y("div", rw, [
                 (_(), re(Re(r.icon), { class: "menu-item__icon" })),
-                y("span", aw, ie(r.caption), 1)
+                y("span", ow, ie(r.caption), 1)
               ]),
               je(Dd, { class: "menu-item__icon | menu-item__chevron" })
             ]),
@@ -13546,11 +13546,11 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
             items: r.submenu,
             class: "submenu"
           }, null, 8, ["items"])) : $("", !0)
-        ], 8, rw))), 256))
-      ], 16, tw);
+        ], 8, tw))), 256))
+      ], 16, nw);
     };
   }
-}), Bv = /* @__PURE__ */ w(iw, [["__scopeId", "data-v-b271e2eb"]]), uw = /* @__PURE__ */ z({
+}), Bv = /* @__PURE__ */ w(aw, [["__scopeId", "data-v-b271e2eb"]]), iw = /* @__PURE__ */ Q({
   __name: "TThumbnail",
   props: {
     alt: {},
@@ -13747,12 +13747,12 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), re(qv, Q(t, { class: "thumbnail" }), null, 16));
+    return (o, i) => (_(), re(qv, z(t, { class: "thumbnail" }), null, 16));
   }
-}), cw = /* @__PURE__ */ w(uw, [["__scopeId", "data-v-ac0df07a"]]), sw = ["data-collapse"], dw = { class: "sidebar-item" }, lw = {
+}), uw = /* @__PURE__ */ w(iw, [["__scopeId", "data-v-ac0df07a"]]), cw = ["data-collapse"], sw = { class: "sidebar-item" }, dw = {
   key: 0,
   class: "sidebar-item__caption"
-}, fw = { class: "sidebar-item__content" }, pw = { class: "sidebar-item__option-caption | text-truncate" }, hw = /* @__PURE__ */ z({
+}, lw = { class: "sidebar-item__content" }, fw = { class: "sidebar-item__option-caption | text-truncate" }, pw = /* @__PURE__ */ Q({
   __name: "TSidebar",
   props: {
     placeholder: {},
@@ -13939,15 +13939,15 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
   },
   setup(n) {
     const t = n, o = Ye(window.innerWidth * 0.16), i = Ee(() => `${o.value}px`), a = () => o.value = window.innerWidth * 0.16;
-    return xm(() => window.addEventListener("resize", a)), Zv(() => window.removeEventListener("resize", a)), (r, u) => (_(), b("ul", Q({ class: "sidebar" }, t, {
+    return xm(() => window.addEventListener("resize", a)), Zv(() => window.removeEventListener("resize", a)), (r, u) => (_(), b("ul", z({ class: "sidebar" }, t, {
       "data-collapse": t.collapse,
       sections: void 0,
       collapse: void 0,
       style: { width: i.value }
     }), [
-      (_(!0), b(We, null, Ce(t.sections, (c) => (_(), b("li", dw, [
-        c.caption ? (_(), b("h6", lw, ie(c.caption), 1)) : $("", !0),
-        y("div", fw, [
+      (_(!0), b(We, null, Ce(t.sections, (c) => (_(), b("li", sw, [
+        c.caption ? (_(), b("h6", dw, ie(c.caption), 1)) : $("", !0),
+        y("div", lw, [
           (_(!0), b(We, null, Ce(c.options, (s) => (_(), re(Bn, {
             route: s.route,
             class: "sidebar-item__option",
@@ -13956,15 +13956,15 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
           }, {
             default: be(() => [
               (_(), re(Re(s.icon))),
-              y("span", pw, ie(s.caption), 1)
+              y("span", fw, ie(s.caption), 1)
             ]),
             _: 2
           }, 1032, ["route", "title", "onClick"]))), 256))
         ])
       ]))), 256))
-    ], 16, sw));
+    ], 16, cw));
   }
-}), mw = /* @__PURE__ */ w(hw, [["__scopeId", "data-v-c75bfeed"]]), vw = { class: "menu-bar" }, yw = /* @__PURE__ */ z({
+}), hw = /* @__PURE__ */ w(pw, [["__scopeId", "data-v-c75bfeed"]]), mw = { class: "menu-bar" }, vw = /* @__PURE__ */ Q({
   __name: "TMenuBar",
   props: {
     placeholder: {},
@@ -14151,15 +14151,15 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
   },
   setup(n) {
     const t = n;
-    return (o, i) => (_(), b("nav", vw, [
-      je(Bv, Q(t, {
+    return (o, i) => (_(), b("nav", mw, [
+      je(Bv, z(t, {
         class: "menu-bar__list",
         orientation: "horizontal"
       }), null, 16)
     ]));
   }
-}), gw = /* @__PURE__ */ w(yw, [["__scopeId", "data-v-69e69f9b"]]);
-function _w(n) {
+}), yw = /* @__PURE__ */ w(vw, [["__scopeId", "data-v-69e69f9b"]]);
+function gw(n) {
   const t = Ye(n);
   return [t, (i) => {
     t.value = i;
@@ -14170,7 +14170,7 @@ var jv = /* @__PURE__ */ ((n) => (n.DARK = "dark", n.LIGHT = "light", n.MIDNIGHT
 function wd(n) {
   document.documentElement.setAttribute(Ev, n);
 }
-function Fw() {
+function _w() {
   if (document.documentElement.getAttribute(Ev) !== "dark") {
     wd(
       "dark"
@@ -14183,15 +14183,15 @@ function Fw() {
     /* LIGHT */
   );
 }
-const aD = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const oD = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Type: jv,
   setTheme: wd,
-  toggleDarkMode: Fw
-}, Symbol.toStringTag, { value: "Module" })), iD = {
+  toggleDarkMode: _w
+}, Symbol.toStringTag, { value: "Module" })), aD = {
   Page: Cv,
   Hyperlink: Bn,
-  Accordion: CO,
+  Accordion: WO,
   Button: yb,
   Slider: _b,
   RangeSlider: bb,
@@ -14203,30 +14203,30 @@ const aD = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   Layout: Yb,
   Panel: Vb,
   Separator: Xb,
-  BreadCrumb: GO,
-  ComboBox: UO,
-  Edit: JO,
-  Memo: nw,
+  BreadCrumb: QO,
+  ComboBox: ZO,
+  Edit: XO,
+  Memo: ew,
   Menu: Bv,
-  MenuBar: gw,
-  Sidebar: mw,
+  MenuBar: yw,
+  Sidebar: hw,
   Image: qv,
-  Thumbnail: cw,
-  CountryFlag: LO,
-  useState: _w,
+  Thumbnail: uw,
+  CountryFlag: YO,
+  useState: gw,
   createDialog: sb,
   createNotification: hb
 };
 Promise.resolve({          });
-const uD = {
+const iD = {
   create: Yv,
   createWebHistory: Rv
 };
 export {
-  ww as Component,
-  Dw as Icon,
-  uD as Router,
-  Ow as Schema,
-  aD as Theme,
-  iD as UI
+  Ow as Component,
+  ww as Icon,
+  iD as Router,
+  Mw as Schema,
+  oD as Theme,
+  aD as UI
 };
