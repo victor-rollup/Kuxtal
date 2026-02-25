@@ -11,7 +11,7 @@
 <template>
   <TLabel :caption="props.caption" class="memo">
     <textarea v-model="model" v-bind="props" class="memo__field"></textarea>
-    <small v-if="!model?.length" class="memo__counter">
+    <small class="memo__counter">
       <span>{{ charCount }}</span
       ><span v-if="props.maxlength"> / {{ props.maxlength }}</span>
     </small>
