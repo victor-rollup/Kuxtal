@@ -3,7 +3,7 @@
   import TLabel from '../atom/TLabel.vue';
 
   const props = defineProps<IEdit['props']>();
-  const model = defineModel<string | number>();
+  const model = defineModel<string | number | null>();
 </script>
 
 <template>

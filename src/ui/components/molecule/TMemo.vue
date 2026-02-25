@@ -3,15 +3,15 @@
   import TLabel from '../atom/TLabel.vue';
   import type { IMemo } from '@/types/component.types';
 
-  const model = defineModel<string>({ default: String() });
+  const model = defineModel<string | null>({ default: String() });
   const props = defineProps<IMemo['props']>();
-  const charCount = computed(() => model.value.length);
+  const charCount = computed(() => model.value?.length);
 </script>
 
 <template>
   <TLabel :caption="props.caption" class="memo">
     <textarea v-model="model" v-bind="props" class="memo__field"></textarea>
-    <small class="memo__counter">
+    <small v-if="!model?.length" class="memo__counter">
       <span>{{ charCount }}</span
       ><span v-if="props.maxlength"> / {{ props.maxlength }}</span>
     </small>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import type { IRadioButton } from '@/types/component.types';
 
-  const model = defineModel<string | number>();
+  const model = defineModel<string | number | null>();
   const props = defineProps<IRadioButton['props']>();
 </script>
 
