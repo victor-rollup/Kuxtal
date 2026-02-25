@@ -155,7 +155,7 @@ export declare const Icon: {
 
 declare interface ICountryFlag {
     props: {
-        code: 'AR' | 'BR' | 'CA' | 'CL' | 'CO' | 'CU' | 'DE' | 'ES' | 'FR' | 'IT' | 'JP' | 'MX' | 'PE' | 'US' | 'VE';
+        code: string | 'AR' | 'BR' | 'CA' | 'CL' | 'CO' | 'CU' | 'DE' | 'ES' | 'FR' | 'IT' | 'JP' | 'MX' | 'PE' | 'US' | 'VE';
     };
 }
 
@@ -910,9 +910,9 @@ export declare const UI: {
     Image: DefineComponent<IDOMImage, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMImage> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLImageElement>;
     Thumbnail: DefineComponent<IDOMImage, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMImage> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLImageElement>;
     CountryFlag: DefineComponent<    {
-    code: "AR" | "BR" | "CA" | "CL" | "CO" | "CU" | "DE" | "ES" | "FR" | "IT" | "JP" | "MX" | "PE" | "US" | "VE";
+    code: string | "AR" | "BR" | "CA" | "CL" | "CO" | "CU" | "DE" | "ES" | "FR" | "IT" | "JP" | "MX" | "PE" | "US" | "VE";
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
-    code: "AR" | "BR" | "CA" | "CL" | "CO" | "CU" | "DE" | "ES" | "FR" | "IT" | "JP" | "MX" | "PE" | "US" | "VE";
+    code: string | "AR" | "BR" | "CA" | "CL" | "CO" | "CU" | "DE" | "ES" | "FR" | "IT" | "JP" | "MX" | "PE" | "US" | "VE";
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
     useState: typeof useState;
     createDialog: typeof createDialog;
