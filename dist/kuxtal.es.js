@@ -12364,7 +12364,7 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
     }), (a, r) => (_(), b("details", Q({
       ref_key: "accordion",
       ref: o
-    }, i, { class: "accordion" }), [
+    }, i, { class: "accordion | sticky" }), [
       y("summary", BO, [
         y("h4", EO, ie(i.title), 1),
         je(Dd, { class: "accordion__chevron" })
@@ -12374,7 +12374,7 @@ const BO = { class: "accordion__header" }, EO = { class: "accordion__title | tex
       ])
     ], 16));
   }
-}), CO = /* @__PURE__ */ w(WO, [["__scopeId", "data-v-9fa84a51"]]), RO = /* @__PURE__ */ z({
+}), CO = /* @__PURE__ */ w(WO, [["__scopeId", "data-v-2750a0e8"]]), RO = /* @__PURE__ */ z({
   __name: "TImage",
   props: {
     alt: {},
