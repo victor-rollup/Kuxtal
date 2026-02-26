@@ -60,7 +60,7 @@
   --hyperlink-text-active-color: var(--theme-primary-color-500);
 
   --edit-background-color: var(--theme-neutral-color-100);
-  --edit-text-color: var(--theme-neutral-color-500);
+  --edit-text-color: var(--theme-neutral-color-800);
   --edit-border-color: var(--theme-neutral-color-200);
   --edit-background-focus-color: var(--theme-neutral-color-100);
   --edit-text-focus-color: var(--theme-neutral-color-900);

@@ -6,6 +6,7 @@
 
   const value = ref(7);
   const isSidebarOpen = ref(false);
+  const password = ref('Admin123#')
 
   function toggleSidebar() {
     isSidebarOpen.value = !isSidebarOpen.value;
@@ -170,6 +171,7 @@
 
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
+          <UI.PasswordIndicator v-model="password" />
           <UI.Slider v-model="value" />
           <UI.RangeSlider v-model:maximun="value" />
           <UI.Checkbox checked />

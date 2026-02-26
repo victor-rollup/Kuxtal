@@ -26,6 +26,7 @@ import Edit from '@/ui/components/molecule/TEdit.vue';
 import Memo from '@/ui/components/molecule/TMemo.vue';
 import Menu from '@/ui/components/molecule/TMenu.vue';
 import Thumbnail from './components/molecule/TThumbnail.vue';
+import PasswordIndicator from './components/molecule/TPasswordIndicator.vue';
 // ------------------------------------------------------------------------------------------------
 import Sidebar from '@/ui/components/organism/TSidebar.vue';
 import MenuBar from './components/organism/TMenuBar.vue';
@@ -60,6 +61,7 @@ export const UI = {
   Image,
   Thumbnail,
   CountryFlag,
+  PasswordIndicator,
   useState,
   createDialog,
   createNotification,
