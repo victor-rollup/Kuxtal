@@ -27,6 +27,7 @@ export declare namespace Component {
     export {
         ILabel,
         IEdit,
+        IEditPassword,
         IComboBox,
         IMemo,
         IToggleSwitch,
@@ -41,7 +42,8 @@ export declare namespace Component {
         IAccordion,
         IBreadcrumb,
         IImage,
-        ICountryFlag
+        ICountryFlag,
+        IPasswordIndicator
     }
 }
 
@@ -447,6 +449,13 @@ declare interface IEdit {
     };
 }
 
+declare interface IEditPassword {
+    props: Omit<IDOMInput, 'type'> & {
+        icon?: Component_2;
+        caption?: string;
+    };
+}
+
 declare interface IForm {
     props: IDOMForm;
 }
@@ -546,6 +555,12 @@ declare interface INotificationOptions {
     description?: string;
     type?: 'success' | 'error' | 'information';
     duration?: number;
+}
+
+declare interface IPasswordIndicator {
+    props: {
+        caption?: string;
+    };
 }
 
 declare interface IRadioButton {
@@ -964,6 +979,36 @@ export declare const UI: {
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<{
     code: string | "AR" | "BR" | "CA" | "CL" | "CO" | "CU" | "DE" | "ES" | "FR" | "IT" | "JP" | "MX" | "PE" | "US" | "VE";
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+    PasswordIndicator: DefineComponent<    {
+    modelValue?: string;
+    } & {
+    caption?: string;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: string;
+    } & {
+    caption?: string;
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: string) => any) | undefined;
+    }>, {
+    caption: string;
+    }, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+    EditPassword: DefineComponent<    {
+    modelValue?: string | null;
+    } & Omit<IDOMInput, "type"> & {
+    icon?: Component_2;
+    caption?: string;
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: string | null) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: string | null;
+    } & Omit<IDOMInput, "type"> & {
+    icon?: Component_2;
+    caption?: string;
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: string | null) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
     useState: typeof useState;
     createDialog: typeof createDialog;
     createNotification: typeof createNotification;
