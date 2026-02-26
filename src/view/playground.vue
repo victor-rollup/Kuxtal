@@ -171,6 +171,7 @@
 
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
+          <UI.EditPassword />
           <UI.PasswordIndicator v-model="password" />
           <UI.Slider v-model="value" />
           <UI.RangeSlider v-model:maximun="value" />

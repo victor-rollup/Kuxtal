@@ -32,6 +32,13 @@ export interface IEdit {
   };
 }
 // ------------------------------------------------------------------------------------------------
+export interface IEditPassword {
+  props: Omit<IDOMInput, 'type'> & {
+    icon?: Component;
+    caption?: string;
+  };
+}
+// ------------------------------------------------------------------------------------------------
 export interface IComboBox {
   props: IDOMSelect & {
     caption?: string;
@@ -151,6 +158,6 @@ export interface ICountryFlag {
 export interface IPasswordIndicator {
   props: {
     caption?: string;
-  }
+  };
 }
 // ------------------------------------------------------------------------------------------------

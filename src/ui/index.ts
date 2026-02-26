@@ -23,6 +23,7 @@ import CountryFlag from './components/atom/TCountryFlag.vue';
 import BreadCrumb from '@/ui/components/molecule/TBreadCrumb.vue';
 import ComboBox from '@/ui/components/molecule/TComboBox.vue';
 import Edit from '@/ui/components/molecule/TEdit.vue';
+import EditPassword from './components/molecule/TEditPassword.vue';
 import Memo from '@/ui/components/molecule/TMemo.vue';
 import Menu from '@/ui/components/molecule/TMenu.vue';
 import Thumbnail from './components/molecule/TThumbnail.vue';
@@ -62,6 +63,7 @@ export const UI = {
   Thumbnail,
   CountryFlag,
   PasswordIndicator,
+  EditPassword,
   useState,
   createDialog,
   createNotification,
