@@ -16,6 +16,8 @@ import { PublicProps } from 'vue';
 import { Ref } from 'vue';
 import { RouteLocationNormalizedLoaded } from 'vue-router';
 import { RouteParamsRawGeneric } from 'vue-router';
+import { Router } from 'vue-router';
+import { RouterOptions } from 'vue-router';
 import { RouterViewProps } from 'vue-router';
 import { UnwrapRef } from 'vue';
 import { VNode } from 'vue';
@@ -46,6 +48,31 @@ export declare namespace Component {
 declare function createDialog({ message, onCancel, onConfirm, title, cancelCaption, confirmCaption, }: IDialogOptions): void;
 
 declare function createNotification({ duration, message, type, description, }: INotificationOptions): void;
+
+export { createRouter }
+
+export { createWebHistory }
+
+export declare namespace DOMType {
+    export {
+        IDOMEvents,
+        IGlobalAttributes,
+        IMicrodataAttributes,
+        IFormAttributes,
+        IDOMElement,
+        IDOMAnchor,
+        IDOMLabel,
+        IDOMImage,
+        IDOMAudio,
+        IDOMVideo,
+        IDOMInput,
+        IDOMButton,
+        IDOMSelect,
+        IDOMSelectOption,
+        IDOMTextarea,
+        IDOMForm
+    }
+}
 
 declare interface IAccordion {
     props: IDOMElement & {
@@ -176,6 +203,16 @@ declare interface IDOMAnchor extends IDOMElement {
     rel?: string;
     target?: string;
     type?: string;
+}
+
+declare interface IDOMAudio extends IDOMElement {
+    autoplay?: boolean;
+    controls?: boolean;
+    crossorigin?: string;
+    loop?: boolean;
+    muted?: boolean;
+    preload?: 'none' | 'metadata' | 'auto';
+    src?: string;
 }
 
 declare interface IDOMButton extends IDOMElement, IFormAttributes {
@@ -389,6 +426,20 @@ declare interface IDOMTextarea extends IDOMElement, IFormAttributes {
     wrap?: string;
 }
 
+declare interface IDOMVideo extends IDOMElement {
+    autoplay?: boolean;
+    controls?: boolean;
+    crossorigin?: string;
+    height?: number;
+    loop?: boolean;
+    muted?: boolean;
+    playsinline?: boolean;
+    poster?: string;
+    preload?: 'none' | 'metadata' | 'auto';
+    src?: string;
+    width?: number;
+}
+
 declare interface IEdit {
     props: IDOMInput & {
         icon?: Component_2;
@@ -527,10 +578,9 @@ declare interface IToggleSwitch {
     props: Omit<IDOMInput, 'type' | 'checked'>;
 }
 
-export declare const Router: {
-    create: typeof createRouter;
-    createWebHistory: typeof createWebHistory;
-};
+export { Router }
+
+export { RouterOptions }
 
 export declare namespace Schema {
     export {
