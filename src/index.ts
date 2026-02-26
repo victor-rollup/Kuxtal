@@ -5,10 +5,10 @@ export * as Schema from './types/schema.types';
 export * as Component from './types/component.types';
 export * as DOMType from './types/dom.types';
 export {
-  createRouter as create,
+  createRouter,
   createWebHistory,
-  type Router as Instance,
-  type RouterOptions as Options,
+  type Router,
+  type RouterOptions,
 } from 'vue-router';
 // ------------------------------------------------------------------------------------------------
 export { Icon, Theme, UI } from '@/ui';
