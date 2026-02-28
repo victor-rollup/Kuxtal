@@ -6,7 +6,14 @@
 
   const value = ref(7);
   const isSidebarOpen = ref(false);
-  const password = ref('Admin123#')
+  const password = ref('dmin123')
+  const steps = ref([
+    { id: 1, label: 'Información Personal', isCompleted: true },
+    { id: 2, label: 'Información de Contacto', isCompleted: false },
+    { id: 3, label: 'Acceso y Permisos', isCompleted: false },
+  ]);
+
+  const currentStep = ref(2);
 
   function toggleSidebar() {
     isSidebarOpen.value = !isSidebarOpen.value;
@@ -171,6 +178,7 @@
 
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
+          <UI.StepProgress v-model="currentStep" v-bind="{steps}" />
           <UI.EditPassword />
           <UI.PasswordIndicator v-model="password" />
           <UI.Slider v-model="value" />

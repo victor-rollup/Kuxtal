@@ -16,6 +16,7 @@ import type {
   IMenuItem,
   ISidebarSection,
   IBreadcrumbRoute,
+  IStep,
 } from './schema.types';
 import type { RouteParamsRawGeneric } from 'vue-router';
 // ------------------------------------------------------------------------------------------------
@@ -158,6 +159,12 @@ export interface ICountryFlag {
 export interface IPasswordIndicator {
   props: {
     caption?: string;
+  };
+}
+// ------------------------------------------------------------------------------------------------
+export interface IStepProgress {
+  props: {
+    steps: IStep[];
   };
 }
 // ------------------------------------------------------------------------------------------------
