@@ -43,7 +43,8 @@ export declare namespace Component {
         IBreadcrumb,
         IImage,
         ICountryFlag,
-        IPasswordIndicator
+        IPasswordIndicator,
+        IStepProgress
     }
 }
 
@@ -589,6 +590,18 @@ declare interface ISidebarSection {
     options: ISidebarOption[];
 }
 
+declare interface IStep {
+    id: number;
+    label: string;
+    isCompleted: boolean;
+}
+
+declare interface IStepProgress {
+    props: {
+        steps: IStep[];
+    };
+}
+
 declare interface IToggleSwitch {
     props: Omit<IDOMInput, 'type' | 'checked'>;
 }
@@ -599,6 +612,7 @@ export { RouterOptions }
 
 export declare namespace Schema {
     export {
+        IStep,
         ISidebarOption,
         ISidebarSection,
         IMenuItem,
@@ -1009,6 +1023,19 @@ export declare const UI: {
     }> & Readonly<{
     "onUpdate:modelValue"?: ((value: string | null) => any) | undefined;
     }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLLabelElement>;
+    StepProgress: DefineComponent<    {
+    modelValue?: number;
+    } & {
+    steps: IStep[];
+    }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:modelValue": (value: number) => any;
+    }, string, PublicProps, Readonly<{
+    modelValue?: number;
+    } & {
+    steps: IStep[];
+    }> & Readonly<{
+    "onUpdate:modelValue"?: ((value: number) => any) | undefined;
+    }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
     useState: typeof useState;
     createDialog: typeof createDialog;
     createNotification: typeof createNotification;
