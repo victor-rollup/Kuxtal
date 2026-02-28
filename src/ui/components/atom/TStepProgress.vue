@@ -30,7 +30,7 @@
       >
         {{ step.id }}
       </div>
-      <span class="step-progress__label">{{ step.label }}</span>
+      <span class="step-progress__label | text-truncate">{{ step.label }}</span>
       <div
         v-if="index < props.steps.length - 1"
         class="step-progress__line"
