@@ -110,7 +110,7 @@
     border-color: var(--sidebar-item-background-active-color);
   }
 
-  .sidebar-item__option.router-link-exact-active {
+  .sidebar-item__option.router-link-active {
     color: var(--sidebar-item-text-active-color);
     background: var(--sidebar-item-background-active-color);
     border-color: transparent !important;
