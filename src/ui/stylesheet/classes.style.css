@@ -143,6 +143,7 @@
 .confirm-dialog {
   height: fit-content;
   min-width: 24rem;
+  max-width: 32rem;
   border-radius: 1rem;
   background: var(--notification-background-color);
   padding: 2rem;
@@ -151,12 +152,17 @@
   border: 0.0125rem solid var(--separator-border-color);
 }
 
+.confirm-dialog__content {
+  padding-block: 2rem;
+}
+
 .confirm-dialog__footer {
   display: flex;
   align-items: center;
   gap: 2rem;
   margin-block-start: 2rem;
 }
+
 .confirm-dialog__button {
   flex: 1 1 auto;
 }

@@ -29,7 +29,8 @@ export default function createDialog({
   dialog.classList.add('confirm-dialog');
   // dialog.innerText = message;
   dialog.appendChild(dialogContent);
-  dialogContent.innerHTML = `<p>${message}</p>`
+  dialogContent.classList.add('confirm-dialog__content')
+  dialogContent.innerHTML = `<p class="confirm-dialog__message">${message}</p>`
   dialogFooter.classList.add('confirm-dialog__footer');
 
   confirmButton.innerText = confirmCaption;
