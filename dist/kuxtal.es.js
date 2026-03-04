@@ -1290,7 +1290,7 @@ function cb({
   confirmCaption: r = "Sí"
 }) {
   const u = document.createElement("dialog"), c = document.createElement("div"), s = document.createElement("header"), d = document.createElement("footer"), h = document.createElement("div"), l = document.createElement("button"), f = document.createElement("button");
-  s.innerHTML = i ? `<h4>${i}</h4>` : "", c.appendChild(s), c.classList.add("confirm-dialog"), c.appendChild(h), h.innerHTML = `<p>${n}</p>`, d.classList.add("confirm-dialog__footer"), l.innerText = r, l.classList.add("button"), l.classList.add("confirm-dialog__button"), l.setAttribute("data-mode", "filled"), l.onclick = () => {
+  s.innerHTML = i ? `<h4>${i}</h4>` : "", c.appendChild(s), c.classList.add("confirm-dialog"), c.appendChild(h), h.classList.add("confirm-dialog__content"), h.innerHTML = `<p class="confirm-dialog__message">${n}</p>`, d.classList.add("confirm-dialog__footer"), l.innerText = r, l.classList.add("button"), l.classList.add("confirm-dialog__button"), l.setAttribute("data-mode", "filled"), l.onclick = () => {
     o?.(), document.body.removeChild(u);
   }, f.innerText = a, f.classList.add("button"), f.setAttribute("data-mode", "text"), f.onclick = () => {
     t?.(), document.body.removeChild(u);
