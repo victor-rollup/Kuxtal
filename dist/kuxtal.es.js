@@ -14293,7 +14293,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
     collapse: { type: Boolean }
   },
   setup(n) {
-    const t = n, o = Ee(window.innerWidth * 0.24), i = ue(() => `${o.value}px`), a = () => o.value = window.innerWidth * 0.24;
+    const t = n, o = Ee(window.innerWidth * 0.18), i = ue(() => `${o.value}px`), a = () => o.value = window.innerWidth * 0.18;
     return Em(() => window.addEventListener("resize", a)), Ky(() => window.removeEventListener("resize", a)), (r, u) => (_(), b("ul", z({ class: "sidebar" }, t, {
       "data-collapse": t.collapse,
       sections: void 0,
@@ -14319,7 +14319,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
       ]))), 256))
     ], 16, jw));
   }
-}), Hw = /* @__PURE__ */ w(Lw, [["__scopeId", "data-v-5b0165b8"]]), Nw = { class: "menu-bar" }, Aw = /* @__PURE__ */ A({
+}), Hw = /* @__PURE__ */ w(Lw, [["__scopeId", "data-v-1d25b103"]]), Nw = { class: "menu-bar" }, Aw = /* @__PURE__ */ A({
   __name: "TMenuBar",
   props: {
     placeholder: {},
