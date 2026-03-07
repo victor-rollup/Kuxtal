@@ -4,9 +4,9 @@
   import { computed, onMounted, onUnmounted, ref } from 'vue';
 
   const props = defineProps<ISidebar['props']>();
-  const width = ref<number>(window.innerWidth * 0.16);
+  const width = ref<number>(window.innerWidth * 0.24);
   const widthAsPx = computed(() => `${width.value}px`);
-  const updateWidth = () => (width.value = window.innerWidth * 0.16);
+  const updateWidth = () => (width.value = window.innerWidth * 0.24);
 
   onMounted(() => window.addEventListener('resize', updateWidth));
   onUnmounted(() => window.removeEventListener('resize', updateWidth));
