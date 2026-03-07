@@ -12,11 +12,15 @@ import { DefineComponent } from 'vue';
 import { GlobalComponents } from 'vue';
 import { GlobalDirectives } from 'vue';
 import { IfAny } from '@vue/shared';
+import { onBeforeRouteLeave } from 'vue-router';
+import { onBeforeRouteUpdate } from 'vue-router';
 import { PublicProps } from 'vue';
 import { Ref } from 'vue';
 import { RouteLocationNormalizedLoaded } from 'vue-router';
+import { RouteParamsRaw } from 'vue-router';
 import { RouteParamsRawGeneric } from 'vue-router';
 import { Router } from 'vue-router';
+import { RouteRecordRaw } from 'vue-router';
 import { RouterOptions } from 'vue-router';
 import { RouterViewProps } from 'vue-router';
 import { UnwrapRef } from 'vue';
@@ -606,7 +610,15 @@ declare interface IToggleSwitch {
     props: Omit<IDOMInput, 'type' | 'checked'>;
 }
 
+export { onBeforeRouteLeave }
+
+export { onBeforeRouteUpdate }
+
+export { RouteParamsRaw }
+
 export { Router }
+
+export { RouteRecordRaw }
 
 export { RouterOptions }
 

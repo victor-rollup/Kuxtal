@@ -1,5 +1,5 @@
 import { RouterLink as Hy, RouterView as Ny } from "vue-router";
-import { createRouter as CS, createWebHistory as WS } from "vue-router";
+import { createRouter as CS, createWebHistory as WS, onBeforeRouteLeave as RS, onBeforeRouteUpdate as YS } from "vue-router";
 import { createElementBlock as b, openBlock as _, createElementVNode as y, createStaticVNode as Q, defineComponent as A, mergeProps as z, createBlock as V, createCommentVNode as U, resolveDynamicComponent as Be, toDisplayString as ae, useModel as oe, ref as Ee, computed as ue, normalizeStyle as Ye, mergeModels as ce, withDirectives as Oe, vModelRadio as Ay, vModelCheckbox as qm, withModifiers as zy, renderSlot as ee, unref as Qy, withCtx as me, createVNode as Le, normalizeClass as Vy, Fragment as xe, renderList as qe, vModelSelect as Gy, vModelDynamic as Bm, vModelText as Zy, onMounted as Em, resolveComponent as Uy, onUnmounted as Ky } from "vue";
 const Uw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
@@ -14293,7 +14293,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
     collapse: { type: Boolean }
   },
   setup(n) {
-    const t = n, o = Ee(window.innerWidth * 0.16), i = ue(() => `${o.value}px`), a = () => o.value = window.innerWidth * 0.16;
+    const t = n, o = Ee(window.innerWidth * 0.24), i = ue(() => `${o.value}px`), a = () => o.value = window.innerWidth * 0.24;
     return Em(() => window.addEventListener("resize", a)), Ky(() => window.removeEventListener("resize", a)), (r, u) => (_(), b("ul", z({ class: "sidebar" }, t, {
       "data-collapse": t.collapse,
       sections: void 0,
@@ -14319,7 +14319,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
       ]))), 256))
     ], 16, jw));
   }
-}), Hw = /* @__PURE__ */ w(Lw, [["__scopeId", "data-v-18ba85ff"]]), Nw = { class: "menu-bar" }, Aw = /* @__PURE__ */ A({
+}), Hw = /* @__PURE__ */ w(Lw, [["__scopeId", "data-v-5b0165b8"]]), Nw = { class: "menu-bar" }, Aw = /* @__PURE__ */ A({
   __name: "TMenuBar",
   props: {
     placeholder: {},
@@ -14584,5 +14584,7 @@ export {
   qS as Theme,
   BS as UI,
   CS as createRouter,
-  WS as createWebHistory
+  WS as createWebHistory,
+  RS as onBeforeRouteLeave,
+  YS as onBeforeRouteUpdate
 };
