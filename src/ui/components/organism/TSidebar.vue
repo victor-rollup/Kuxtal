@@ -124,4 +124,27 @@
   .sidebar[data-collapse='true'] .sidebar-item__caption {
     display: none;
   }
+
+  @media (max-width: 960px) {
+    .sidebar {
+      gap: 0.5rem;
+      padding: 0.5rem;
+      width: 4rem !important;
+    }
+
+    .sidebar-item,
+    .sidebar-item__content {
+      gap: 0.5rem;
+    }
+
+    .sidebar-item__option {
+      padding: 0.5rem;
+      justify-content: center;
+    }
+
+    .sidebar-item__caption,
+    .sidebar-item__option-caption {
+      display: none;
+    }
+  }
 </style>
