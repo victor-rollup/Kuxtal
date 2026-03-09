@@ -409,6 +409,10 @@
       </UI.Accordion>
 
       <UI.Accordion title="Multimedia">
+        <UI.Thumbnail
+          src=""
+          class="skeleton"
+        />
         <div class="row">
           <UI.CountryFlag code="AR" />
           <UI.CountryFlag code="MX" />
