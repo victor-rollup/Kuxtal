@@ -60,6 +60,7 @@
     width: 3rem;
     height: 3rem;
     border-radius: 100%;
+    font-size: 1.5rem;
     color: var(--theme-neutral-color-900);
     background: var(--theme-neutral-color-100);
     display: flex;
@@ -76,6 +77,7 @@
     background: var(--notification-success-color);
     border-color: transparent;
     color: white;
+    box-shadow: 0.125rem 0.125rem 0.25rem 0 rgb(0 0 0 / 0.5);
   }
 
   .step-progress__label {
@@ -85,10 +87,10 @@
 
   .step-progress__line {
     position: absolute;
-    top: 1rem;
+    top: 1.25rem;
     left: 50%;
     width: 100%;
-    height: 0.25rem;
+    height: 0.5rem;
     background: var(--theme-neutral-color-300);
     z-index: -1;
   }

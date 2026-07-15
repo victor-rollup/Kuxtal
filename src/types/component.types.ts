@@ -101,6 +101,10 @@ export interface IButton {
     mode?: 'filled' | 'secondary' | 'outlined' | 'text' | 'icon';
     caption?: string;
     icon?: Component;
+    theme?: Partial<{
+      background: string;
+      color: string;
+    }>;
   };
 }
 // ------------------------------------------------------------------------------------------------
