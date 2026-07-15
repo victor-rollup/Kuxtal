@@ -1,16 +1,20 @@
 <script setup lang="ts">
   import type { IButton } from '@/types/component.types';
+  import { computed } from 'vue';
 
   const props = defineProps<IButton['props']>();
+  const attributes = computed(function () {
+    const { icon, theme, caption, mode, ...more } = props;
+    return more;
+  });
 </script>
 
 <template>
   <button
+    v-bind="attributes"
     class="button"
-    v-bind="props"
-    :data-mode="props.mode ?? 'filled'"
     :type="props.type ?? 'button'"
-    :icon="undefined"
+    :data-mode="props.mode ?? 'filled'"
   >
     <component :is="props.icon" class="button__icon" />
     <span v-if="props.caption" class="button__caption">{{
@@ -27,10 +31,10 @@
     gap: 0.25rem;
 
     border-radius: 0.5rem;
-    padding-block: 0.5rem;
+    padding-block: 0.75rem;
     padding-inline: 1rem;
 
-    font-size: 1rem;
+    font-size: 1.25rem;
     cursor: pointer;
     border: 0.125rem solid transparent;
   }
@@ -81,9 +85,6 @@
   }
 
   .button__icon {
-    min-height: 1rem;
-    min-width: 1rem;
-    height: 1rem;
-    width: 1rem;
+    --icon-dimension: 1rem;
   }
 </style>

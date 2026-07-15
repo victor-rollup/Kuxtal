@@ -73,7 +73,7 @@ table {
 }
 
 thead {
-  position: sticky;
+  position: static;
   top: 0;
   color: var(--table-head-text-color);
   background: var(--table-head-background-color);

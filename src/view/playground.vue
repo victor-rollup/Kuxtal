@@ -6,7 +6,7 @@
 
   const value = ref(7);
   const isSidebarOpen = ref(false);
-  const password = ref('dmin123')
+  const password = ref('dmin123');
   const steps = ref([
     { id: 1, label: 'Información Personal', isCompleted: true },
     { id: 2, label: 'Información de Contacto', isCompleted: false },
@@ -178,7 +178,7 @@
 
       <UI.Accordion title="Controles de formulario">
         <UI.Form>
-          <UI.StepProgress v-model="currentStep" v-bind="{steps}" />
+          <UI.StepProgress v-model="currentStep" v-bind="{ steps }" />
           <UI.EditPassword />
           <UI.PasswordIndicator v-model="password" />
           <UI.Slider v-model="value" />
@@ -344,6 +344,19 @@
           "
         />
         <UI.Separator />
+        <UI.Button
+          caption="Custom"
+          :theme="{ background: 'darkred', color: 'yellow' }"
+        />
+        <UI.Separator />
+        <UI.Button
+          caption="Custom"
+          mode="outlined"
+          :theme="{ background: 'darkred' }"
+        />
+        <UI.Separator />
+        <UI.Button caption="Click me" mode="secondary" />
+        <UI.Separator />
         <UI.Button caption="Click me" mode="secondary" />
         <UI.Separator />
         <UI.Button caption="Click me" mode="outlined" />
@@ -409,10 +422,7 @@
       </UI.Accordion>
 
       <UI.Accordion title="Multimedia">
-        <UI.Thumbnail
-          src=""
-          class="skeleton"
-        />
+        <UI.Thumbnail src="" class="skeleton" />
         <div class="row">
           <UI.CountryFlag code="AR" />
           <UI.CountryFlag code="MX" />

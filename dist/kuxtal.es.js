@@ -1,6 +1,6 @@
 import { RouterLink as Hy, RouterView as Ny } from "vue-router";
 import { createRouter as CS, createWebHistory as WS, onBeforeRouteLeave as RS, onBeforeRouteUpdate as YS } from "vue-router";
-import { createElementBlock as b, openBlock as _, createElementVNode as y, createStaticVNode as Q, defineComponent as A, mergeProps as z, createBlock as V, createCommentVNode as U, resolveDynamicComponent as Be, toDisplayString as ae, useModel as oe, ref as Ee, computed as ue, normalizeStyle as Ye, mergeModels as ce, withDirectives as Oe, vModelRadio as Ay, vModelCheckbox as qm, withModifiers as zy, renderSlot as ee, unref as Qy, withCtx as me, createVNode as Le, normalizeClass as Vy, Fragment as xe, renderList as qe, vModelSelect as Gy, vModelDynamic as Bm, vModelText as Zy, onMounted as Em, resolveComponent as Uy, onUnmounted as Ky } from "vue";
+import { createElementBlock as b, openBlock as _, createElementVNode as y, createStaticVNode as Q, defineComponent as A, computed as ie, mergeProps as z, createBlock as V, createCommentVNode as U, resolveDynamicComponent as Be, toDisplayString as ae, useModel as oe, ref as Ee, normalizeStyle as Ye, mergeModels as ce, withDirectives as Oe, vModelRadio as Ay, vModelCheckbox as qm, withModifiers as zy, renderSlot as ee, unref as Qy, withCtx as me, createVNode as Le, normalizeClass as Vy, Fragment as xe, renderList as qe, vModelSelect as Gy, vModelDynamic as Bm, vModelText as Zy, onMounted as Em, resolveComponent as Uy, onUnmounted as Ky } from "vue";
 const Uw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null
 }, Symbol.toStringTag, { value: "Module" })), Kw = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
@@ -1316,7 +1316,7 @@ function pb({
     ${i ? `<p>${i}</p>` : ""}
   `, document.body.appendChild(a), setTimeout(() => document.body.removeChild(a), n);
 }
-const hb = ["data-mode", "type"], mb = {
+const hb = ["type", "data-mode"], mb = {
   key: 0,
   class: "button__caption"
 }, yb = /* @__PURE__ */ A({
@@ -1513,14 +1513,18 @@ const hb = ["data-mode", "type"], mb = {
     formtarget: {},
     mode: {},
     caption: {},
-    icon: {}
+    icon: {},
+    theme: {}
   },
   setup(n) {
-    const t = n;
-    return (o, i) => (_(), b("button", z({ class: "button" }, t, {
-      "data-mode": t.mode ?? "filled",
+    const t = n, o = ie(function() {
+      const { icon: i, theme: a, caption: r, mode: u, ...c } = t;
+      return c;
+    });
+    return (i, a) => (_(), b("button", z(o.value, {
+      class: "button",
       type: t.type ?? "button",
-      icon: void 0
+      "data-mode": t.mode ?? "filled"
     }), [
       (_(), V(Be(t.icon), { class: "button__icon" })),
       t.caption ? (_(), b("span", mb, ae(t.caption), 1)) : U("", !0)
@@ -1538,7 +1542,7 @@ const hb = ["data-mode", "type"], mb = {
   },
   emits: ["update:modelValue", "update:min", "update:max"],
   setup(n) {
-    const t = oe(n, "modelValue"), o = oe(n, "min"), i = oe(n, "max"), a = Ee(null), r = ue(() => {
+    const t = oe(n, "modelValue"), o = oe(n, "min"), i = oe(n, "max"), a = Ee(null), r = ie(() => {
       const h = i.value - o.value;
       return (t.value - o.value) / h * 100;
     });
@@ -1591,9 +1595,9 @@ const hb = ["data-mode", "type"], mb = {
   }),
   emits: ["update:minimum", "update:maximun"],
   setup(n) {
-    const t = oe(n, "minimum"), o = oe(n, "maximun"), i = n, a = Ee(null), r = ue(
+    const t = oe(n, "minimum"), o = oe(n, "maximun"), i = n, a = Ee(null), r = ie(
       () => (t.value - i.min) / (i.max - i.min) * 100
-    ), u = ue(
+    ), u = ie(
       () => (o.value - i.min) / (i.max - i.min) * 100
     );
     function c(d, h) {
@@ -6877,7 +6881,7 @@ function F2() {
   };
   return nn.EraParser = t, nn;
 }
-var rn = {}, ie = {}, Te = {}, Jp;
+var rn = {}, ue = {}, Te = {}, Jp;
 function te() {
   return Jp || (Jp = 1, Te.timezonePatterns = Te.numericPatterns = void 0, Te.numericPatterns = {
     month: /^(1[0-2]|0?\d)/,
@@ -6927,8 +6931,8 @@ function te() {
 }
 var kp;
 function L() {
-  if (kp) return ie;
-  kp = 1, ie.dayPeriodEnumToHours = s, ie.isLeapYearIndex = h, ie.mapValue = o, ie.normalizeTwoDigitYear = d, ie.parseAnyDigitsSigned = r, ie.parseNDigits = u, ie.parseNDigitsSigned = c, ie.parseNumericPattern = i, ie.parseTimezonePattern = a;
+  if (kp) return ue;
+  kp = 1, ue.dayPeriodEnumToHours = s, ue.isLeapYearIndex = h, ue.mapValue = o, ue.normalizeTwoDigitYear = d, ue.parseAnyDigitsSigned = r, ue.parseNDigits = u, ue.parseNDigitsSigned = c, ue.parseNumericPattern = i, ue.parseTimezonePattern = a;
   var n = /* @__PURE__ */ j(), t = /* @__PURE__ */ te();
   function o(l, f) {
     return l && {
@@ -7044,7 +7048,7 @@ function L() {
   function h(l) {
     return l % 400 === 0 || l % 4 === 0 && l % 100 !== 0;
   }
-  return ie;
+  return ue;
 }
 var $p;
 function b2() {
@@ -12622,7 +12626,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
       ], 8, LO))), 128))
     ]));
   }
-}), QO = /* @__PURE__ */ w(zO, [["__scopeId", "data-v-fd9f33d5"]]), VO = { class: "breadcrumb__list" }, GO = ["data-divider"], ZO = { class: "breadcrumb__route-caption | text-truncate" }, UO = { class: "breadcrumb__current | text-truncate" }, KO = /* @__PURE__ */ A({
+}), QO = /* @__PURE__ */ w(zO, [["__scopeId", "data-v-8d065a8e"]]), VO = { class: "breadcrumb__list" }, GO = ["data-divider"], ZO = { class: "breadcrumb__route-caption | text-truncate" }, UO = { class: "breadcrumb__current | text-truncate" }, KO = /* @__PURE__ */ A({
   __name: "TBreadCrumb",
   props: {
     current: {},
@@ -13349,7 +13353,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
   }),
   emits: ["update:modelValue"],
   setup(n) {
-    const t = n, o = oe(n, "modelValue"), i = Ee(Sd), a = ue(() => i.value === Sd), r = () => i.value = aw, u = () => i.value = Sd;
+    const t = n, o = oe(n, "modelValue"), i = Ee(Sd), a = ie(() => i.value === Sd), r = () => i.value = aw, u = () => i.value = Sd;
     return (c, s) => (_(), V(He, {
       caption: t.caption,
       class: "edit"
@@ -13585,7 +13589,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
   }),
   emits: ["update:modelValue"],
   setup(n) {
-    const t = oe(n, "modelValue"), o = n, i = ue(() => t.value?.length);
+    const t = oe(n, "modelValue"), o = n, i = ie(() => t.value?.length);
     return (a, r) => (_(), V(He, {
       caption: o.caption,
       class: "memo"
@@ -14045,7 +14049,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
   }),
   emits: ["update:modelValue"],
   setup(n) {
-    const t = oe(n, "modelValue"), o = n, i = ue(() => /[a-z]/.test(t.value)), a = ue(() => /[A-Z]/.test(t.value)), r = ue(() => /\d/.test(t.value)), u = ue(() => /[@.#$!%*?&]/.test(t.value)), c = ue(
+    const t = oe(n, "modelValue"), o = n, i = ie(() => /[a-z]/.test(t.value)), a = ie(() => /[A-Z]/.test(t.value)), r = ie(() => /\d/.test(t.value)), u = ie(() => /[@.#$!%*?&]/.test(t.value)), c = ie(
       () => t.value.length >= 8 && t.value.length <= 25
     );
     return (s, d) => (_(), b("div", gw, [
@@ -14293,7 +14297,7 @@ const qO = { class: "accordion__title | text-truncate" }, BO = { class: "accordi
     collapse: { type: Boolean }
   },
   setup(n) {
-    const t = n, o = Ee(window.innerWidth * 0.18), i = ue(() => `${o.value}px`), a = () => o.value = window.innerWidth * 0.18;
+    const t = n, o = Ee(window.innerWidth * 0.18), i = ie(() => `${o.value}px`), a = () => o.value = window.innerWidth * 0.18;
     return Em(() => window.addEventListener("resize", a)), Ky(() => window.removeEventListener("resize", a)), (r, u) => (_(), b("ul", z({ class: "sidebar" }, t, {
       "data-collapse": t.collapse,
       sections: void 0,

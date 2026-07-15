@@ -111,6 +111,10 @@ declare interface IButton {
         mode?: 'filled' | 'secondary' | 'outlined' | 'text' | 'icon';
         caption?: string;
         icon?: Component_2;
+        theme?: Partial<{
+            background: string;
+            color: string;
+        }>;
     };
 }
 
@@ -729,10 +733,18 @@ export declare const UI: {
     mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
     caption?: string;
     icon?: Component_2;
+    theme?: Partial<{
+    background: string;
+    color: string;
+    }>;
     }, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<IDOMButton & {
     mode?: "filled" | "secondary" | "outlined" | "text" | "icon";
     caption?: string;
     icon?: Component_2;
+    theme?: Partial<{
+    background: string;
+    color: string;
+    }>;
     }> & Readonly<{}>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLButtonElement>;
     Slider: DefineComponent<    {
     modelValue?: number;

@@ -1,49 +1,53 @@
 /* --------------------------------------------------------------------------------------------- */
 [data-theme='dark'] {
   color-scheme: dark;
-  --theme-primary-color-100: hsl(210, 50%, 60%);
-  --theme-primary-color-200: hsl(210, 50%, 55%);
-  --theme-primary-color-300: hsl(210, 50%, 50%);
-  --theme-primary-color-400: hsl(210, 50%, 45%);
-  --theme-primary-color-500: hsl(210, 62%, 40%);
-  --theme-primary-color-600: hsl(210, 50%, 35%);
-  --theme-primary-color-700: hsl(210, 50%, 30%);
-  --theme-primary-color-800: hsl(210, 50%, 25%);
-  --theme-primary-color-900: hsl(210, 50%, 20%);
+  /* Primario: Azul más suave y luminoso para legibilidad en fondo oscuro */
+  --theme-primary-color-100: hsl(220, 30%, 15%);
+  --theme-primary-color-200: hsl(220, 30%, 25%);
+  --theme-primary-color-300: hsl(220, 30%, 35%);
+  --theme-primary-color-400: hsl(220, 30%, 45%);
+  --theme-primary-color-500: hsl(220, 30%, 55%);
+  --theme-primary-color-600: hsl(220, 30%, 65%);
+  --theme-primary-color-700: hsl(220, 30%, 75%);
+  --theme-primary-color-800: hsl(220, 30%, 85%);
+  --theme-primary-color-900: hsl(220, 30%, 95%);
 
-  --theme-secondary-color-100: hsl(192, 74%, 90%);
-  --theme-secondary-color-200: hsl(192, 74%, 80%);
-  --theme-secondary-color-300: hsl(192, 74%, 70%);
-  --theme-secondary-color-400: hsl(192, 74%, 60%);
-  --theme-secondary-color-500: hsl(192, 74%, 50%);
-  --theme-secondary-color-600: hsl(192, 74%, 40%);
-  --theme-secondary-color-700: hsl(192, 74%, 30%);
-  --theme-secondary-color-800: hsl(192, 74%, 20%);
-  --theme-secondary-color-900: hsl(192, 74%, 10%);
+  /* Secundario: Amarillo Huevo ajustado para no deslumbrar */
+  --theme-secondary-color-100: hsl(45, 90%, 15%);
+  --theme-secondary-color-200: hsl(45, 90%, 25%);
+  --theme-secondary-color-300: hsl(45, 90%, 35%);
+  --theme-secondary-color-400: hsl(45, 90%, 45%);
+  --theme-secondary-color-500: hsl(45, 90%, 55%);
+  --theme-secondary-color-600: hsl(45, 90%, 65%);
+  --theme-secondary-color-700: hsl(45, 90%, 75%);
+  --theme-secondary-color-800: hsl(45, 90%, 85%);
+  --theme-secondary-color-900: hsl(45, 90%, 95%);
 
-  --theme-tertiary-color-100: hsl(200, 100%, 90%);
-  --theme-tertiary-color-200: hsl(200, 100%, 80%);
-  --theme-tertiary-color-300: hsl(200, 100%, 70%);
-  --theme-tertiary-color-400: hsl(200, 100%, 60%);
-  --theme-tertiary-color-500: hsl(200, 100%, 50%);
-  --theme-tertiary-color-600: hsl(200, 100%, 40%);
-  --theme-tertiary-color-700: hsl(200, 100%, 30%);
-  --theme-tertiary-color-800: hsl(200, 100%, 20%);
-  --theme-tertiary-color-900: hsl(200, 100%, 10%);
+  /* Terciario: Naranja ajustado */
+  --theme-tertiary-color-100: hsl(35, 70%, 15%);
+  --theme-tertiary-color-200: hsl(35, 70%, 25%);
+  --theme-tertiary-color-300: hsl(35, 70%, 35%);
+  --theme-tertiary-color-400: hsl(35, 70%, 45%);
+  --theme-tertiary-color-500: hsl(35, 70%, 55%);
+  --theme-tertiary-color-600: hsl(35, 70%, 65%);
+  --theme-tertiary-color-700: hsl(35, 70%, 75%);
+  --theme-tertiary-color-800: hsl(35, 70%, 85%);
+  --theme-tertiary-color-900: hsl(35, 70%, 95%);
 
-  --theme-neutral-color-100: hsl(0, 0%, 10%);
-  --theme-neutral-color-200: hsl(0, 0%, 20%);
-  --theme-neutral-color-300: hsl(0, 0%, 30%);
-  --theme-neutral-color-400: hsl(0, 0%, 40%);
-  --theme-neutral-color-500: hsl(0, 0%, 50%);
-  --theme-neutral-color-600: hsl(0, 0%, 60%);
-  --theme-neutral-color-700: hsl(0, 0%, 70%);
-  --theme-neutral-color-800: hsl(0, 0%, 80%);
-  --theme-neutral-color-900: hsl(0, 0%, 90%);
+  /* Neutral: Escala de grises inversa (del más oscuro al más claro) */
+  --theme-neutral-color-100: hsl(220, 15%, 10%);
+  --theme-neutral-color-200: hsl(220, 15%, 15%);
+  --theme-neutral-color-300: hsl(220, 15%, 25%);
+  --theme-neutral-color-400: hsl(220, 15%, 35%);
+  --theme-neutral-color-500: hsl(220, 15%, 45%);
+  --theme-neutral-color-600: hsl(220, 15%, 55%);
+  --theme-neutral-color-700: hsl(220, 15%, 70%);
+  --theme-neutral-color-800: hsl(220, 15%, 85%);
+  --theme-neutral-color-900: hsl(220, 15%, 95%);
 }
 /* --------------------------------------------------------------------------------------------- */
 [data-theme='dark'] {
-  /* background: var(--theme-neutral-color-100); */
+  color-scheme: dark;
   --accordion-border-color: var(--theme-neutral-color-200);
   --accordion-header-text-color: var(--theme-neutral-color-900);
   --accordion-header-background-color: var(--theme-neutral-color-100);
@@ -54,19 +58,19 @@
   --filled-button-background-color: var(--theme-primary-color-500);
   --secondary-button-text-color: var(--theme-neutral-color-900);
   --secondary-button-background-color: var(--theme-neutral-color-300);
-  --outlined-button-text-color: var(--theme-primary-color-200);
+  --outlined-button-text-color: var(--theme-primary-color-800);
 
-  --hyperlink-text-color: var(--theme-primary-color-200);
+  --hyperlink-text-color: var(--theme-primary-color-500);
   --hyperlink-text-active-color: var(--theme-primary-color-300);
 
   --edit-background-color: var(--theme-neutral-color-100);
-  --edit-text-color: var(--theme-neutral-color-500);
+  --edit-text-color: var(--theme-neutral-color-600);
   --edit-border-color: var(--theme-neutral-color-200);
   --edit-background-focus-color: var(--theme-neutral-color-100);
   --edit-text-focus-color: var(--theme-neutral-color-900);
   --edit-border-focus-color: var(--theme-primary-color-500);
 
-  --sidebar-item-text-color: var(--theme-neutral-color-600);
+  --sidebar-item-text-color: var(--theme-neutral-color-800);
   --sidebar-item-text-hover-color: var(--theme-neutral-color-700);
   --sidebar-item-background-hover-color: var(--theme-neutral-color-200);
   --sidebar-item-text-active-color: var(--theme-neutral-color-900);
